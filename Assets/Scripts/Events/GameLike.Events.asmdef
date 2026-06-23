@@ -1,0 +1,16 @@
+{
+    "name": "GameLike.Events",
+    "rootNamespace": "GameLike.Core.Events",
+    "references": [
+        "GameLike.Core"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

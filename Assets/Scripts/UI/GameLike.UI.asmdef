@@ -1,0 +1,20 @@
+{
+    "name": "GameLike.UI",
+    "rootNamespace": "GameLike.UI",
+    "references": [
+        "GameLike.Core",
+        "GameLike.Events",
+        "GameLike.Data",
+        "GameLike.State",
+        "GameLike.Systems"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

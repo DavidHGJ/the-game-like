@@ -1,0 +1,28 @@
+{
+    "name": "GameLike.Tests.EditMode",
+    "rootNamespace": "GameLike.Tests.EditMode",
+    "references": [
+        "GameLike.Core",
+        "GameLike.Events",
+        "GameLike.Data",
+        "GameLike.State",
+        "GameLike.Systems",
+        "UnityEngine.TestRunner",
+        "UnityEditor.TestRunner"
+    ],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": true,
+    "precompiledReferences": [
+        "nunit.framework.dll"
+    ],
+    "autoReferenced": false,
+    "defineConstraints": [
+        "UNITY_INCLUDE_TESTS"
+    ],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

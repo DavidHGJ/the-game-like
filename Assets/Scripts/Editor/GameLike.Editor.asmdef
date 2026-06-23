@@ -1,0 +1,20 @@
+{
+    "name": "GameLike.Editor",
+    "rootNamespace": "GameLike.Editor",
+    "references": [
+        "GameLike.Core",
+        "GameLike.Events",
+        "GameLike.Data"
+    ],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
