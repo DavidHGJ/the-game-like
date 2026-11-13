@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f22b15093a9a4ef45a6987a5508f7468, type: 3}
+  m_Name: MarketingBalance
+  m_EditorClassIdentifier: GameLike.Data::GameLike.Data.Balance.MarketingBalanceSO
+  passiveHypeGainPerWeek: 0.015
+  hypeDecayPerWeek: 0.02
+  announcementCost: 2000
+  announcementHype: 0.15
+  wishlistCampaignCost: 5000
+  wishlistCampaignHype: 0.1
+  wishlistCampaignBurst: 3
+  demoCost: 8000
+  demoHype: 0.25
+  gameShowCost: 20000
+  gameShowHype: 0.4

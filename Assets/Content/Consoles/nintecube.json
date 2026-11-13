@@ -1,0 +1,12 @@
+{
+    "key":  "nintecube",
+    "displayNamePtBr":  "NinteCube",
+    "descriptionPtBr":  "Popularidade média-baixa nesta geração. Paródia do GameCube.",
+    "manufacturer":  "Nintendu",
+    "category":  "Console",
+    "releaseYear":  29,
+    "licenseCost":  18000,
+    "initialPopularity":  0.25,
+    "peakPopularity":  0.52,
+    "lifespanYears":  8
+}

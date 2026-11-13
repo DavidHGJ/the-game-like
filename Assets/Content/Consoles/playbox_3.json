@@ -1,0 +1,12 @@
+{
+    "key":  "playbox_3",
+    "displayNamePtBr":  "PlayBox 3",
+    "descriptionPtBr":  "A maior base da história até então, popularidade altíssima. Paródia do PlayStation 2.",
+    "manufacturer":  "Suny",
+    "category":  "Console",
+    "releaseYear":  29,
+    "licenseCost":  30000,
+    "initialPopularity":  0.6,
+    "peakPopularity":  0.98,
+    "lifespanYears":  11
+}

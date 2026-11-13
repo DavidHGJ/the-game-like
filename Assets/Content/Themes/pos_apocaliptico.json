@@ -1,0 +1,16 @@
+{
+  "key": "pos_apocaliptico",
+  "displayNamePtBr": "Pós-apocalíptico",
+  "descriptionPtBr": "Mundo após um colapso civilizacional. Sobrevivência em ruínas com recursos escassos e sociedades fragmentadas.",
+  "category": "FictionFantasy",
+  "compatibilities": [
+    { "genre": "platformer", "weight": "+" },
+    { "genre": "rpg", "weight": "++" },
+    { "genre": "action_rpg", "weight": "++" },
+    { "genre": "shooter", "weight": "++" },
+    { "genre": "horror", "weight": "++" },
+    { "genre": "simulation", "weight": "+" },
+    { "genre": "strategy", "weight": "+" },
+    { "genre": "puzzle", "weight": "-" }
+  ]
+}

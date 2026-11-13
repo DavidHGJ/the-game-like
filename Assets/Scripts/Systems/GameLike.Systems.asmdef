@@ -5,7 +5,9 @@
         "GameLike.Core",
         "GameLike.Events",
         "GameLike.Data",
-        "GameLike.State"
+        "GameLike.State",
+        "Unity.RenderPipelines.Core.Runtime",
+        "Unity.RenderPipelines.Universal.Runtime"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],

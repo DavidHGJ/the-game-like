@@ -1,0 +1,13 @@
+{
+  "key": "talento_raro",
+  "title": "Talento Raro Disponível",
+  "body": "Um designer lendário está procurando emprego após sair de uma grande empresa.",
+  "category": "Opportunity",
+  "weight": 0.7,
+  "requiresActiveProject": false,
+  "options": [
+    { "text": "Contratar imediatamente (custo alto).", "effects": [ { "type": "Cash", "amount": -20000 }, { "type": "Reputation", "amount": 0.05 } ] },
+    { "text": "Negociar o salário.", "effects": [ { "type": "Cash", "amount": -8000 } ] },
+    { "text": "Ignorar.", "effects": [ { "type": "Reputation", "amount": -0.02 } ] }
+  ]
+}

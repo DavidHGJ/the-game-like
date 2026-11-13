@@ -1,0 +1,49 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6654ce38bda6d1741a92f4968649c205, type: 3}
+  m_Name: lava_lamp
+  m_EditorClassIdentifier: GameLike.Data::GameLike.Data.LevelBuilder.FurnitureDef3DSO
+  id: 26b8bfc0a7ad4443b096fbe50403dfad
+  displayNamePt: 
+  displayName:
+    m_TableReference:
+      m_TableCollectionName: 
+    m_TableEntryReference:
+      m_KeyId: 0
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  editorName: "Lumin\xE1ria de lava"
+  category: 3
+  prefab: {fileID: 5025318126357427863, guid: f5cce9bab028e9746a8b986ee64bbd4b, type: 3}
+  footprintInCells: {x: 1, y: 1}
+  rotatable: 0
+  isWallPiece: 0
+  placeableOnTop: 1
+  supportsItemsOnTop: 0
+  surfaceHeight: 0
+  effect:
+    type: 0
+    magnitude: 0
+  lights:
+  - localPosition: {x: 0, y: 0.2, z: 0}
+    color: {r: 1, g: 0.5, b: 0.42, a: 1}
+    intensity: 1.3
+    range: 2.6
+    spot: 0
+    spotAngle: 0
+    spotDirection: {x: 0, y: 0, z: 0}
+  purchaseCost: 0
+  references:
+    version: 2
+    RefIds: []

@@ -19,9 +19,16 @@ namespace GameLike.Data.Balance
         [SerializeField] private long advancedResearchWeeklyCost = 2_000;
 
         [Header("Geração de PP")]
-        [SerializeField] private int ppPerActiveResearchWeek = 2;
+        [Tooltip("PP por semana de DESENVOLVIMENTO de um jogo (adendo 23.5 — nunca com a empresa parada).")]
+        [SerializeField] private int ppPerDevelopmentWeek = 2;
         [SerializeField] private int ppPerGameLaunched = 5;
-        [SerializeField] private int ppPerManualStudyWeek = 3;
+        [Tooltip("PP ganho ao concluir uma pesquisa (adendo 23.5).")]
+        [SerializeField] private int ppPerResearchCompleted = 2;
+
+        [Header("Duração da Pesquisa (semanas)")]
+        [SerializeField] private int researchWeeksBasic = 2;
+        [SerializeField] private int researchWeeksIntermediate = 4;
+        [SerializeField] private int researchWeeksAdvanced = 8;
 
         public int BasicResearchCostPP => basicResearchCostPP;
         public int IntermediateResearchCostPP => intermediateResearchCostPP;
@@ -31,8 +38,12 @@ namespace GameLike.Data.Balance
         public long IntermediateResearchWeeklyCost => intermediateResearchWeeklyCost;
         public long AdvancedResearchWeeklyCost => advancedResearchWeeklyCost;
 
-        public int PpPerActiveResearchWeek => ppPerActiveResearchWeek;
+        public int PpPerDevelopmentWeek => ppPerDevelopmentWeek;
         public int PpPerGameLaunched => ppPerGameLaunched;
-        public int PpPerManualStudyWeek => ppPerManualStudyWeek;
+        public int PpPerResearchCompleted => ppPerResearchCompleted;
+
+        public int ResearchWeeksBasic => researchWeeksBasic;
+        public int ResearchWeeksIntermediate => researchWeeksIntermediate;
+        public int ResearchWeeksAdvanced => researchWeeksAdvanced;
     }
 }

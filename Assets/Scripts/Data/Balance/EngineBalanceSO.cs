@@ -30,6 +30,15 @@ namespace GameLike.Data.Balance
         [SerializeField] private int advancedEngineBudget = 1_200;
         [SerializeField] private int completeEngineBudget = 2_000;
 
+        /// <summary>EB de referência para o escopo dado (adendo 23.7).</summary>
+        public int ReferenceBudgetFor(GameLike.Data.Definitions.ProjectSize size) => size switch
+        {
+            GameLike.Data.Definitions.ProjectSize.Small => basicEngineBudget,
+            GameLike.Data.Definitions.ProjectSize.Medium => intermediateEngineBudget,
+            GameLike.Data.Definitions.ProjectSize.Large => advancedEngineBudget,
+            _ => completeEngineBudget
+        };
+
         public ModuleTierCost LightModule => lightModule;
         public ModuleTierCost MediumModule => mediumModule;
         public ModuleTierCost HeavyModule => heavyModule;

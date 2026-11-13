@@ -1,0 +1,42 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6654ce38bda6d1741a92f4968649c205, type: 3}
+  m_Name: workstation
+  m_EditorClassIdentifier: GameLike.Data::GameLike.Data.LevelBuilder.FurnitureDef3DSO
+  id: c84937327c5f4d0081492134b2aa6ed5
+  displayNamePt: 
+  displayName:
+    m_TableReference:
+      m_TableCollectionName: 
+    m_TableEntryReference:
+      m_KeyId: 0
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  editorName: "Esta\xE7\xE3o"
+  category: 0
+  prefab: {fileID: 919132149155446097, guid: c9014cd0f2adef049aa2a6fad9d44b0d, type: 3}
+  footprintInCells: {x: 2, y: 1}
+  rotatable: 1
+  isWallPiece: 0
+  placeableOnTop: 0
+  supportsItemsOnTop: 1
+  surfaceHeight: 0.765
+  effect:
+    type: 1
+    magnitude: 0.05
+  lights: []
+  purchaseCost: 0
+  references:
+    version: 2
+    RefIds: []

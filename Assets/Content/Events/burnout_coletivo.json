@@ -1,0 +1,14 @@
+{
+  "key": "burnout_coletivo",
+  "title": "Burnout Coletivo",
+  "body": "Após o crunch do último lançamento, metade da equipe está no limite.",
+  "category": "HumanResources",
+  "weight": 0.8,
+  "requiresActiveProject": false,
+  "options": [
+    { "text": "Ignorar.", "effects": [ { "type": "TeamBurnout", "amount": 0.1 }, { "type": "TeamMood", "amount": -0.15 } ] },
+    { "text": "Dar folga remunerada.", "effects": [ { "type": "Cash", "amount": -8000 }, { "type": "TeamBurnout", "amount": -0.3 }, { "type": "TeamMood", "amount": 0.15 } ] },
+    { "text": "Festa da empresa.", "effects": [ { "type": "Cash", "amount": -3000 }, { "type": "TeamMood", "amount": 0.2 } ] },
+    { "text": "[Liderança] Política anti-crunch permanente.", "requiredSkill": "Leadership", "effects": [ { "type": "TeamBurnout", "amount": -0.4 } ] }
+  ]
+}

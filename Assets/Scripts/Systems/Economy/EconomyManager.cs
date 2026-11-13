@@ -1,61 +1,74 @@
 using GameLike.Core.Events;
 using GameLike.Data.Balance;
+using GameLike.State;
 using UnityEngine;
 
 namespace GameLike.Systems.Economy
 {
     /// <summary>
-    /// Reference implementation of an event listener that also demonstrates
-    /// the balance-asset access pattern. Subscribes in OnEnable, unsubscribes
-    /// in OnDisable — the discipline that keeps the EventBus from leaking
-    /// handlers across scene loads or runs.
+    /// Autoridade sobre o caixa da empresa. Opera sobre o <see cref="CompanyState"/>
+    /// da run ativa (ligado via <see cref="Bind"/> pelo GameController), centraliza
+    /// toda mutação de saldo em <see cref="ApplyDelta"/> e anuncia o novo estado
+    /// com <see cref="MoneyChangedEvent"/> para que valuation, UI e outros reajam.
     ///
-    /// Reads salary values live from <see cref="EconomyBalanceSO"/> via
-    /// <see cref="BalanceProvider"/> on every tick — never cached into a
-    /// local field — so an Inspector edit to a salary takes effect on the
-    /// very next week tick, including mid-Play Mode.
-    ///
-    /// This is still a stub: the real implementation will aggregate actual
-    /// hired employees' salaries from the active run state (CompanyState,
-    /// to be added) instead of a single flat placeholder cost.
+    /// Custos recorrentes (salários/P&D) são cobrados pelos managers de domínio
+    /// (ex: <c>ProjectManager</c> cobra o custo de desenvolvimento por semana),
+    /// não aqui — este manager não decide "o que" cobrar, só aplica o delta.
     /// </summary>
     public sealed class EconomyManager : MonoBehaviour
     {
-        private long _balance;
+        private CompanyState _company;
 
-        private void OnEnable()
-        {
-            EventBus.Subscribe<WeekTickEvent>(OnWeekTick);
-        }
+        private void OnEnable() => EventBus.Subscribe<WeekTickEvent>(OnWeekTick);
+        private void OnDisable() => EventBus.Unsubscribe<WeekTickEvent>(OnWeekTick);
 
-        private void OnDisable()
-        {
-            EventBus.Unsubscribe<WeekTickEvent>(OnWeekTick);
-        }
+        /// <summary>Liga o manager ao estado da empresa da run ativa.</summary>
+        public void Bind(CompanyState company) => _company = company;
 
+        /// <summary>
+        /// Cobra o custo operacional fixo da semana (overhead por fase, GDD 2.3). A
+        /// folha salarial é cobrada pelo <c>StaffManager</c>; aqui é só o overhead.
+        /// Lê o valor do balanceamento a cada uso.
+        /// </summary>
         private void OnWeekTick(WeekTickEvent e)
         {
-            var balance = BalanceProvider.Get<EconomyBalanceSO>();
-            if (balance == null) return; // setup error already logged by the provider
+            if (_company == null) return;
+            _company.weeksElapsed++;
+            var economy = BalanceProvider.Get<EconomyBalanceSO>();
+            long operating = economy != null ? economy.WeeklyOperatingFor(_company.phase) : 0;
+            if (operating > 0) ApplyDelta(-operating, "Custo operacional");
+        }
 
-            // Placeholder: charges a single junior salary as a stand-in for
-            // "whatever the hired team currently costs". Replace once
-            // CompanyState tracks actual employees.
-            var weeklyCost = balance.JuniorWeeklySalary;
-            if (weeklyCost == 0) return;
+        /// <summary>Saldo atual (0 se nenhuma empresa estiver ligada).</summary>
+        public long Balance => _company?.cash ?? 0;
 
-            ApplyDelta(-weeklyCost, "Weekly operating cost (placeholder)");
+        /// <summary>
+        /// Quanto os custos estão mais caros (ou baratos) agora: inflação acumulada nas semanas
+        /// da run vezes o fator sorteado para esta run (GDD 23.12). 1 = custo base.
+        /// </summary>
+        public float CostMultiplier
+        {
+            get
+            {
+                if (_company == null) return 1f;
+                var tuning = BalanceProvider.Get<GameTuningBalanceSO>();
+                float inflation = tuning != null ? tuning.InflationFactor(_company.weeksElapsed) : 1f;
+                float variation = _company.costVariation > 0f ? _company.costVariation : 1f;
+                return inflation * variation;
+            }
         }
 
         /// <summary>
-        /// Single choke point for balance changes. Applies the delta and announces
-        /// the new state so valuation, UI and others can react.
+        /// Único choke point de mudança de saldo. Aplica o delta ao caixa da
+        /// empresa e anuncia o novo estado. Todo custo (delta negativo) passa pelo
+        /// <see cref="CostMultiplier"/>; receitas entram como vieram.
         /// </summary>
         public void ApplyDelta(long delta, string reason)
         {
-            _balance += delta;
-            EventBus.Publish(new MoneyChangedEvent(_balance, delta, reason));
+            if (_company == null) return;
+            if (delta < 0) delta = (long)System.Math.Round(delta * (double)CostMultiplier);
+            _company.cash += delta;
+            EventBus.Publish(new MoneyChangedEvent(_company.cash, delta, reason));
         }
     }
 }
-

@@ -28,8 +28,26 @@ namespace GameLike.Editor.Content
         private const string SourceFolder = "Assets/Content/Genres";
         private const string TargetFolder = "Assets/Data/Genres";
 
+        /// <summary>
+        /// Pasta de destino usada pelo vertical slice. O runtime do slice carrega
+        /// os gêneros via <c>Resources.LoadAll&lt;GenreSO&gt;("Genres")</c>, então
+        /// o import do slice grava aqui. No jogo completo os gêneros ficam em
+        /// <see cref="TargetFolder"/> e são referenciados por Inspector (sem Resources).
+        /// </summary>
+        private const string SliceResourcesFolder = "Assets/Resources/Genres";
+
         [MenuItem("Tools/GameLike/Import Content/Genres")]
-        public static void ImportGenres()
+        public static void ImportGenres() => Import(TargetFolder);
+
+        [MenuItem("Tools/GameLike/Import Content/Genres → Resources (slice)")]
+        public static void ImportGenresToResources() => Import(SliceResourcesFolder);
+
+        /// <summary>
+        /// Lê todos os JSONs de <see cref="SourceFolder"/> e cria/atualiza os
+        /// <see cref="GenreSO"/> em <paramref name="targetFolder"/>, casando pelo
+        /// campo <c>key</c> e preservando o Id de assets existentes.
+        /// </summary>
+        public static void Import(string targetFolder)
         {
             if (!Directory.Exists(SourceFolder))
             {
@@ -37,7 +55,7 @@ namespace GameLike.Editor.Content
                 return;
             }
 
-            EnsureFolderExists(TargetFolder);
+            EnsureFolderExists(targetFolder);
 
             var jsonFiles = Directory.GetFiles(SourceFolder, "*.json", SearchOption.TopDirectoryOnly);
             var created = 0;
@@ -46,6 +64,10 @@ namespace GameLike.Editor.Content
 
             foreach (var filePath in jsonFiles)
             {
+                // Arquivos "*.example.json" são modelos de referência, não conteúdo real.
+                if (filePath.EndsWith(".example.json", StringComparison.OrdinalIgnoreCase))
+                    continue;
+
                 try
                 {
                     var json = File.ReadAllText(filePath);
@@ -58,7 +80,7 @@ namespace GameLike.Editor.Content
                         continue;
                     }
 
-                    var assetPath = $"{TargetFolder}/{dto.key}.asset";
+                    var assetPath = $"{targetFolder}/{dto.key}.asset";
                     var existing = AssetDatabase.LoadAssetAtPath<GenreSO>(assetPath);
 
                     if (existing != null)
@@ -94,6 +116,10 @@ namespace GameLike.Editor.Content
 
             SetLocalizedStringPlaceholder(so, "displayName", dto.displayNamePtBr);
             SetLocalizedStringPlaceholder(so, "description", dto.descriptionPtBr);
+
+            // Nome amigável plano (a UI usa enquanto a ponte com o Localization Package não existe).
+            var displayNameProp = so.FindProperty("displayNamePt");
+            if (displayNameProp != null) displayNameProp.stringValue = dto.displayNamePtBr;
 
             SetWeights(so, "gameDesign", dto.gameDesign, dto.key);
             SetWeights(so, "narrative", dto.narrative, dto.key);

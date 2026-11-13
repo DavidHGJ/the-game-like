@@ -1,0 +1,12 @@
+{
+    "key":  "nintendu",
+    "displayNamePtBr":  "Nintendu",
+    "descriptionPtBr":  "Sucessor de popularidade muito alta. Paródia do SNES.",
+    "manufacturer":  "Nintendu",
+    "category":  "Console",
+    "releaseYear":  18,
+    "licenseCost":  28000,
+    "initialPopularity":  0.52,
+    "peakPopularity":  0.92,
+    "lifespanYears":  9
+}

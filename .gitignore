@@ -39,3 +39,9 @@ Thumbs.db
 # Crashlytics / Asset Store
 crashlytics-build.properties
 /[Aa]ssets/[Aa]sset[Ss]tore[Tt]ools*
+
+# Fora do repositório público (decisão provisória de 2026-11-13 — ver AUTONOMOUS_BUILD.md)
+GDD_*.txt
+DEV_LOG_GDD.md
+References/
+_Descartados/

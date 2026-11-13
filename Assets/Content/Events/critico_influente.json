@@ -1,0 +1,13 @@
+{
+  "key": "critico_influente",
+  "title": "Crítico Influente",
+  "body": "Um crítico famoso oferece review positiva garantida em troca de uma consultoria paga.",
+  "category": "EthicalDilemma",
+  "weight": 0.6,
+  "requiresActiveProject": true,
+  "options": [
+    { "text": "Recusar — review honesta.", "effects": [ { "type": "Reputation", "amount": 0.04 } ] },
+    { "text": "Aceitar — review 9/10 garantida.", "effects": [ { "type": "Cash", "amount": -10000 }, { "type": "Hype", "amount": 0.18 }, { "type": "Reputation", "amount": -0.1 } ] },
+    { "text": "[Carisma] Convidá-lo para um tour exclusivo do estúdio.", "requiredSkill": "Charisma", "effects": [ { "type": "Hype", "amount": 0.12 }, { "type": "Reputation", "amount": 0.03 } ] }
+  ]
+}

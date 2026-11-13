@@ -1,0 +1,14 @@
+{
+  "key": "vazamento_de_codigo",
+  "title": "Vazamento de Código",
+  "body": "Código-fonte parcial do seu próximo jogo foi vazado online.",
+  "category": "OperationalCrisis",
+  "weight": 0.7,
+  "requiresActiveProject": true,
+  "options": [
+    { "text": "Ignorar.", "effects": [ { "type": "Hype", "amount": -0.12 } ] },
+    { "text": "Comunicado negando.", "effects": [ { "type": "Reputation", "amount": -0.04 }, { "type": "Hype", "amount": -0.05 } ] },
+    { "text": "Abraçar com humor.", "effects": [ { "type": "Hype", "amount": 0.15 }, { "type": "Reputation", "amount": 0.03 } ] },
+    { "text": "[Carisma] Transformar em ARG/campanha de marketing.", "requiredSkill": "Charisma", "effects": [ { "type": "Hype", "amount": 0.3 } ] }
+  ]
+}

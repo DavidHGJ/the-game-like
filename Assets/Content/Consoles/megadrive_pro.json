@@ -1,0 +1,12 @@
+{
+    "key":  "megadrive_pro",
+    "displayNamePtBr":  "MegaDrive Pro",
+    "descriptionPtBr":  "Console de segunda geração. Média a alta, com declínio após o crash do mercado. Paródia do Atari 2600.",
+    "manufacturer":  "Patari",
+    "category":  "Console",
+    "releaseYear":  5,
+    "licenseCost":  8000,
+    "initialPopularity":  0.3,
+    "peakPopularity":  0.62,
+    "lifespanYears":  9
+}

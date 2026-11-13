@@ -1,0 +1,46 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e8c5ebafe2b39014c86e99f44d66b9d0, type: 3}
+  m_Name: vazamento_de_codigo
+  m_EditorClassIdentifier: GameLike.Data::GameLike.Data.Definitions.NarrativeEventSO
+  id: 7e805e4904bd42cfb14caf09296613ca
+  displayNamePt: 
+  title: "Vazamento de C\xF3digo"
+  body: "C\xF3digo-fonte parcial do seu pr\xF3ximo jogo foi vazado online."
+  category: 1
+  weight: 0.7
+  requiresActiveProject: 1
+  options:
+  - text: Ignorar.
+    requiredSkill: 0
+    effects:
+    - type: 2
+      amount: -0.12
+  - text: Comunicado negando.
+    requiredSkill: 0
+    effects:
+    - type: 1
+      amount: -0.04
+    - type: 2
+      amount: -0.05
+  - text: "Abra\xE7ar com humor."
+    requiredSkill: 0
+    effects:
+    - type: 2
+      amount: 0.15
+    - type: 1
+      amount: 0.03
+  - text: '[Carisma] Transformar em ARG/campanha de marketing.'
+    requiredSkill: 5
+    effects:
+    - type: 2
+      amount: 0.3

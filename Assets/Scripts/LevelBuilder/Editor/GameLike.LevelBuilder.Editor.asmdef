@@ -1,0 +1,21 @@
+{
+    "name": "GameLike.LevelBuilder.Editor",
+    "rootNamespace": "GameLike.LevelBuilder.Editor",
+    "references": [
+        "GameLike.Core",
+        "GameLike.Events",
+        "GameLike.Data",
+        "GameLike.LevelBuilder"
+    ],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

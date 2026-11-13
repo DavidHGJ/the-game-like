@@ -1,0 +1,14 @@
+{
+  "key": "a_grande_entrevista",
+  "title": "A Grande Entrevista",
+  "body": "Um jornalista famoso te pergunta ao vivo: seu próximo jogo vai competir com os gigantes do mercado?",
+  "category": "PublicStatement",
+  "weight": 1.0,
+  "requiresActiveProject": false,
+  "options": [
+    { "text": "Com certeza, vamos dominar o mercado!", "effects": [ { "type": "Hype", "amount": 0.2 }, { "type": "Reputation", "amount": -0.04 } ] },
+    { "text": "Estamos focados em fazer algo especial.", "effects": [ { "type": "Reputation", "amount": 0.06 }, { "type": "Hype", "amount": 0.08 } ] },
+    { "text": "Sem comentários.", "effects": [ { "type": "Reputation", "amount": -0.06 } ] },
+    { "text": "[Carisma] Deixa o jogo falar por si — mas vai surpreender.", "requiredSkill": "Charisma", "effects": [ { "type": "Hype", "amount": 0.25 }, { "type": "Reputation", "amount": 0.08 } ] }
+  ]
+}

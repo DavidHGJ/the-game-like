@@ -1,0 +1,40 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e8c5ebafe2b39014c86e99f44d66b9d0, type: 3}
+  m_Name: informacao_privilegiada
+  m_EditorClassIdentifier: GameLike.Data::GameLike.Data.Definitions.NarrativeEventSO
+  id: c5dc3221888b4ca385fd4cee04250ea4
+  displayNamePt: 
+  title: "Informa\xE7\xE3o Privilegiada"
+  body: "Um ex-funcion\xE1rio de um rival te oferece informa\xE7\xF5es sobre o jogo
+    deles em desenvolvimento."
+  category: 2
+  weight: 0.6
+  requiresActiveProject: 0
+  options:
+  - text: Recusar.
+    requiredSkill: 0
+    effects:
+    - type: 1
+      amount: 0.02
+  - text: Aceitar.
+    requiredSkill: 0
+    effects:
+    - type: 0
+      amount: 5000
+    - type: 1
+      amount: -0.08
+  - text: "[Networking] Recrutar o funcion\xE1rio em vez de comprar a informa\xE7\xE3o."
+    requiredSkill: 6
+    effects:
+    - type: 1
+      amount: 0.05

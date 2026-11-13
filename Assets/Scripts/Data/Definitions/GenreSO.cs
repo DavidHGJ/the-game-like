@@ -72,5 +72,30 @@ namespace GameLike.Data.Definitions
         public ParameterWeightBySize Content => content;
         public ParameterWeightBySize ImplementedNarrative => implementedNarrative;
         public ParameterWeightBySize Balancing => balancing;
+
+        /// <summary>Peso do gênero para um parâmetro e escopo (GDD 18.5).</summary>
+        public WeightLevel WeightFor(GameParameter parameter, ProjectSize size) => parameter switch
+        {
+            GameParameter.GameDesign => gameDesign.ForSize(size),
+            GameParameter.Narrative => narrative.ForSize(size),
+            GameParameter.ArtDirection => artDirection.ForSize(size),
+            GameParameter.GameFeel => gameFeel.ForSize(size),
+            GameParameter.Scope => scope.ForSize(size),
+            GameParameter.Graphics => graphics.ForSize(size),
+            GameParameter.Animation => animation.ForSize(size),
+            GameParameter.UserInterface => userInterface.ForSize(size),
+            GameParameter.Vfx => vfx.ForSize(size),
+            GameParameter.Soundtrack => soundtrack.ForSize(size),
+            GameParameter.SoundDesign => soundDesign.ForSize(size),
+            GameParameter.VoiceActing => voiceActing.ForSize(size),
+            GameParameter.Programming => programming.ForSize(size),
+            GameParameter.PerformanceOptimization => performanceOptimization.ForSize(size),
+            GameParameter.StabilityTesting => stabilityTesting.ForSize(size),
+            GameParameter.Gameplay => gameplay.ForSize(size),
+            GameParameter.Content => content.ForSize(size),
+            GameParameter.ImplementedNarrative => implementedNarrative.ForSize(size),
+            GameParameter.Balancing => balancing.ForSize(size),
+            _ => WeightLevel.Neutral
+        };
     }
 }

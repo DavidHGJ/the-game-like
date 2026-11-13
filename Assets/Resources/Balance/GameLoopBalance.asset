@@ -1,0 +1,32 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 172cb49b4d3c19c4b85e307a67c87515, type: 3}
+  m_Name: GameLoopBalance
+  m_EditorClassIdentifier: GameLike.Data::GameLike.Data.Balance.GameLoopBalanceSO
+  startingCash: 50000
+  smallWeeks: 8
+  mediumWeeks: 14
+  largeWeeks: 22
+  aaaWeeks: 34
+  smallTeam: 1
+  mediumTeam: 2
+  largeTeam: 4
+  aaaTeam: 8
+  smallBaseUnits: 20000
+  mediumBaseUnits: 90000
+  largeBaseUnits: 300000
+  aaaBaseUnits: 1200000
+  smallPrice: 15
+  mediumPrice: 20
+  largePrice: 40
+  aaaPrice: 60
+  salesScoreExponent: 2.4

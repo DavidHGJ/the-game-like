@@ -1,0 +1,12 @@
+{
+    "key":  "xstation_one",
+    "displayNamePtBr":  "XStation One",
+    "descriptionPtBr":  "Console de alta popularidade na geração seguinte. Paródia do Xbox One.",
+    "manufacturer":  "Macrosoft",
+    "category":  "Console",
+    "releaseYear":  41,
+    "licenseCost":  38000,
+    "initialPopularity":  0.5,
+    "peakPopularity":  0.8,
+    "lifespanYears":  9
+}

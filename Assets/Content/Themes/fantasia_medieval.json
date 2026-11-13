@@ -1,0 +1,16 @@
+{
+  "key": "fantasia_medieval",
+  "displayNamePtBr": "Fantasia Medieval",
+  "descriptionPtBr": "Mundo inspirado na Idade Média europeia com magia, dragões, castelos e classes clássicas. O tema mais estabelecido do RPG e da estratégia.",
+  "category": "FictionFantasy",
+  "compatibilities": [
+    { "genre": "platformer", "weight": "++" },
+    { "genre": "rpg", "weight": "+++" },
+    { "genre": "action_rpg", "weight": "+++" },
+    { "genre": "strategy", "weight": "++" },
+    { "genre": "simulation", "weight": "+" },
+    { "genre": "horror", "weight": "+" },
+    { "genre": "puzzle", "weight": "~" },
+    { "genre": "shooter", "weight": "-" }
+  ]
+}

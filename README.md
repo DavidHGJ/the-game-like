@@ -38,7 +38,8 @@ Cada pasta tem seu próprio `.asmdef`. A regra de dependência é estritamente d
 
 ## Checklist de configuração inicial (uma vez, ao criar o projeto)
 
-- [ ] **Template:** 2D (URP) no Unity Hub
+- [ ] **Template:** 3D (URP) no Unity Hub — *migrado de 2D em 2026-10-31; ver `ART_STYLE.md`. O jogo usa câmera ortográfica em ângulo isométrico sobre cena 3D low-poly.*
+- [ ] **Universal Renderer:** garantir que o renderer do URP é o **Universal Renderer (3D)**, não o 2D Renderer. `Assets/Settings/` → o asset de renderer referenciado pelo `UniversalRenderPipelineAsset`.
 - [ ] **Input System:** Edit → Project Settings → Player → Active Input Handling → **Input System Package (New)**. Instale o pacote via Package Manager (`com.unity.inputsystem`) se ainda não vier com o template.
 - [ ] **UI Toolkit:** geralmente já vem habilitado nos templates recentes do Unity 6. Confirme em Package Manager que `com.unity.modules.uielements` está presente.
 - [ ] **Player Settings → Company Name:** `PlaceholderStudio` *(placeholder — ver aviso abaixo)*
@@ -55,7 +56,8 @@ Três camadas: **Definição** (ScriptableObjects imutáveis) + **Estado** (clas
 
 - **`CLAUDE.md`** — arquitetura completa, padrões e convenções. Leitura obrigatória para qualquer um (humano ou IA) que for codar.
 - **`agents.md`** — roadmap de implementação, ordem de dependência e tarefas delegáveis.
-- **GDD v1.0** — design completo do jogo (documento separado, fonte da verdade das regras).
+- **GDD v1.1** — design completo do jogo (documento separado, fonte da verdade das regras).
+- **`OVERNIGHT_LOG.md`** — log de uma sessão de trabalho autônoma (pivô 2D→3D + vertical slice jogável): o que foi feito, decisões provisórias assumidas, dúvidas guardadas e passos manuais de setup no Unity.
 
 ## Testar o EventBus rapidamente
 

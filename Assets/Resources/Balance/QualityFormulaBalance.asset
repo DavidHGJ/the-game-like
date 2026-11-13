@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 091097c66da279846bd0b6f2a909f16e, type: 3}
+  m_Name: QualityFormulaBalance
+  m_EditorClassIdentifier: GameLike.Data::GameLike.Data.Balance.QualityFormulaBalanceSO
+  sliderProfileWeight: 0.4
+  themeGenreCompatibilityWeight: 0.2
+  teamLevelWeight: 0.15
+  engineBudgetUsageWeight: 0.1
+  marketTrendWeight: 0.1
+  developmentEventsWeight: 0.05
+  weakHypeUpperBound: 20
+  mediumHypeUpperBound: 50
+  goodHypeUpperBound: 80
+  salesPer100Wishlists: 80

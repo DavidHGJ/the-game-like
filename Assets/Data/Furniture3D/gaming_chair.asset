@@ -1,0 +1,42 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6654ce38bda6d1741a92f4968649c205, type: 3}
+  m_Name: gaming_chair
+  m_EditorClassIdentifier: GameLike.Data::GameLike.Data.LevelBuilder.FurnitureDef3DSO
+  id: 6076d636e65e4beba3ff4fa5f06a8d04
+  displayNamePt: 
+  displayName:
+    m_TableReference:
+      m_TableCollectionName: 
+    m_TableEntryReference:
+      m_KeyId: 0
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  editorName: Cadeira gamer
+  category: 1
+  prefab: {fileID: 919132149155446097, guid: 5efd3f726e6ac3a47be4bb3ecb218a65, type: 3}
+  footprintInCells: {x: 1, y: 1}
+  rotatable: 1
+  isWallPiece: 0
+  placeableOnTop: 0
+  supportsItemsOnTop: 0
+  surfaceHeight: 0.58
+  effect:
+    type: 1
+    magnitude: 0.04
+  lights: []
+  purchaseCost: 0
+  references:
+    version: 2
+    RefIds: []

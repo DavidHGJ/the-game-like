@@ -20,8 +20,35 @@ namespace GameLike.Data.Base
         [SerializeField, HideInInspector]
         private string id;
 
+        [SerializeField, Tooltip("Nome amigável pt-BR mostrado ao jogador (ex: \"Action RPG\"). " +
+            "Preenchido pelo importer a partir de displayNamePtBr. Enquanto a ponte com o " +
+            "Localization Package não existe, a UI usa este campo em vez do slug cru.")]
+        private string displayNamePt;
+
         /// <summary>Stable unique identifier. Never changes after creation.</summary>
         public string Id => id;
+
+        /// <summary>Nome amigável pt-BR (pode estar vazio em assets antigos).</summary>
+        public string DisplayNamePt => displayNamePt;
+
+        /// <summary>
+        /// Rótulo pronto para a UI: usa <see cref="DisplayNamePt"/> quando preenchido,
+        /// senão deriva do nome do asset (slug) deixando-o legível. Nunca mostra o slug cru.
+        /// </summary>
+        public string DisplayLabel =>
+            string.IsNullOrWhiteSpace(displayNamePt) ? Prettify(name) : displayNamePt;
+
+        private static string Prettify(string slug)
+        {
+            if (string.IsNullOrEmpty(slug)) return slug;
+            var parts = slug.Replace('_', ' ').Replace('-', ' ').Split(' ');
+            for (int i = 0; i < parts.Length; i++)
+            {
+                if (parts[i].Length == 0) continue;
+                parts[i] = char.ToUpperInvariant(parts[i][0]) + parts[i].Substring(1);
+            }
+            return string.Join(" ", parts);
+        }
 
         /// <summary>
         /// Assigns the Id exactly once. Intended to be called only by editor

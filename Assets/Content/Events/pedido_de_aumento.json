@@ -1,0 +1,14 @@
+{
+  "key": "pedido_de_aumento",
+  "title": "Pedido de Aumento",
+  "body": "Seu melhor programador pede aumento de 40%. Sem isso, ele vai embora.",
+  "category": "HumanResources",
+  "weight": 0.7,
+  "requiresActiveProject": false,
+  "options": [
+    { "text": "Aceitar.", "effects": [ { "type": "Cash", "amount": -4000 }, { "type": "TeamMood", "amount": 0.15 } ] },
+    { "text": "Negociar (20%).", "effects": [ { "type": "Cash", "amount": -2000 }, { "type": "TeamMood", "amount": 0.05 } ] },
+    { "text": "Recusar.", "effects": [ { "type": "TeamMood", "amount": -0.1 }, { "type": "TeamBurnout", "amount": 0.05 } ] },
+    { "text": "[Liderança] Oferecer equity simbólica.", "requiredSkill": "Leadership", "effects": [ { "type": "TeamMood", "amount": 0.18 } ] }
+  ]
+}

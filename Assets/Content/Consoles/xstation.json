@@ -1,0 +1,12 @@
+{
+    "key":  "xstation",
+    "displayNamePtBr":  "XStation",
+    "descriptionPtBr":  "Entrada de uma nova fabricante, popularidade média. Paródia do Xbox original.",
+    "manufacturer":  "Macrosoft",
+    "category":  "Console",
+    "releaseYear":  29,
+    "licenseCost":  12000,
+    "initialPopularity":  0.3,
+    "peakPopularity":  0.6,
+    "lifespanYears":  9
+}

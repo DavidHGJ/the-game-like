@@ -1,0 +1,12 @@
+{
+    "key":  "visorx",
+    "displayNamePtBr":  "VisorX",
+    "descriptionPtBr":  "Nicho crescente de realidade virtual, popularidade média. Paródia do Meta Quest / PSVR.",
+    "manufacturer":  "Suny / Meta-like",
+    "category":  "VR",
+    "releaseYear":  48,
+    "licenseCost":  20000,
+    "initialPopularity":  0.2,
+    "peakPopularity":  0.52,
+    "lifespanYears":  12
+}

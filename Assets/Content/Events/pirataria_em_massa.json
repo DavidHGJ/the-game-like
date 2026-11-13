@@ -1,0 +1,13 @@
+{
+  "key": "pirataria_em_massa",
+  "title": "Pirataria em Massa",
+  "body": "Seu jogo foi crackeado. Estimativa: 50 mil downloads piratas.",
+  "category": "OperationalCrisis",
+  "weight": 0.7,
+  "requiresActiveProject": false,
+  "options": [
+    { "text": "Ignorar.", "effects": [ { "type": "Reputation", "amount": 0.03 } ] },
+    { "text": "Processar os distribuidores.", "effects": [ { "type": "Cash", "amount": -15000 }, { "type": "Reputation", "amount": -0.05 } ] },
+    { "text": "Lançar DLC exclusivo para compradores legítimos.", "effects": [ { "type": "Cash", "amount": 8000 }, { "type": "Reputation", "amount": 0.04 } ] }
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "key": "cyberpunk",
+  "displayNamePtBr": "Cyberpunk",
+  "descriptionPtBr": "Futuro distópico com alta tecnologia e baixa qualidade de vida. Megacorporações, implantes, neon e submundo urbano.",
+  "category": "FictionFantasy",
+  "compatibilities": [
+    { "genre": "platformer", "weight": "+" },
+    { "genre": "rpg", "weight": "++" },
+    { "genre": "action_rpg", "weight": "++" },
+    { "genre": "shooter", "weight": "++" },
+    { "genre": "horror", "weight": "++" },
+    { "genre": "strategy", "weight": "+" },
+    { "genre": "simulation", "weight": "+" },
+    { "genre": "puzzle", "weight": "~" }
+  ]
+}

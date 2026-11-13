@@ -1,0 +1,12 @@
+{
+    "key":  "pc",
+    "displayNamePtBr":  "PC",
+    "descriptionPtBr":  "O computador pessoal. Sempre disponível para pesquisa; ganha tração enorme com a distribuição digital (Boom Digital, ~Ano 31).",
+    "manufacturer":  "Compatíveis / Steambox",
+    "category":  "PC",
+    "releaseYear":  1,
+    "licenseCost":  5000,
+    "initialPopularity":  0.3,
+    "peakPopularity":  0.75,
+    "lifespanYears":  55
+}

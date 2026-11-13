@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 06893c11df4f1fd4aad7746e2c25bed5, type: 3}
+  m_Name: LegacyProgressionBalance
+  m_EditorClassIdentifier: GameLike.Data::GameLike.Data.Balance.LegacyProgressionBalanceSO
+  plForReachingIndie: 5
+  plForReachingOffice: 15
+  plForReachingStudio: 30
+  plPerGameAboveScoreSeven: 2
+  plForFranchiseWithThreeOrMoreGames: 10
+  plForRunWithoutMajorCrisis: 5
+  plForValuationAboveOneMillion: 5
+  plForValuationAboveTenMillion: 15
+  incrementalNodeFirstCost: 10000
+  incrementalNodeCostMultiplier: 2
+  uniqueNodeMinCostPL: 5
+  uniqueNodeMaxCostPL: 25
+  legacyResetCost: 50000

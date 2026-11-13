@@ -1,0 +1,12 @@
+{
+    "key":  "playbox",
+    "displayNamePtBr":  "PlayBox",
+    "descriptionPtBr":  "Concorrente de alta popularidade. Paródia do Mega Drive / Genesis.",
+    "manufacturer":  "Sega-like",
+    "category":  "Console",
+    "releaseYear":  19,
+    "licenseCost":  15000,
+    "initialPopularity":  0.45,
+    "peakPopularity":  0.75,
+    "lifespanYears":  8
+}

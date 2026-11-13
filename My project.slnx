@@ -1,2 +1,14 @@
 ﻿<Solution>
+  <Project Path="GameLike.Data.csproj" />
+  <Project Path="GameLike.Core.csproj" />
+  <Project Path="GameLike.Systems.csproj" />
+  <Project Path="GameLike.State.csproj" />
+  <Project Path="GameLike.UI.csproj" />
+  <Project Path="GameLike.LevelBuilder.csproj" />
+  <Project Path="GameLike.Tests.EditMode.csproj" />
+  <Project Path="GameLike.Editor.csproj" />
+  <Project Path="GameLike.Events.csproj" />
+  <Project Path="GameLike.LevelBuilder.Editor.csproj" />
+  <Project Path="GameLike.Tests.PlayMode.csproj" />
+  <Project Path="GameLike.LevelBuilder.Tests.csproj" />
 </Solution>

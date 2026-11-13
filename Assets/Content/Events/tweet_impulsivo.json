@@ -1,0 +1,13 @@
+{
+  "key": "tweet_impulsivo",
+  "title": "Tweet Impulsivo",
+  "body": "Você acorda às 3h e posta: jogos AAA são todos iguais e sem alma.",
+  "category": "PublicStatement",
+  "weight": 0.8,
+  "requiresActiveProject": false,
+  "options": [
+    { "text": "Deixar no ar.", "effects": [ { "type": "Hype", "amount": 0.12 }, { "type": "Reputation", "amount": -0.05 } ] },
+    { "text": "Deletar rapidamente.", "effects": [ { "type": "Reputation", "amount": -0.03 } ] },
+    { "text": "[Carisma] Transformar em campanha \"Nós Fazemos Diferente\".", "requiredSkill": "Charisma", "effects": [ { "type": "Hype", "amount": 0.2 }, { "type": "Reputation", "amount": 0.07 } ] }
+  ]
+}

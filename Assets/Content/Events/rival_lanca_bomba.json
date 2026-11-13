@@ -1,0 +1,13 @@
+{
+  "key": "rival_lanca_bomba",
+  "title": "Rival Lança Jogo Bomba",
+  "body": "Um rival lançou um jogo dominando o mercado e saturando seu gênero.",
+  "category": "Market",
+  "weight": 0.6,
+  "requiresActiveProject": true,
+  "options": [
+    { "text": "Acelerar lançamento (mais bugs).", "effects": [ { "type": "Hype", "amount": 0.08 } ] },
+    { "text": "Atrasar e diferenciar.", "effects": [ { "type": "Hype", "amount": -0.05 }, { "type": "ThemeTrend", "amount": 0.08 } ] },
+    { "text": "Pivotar marketing para destacar diferenças.", "effects": [ { "type": "Hype", "amount": 0.12 } ] }
+  ]
+}

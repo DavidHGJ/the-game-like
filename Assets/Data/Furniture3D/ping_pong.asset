@@ -1,0 +1,42 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6654ce38bda6d1741a92f4968649c205, type: 3}
+  m_Name: ping_pong
+  m_EditorClassIdentifier: GameLike.Data::GameLike.Data.LevelBuilder.FurnitureDef3DSO
+  id: bfdc6d4fc035436cb117b0f8acdc85c2
+  displayNamePt: 
+  displayName:
+    m_TableReference:
+      m_TableCollectionName: 
+    m_TableEntryReference:
+      m_KeyId: 0
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  editorName: Pingue-pongue
+  category: 3
+  prefab: {fileID: 919132149155446097, guid: cee89c0bf7d93fe47abf775851246d06, type: 3}
+  footprintInCells: {x: 3, y: 2}
+  rotatable: 1
+  isWallPiece: 0
+  placeableOnTop: 0
+  supportsItemsOnTop: 1
+  surfaceHeight: 0.785
+  effect:
+    type: 0
+    magnitude: 0
+  lights: []
+  purchaseCost: 0
+  references:
+    version: 2
+    RefIds: []

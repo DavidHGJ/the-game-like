@@ -1,0 +1,12 @@
+{
+    "key":  "playpocket",
+    "displayNamePtBr":  "PlayPocket",
+    "descriptionPtBr":  "Portátil de popularidade alta e duradoura. Paródia do Game Boy.",
+    "manufacturer":  "Nintendu",
+    "category":  "Handheld",
+    "releaseYear":  17,
+    "licenseCost":  18000,
+    "initialPopularity":  0.45,
+    "peakPopularity":  0.8,
+    "lifespanYears":  13
+}

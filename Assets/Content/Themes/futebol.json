@@ -1,0 +1,16 @@
+{
+  "key": "futebol",
+  "displayNamePtBr": "Futebol",
+  "descriptionPtBr": "O esporte mais popular do mundo. Partidas, ligas, transferências e gestão de clubes.",
+  "category": "SportsVehicles",
+  "compatibilities": [
+    { "genre": "platformer", "weight": "--" },
+    { "genre": "rpg", "weight": "--" },
+    { "genre": "simulation", "weight": "++" },
+    { "genre": "strategy", "weight": "+" },
+    { "genre": "action_rpg", "weight": "~" },
+    { "genre": "puzzle", "weight": "-" },
+    { "genre": "shooter", "weight": "-" },
+    { "genre": "horror", "weight": "--" }
+  ]
+}

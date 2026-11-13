@@ -1,0 +1,12 @@
+{
+    "key":  "nintendu_64",
+    "displayNamePtBr":  "Nintendu 64",
+    "descriptionPtBr":  "Console de alta popularidade da mesma geração. Paródia do Nintendo 64.",
+    "manufacturer":  "Nintendu",
+    "category":  "Console",
+    "releaseYear":  22,
+    "licenseCost":  14000,
+    "initialPopularity":  0.45,
+    "peakPopularity":  0.76,
+    "lifespanYears":  8
+}

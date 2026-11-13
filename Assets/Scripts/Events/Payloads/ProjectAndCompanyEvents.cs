@@ -85,6 +85,7 @@ namespace GameLike.Core.Events
     public enum SaleType
     {
         IPO,
-        RivalAcquisition
+        RivalAcquisition,
+        MarketSale
     }
 }

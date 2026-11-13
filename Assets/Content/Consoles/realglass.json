@@ -1,0 +1,12 @@
+{
+    "key":  "realglass",
+    "displayNamePtBr":  "RealGlass",
+    "descriptionPtBr":  "Nicho premium de popularidade baixa-média. Paródia do Apple Vision Pro.",
+    "manufacturer":  "Maçã",
+    "category":  "VR",
+    "releaseYear":  51,
+    "licenseCost":  35000,
+    "initialPopularity":  0.15,
+    "peakPopularity":  0.42,
+    "lifespanYears":  12
+}

@@ -1,0 +1,12 @@
+{
+    "key":  "playbox_4",
+    "displayNamePtBr":  "PlayBox 4",
+    "descriptionPtBr":  "Console de alta popularidade. Paródia do PlayStation 3.",
+    "manufacturer":  "Suny",
+    "category":  "Console",
+    "releaseYear":  34,
+    "licenseCost":  45000,
+    "initialPopularity":  0.5,
+    "peakPopularity":  0.86,
+    "lifespanYears":  10
+}

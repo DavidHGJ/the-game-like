@@ -1,0 +1,41 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e8c5ebafe2b39014c86e99f44d66b9d0, type: 3}
+  m_Name: tweet_impulsivo
+  m_EditorClassIdentifier: GameLike.Data::GameLike.Data.Definitions.NarrativeEventSO
+  id: 7ef51d63ed904d0a8070e0c4628c6f39
+  displayNamePt: 
+  title: Tweet Impulsivo
+  body: "Voc\xEA acorda \xE0s 3h e posta: jogos AAA s\xE3o todos iguais e sem alma."
+  category: 0
+  weight: 0.8
+  requiresActiveProject: 0
+  options:
+  - text: Deixar no ar.
+    requiredSkill: 0
+    effects:
+    - type: 2
+      amount: 0.12
+    - type: 1
+      amount: -0.05
+  - text: Deletar rapidamente.
+    requiredSkill: 0
+    effects:
+    - type: 1
+      amount: -0.03
+  - text: "[Carisma] Transformar em campanha \"N\xF3s Fazemos Diferente\"."
+    requiredSkill: 5
+    effects:
+    - type: 2
+      amount: 0.2
+    - type: 1
+      amount: 0.07

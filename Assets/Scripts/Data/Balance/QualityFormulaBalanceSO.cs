@@ -20,6 +20,14 @@ namespace GameLike.Data.Balance
         [Range(0f, 1f)] [SerializeField] private float marketTrendWeight = 0.10f;
         [Range(0f, 1f)] [SerializeField] private float developmentEventsWeight = 0.05f;
 
+        [Header("Valores neutros 0–10 p/ componentes sem sistema ainda (provisório, GDD 19.7)")]
+        [Tooltip("Enquanto Temas, Engine/EB, Mercado e Eventos não existem, esses componentes " +
+                 "da fórmula retornam este valor neutro. Substituir pelos sistemas reais depois.")]
+        [Range(0f, 10f)] [SerializeField] private float neutralThemeGenreScore = 6f;
+        [Range(0f, 10f)] [SerializeField] private float neutralEngineBudgetScore = 6f;
+        [Range(0f, 10f)] [SerializeField] private float neutralMarketTrendScore = 6f;
+        [Range(0f, 10f)] [SerializeField] private float neutralDevelopmentEventsScore = 6f;
+
         [Header("Conversão de Hype em Vendas (GDD 19.6)")]
         [SerializeField] private int weakHypeUpperBound = 20;
         [SerializeField] private int mediumHypeUpperBound = 50;
@@ -33,6 +41,11 @@ namespace GameLike.Data.Balance
         public float EngineBudgetUsageWeight => engineBudgetUsageWeight;
         public float MarketTrendWeight => marketTrendWeight;
         public float DevelopmentEventsWeight => developmentEventsWeight;
+
+        public float NeutralThemeGenreScore => neutralThemeGenreScore;
+        public float NeutralEngineBudgetScore => neutralEngineBudgetScore;
+        public float NeutralMarketTrendScore => neutralMarketTrendScore;
+        public float NeutralDevelopmentEventsScore => neutralDevelopmentEventsScore;
 
         public int WeakHypeUpperBound => weakHypeUpperBound;
         public int MediumHypeUpperBound => mediumHypeUpperBound;

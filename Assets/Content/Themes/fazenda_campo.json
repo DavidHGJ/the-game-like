@@ -1,0 +1,16 @@
+{
+  "key": "fazenda_campo",
+  "displayNamePtBr": "Fazenda / Campo",
+  "descriptionPtBr": "Vida rural com plantio, colheita, criação de animais e comunidade local. Popular no casual e simulação.",
+  "category": "LifestyleDaily",
+  "compatibilities": [
+    { "genre": "platformer", "weight": "~" },
+    { "genre": "rpg", "weight": "+" },
+    { "genre": "simulation", "weight": "+++" },
+    { "genre": "puzzle", "weight": "+" },
+    { "genre": "strategy", "weight": "+" },
+    { "genre": "action_rpg", "weight": "~" },
+    { "genre": "shooter", "weight": "--" },
+    { "genre": "horror", "weight": "--" }
+  ]
+}

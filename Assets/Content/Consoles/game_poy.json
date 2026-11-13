@@ -1,0 +1,12 @@
+{
+    "key":  "game_poy",
+    "displayNamePtBr":  "Game Poy",
+    "descriptionPtBr":  "O primeiro console doméstico. Popularidade baixa que cresce para média. Paródia do Atari Pong.",
+    "manufacturer":  "Patari",
+    "category":  "Console",
+    "releaseYear":  3,
+    "licenseCost":  3000,
+    "initialPopularity":  0.12,
+    "peakPopularity":  0.45,
+    "lifespanYears":  9
+}

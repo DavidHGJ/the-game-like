@@ -1,0 +1,16 @@
+{
+  "key": "espaco_sideral",
+  "displayNamePtBr": "Espaço Sideral",
+  "descriptionPtBr": "Exploração do cosmos com planetas alienígenas, asteroides e o vazio entre estrelas.",
+  "category": "NatureExploration",
+  "compatibilities": [
+    { "genre": "platformer", "weight": "+" },
+    { "genre": "rpg", "weight": "++" },
+    { "genre": "shooter", "weight": "++" },
+    { "genre": "strategy", "weight": "++" },
+    { "genre": "action_rpg", "weight": "+" },
+    { "genre": "simulation", "weight": "+" },
+    { "genre": "horror", "weight": "+" },
+    { "genre": "puzzle", "weight": "~" }
+  ]
+}

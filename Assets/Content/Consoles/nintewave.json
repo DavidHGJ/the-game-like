@@ -1,0 +1,12 @@
+{
+    "key":  "nintewave",
+    "displayNamePtBr":  "NinteWave",
+    "descriptionPtBr":  "Boom casual, popularidade muito alta. Paródia do Nintendo Wii.",
+    "manufacturer":  "Nintendu",
+    "category":  "Console",
+    "releaseYear":  34,
+    "licenseCost":  28000,
+    "initialPopularity":  0.6,
+    "peakPopularity":  0.95,
+    "lifespanYears":  8
+}

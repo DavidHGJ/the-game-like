@@ -1,0 +1,16 @@
+{
+  "key": "terror_sobrenatural",
+  "displayNamePtBr": "Terror Sobrenatural",
+  "descriptionPtBr": "Medo originado de entidades além da explicação científica — fantasmas, demônios, possessões e amaldiçoados.",
+  "category": "HorrorSuspense",
+  "compatibilities": [
+    { "genre": "platformer", "weight": "+" },
+    { "genre": "rpg", "weight": "+" },
+    { "genre": "horror", "weight": "+++" },
+    { "genre": "action_rpg", "weight": "+" },
+    { "genre": "puzzle", "weight": "+" },
+    { "genre": "shooter", "weight": "+" },
+    { "genre": "simulation", "weight": "-" },
+    { "genre": "strategy", "weight": "-" }
+  ]
+}

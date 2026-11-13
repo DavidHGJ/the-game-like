@@ -6,7 +6,8 @@
         "GameLike.Events",
         "GameLike.Data",
         "GameLike.State",
-        "GameLike.Systems"
+        "GameLike.Systems",
+        "Unity.InputSystem"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],

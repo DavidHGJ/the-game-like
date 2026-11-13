@@ -1,0 +1,13 @@
+{
+  "key": "informacao_privilegiada",
+  "title": "Informação Privilegiada",
+  "body": "Um ex-funcionário de um rival te oferece informações sobre o jogo deles em desenvolvimento.",
+  "category": "EthicalDilemma",
+  "weight": 0.6,
+  "requiresActiveProject": false,
+  "options": [
+    { "text": "Recusar.", "effects": [ { "type": "Reputation", "amount": 0.02 } ] },
+    { "text": "Aceitar.", "effects": [ { "type": "Cash", "amount": 5000 }, { "type": "Reputation", "amount": -0.08 } ] },
+    { "text": "[Networking] Recrutar o funcionário em vez de comprar a informação.", "requiredSkill": "Networking", "effects": [ { "type": "Reputation", "amount": 0.05 } ] }
+  ]
+}

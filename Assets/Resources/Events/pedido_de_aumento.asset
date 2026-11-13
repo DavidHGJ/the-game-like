@@ -1,0 +1,48 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e8c5ebafe2b39014c86e99f44d66b9d0, type: 3}
+  m_Name: pedido_de_aumento
+  m_EditorClassIdentifier: GameLike.Data::GameLike.Data.Definitions.NarrativeEventSO
+  id: d1f66662809941afbf96df2472bdb214
+  displayNamePt: 
+  title: Pedido de Aumento
+  body: Seu melhor programador pede aumento de 40%. Sem isso, ele vai embora.
+  category: 4
+  weight: 0.7
+  requiresActiveProject: 0
+  options:
+  - text: Aceitar.
+    requiredSkill: 0
+    effects:
+    - type: 0
+      amount: -4000
+    - type: 4
+      amount: 0.15
+  - text: Negociar (20%).
+    requiredSkill: 0
+    effects:
+    - type: 0
+      amount: -2000
+    - type: 4
+      amount: 0.05
+  - text: Recusar.
+    requiredSkill: 0
+    effects:
+    - type: 4
+      amount: -0.1
+    - type: 3
+      amount: 0.05
+  - text: "[Lideran\xE7a] Oferecer equity simb\xF3lica."
+    requiredSkill: 2
+    effects:
+    - type: 4
+      amount: 0.18

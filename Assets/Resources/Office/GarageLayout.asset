@@ -1,0 +1,80 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b08c294a520a7a41851540944aaa056, type: 3}
+  m_Name: GarageLayout
+  m_EditorClassIdentifier: GameLike.Data::GameLike.Data.LevelBuilder.OfficeLayoutSO
+  id: 7f39179ae99d49bd903771cedb9af331
+  displayNamePt: 
+  phase: 0
+  cols: 8
+  rows: 7
+  cellSize: 1
+  wallHeight: 2.8
+  wallThickness: 0.2
+  floorColor: {r: 0.62, g: 0.6, b: 0.56, a: 1}
+  wallColor: {r: 0.55, g: 0.7, b: 0.5, a: 1}
+  placements:
+  - furniture: {fileID: 11400000, guid: 155acaefc2b654240b8c3c184472ded2, type: 2}
+    cell: {x: 1, y: 0}
+    rotationSteps: 0
+  - furniture: {fileID: 11400000, guid: 443db85c4d9096843b340041d191e3db, type: 2}
+    cell: {x: 3, y: 0}
+    rotationSteps: 0
+  - furniture: {fileID: 11400000, guid: 3cb5a3ffacf770443b66f8f4c1c82620, type: 2}
+    cell: {x: 6, y: 0}
+    rotationSteps: 0
+  - furniture: {fileID: 11400000, guid: a188447e9b2454143822d56ac8cca737, type: 2}
+    cell: {x: 1, y: 3}
+    rotationSteps: 0
+  - furniture: {fileID: 11400000, guid: 04e40920314e89847886b9661b3f7c66, type: 2}
+    cell: {x: 5, y: 3}
+    rotationSteps: 0
+  - furniture: {fileID: 11400000, guid: 877ffa45fea2a624b8f9a2f1af432134, type: 2}
+    cell: {x: 5, y: 3}
+    rotationSteps: 0
+  - furniture: {fileID: 11400000, guid: 1f2b9db3a00ddf442a8836b690f6bf31, type: 2}
+    cell: {x: 6, y: 3}
+    rotationSteps: 0
+  - furniture: {fileID: 11400000, guid: 6d3d6450bd686b14b889eefa0ed229e2, type: 2}
+    cell: {x: 5, y: 4}
+    rotationSteps: 2
+  - furniture: {fileID: 11400000, guid: 13c5d66528c324a42a5e6428b74d6a1f, type: 2}
+    cell: {x: 7, y: 3}
+    rotationSteps: 0
+  - furniture: {fileID: 11400000, guid: 10f6eaa067ac24342915275386b720ad, type: 2}
+    cell: {x: 7, y: 5}
+    rotationSteps: 0
+  - furniture: {fileID: 11400000, guid: d4869ef304f4702448a925a96b77af87, type: 2}
+    cell: {x: 7, y: 0}
+    rotationSteps: 2
+  - furniture: {fileID: 11400000, guid: 12ec793241f861c44a089f86deaa39a0, type: 2}
+    cell: {x: 6, y: 1}
+    rotationSteps: 0
+  - furniture: {fileID: 11400000, guid: 12ec793241f861c44a089f86deaa39a0, type: 2}
+    cell: {x: 7, y: 1}
+    rotationSteps: 0
+  ceilingLights:
+  - cell: {x: 2, y: 3}
+    color: {r: 1, g: 0.96, b: 0.88, a: 1}
+    intensity: 2.2
+    range: 0
+    dropFromCeiling: 0
+  - cell: {x: 6, y: 3}
+    color: {r: 1, g: 0.96, b: 0.88, a: 1}
+    intensity: 2
+    range: 0
+    dropFromCeiling: 0
+  seats:
+  - cell: {x: 5, y: 4}
+    rotationSteps: 0
+    offset: {x: 0, y: 0, z: 0}
+  characterPrefab: {fileID: 919132149155446097, guid: 2cdb9f9ab8c2ffb4b87e6b25412fdc13, type: 3}

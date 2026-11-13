@@ -1,0 +1,13 @@
+{
+  "key": "estagiario_genio",
+  "title": "O Estagiário Gênio",
+  "body": "Um estagiário de 17 anos criou sozinho uma engine melhor que a sua num fim de semana.",
+  "category": "Absurd",
+  "weight": 0.5,
+  "requiresActiveProject": false,
+  "options": [
+    { "text": "Contratar imediatamente (custo baixo).", "effects": [ { "type": "Cash", "amount": -2000 }, { "type": "Reputation", "amount": 0.04 } ] },
+    { "text": "Pedir para trabalhar na engine atual.", "effects": [ { "type": "Reputation", "amount": 0.02 } ] },
+    { "text": "Ignorar com inveja.", "effects": [ { "type": "Reputation", "amount": -0.03 } ] }
+  ]
+}

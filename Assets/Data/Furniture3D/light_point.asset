@@ -1,0 +1,49 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6654ce38bda6d1741a92f4968649c205, type: 3}
+  m_Name: light_point
+  m_EditorClassIdentifier: GameLike.Data::GameLike.Data.LevelBuilder.FurnitureDef3DSO
+  id: 1820deee7fb746f28382ca8a4997f7bc
+  displayNamePt: 
+  displayName:
+    m_TableReference:
+      m_TableCollectionName: 
+    m_TableEntryReference:
+      m_KeyId: 0
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  editorName: Ponto de luz
+  category: 3
+  prefab: {fileID: 919132149155446097, guid: 063719334ecb14844a509815fbf98039, type: 3}
+  footprintInCells: {x: 1, y: 1}
+  rotatable: 0
+  isWallPiece: 0
+  placeableOnTop: 1
+  supportsItemsOnTop: 0
+  surfaceHeight: 0
+  effect:
+    type: 0
+    magnitude: 0
+  lights:
+  - localPosition: {x: 0, y: 0.15, z: 0}
+    color: {r: 1, g: 0.9, b: 0.68, a: 1}
+    intensity: 2.2
+    range: 5.5
+    spot: 0
+    spotAngle: 0
+    spotDirection: {x: 0, y: 0, z: 0}
+  purchaseCost: 0
+  references:
+    version: 2
+    RefIds: []

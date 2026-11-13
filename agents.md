@@ -20,7 +20,8 @@ O jogo é uma teia de sistemas interconectados. Construir tudo de uma vez é rec
 - [x] Manager de exemplo (`TimeManager`) e listener de exemplo (`EconomyManager`)
 - [x] Assembly Definitions por camada (`Core`, `Events`, `Data`, `State`, `Systems`)
 - [x] Estratégia de cenas: Boot persistente + SceneLoader aditivo (`Core/Bootstrap/`, `Core/Scenes/`)
-- [x] Decisões de setup do projeto: render pipeline (URP 2D), Input System (novo), Player Settings (placeholder) — ver `README.md`
+- [x] Decisões de setup do projeto: render pipeline (URP 3D — migrado de URP 2D em 2026-10-31, ver `ART_STYLE.md`), Input System (novo), Player Settings (placeholder) — ver `README.md`
+- [ ] **Ação manual necessária (editor Unity):** trocar o Universal Renderer de 2D para 3D e configurar a câmera ortográfica em ângulo isométrico — ver `README.md`, checklist de setup
 - [ ] Definir `CompanyState` e `RunState` (camada de estado)
 - [ ] Bootstrap/composition root que instancia os managers numa cena
 
@@ -31,7 +32,7 @@ Destrava o trabalho de conteúdo em paralelo. Criar as classes SO **vazias de da
 - [x] Pipeline de importação de conteúdo (JSON → asset): `DefinitionAsset` (Id estável), `DefinitionAssetIdAssigner` (auto-gera Id), `GenreContentDto` + `WeightScaleParser` + `GenreContentImporter` (menu Tools → GameLike → Import Content → Genres)
 - [x] Sistema de balanceamento: `BalanceAsset` base + `EconomyBalanceSO` / `ResearchBalanceSO` / `EngineBalanceSO` / `LegacyProgressionBalanceSO` / `QualityFormulaBalanceSO` + `BalanceProvider` (`Data/Balance/`)
 - [x] Sistema de layout de escritório (fundação de dados): `FurnitureEffectType`/`FurnitureEffect`, `FurnitureCategory`, `FurnitureVisualLayer` (composição base+estofado+cor via tint), `FurnitureDefinitionSO`, `RoomBlockSO` (7x7 tiles fixo), `OfficeLayoutTypes` (`PlacedRoomBlock`/`BlockConnection`/`PlacedFurniture`), `OfficeLayoutSO` (`Data/Office/`) — ver `CLAUDE.md`, seção "Sistema de layout de escritório", e `ART_STYLE.md` para a referência visual e unidade de tile (32x32)
-- [ ] **Pendência de ferramenta (ainda não construída):** cena de edição com Tilemap para pintar piso/parede dos `RoomBlock` visualmente + script de editor "bake cena → `OfficeLayoutSO`". A fundação de dados existe; falta a ferramenta de autoria. Diferente do pipeline de conteúdo dos demais SOs (JSON → importer): aqui não há agente gerando conteúdo, é trabalho de composição visual feito por você no editor.
+- [x] **Ferramenta de autoria de cenários: Map Builder in-game** (substitui a ideia de cena de edição com Tilemap + bake, da direção 2D). Opção "Map Builder" no menu inicial (editor/development build) ou `Tools → GameLike → ★ Map Builder in-game (Play)`; salva JSON em `Assets/Resources/OfficeMaps/`, que o jogo carrega por fase. Ver `CLAUDE.md`, "Sistema de layout de escritório".
 - [ ] **Ação manual necessária:** criar uma instância de cada `BalanceAsset` em `Assets/Resources/Balance/` (Assets → Create → GameLike → Balance → ...) — os SOs existem como classe mas nenhuma instância foi criada ainda
 - [ ] `SubgenreSO` — gênero pai + peso de combinação (GDD 18.4) + regra de combinação determinística
 - [ ] `ThemeSO` — categoria + compatibilidade com gêneros (GDD 18.7)

@@ -1,0 +1,16 @@
+{
+  "key": "anos_80_retro",
+  "displayNamePtBr": "Anos 80 / Retrô",
+  "descriptionPtBr": "Estética e cultura dos anos 80 — sintetizadores, VHS, fliperama e nostalgia pixelada.",
+  "category": "MetaPop",
+  "compatibilities": [
+    { "genre": "platformer", "weight": "+++" },
+    { "genre": "rpg", "weight": "+" },
+    { "genre": "shooter", "weight": "++" },
+    { "genre": "puzzle", "weight": "++" },
+    { "genre": "action_rpg", "weight": "+" },
+    { "genre": "horror", "weight": "+" },
+    { "genre": "simulation", "weight": "~" },
+    { "genre": "strategy", "weight": "~" }
+  ]
+}

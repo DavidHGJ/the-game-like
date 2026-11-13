@@ -1,0 +1,12 @@
+{
+    "key":  "supernintendium",
+    "displayNamePtBr":  "SuperNintendium",
+    "descriptionPtBr":  "Renascimento da indústria após o crash. Popularidade muito alta. Paródia do NES.",
+    "manufacturer":  "Nintendu",
+    "category":  "Console",
+    "releaseYear":  13,
+    "licenseCost":  10000,
+    "initialPopularity":  0.5,
+    "peakPopularity":  0.92,
+    "lifespanYears":  9
+}

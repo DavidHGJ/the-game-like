@@ -1,0 +1,55 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3dc93b1b72260ae449f35e63e7453d70, type: 3}
+  m_Name: fazenda_campo
+  m_EditorClassIdentifier: GameLike.Data::GameLike.Data.Definitions.ThemeSO
+  id: 9fe2eb6d8eed4a30b0c8efdec806d9b6
+  displayNamePt: Fazenda / Campo
+  displayName:
+    m_TableReference:
+      m_TableCollectionName: 
+    m_TableEntryReference:
+      m_KeyId: 0
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  description:
+    m_TableReference:
+      m_TableCollectionName: 
+    m_TableEntryReference:
+      m_KeyId: 0
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  category: 2
+  genreCompatibilities:
+  - genreKey: platformer
+    weight: 0
+  - genreKey: rpg
+    weight: 1
+  - genreKey: simulation
+    weight: 3
+  - genreKey: puzzle
+    weight: 1
+  - genreKey: strategy
+    weight: 1
+  - genreKey: action_rpg
+    weight: 0
+  - genreKey: shooter
+    weight: -2
+  - genreKey: horror
+    weight: -2
+  references:
+    version: 2
+    RefIds: []

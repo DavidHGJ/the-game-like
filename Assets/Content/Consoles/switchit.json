@@ -1,0 +1,12 @@
+{
+    "key":  "switchit",
+    "displayNamePtBr":  "SwitchIt",
+    "descriptionPtBr":  "Portátil colorido de alta popularidade. Paródia do Game Boy Color / Advance.",
+    "manufacturer":  "Nintendu",
+    "category":  "Handheld",
+    "releaseYear":  26,
+    "licenseCost":  35000,
+    "initialPopularity":  0.5,
+    "peakPopularity":  0.82,
+    "lifespanYears":  10
+}
