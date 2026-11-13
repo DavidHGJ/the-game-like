@@ -37,6 +37,53 @@ namespace GameLike.Tests.EditMode.Systems
         }
 
         [Test]
+        public void Mask_WholeNumber_AddsThousandDotsAsYouType()
+        {
+            Assert.AreEqual("1", TuningNumbers.Mask("1", true));
+            Assert.AreEqual("1.000", TuningNumbers.Mask("1000", true));
+            Assert.AreEqual("10.000.000", TuningNumbers.Mask("10000000", true));
+            Assert.AreEqual("100.000.000", TuningNumbers.Mask("10.000.0000", true));
+            Assert.AreEqual("15.000", TuningNumbers.Mask("1.5000", true), "ponto no lugar errado é refeito");
+        }
+
+        [Test]
+        public void Mask_WholeNumber_IgnoresLettersLeadingZerosAndKeepsMinus()
+        {
+            Assert.AreEqual("2.500", TuningNumbers.Mask("R$ 2a500", true));
+            Assert.AreEqual("50", TuningNumbers.Mask("0050", true));
+            Assert.AreEqual("0", TuningNumbers.Mask("000", true));
+            Assert.AreEqual("-1.200", TuningNumbers.Mask("-1200", true));
+            Assert.AreEqual("", TuningNumbers.Mask("", true));
+        }
+
+        [Test]
+        public void Mask_Decimal_KeepsOneCommaAndGroupsTheIntegerPart()
+        {
+            Assert.AreEqual("0,005", TuningNumbers.Mask("0,005", false));
+            Assert.AreEqual("1.234,5", TuningNumbers.Mask("1234,5", false));
+            Assert.AreEqual("0,", TuningNumbers.Mask(",", false));
+            Assert.AreEqual("1,", TuningNumbers.Mask("1.", false), "ponto digitado no fim vira vírgula");
+            Assert.AreEqual("2,55", TuningNumbers.Mask("2,5,5", false), "segunda vírgula é ignorada");
+        }
+
+        [Test]
+        public void Mask_ResultIsReadBackAsTheSameNumber()
+        {
+            Assert.IsTrue(TuningNumbers.TryParse(TuningNumbers.Mask("100000000", true), true, out double whole));
+            Assert.AreEqual(100_000_000d, whole);
+            Assert.IsTrue(TuningNumbers.TryParse(TuningNumbers.Mask("1234,56", false), false, out double fraction));
+            Assert.AreEqual(1234.56, fraction, 1e-9);
+        }
+
+        [Test]
+        public void CaretAfterMask_KeepsTheCaretAfterTheSameDigits()
+        {
+            Assert.AreEqual(5, TuningNumbers.CaretAfterMask("1000", 4, "1.000"), "cursor no fim continua no fim");
+            Assert.AreEqual(2, TuningNumbers.CaretAfterMask("15000", 2, "15.000"), "depois do 5, antes do ponto");
+            Assert.AreEqual(0, TuningNumbers.CaretAfterMask("1000", 0, "1.000"));
+        }
+
+        [Test]
         public void Box_ReturnsTheExactFieldType()
         {
             Assert.IsInstanceOf<long>(TuningNumbers.Box(typeof(long), 300000.4));

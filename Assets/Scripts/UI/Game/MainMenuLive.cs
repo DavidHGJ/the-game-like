@@ -264,7 +264,21 @@ namespace GameLike.UI.Game
                 System.IO.Directory.CreateDirectory(System.IO.Path.GetDirectoryName(shot));
                 Tuning.TuningScreen.Open();
                 yield return new WaitForSecondsRealtime(2f);
+
+                // digita sem pontos no primeiro campo numérico e confere a máscara e o valor aplicado
+                var screen = FindFirstObjectByType<Tuning.TuningScreen>();
+                var fields = screen.GetComponent<UIDocument>().rootVisualElement.Query<TextField>().ToList();
+                var economy = GameLike.Data.Balance.BalanceProvider.Get<GameLike.Data.Balance.EconomyBalanceSO>();
+                long before = economy.GarageToIndieThreshold;
+                if (fields.Count > 1) fields[1].value = "12500000";
+                yield return new WaitForSecondsRealtime(0.5f);
+                string shown = fields.Count > 1 ? fields[1].value : "?";
+                Debug.Log("[TuningShot] digitado=12500000 mostrado=" + shown + " aplicado=" + economy.GarageToIndieThreshold);
+                Debug.Log(shown == "12.500.000" && economy.GarageToIndieThreshold == 12_500_000 ? "GAMELIKE_TUNING_MASK_OK" : "GAMELIKE_TUNING_MASK_FAIL");
                 ScreenCapture.CaptureScreenshot(shot);
+                yield return new WaitForSecondsRealtime(1f);
+                GameLike.Data.Balance.BalanceProvider.ResetToDefaults(economy);
+                if (economy.GarageToIndieThreshold != before) Debug.LogWarning("[TuningShot] valor original não restaurado");
                 yield return new WaitForSecondsRealtime(1f);
 #if UNITY_EDITOR
                 UnityEditor.EditorApplication.Exit(0);

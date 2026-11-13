@@ -357,7 +357,7 @@ namespace GameLike.UI.Tuning
         {
             bool whole = type == typeof(int) || type == typeof(long);
             var row = Kit.Row();
-            var field = Widgets.Input(Format(get(), whole), 150, 14, 24);
+            var field = Widgets.Input(Format(get(), whole), 180, 14, 24);
             field.style.height = 34;
 
             void Commit(double value)
@@ -378,6 +378,22 @@ namespace GameLike.UI.Tuning
                 return magnitude < 0.0001 ? 0.01 : Math.Pow(10, Math.Floor(Math.Log10(magnitude)) - 1);
             }
 
+            // Máscara: a cada tecla o texto ganha a pontuação certa e o valor já vale (sem precisar
+            // sair do campo). Os limites do campo só são aplicados ao sair, para não atrapalhar a digitação.
+            field.RegisterValueChangedCallback(e =>
+            {
+                string masked = TuningNumbers.Mask(e.newValue, whole);
+                if (masked != e.newValue)
+                {
+                    int caret = TuningNumbers.CaretAfterMask(e.newValue, field.cursorIndex, masked);
+                    field.SetValueWithoutNotify(masked);
+                    field.SelectRange(caret, caret);
+                    field.schedule.Execute(() => field.SelectRange(caret, caret));
+                }
+                if (!TuningNumbers.TryParse(masked, whole, out double typed)) return;
+                if (range != null) typed = Math.Max(range.min, Math.Min(range.max, typed));
+                set(TuningNumbers.Box(type, typed));
+            });
             field.RegisterCallback<FocusOutEvent>(_ =>
             {
                 if (TuningNumbers.TryParse(field.value, whole, out double parsed)) Commit(parsed);
@@ -398,9 +414,8 @@ namespace GameLike.UI.Tuning
         }
 
         private static string Format(object value, bool whole) =>
-            whole ? Convert.ToInt64(value).ToString("N0", Culture) : Convert.ToDouble(value, CultureInfo.InvariantCulture).ToString("0.####", Culture);
+            whole ? Convert.ToInt64(value).ToString("N0", Culture) : Convert.ToDouble(value, CultureInfo.InvariantCulture).ToString("#,0.######", Culture);
 
-        /// <summary>Aceita "1.234,5", "1234.5" e "1234,5".</summary>
         /// <summary>
         /// Confirma o campo de texto que estiver sendo digitado. Clicar em Salvar, trocar de grupo
         /// ou restaurar não tira o foco dele sozinho — sem isso, o último número digitado se perdia.
