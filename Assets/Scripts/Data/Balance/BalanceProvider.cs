@@ -109,6 +109,9 @@ namespace GameLike.Data.Balance
                 var shipped = Resources.Load<TextAsset>(OverridesFolder + "/" + typeName);
                 if (shipped != null) Overwrite(shipped.text, asset, typeName);
             }
+            // Ajustes gravados no computador só valem onde a tela de Parâmetros existe: o build
+            // publicado usa exatamente os valores que vieram com ele.
+            if (!GameLike.Core.DevTools.Enabled) return;
             string path = OverridePath(asset);
             if (File.Exists(path)) Overwrite(File.ReadAllText(path), asset, typeName);
         }

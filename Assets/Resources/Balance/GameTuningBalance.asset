@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d909db1c654063c44835ad824b1ab259, type: 3}
   m_Name: GameTuningBalance
   m_EditorClassIdentifier: GameLike.Data::GameLike.Data.Balance.GameTuningBalanceSO
-  secondsPerWeek: 5
-  weeklyInflationPercent: 0
-  runCostVariationPercent: 0
+  secondsPerWeek: 6
+  weeklyInflationPercent: 0.1
+  runCostVariationPercent: 5
   bankruptcyGraceWeeks: 4
-  ipoPremium: 1.5
+  ipoPremium: 1.2

@@ -72,6 +72,8 @@ namespace GameLike.UI.Tuning
             { "largePrice", ("Preço sugerido — Grande", "Preço de referência por unidade de um jogo Grande.") },
             { "aaaPrice", ("Preço sugerido — AAA", "Preço de referência por unidade de um jogo AAA.") },
             { "salesScoreExponent", ("Peso da nota nas vendas", "Quanto a nota pesa: vendas = vendas-base × (nota/10) elevado a este número. Maior = notas baixas vendem muito menos.") },
+            { "salesFloorShare", ("Piso de vendas", "Fração das vendas-base que todo jogo lançado vende, mesmo com nota baixa. 0,3 = um fracasso ainda vende 30%. Faz o fracasso devolver parte do custo.") },
+            { "salesScoreThreshold", ("Nota de virada", "Abaixo desta nota o jogo vende só o piso; acima dela as vendas crescem até o máximo na nota 10. Separa fracasso de acerto.") },
             { "pointsPerPersonPerPhase", ("Pontos por pessoa em cada fase", "Quantos pontos cada pessoa da equipe dá para distribuir em cada fase de produção.") },
             { "productionPhaseCount", ("Número de fases de produção", "Quantas fases o desenvolvimento tem (hoje 5: pré-produção, arte, áudio, tecnologia, conteúdo).") },
             { "smallParamCap", ("Teto por parâmetro — Pequeno", "Máximo de pontos que um único parâmetro (ex.: Gráficos) aceita num jogo Pequeno.") },

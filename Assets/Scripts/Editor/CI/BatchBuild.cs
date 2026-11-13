@@ -97,7 +97,7 @@ namespace GameLike.Editor.CI
         /// Build de RELEASE para publicar (batch): grava a versão dada por <c>-glversion 0.2.0</c>
         /// no projeto (é ela que o atualizador compara com a release do GitHub), gera o build
         /// final para Windows abrindo no menu e grava em <c>-glout &lt;pasta&gt;</c>. Sem ferramentas
-        /// do dev — elas aparecem se houver um <c>devtools.txt</c> ao lado do executável.
+        /// do dev: elas não existem em build sem DEVELOPMENT_BUILD (ver <c>GameLike.Core.DevTools</c>).
         /// Usado por <c>Tools/Release/release.sh</c>.
         /// </summary>
         public static void BuildRelease()

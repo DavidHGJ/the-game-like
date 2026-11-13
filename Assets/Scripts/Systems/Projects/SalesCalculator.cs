@@ -49,9 +49,9 @@ namespace GameLike.Systems.Projects
             long launchSales = wishlists * salesPer100 / 100;
 
             long baseUnits = loop != null ? loop.BaseUnitsFor(size) : 90_000;
-            float exponent = loop != null ? loop.SalesScoreExponent : 2.4f;
+            float share = loop != null ? loop.SalesShareForScore(score) : Mathf.Pow(scoreFraction, 2.4f);
             float bandMultiplier = HypeBandMultiplier(hype100, qf);
-            long organicSales = (long)(baseUnits * Mathf.Pow(scoreFraction, exponent) * bandMultiplier);
+            long organicSales = (long)(baseUnits * share * bandMultiplier);
 
             // A base instalada da plataforma amplia (ou reduz) o mercado total alcançável.
             long units = (long)((launchSales + organicSales) * platformReach01);

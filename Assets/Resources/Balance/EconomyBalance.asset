@@ -15,7 +15,16 @@ MonoBehaviour:
   garageToIndieThreshold: 250000
   indieToOfficeThreshold: 500000
   officeToStudioThreshold: 5000000
-  juniorWeeklySalary: 2000
-  midWeeklySalary: 3500
-  seniorWeeklySalary: 6000
-  starWeeklySalary: 10000
+  juniorWeeklySalary: 5000
+  midWeeklySalary: 10000
+  seniorWeeklySalary: 15000
+  starWeeklySalary: 35000
+  garageWeeklyOperating: 9000
+  indieWeeklyOperating: 45000
+  officeWeeklyOperating: 90000
+  studioWeeklyOperating: 250000
+  expandToIndieCost: 250000
+  expandToOfficeCost: 1500000
+  expandToStudioCost: 15000000
+  stagnationLossPerWeek: 0.005
+  stagnationLossMax: 0.3

@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 172cb49b4d3c19c4b85e307a67c87515, type: 3}
   m_Name: GameLoopBalance
   m_EditorClassIdentifier: GameLike.Data::GameLike.Data.Balance.GameLoopBalanceSO
-  startingCash: 50000
+  startingCash: 75000
   smallWeeks: 8
   mediumWeeks: 14
   largeWeeks: 22
@@ -21,12 +21,48 @@ MonoBehaviour:
   mediumTeam: 2
   largeTeam: 4
   aaaTeam: 8
-  smallBaseUnits: 20000
-  mediumBaseUnits: 90000
-  largeBaseUnits: 300000
-  aaaBaseUnits: 1200000
+  smallBaseUnits: 40000
+  mediumBaseUnits: 180000
+  largeBaseUnits: 375000
+  aaaBaseUnits: 1500000
   smallPrice: 15
-  mediumPrice: 20
-  largePrice: 40
+  mediumPrice: 30
+  largePrice: 60
   aaaPrice: 60
-  salesScoreExponent: 2.4
+  salesScoreExponent: 1.5
+  salesFloorShare: 0.2
+  salesScoreThreshold: 5
+  pointsPerPersonPerPhase: 100
+  productionPhaseCount: 5
+  smallParamCap: 300
+  mediumParamCap: 450
+  largeParamCap: 550
+  aaaParamCap: 600
+  smallReferenceTeam: 1
+  mediumReferenceTeam: 3
+  largeReferenceTeam: 6
+  aaaReferenceTeam: 9
+  garageMaxTeam: 1
+  indieMaxTeam: 3
+  officeMaxTeam: 6
+  studioMaxTeam: 9
+  scopeCoverageFloor: 0.15
+  bugBasePerWeek: 2.5
+  bugToleranceFree: 5
+  bugScorePenaltyMax: 3
+  smallBaseWishlists: 4000
+  mediumBaseWishlists: 18000
+  largeBaseWishlists: 60000
+  aaaBaseWishlists: 220000
+  salesTailWeeks: 26
+  tailRetentionWorst: 0.4
+  tailRetentionBest: 0.65
+  priceElasticity: 1.3
+  launchBudgetHypePer10k: 0.12
+  reviewerNoise: 1
+  bugFixPerWeekBase: 3
+  bugFixPerWeekPerPerson: 2
+  waitingHypeLossPerWeek: 0.03
+  crunchDurationMultiplier: 0.75
+  crunchBugMultiplier: 2.4999995
+  crunchBurnoutPerWeek: 0.05

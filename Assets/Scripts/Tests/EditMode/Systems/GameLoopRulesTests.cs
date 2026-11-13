@@ -174,22 +174,33 @@ namespace GameLike.Tests.EditMode.Systems
         }
 
         [Test]
-        public void BuyRoot_CostDoublesEachPurchase()
+        public void BuyRoot_CostGrowsByTheBalanceMultiplierEachPurchase()
         {
-            var meta = new MetaProgressionState { personalMoney = 100_000 };
-            Assert.AreEqual(10_000, SkillTreeCatalog.RootCost(0));
+            // Os valores vêm do balanceamento (ajustável na tela de Parâmetros); o teste protege a regra.
+            var balance = GameLike.Data.Balance.BalanceProvider.Get<GameLike.Data.Balance.LegacyProgressionBalanceSO>();
+            long first = balance.IncrementalNodeFirstCost;
+            long second = SkillTreeCatalog.RootCost(1);
+            Assert.AreEqual(first, SkillTreeCatalog.RootCost(0));
+            Assert.AreEqual(System.Math.Round(first * (double)balance.IncrementalNodeCostMultiplier), second, 1.0);
+            Assert.Greater(second, first, "cada compra fica mais cara");
+
+            long start = first + second + 1_000;
+            var meta = new MetaProgressionState { personalMoney = start };
             Assert.IsTrue(SkillTreeCatalog.TryBuyRoot(meta, FounderSkill.Technical));
-            Assert.AreEqual(90_000, meta.personalMoney);
-            Assert.AreEqual(20_000, SkillTreeCatalog.RootCost(meta.skillLevels[(int)FounderSkill.Technical - 1]));
+            Assert.AreEqual(start - first, meta.personalMoney);
             Assert.IsTrue(SkillTreeCatalog.TryBuyRoot(meta, FounderSkill.Technical));
-            Assert.AreEqual(70_000, meta.personalMoney);
+            Assert.AreEqual(start - first - second, meta.personalMoney);
             Assert.AreEqual(2, meta.skillLevels[(int)FounderSkill.Technical - 1]);
+            Assert.IsFalse(SkillTreeCatalog.TryBuyRoot(meta, FounderSkill.Technical), "sem dinheiro para a 3ª compra");
         }
 
         [Test]
         public void BuyPerk_IsUnique_AndResetRefundsLegacyButKeepsRoots()
         {
-            var meta = new MetaProgressionState { personalMoney = 100_000, legacyPoints = 20 };
+            long rootCost = SkillTreeCatalog.RootCost(0);
+            long resetCost = SkillTreeCatalog.ResetCost();
+            long start = rootCost + resetCost + 1_000;
+            var meta = new MetaProgressionState { personalMoney = start, legacyPoints = 20 };
             SkillTreeCatalog.TryBuyRoot(meta, FounderSkill.Technical);
             Assert.IsTrue(SkillTreeCatalog.TryBuyPerk(meta, SkillTreeCatalog.CodeReview));
             Assert.IsFalse(SkillTreeCatalog.TryBuyPerk(meta, SkillTreeCatalog.CodeReview), "nó único só compra uma vez");
@@ -199,7 +210,7 @@ namespace GameLike.Tests.EditMode.Systems
             Assert.AreEqual(20, meta.legacyPoints, "PL devolvidos");
             Assert.AreEqual(0, meta.perks.Count);
             Assert.AreEqual(1, meta.skillLevels[(int)FounderSkill.Technical - 1], "incrementais não resetam (GDD 14.3)");
-            Assert.AreEqual(100_000 - 10_000 - 50_000, meta.personalMoney, "reset custa 50.000 (GDD 19.5)");
+            Assert.AreEqual(start - rootCost - resetCost, meta.personalMoney, "reset cobra o custo do balanceamento (GDD 19.5)");
         }
 
         [Test]

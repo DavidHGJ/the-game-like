@@ -69,7 +69,7 @@ namespace GameLike.Systems.Office
             }
 
             string folder = WritableFolder;
-            if (Directory.Exists(folder))
+            if (GameLike.Core.DevTools.Enabled && Directory.Exists(folder))
             {
                 foreach (string file in Directory.GetFiles(folder, "*.json"))
                 {

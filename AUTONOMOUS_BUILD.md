@@ -841,3 +841,42 @@ Pedido: montar os cenarios DENTRO do jogo, vendo o 3D, movendo e girando as peca
 2. Nomes dos parametros na tela vem do nome do campo no codigo (em ingles); as descricoes (tooltip) estao em portugues.
 3. Catalogos em codigo (ResearchCatalog, SkillTreeCatalog, ParameterCatalog) ainda NAO aparecem na tela de Parametros.
 4. Boneco feito de primitivas do Unity (nao e modelo do Blender com esqueleto).
+
+## 2026-11-13 (tarde) — Ferramentas fora do build publico, ajustes do David importados, SIMULADOR DE ECONOMIA
+- **Build publicado sem ferramentas:** `GameLike.Core.DevTools.Enabled` agora e decidido na compilacao (editor e
+  development build = sim; build publicado = nao). Acabou o `devtools.txt`. No build publicado, ajustes gravados no
+  computador (BalanceOverrides, OfficeMaps em persistentDataPath) sao ignorados.
+- **Ajustes do David importados para os assets** (Tools -> GameLike -> Build -> Importar ajustes do jogo instalado;
+  batch `ImportPlaytestSettings.BatchImport [-glfrom pasta]`): 46 valores em 6 grupos. Correcoes decididas pelo David:
+  limites de hype 15/50/80 (ele tinha salvo 15.000/50.000/200.000 numa escala de 0 a 100) e dinheiro inicial R$ 75 mil,
+  Garagem R$ 9 mil/semana. A pasta dele foi renomeada para `BalanceOverrides_importados_2026-11-13` (backup).
+- **Nada publicado:** com esses valores toda run vai a falencia (simulacao abaixo). Release 0.1.4 aguardando o
+  rebalanceamento. Build de release pronto e conferido sem ferramentas em Build/Release/0.1.4-pre (nao publicado).
+- **Simulador de economia** (pedido do David: testar todas as faixas de nota sem jogar): `Systems/Simulation/
+  EconomySimulator` (semana a semana com as mesmas formulas/valores do jogo) + `EconomyReport` (7 cenarios fase x
+  tamanho, 6 faixas de nota, 3 jogos cada, metas: ruim = prejuizo, media/boa/otima = lucro, Garagem sem falir).
+  Na tela de Parametros: item "Simulacao da economia" (topo). No editor: Tools -> GameLike -> Balanceamento -> Simular
+  economia (grava Docs/Simulacao/economia.md). 9 testes do simulador (EconomySimulatorTests). 115/115 testes.
+- Versao de teste com ferramentas (nao publicada): Downloads/TheGameLike_Dev_2026-11-13.
+- Achados: (1) Garagem: as vendas entram ao longo de 26 semanas e a carencia e 4 semanas, entao ate jogo nota 9,5
+  faliu; (2) Indie em diante: custo fixo semanal (45 mil/90 mil/250 mil) e muito maior que a receita dos jogos.
+
+## 2026-11-13 (noite) — Rebalanceamento da RECEITA pelo simulador (GDD 23.14) + Garagem nova + release 0.1.4
+- Regra do David (GDD 23.14, escrito antes do codigo): nao pode ficar facil — na Garagem, no maximo ~2 chances de
+  acertar um jogo (nota >= 7); custos ficam como ele definiu; o ajuste e na receita das vendas.
+- Formula de vendas ganhou piso e nota de virada (`salesFloorShare`, `salesScoreThreshold` em GameLoopBalanceSO;
+  `SalesShareForScore`). Com 0/0 e a formula antiga.
+- Busca automatica (`Editor/CI/BalanceSearch`, ~16 s, 41 mil combinacoes so na Garagem) escolheu, entre as que
+  cumprem todas as metas, a que deixa o jogo medio com lucro perto de 30% do custo e muda o minimo:
+  pequeno 40 mil un. (era 20 mil), medio 180 mil un. a R$ 30 (90 mil a R$ 20), grande 375 mil a R$ 60 (300 mil a
+  R$ 40), AAA 1,5 mi (1,2 mi); expoente 1,5 (2,4), piso 20%, virada na nota 5, retencao 0,40-0,65 (0,55-0,93).
+- Resultado (sem marketing): 21/21 metas. Dois fracassos seguidos quebram na semana 18 (depois do 2o lancamento);
+  fracasso + acerto segue; jogo medio lucra 17-40% do custo conforme a fase. Com +-5% de custo, 2 casos limite viram.
+- Com marketing completo as metas falham: as campanhas custam R$ 200 mil+ (valores do David) — informativo.
+- Cenario da Garagem do David (5x5, 13 pecas) virou o padrao: Assets/Resources/OfficeMaps/GarageLayout.json.
+- Release 0.1.4 publicada sem ferramentas de dev.
+
+### DECISOES PROVISORIAS PARA O DAVID VALIDAR
+1. "Dar certo" = nota >= 7; metas e alvo de 30% de lucro do jogo medio sao propostas (EconomyReport/BalanceSearch).
+2. Nota 5 conta como fracasso (vende o mesmo piso que a nota 3).
+3. Simulador nao usa tema/plataforma (neutros) nem sorteio das criticas.

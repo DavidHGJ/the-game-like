@@ -1,0 +1,264 @@
+{
+    "schemaVersion": 3,
+    "name": "GarageLayout",
+    "phase": 0,
+    "usedInGame": true,
+    "cols": 5,
+    "rows": 5,
+    "cellSize": 1.0,
+    "wallHeight": 2.799999952316284,
+    "wallThickness": 0.20000000298023225,
+    "floorColor": {
+        "r": 0.6200000047683716,
+        "g": 0.6000000238418579,
+        "b": 0.5600000023841858,
+        "a": 1.0
+    },
+    "wallColor": {
+        "r": 0.550000011920929,
+        "g": 0.699999988079071,
+        "b": 0.5,
+        "a": 1.0
+    },
+    "floorStyle": 0,
+    "wallStyle": 0,
+    "sideWallCustom": false,
+    "sideWallColor": {
+        "r": 0.550000011920929,
+        "g": 0.699999988079071,
+        "b": 0.5,
+        "a": 1.0
+    },
+    "sideWallStyle": 0,
+    "pieces": [
+        {
+            "furnitureId": "ca7c289b85c5402aadd8d47d097793c2",
+            "furnitureKey": "workbench",
+            "cell": {
+                "x": 0,
+                "y": 0
+            },
+            "rotationSteps": 0,
+            "align": {
+                "x": -1,
+                "y": -1
+            },
+            "onTop": false
+        },
+        {
+            "furnitureId": "5a30d566f2f5496894f3e045c8c0c470",
+            "furnitureKey": "old_desk",
+            "cell": {
+                "x": 3,
+                "y": 0
+            },
+            "rotationSteps": 0,
+            "align": {
+                "x": 0,
+                "y": 0
+            },
+            "onTop": false
+        },
+        {
+            "furnitureId": "17cd800e67df48c695b88c243acecf2b",
+            "furnitureKey": "old_chair",
+            "cell": {
+                "x": 3,
+                "y": 1
+            },
+            "rotationSteps": 2,
+            "align": {
+                "x": 0,
+                "y": 0
+            },
+            "onTop": false
+        },
+        {
+            "furnitureId": "be9d3a084030486dacc96467ad566c7c",
+            "furnitureKey": "old_pc",
+            "cell": {
+                "x": 3,
+                "y": 0
+            },
+            "rotationSteps": 0,
+            "align": {
+                "x": 0,
+                "y": 0
+            },
+            "onTop": true
+        },
+        {
+            "furnitureId": "97f42ebd6ab54bc0b43fbcebb23ab4b9",
+            "furnitureKey": "trash_bin",
+            "cell": {
+                "x": 4,
+                "y": 0
+            },
+            "rotationSteps": 0,
+            "align": {
+                "x": -1,
+                "y": 0
+            },
+            "onTop": false
+        },
+        {
+            "furnitureId": "4a79b39151c246a3b0edf210b415f1bb",
+            "furnitureKey": "trophy",
+            "cell": {
+                "x": 0,
+                "y": 0
+            },
+            "rotationSteps": 0,
+            "align": {
+                "x": 0,
+                "y": 0
+            },
+            "onTop": true
+        },
+        {
+            "furnitureId": "c2d4b210e01c4e94bac56bca8b7458cc",
+            "furnitureKey": "clock",
+            "cell": {
+                "x": 2,
+                "y": 0
+            },
+            "rotationSteps": 0,
+            "align": {
+                "x": 0,
+                "y": 0
+            },
+            "onTop": false
+        },
+        {
+            "furnitureId": "b79f81b777f7400da75c26e7dc84494b",
+            "furnitureKey": "cabinet",
+            "cell": {
+                "x": 0,
+                "y": 4
+            },
+            "rotationSteps": 1,
+            "align": {
+                "x": -1,
+                "y": 1
+            },
+            "onTop": false
+        },
+        {
+            "furnitureId": "7b01b22359294c37b06a3c93efbf25fb",
+            "furnitureKey": "cardboard_box",
+            "cell": {
+                "x": 0,
+                "y": 3
+            },
+            "rotationSteps": 0,
+            "align": {
+                "x": -1,
+                "y": 1
+            },
+            "onTop": false
+        },
+        {
+            "furnitureId": "7b01b22359294c37b06a3c93efbf25fb",
+            "furnitureKey": "cardboard_box",
+            "cell": {
+                "x": 0,
+                "y": 3
+            },
+            "rotationSteps": 0,
+            "align": {
+                "x": -1,
+                "y": 1
+            },
+            "onTop": true
+        },
+        {
+            "furnitureId": "886ddf8f163b4859b75e4c38c5f63a1d",
+            "furnitureKey": "metal_shelf",
+            "cell": {
+                "x": 0,
+                "y": 2
+            },
+            "rotationSteps": 3,
+            "align": {
+                "x": -1,
+                "y": 0
+            },
+            "onTop": false
+        },
+        {
+            "furnitureId": "bf4cf502691f4f4ab22b2b1cf161312b",
+            "furnitureKey": "corkboard",
+            "cell": {
+                "x": 0,
+                "y": 1
+            },
+            "rotationSteps": 0,
+            "align": {
+                "x": 0,
+                "y": 0
+            },
+            "onTop": false
+        },
+        {
+            "furnitureId": "ff07880fb4b447209d3ae1a8f9a14f59",
+            "furnitureKey": "car",
+            "cell": {
+                "x": 2,
+                "y": 3
+            },
+            "rotationSteps": 0,
+            "align": {
+                "x": 0,
+                "y": 0
+            },
+            "onTop": false
+        }
+    ],
+    "lights": [
+        {
+            "cell": {
+                "x": 1,
+                "y": 2
+            },
+            "color": {
+                "r": 1.0,
+                "g": 0.949999988079071,
+                "b": 0.8500000238418579,
+                "a": 1.0
+            },
+            "intensity": 2.200000047683716,
+            "range": 0.0,
+            "dropFromCeiling": 0.0
+        },
+        {
+            "cell": {
+                "x": 3,
+                "y": 2
+            },
+            "color": {
+                "r": 1.0,
+                "g": 0.949999988079071,
+                "b": 0.8500000238418579,
+                "a": 1.0
+            },
+            "intensity": 2.200000047683716,
+            "range": 0.0,
+            "dropFromCeiling": 0.0
+        }
+    ],
+    "seats": [
+        {
+            "cell": {
+                "x": 3,
+                "y": 1
+            },
+            "rotationSteps": 0,
+            "offset": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+            },
+            "activity": 0
+        }
+    ]
+}

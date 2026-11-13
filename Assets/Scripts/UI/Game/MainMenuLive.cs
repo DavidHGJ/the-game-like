@@ -265,8 +265,14 @@ namespace GameLike.UI.Game
                 Tuning.TuningScreen.Open();
                 yield return new WaitForSecondsRealtime(2f);
 
-                // digita sem pontos no primeiro campo numérico e confere a máscara e o valor aplicado
+                // 1º print: a simulação (primeiro item da lista)
+                ScreenCapture.CaptureScreenshot(System.IO.Path.ChangeExtension(shot, null) + "_simulacao.png");
+                yield return new WaitForSecondsRealtime(1f);
+
+                // digita sem pontos no primeiro campo numérico da Economia e confere a máscara e o valor aplicado
                 var screen = FindFirstObjectByType<Tuning.TuningScreen>();
+                screen.SelectGroup("Economia");
+                yield return new WaitForSecondsRealtime(0.5f);
                 var fields = screen.GetComponent<UIDocument>().rootVisualElement.Query<TextField>().ToList();
                 var economy = GameLike.Data.Balance.BalanceProvider.Get<GameLike.Data.Balance.EconomyBalanceSO>();
                 long before = economy.GarageToIndieThreshold;

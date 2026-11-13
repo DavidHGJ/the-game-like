@@ -21,7 +21,7 @@ MonoBehaviour:
   plForValuationAboveOneMillion: 5
   plForValuationAboveTenMillion: 15
   incrementalNodeFirstCost: 10000
-  incrementalNodeCostMultiplier: 2
+  incrementalNodeCostMultiplier: 2.3
   uniqueNodeMinCostPL: 5
   uniqueNodeMaxCostPL: 25
-  legacyResetCost: 50000
+  legacyResetCost: 15000000

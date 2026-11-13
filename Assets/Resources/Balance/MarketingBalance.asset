@@ -12,14 +12,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f22b15093a9a4ef45a6987a5508f7468, type: 3}
   m_Name: MarketingBalance
   m_EditorClassIdentifier: GameLike.Data::GameLike.Data.Balance.MarketingBalanceSO
-  passiveHypeGainPerWeek: 0.015
+  passiveHypeGainPerWeek: 0.005
   hypeDecayPerWeek: 0.02
-  announcementCost: 2000
+  announcementCost: 200000
   announcementHype: 0.15
-  wishlistCampaignCost: 5000
+  wishlistCampaignCost: 500000
   wishlistCampaignHype: 0.1
   wishlistCampaignBurst: 3
-  demoCost: 8000
-  demoHype: 0.25
-  gameShowCost: 20000
-  gameShowHype: 0.4
+  demoCost: 800000
+  demoHype: 0.4
+  gameShowCost: 2000000
+  gameShowHype: 0.6
+  devlogCost: 15000
+  devlogHype: 0.005
+  pressKitCost: 50000
+  pressKitHype: 0.015
+  closedBetaCost: 500000
+  closedBetaHype: 0.06
+  closedBetaBugReduction: 0.3
+  influencersCost: 1000000
+  influencersHype: 0.3

@@ -43,6 +43,10 @@ namespace GameLike.Data.Balance
 
         [Header("Curva nota→vendas: fração de unidades-base = (nota/10)^expoente")]
         [SerializeField] private float salesScoreExponent = 2.4f;
+        [Tooltip("Piso de vendas (GDD 23.14): fração das unidades-base que todo jogo lançado vende, mesmo com nota baixa. 0 = sem piso.")]
+        [Range(0f, 1f)] [SerializeField] private float salesFloorShare;
+        [Tooltip("Nota de virada (GDD 23.14): abaixo dela o jogo vende só o piso; acima, as vendas crescem pela curva. 0 = curva desde a nota 0.")]
+        [Range(0f, 9f)] [SerializeField] private float salesScoreThreshold;
 
         [Header("Produção por pontos (GDD 5.3)")]
         [Tooltip("Pontos-base que cada pessoa contribui por fase de produção (GDD 5.3).")]
@@ -127,6 +131,20 @@ namespace GameLike.Data.Balance
 
         public long StartingCash => startingCash;
         public float SalesScoreExponent => salesScoreExponent;
+        public float SalesFloorShare => salesFloorShare;
+        public float SalesScoreThreshold => salesScoreThreshold;
+
+        /// <summary>
+        /// Fração das unidades-base que um jogo com esta nota vende (GDD 23.14): piso + curva de
+        /// potência a partir da nota de virada. Com piso 0 e virada 0 é (nota/10)^expoente.
+        /// </summary>
+        public float SalesShareForScore(float score)
+        {
+            float threshold = Mathf.Clamp(salesScoreThreshold, 0f, 9.5f);
+            float above = Mathf.Clamp01((score - threshold) / (10f - threshold));
+            float floor = Mathf.Clamp01(salesFloorShare);
+            return floor + (1f - floor) * Mathf.Pow(above, salesScoreExponent);
+        }
 
         public int PointsPerPersonPerPhase => pointsPerPersonPerPhase;
         public int ProductionPhaseCount => productionPhaseCount;

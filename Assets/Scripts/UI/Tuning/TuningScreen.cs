@@ -32,6 +32,8 @@ namespace GameLike.UI.Tuning
             public string section, title;
             public UnityEngine.Object target;
             public VisualElement button;
+            /// <summary>true = o item da simulação da economia (não edita um asset).</summary>
+            public bool simulation;
         }
 
         private readonly List<Group> _groups = new List<Group>();
@@ -90,6 +92,7 @@ namespace GameLike.UI.Tuning
 
         private void CollectGroups()
         {
+            _groups.Add(new Group { section = "Testar", title = "Simulação da economia", simulation = true });
             // Garante que os parâmetros gerais existam mesmo sem asset criado.
             BalanceProvider.Get<GameTuningBalanceSO>();
             foreach (var asset in BalanceProvider.All())
@@ -176,6 +179,13 @@ namespace GameLike.UI.Tuning
             _root.Add(right);
         }
 
+        /// <summary>Abre o grupo com este título (roteiros de validação).</summary>
+        internal void SelectGroup(string title)
+        {
+            var group = _groups.Find(g => g.title == title);
+            if (group != null) Select(group);
+        }
+
         private void Select(Group group)
         {
             CommitTyping();
@@ -193,6 +203,7 @@ namespace GameLike.UI.Tuning
         {
             _content.Clear();
             if (_current == null) return;
+            if (_current.simulation) { _content.Add(TuningSimulationView.Build()); return; }
             var target = _current.target;
 
             var head = Kit.Row();

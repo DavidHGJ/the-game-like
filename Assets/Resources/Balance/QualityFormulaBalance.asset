@@ -18,7 +18,11 @@ MonoBehaviour:
   engineBudgetUsageWeight: 0.1
   marketTrendWeight: 0.1
   developmentEventsWeight: 0.05
-  weakHypeUpperBound: 20
+  neutralThemeGenreScore: 5
+  neutralEngineBudgetScore: 5
+  neutralMarketTrendScore: 5
+  neutralDevelopmentEventsScore: 5
+  weakHypeUpperBound: 15
   mediumHypeUpperBound: 50
   goodHypeUpperBound: 80
-  salesPer100Wishlists: 80
+  salesPer100Wishlists: 65
