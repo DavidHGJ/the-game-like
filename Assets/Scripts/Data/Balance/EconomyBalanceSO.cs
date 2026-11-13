@@ -12,7 +12,7 @@ namespace GameLike.Data.Balance
     [CreateAssetMenu(menuName = "GameLike/Balance/Economy Balance", fileName = "EconomyBalance")]
     public sealed class EconomyBalanceSO : BalanceAsset
     {
-        [Header("Thresholds de Valuation por Fase (GDD 19.1)")]
+        [Header("Valuation para mudar de fase (GDD 19.1)")]
         [SerializeField] private long garageToIndieThreshold = 250_000;
         [SerializeField] private long indieToOfficeThreshold = 500_000;
         [SerializeField] private long officeToStudioThreshold = 5_000_000;

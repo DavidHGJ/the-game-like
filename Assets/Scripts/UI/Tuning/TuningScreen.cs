@@ -93,7 +93,7 @@ namespace GameLike.UI.Tuning
             // Garante que os parâmetros gerais existam mesmo sem asset criado.
             BalanceProvider.Get<GameTuningBalanceSO>();
             foreach (var asset in BalanceProvider.All())
-                _groups.Add(new Group { section = "Balanceamento", title = Nicify(asset.GetType().Name.Replace("BalanceSO", "")), target = asset });
+                _groups.Add(new Group { section = "Balanceamento", title = GroupTitle(asset.GetType().Name.Replace("BalanceSO", "")), target = asset });
             AddDefinitions("Gêneros", Resources.LoadAll<GenreSO>("Genres"));
             AddDefinitions("Temas", Resources.LoadAll<ThemeSO>("Themes"));
             AddDefinitions("Plataformas", Resources.LoadAll<ConsoleSO>("Consoles"));
@@ -227,7 +227,7 @@ namespace GameLike.UI.Tuning
                 }
                 if (!matches) continue;
                 var captured = field;
-                var row = Draw(Nicify(field.Name), field.FieldType, field,
+                var row = Draw(FieldLabel(field), field.FieldType, field,
                     () => captured.GetValue(target),
                     value => { captured.SetValue(target, value); Touch(target); }, 0);
                 if (row != null) _content.Add(row);
@@ -238,6 +238,9 @@ namespace GameLike.UI.Tuning
         {
             if (_search.Length == 0) return true;
             var tooltip = field.GetCustomAttribute<TooltipAttribute>();
+            if (TuningTexts.TryField(field.Name, out string label, out string help)
+                && (label.IndexOf(_search, StringComparison.OrdinalIgnoreCase) >= 0 || help.IndexOf(_search, StringComparison.OrdinalIgnoreCase) >= 0))
+                return true;
             return Nicify(field.Name).IndexOf(_search, StringComparison.OrdinalIgnoreCase) >= 0
                    || field.Name.IndexOf(_search, StringComparison.OrdinalIgnoreCase) >= 0
                    || (tooltip != null && tooltip.tooltip.IndexOf(_search, StringComparison.OrdinalIgnoreCase) >= 0);
@@ -295,7 +298,7 @@ namespace GameLike.UI.Tuning
         /// <summary>Monta o editor de um valor do tipo dado. Devolve null para tipos sem editor.</summary>
         private VisualElement Draw(string label, Type type, FieldInfo info, Func<object> get, Action<object> set, int depth)
         {
-            string tooltip = info != null ? info.GetCustomAttribute<TooltipAttribute>()?.tooltip : null;
+            string tooltip = info == null ? null : TuningTexts.TryField(info.Name, out _, out string help) ? help : info.GetCustomAttribute<TooltipAttribute>()?.tooltip;
             var range = info != null ? info.GetCustomAttribute<RangeAttribute>() : null;
 
             if (type == typeof(int) || type == typeof(long) || type == typeof(float) || type == typeof(double))
@@ -311,7 +314,7 @@ namespace GameLike.UI.Tuning
             }
             if (type.IsEnum)
             {
-                string[] names = Enum.GetNames(type);
+                string[] names = Array.ConvertAll(Enum.GetNames(type), n => TuningTexts.EnumValue(type, n));
                 Array values = Enum.GetValues(type);
                 int index = Mathf.Max(0, Array.IndexOf(values, get()));
                 return Line(label, tooltip, Widgets.Select(names, index, 220, i => set(values.GetValue(i))));
@@ -429,7 +432,7 @@ namespace GameLike.UI.Tuning
             foreach (var field in SerializedFields(type))
             {
                 var captured = field;
-                var row = Draw(Nicify(field.Name), field.FieldType, field,
+                var row = Draw(FieldLabel(field), field.FieldType, field,
                     () => { object owner = get(); return owner != null ? captured.GetValue(owner) : null; },
                     value =>
                     {
@@ -466,11 +469,17 @@ namespace GameLike.UI.Tuning
             {
                 object value = field.GetValue(element);
                 if (value is DefinitionAsset inner) return inner.DisplayLabel;
-                if (value != null && field.FieldType.IsEnum) return Nicify(value.ToString());
+                if (value != null && field.FieldType.IsEnum) return TuningTexts.EnumValue(field.FieldType, value.ToString());
                 if (value is string text && !string.IsNullOrEmpty(text)) return text;
             }
             return "#" + (index + 1);
         }
+
+        /// <summary>Nome em português do campo; sem tradução, o nome derivado do código.</summary>
+        private static string FieldLabel(FieldInfo field) =>
+            TuningTexts.TryField(field.Name, out string label, out _) ? label : Nicify(field.Name);
+
+        private static string GroupTitle(string typeKey) => TuningTexts.Group(typeKey) ?? Nicify(typeKey);
 
         /// <summary>"garageToIndieThreshold" → "Garage to indie threshold".</summary>
         private static string Nicify(string name)
