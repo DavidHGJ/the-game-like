@@ -178,6 +178,7 @@ namespace GameLike.UI.Tuning
 
         private void Select(Group group)
         {
+            CommitTyping();
             _current = group;
             foreach (var g in _groups)
             {
@@ -203,6 +204,7 @@ namespace GameLike.UI.Tuning
                 if (BalanceProvider.HasOverride(balance)) { head.Add(Kit.Chip("com ajuste salvo", Kit.Teal, true, Kit.IcCheck)); head.Add(Kit.Gap(8)); }
                 head.Add(Kit.Button("Restaurar valores originais", Kit.IcUndo, Kit.Sand, Kit.Ink, () =>
                 {
+                    CommitTyping();
                     BalanceProvider.ResetToDefaults(balance);
                     _dirty.Remove(balance);
                     SetStatus("Valores originais restaurados.");
@@ -259,6 +261,7 @@ namespace GameLike.UI.Tuning
 
         private void Save()
         {
+            CommitTyping();
             int saved = 0;
             foreach (var target in _dirty)
             {
@@ -360,9 +363,7 @@ namespace GameLike.UI.Tuning
             void Commit(double value)
             {
                 if (range != null) value = Math.Max(range.min, Math.Min(range.max, value));
-                object boxed = type == typeof(int) ? (object)(int)Math.Round(value)
-                    : type == typeof(long) ? (long)Math.Round(value)
-                    : type == typeof(float) ? (float)value : value;
+                object boxed = TuningNumbers.Box(type, value);
                 set(boxed);
                 field.SetValueWithoutNotify(Format(boxed, whole));
             }
@@ -379,7 +380,7 @@ namespace GameLike.UI.Tuning
 
             field.RegisterCallback<FocusOutEvent>(_ =>
             {
-                if (TryParse(field.value, out double parsed)) Commit(parsed);
+                if (TuningNumbers.TryParse(field.value, whole, out double parsed)) Commit(parsed);
                 else field.SetValueWithoutNotify(Format(get(), whole));
             });
             row.Add(Kit.RoundButton(Kit.IcMinus, Kit.Sand, Kit.Ink, 28, () => Commit(Current() - Step())));
@@ -400,13 +401,14 @@ namespace GameLike.UI.Tuning
             whole ? Convert.ToInt64(value).ToString("N0", Culture) : Convert.ToDouble(value, CultureInfo.InvariantCulture).ToString("0.####", Culture);
 
         /// <summary>Aceita "1.234,5", "1234.5" e "1234,5".</summary>
-        private static bool TryParse(string text, out double value)
+        /// <summary>
+        /// Confirma o campo de texto que estiver sendo digitado. Clicar em Salvar, trocar de grupo
+        /// ou restaurar não tira o foco dele sozinho — sem isso, o último número digitado se perdia.
+        /// </summary>
+        private void CommitTyping()
         {
-            value = 0;
-            if (string.IsNullOrWhiteSpace(text)) return false;
-            string clean = text.Trim().Replace(" ", "");
-            if (clean.Contains(",")) clean = clean.Replace(".", "").Replace(',', '.');
-            return double.TryParse(clean, NumberStyles.Float, CultureInfo.InvariantCulture, out value);
+            var focused = _root?.panel?.focusController?.focusedElement as VisualElement;
+            focused?.Blur();
         }
 
         private VisualElement ListEditor(string label, string tooltip, Type listType, Func<object> get, int depth)
