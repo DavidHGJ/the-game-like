@@ -33,7 +33,8 @@ echo "== Git =="
 cd "$ROOT"
 git add ProjectSettings/ProjectSettings.asset
 git diff --cached --quiet || git commit -m "chore: versão $VERSION"
-git push origin HEAD
+# usa a autenticação do gh (o Git Credential Manager trava esperando janela de login)
+git -c credential.helper= -c credential.helper='!gh auth git-credential' push origin HEAD
 
 echo "== Release =="
 gh release create "v$VERSION" "$ZIP" --repo "$REPO" --title "The Game Like $VERSION" --notes "$NOTES"
