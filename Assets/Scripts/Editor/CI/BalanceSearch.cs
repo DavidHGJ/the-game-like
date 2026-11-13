@@ -85,6 +85,94 @@ namespace GameLike.Editor.CI
             EditorApplication.Exit(0);
         }
 
+        /// <summary>
+        /// Busca guiada pela SIMULAÇÃO LONGA (GDD 23.15): mantém a venda de um fracasso na Garagem
+        /// (piso × unidades-base do Pequeno) e varia quanto um acerto rende e quanto vendem Médio,
+        /// Grande e AAA. Toda combinação tem de manter as metas de chances da Garagem (GDD 23.14);
+        /// entre elas, vence a que cumpre mais metas de carreira e, depois, a que muda menos.
+        /// Uso: <c>-executeMethod GameLike.Editor.CI.BalanceSearch.BatchCareerSearch -glout &lt;pasta&gt;</c>.
+        /// </summary>
+        public static void BatchCareerSearch()
+        {
+            var args = Environment.GetCommandLineArgs();
+            int at = Array.IndexOf(args, "-glout");
+            string outFolder = at >= 0 && at < args.Length - 1 ? args[at + 1] : Path.Combine(Application.temporaryCachePath, "career-search");
+            const int careers = 30;
+
+            var loop = BalanceProvider.Get<GameLoopBalanceSO>();
+            string original = JsonUtility.ToJson(loop);
+            var current = Read(loop, "smallBaseUnits", "salesFloorShare", "salesScoreExponent", "salesScoreThreshold",
+                "mediumBaseUnits", "largeBaseUnits", "aaaBaseUnits");
+            double flopUnits = current["smallBaseUnits"] * current["salesFloorShare"];
+            var profiles = CareerReport.StandardProfiles().FindAll(p => p.name.Contains("equipe enxuta"));
+            var chanceScenarios = EconomyReport.StandardScenarios().FindAll(s => s.section == EconomyReport.SectionChances || s.section == EconomyReport.SectionProfit);
+            var report = new StringBuilder();
+            report.AppendLine("Busca guiada pela simulação longa (" + careers + " carreiras por perfil). Fracasso na Garagem fixo em "
+                              + flopUnits.ToString("0", Inv) + " unidades-base de piso.");
+
+            Dictionary<string, double> best = null;
+            int bestGoals = -1, evaluated = 0, kept = 0;
+            double bestDistance = double.MaxValue;
+            string bestMeasured = "";
+            try
+            {
+                var grid = new Dictionary<string, double[]>
+                {
+                    { "smallBaseUnits", new double[] { 40000, 50000, 60000 } },
+                    { "salesScoreThreshold", new double[] { 4, 5, 6 } },
+                    { "salesScoreExponent", new double[] { 0.8, 1, 1.1, 1.2, 1.3, 1.4 } },
+                    { "mediumBaseUnits", Scale(current["mediumBaseUnits"], 0.75, 1, 1.25, 1.5) },
+                    { "largeBaseUnits", Scale(current["largeBaseUnits"], 0.5, 0.6, 0.75, 0.9, 1, 1.25) },
+                    { "aaaBaseUnits", Scale(current["aaaBaseUnits"], 1, 1.5) },
+                };
+                foreach (var combo in Combinations(grid))
+                {
+                    evaluated++;
+                    combo["salesFloorShare"] = Math.Round(flopUnits / combo["smallBaseUnits"], 4);
+                    Apply(loop, combo);
+
+                    var chances = new Candidate { values = combo };
+                    Evaluate(chanceScenarios, chances, new[] { 1f });
+                    if (chances.passed < chances.total) continue;
+                    kept++;
+
+                    var results = new List<CareerProfileResult>();
+                    int seed = 1;
+                    foreach (var profile in profiles) results.Add(CareerReport.RunProfile(profile, careers, seed++ * 1000));
+                    var goals = CareerReport.Goals(results);
+                    int passed = goals.FindAll(g => g.passed).Count;
+                    double distance = Distance(combo, current);
+                    if (passed > bestGoals || (passed == bestGoals && distance < bestDistance))
+                    {
+                        best = combo;
+                        bestGoals = passed;
+                        bestDistance = distance;
+                        var measured = new StringBuilder();
+                        foreach (var g in goals) measured.AppendLine("  " + (g.passed ? "ok  " : "NÃO ") + g.text + " — " + g.measured);
+                        bestMeasured = measured.ToString();
+                    }
+                }
+            }
+            finally
+            {
+                JsonUtility.FromJsonOverwrite(original, loop);
+            }
+
+            report.AppendLine(evaluated + " combinações; " + kept + " mantêm as chances da Garagem e o lucro por jogo de cada fase.");
+            report.AppendLine("Atual:     " + Describe(current));
+            if (best != null)
+            {
+                report.AppendLine("Escolhida: " + Describe(best) + "  → metas de carreira " + bestGoals + "/" + 5);
+                report.Append(bestMeasured);
+                Directory.CreateDirectory(Path.Combine(outFolder, "BalanceOverrides"));
+                File.WriteAllText(Path.Combine(outFolder, "BalanceOverrides", "GameLoopBalanceSO.json"), ToJson(best), new UTF8Encoding(false));
+            }
+            File.WriteAllText(Path.Combine(outFolder, "busca_carreira.txt"), report.ToString(), new UTF8Encoding(false));
+            Debug.Log(report.ToString());
+            Debug.Log("GAMELIKE_CAREER_SEARCH goals=" + bestGoals);
+            EditorApplication.Exit(0);
+        }
+
         private static void SearchSize(GameLoopBalanceSO loop, string scenarioName, string unitsKey, string priceKey,
             Dictionary<string, double> chosen, StringBuilder report)
         {

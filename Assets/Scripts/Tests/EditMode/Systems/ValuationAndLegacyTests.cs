@@ -27,6 +27,22 @@ namespace GameLike.Tests.EditMode.Systems
         }
 
         [Test]
+        public void Valuation_Debt_ReducesTheValue()
+        {
+            var broke = new CompanyState("A", 0) { reputation01 = 0.5f };
+            var inDebt = new CompanyState("B", -20_000) { reputation01 = 0.5f };
+            Assert.AreEqual(ValuationCalculator.Compute(broke, null) - 20_000, ValuationCalculator.Compute(inDebt, null),
+                "caixa negativo desconta do valor (GDD 23.15)");
+        }
+
+        [Test]
+        public void Valuation_NeverNegative()
+        {
+            var ruined = new CompanyState("A", -10_000_000) { reputation01 = 0.5f };
+            Assert.AreEqual(0, ValuationCalculator.Compute(ruined, null));
+        }
+
+        [Test]
         public void Valuation_TeamAddsValue()
         {
             var solo = new CompanyState("A", 100_000);

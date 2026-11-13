@@ -269,8 +269,13 @@ namespace GameLike.UI.Game
                 ScreenCapture.CaptureScreenshot(System.IO.Path.ChangeExtension(shot, null) + "_simulacao.png");
                 yield return new WaitForSecondsRealtime(1f);
 
-                // digita sem pontos no primeiro campo numérico da Economia e confere a máscara e o valor aplicado
                 var screen = FindFirstObjectByType<Tuning.TuningScreen>();
+                screen.SelectGroup("Simulação de carreira");
+                yield return new WaitForSecondsRealtime(1.5f);
+                ScreenCapture.CaptureScreenshot(System.IO.Path.ChangeExtension(shot, null) + "_carreira.png");
+                yield return new WaitForSecondsRealtime(1f);
+
+                // digita sem pontos no primeiro campo numérico da Economia e confere a máscara e o valor aplicado
                 screen.SelectGroup("Economia");
                 yield return new WaitForSecondsRealtime(0.5f);
                 var fields = screen.GetComponent<UIDocument>().rootVisualElement.Query<TextField>().ToList();

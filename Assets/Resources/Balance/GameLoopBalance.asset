@@ -23,13 +23,13 @@ MonoBehaviour:
   aaaTeam: 8
   smallBaseUnits: 40000
   mediumBaseUnits: 180000
-  largeBaseUnits: 375000
+  largeBaseUnits: 225000
   aaaBaseUnits: 1500000
   smallPrice: 15
   mediumPrice: 30
   largePrice: 60
   aaaPrice: 60
-  salesScoreExponent: 1.5
+  salesScoreExponent: 1
   salesFloorShare: 0.2
   salesScoreThreshold: 5
   pointsPerPersonPerPhase: 100

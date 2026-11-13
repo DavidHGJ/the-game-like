@@ -31,6 +31,31 @@ namespace GameLike.Editor.CI
             EditorApplication.Exit(0);
         }
 
+        [MenuItem("Tools/GameLike/Balanceamento/Simular carreiras (relatório longo)")]
+        public static void RunCareerFromMenu()
+        {
+            string path = WriteCareer(100);
+            EditorUtility.RevealInFinder(path);
+        }
+
+        /// <summary>Entrada batch da simulação longa: grava <c>Docs/Simulacao/carreira.md</c>.</summary>
+        public static void BatchCareer()
+        {
+            var watch = System.Diagnostics.Stopwatch.StartNew();
+            string path = WriteCareer(100);
+            Debug.Log("GAMELIKE_CAREER report=" + path + " ms=" + watch.ElapsedMilliseconds);
+            EditorApplication.Exit(0);
+        }
+
+        private static string WriteCareer(int careers)
+        {
+            var results = CareerReport.RunAll(careers);
+            Directory.CreateDirectory(OutputFolder);
+            string path = Path.GetFullPath(Path.Combine(OutputFolder, "carreira.md"));
+            File.WriteAllText(path, CareerReport.ToMarkdown(results, careers), new UTF8Encoding(false));
+            return path;
+        }
+
         private static string Write(out int passed, out int total)
         {
             var plain = EconomyReport.RunAll(SimMarketing.None);

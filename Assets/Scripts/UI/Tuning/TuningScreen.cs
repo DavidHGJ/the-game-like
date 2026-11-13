@@ -34,6 +34,8 @@ namespace GameLike.UI.Tuning
             public VisualElement button;
             /// <summary>true = o item da simulação da economia (não edita um asset).</summary>
             public bool simulation;
+            /// <summary>true = o item da simulação de carreira (não edita um asset).</summary>
+            public bool career;
         }
 
         private readonly List<Group> _groups = new List<Group>();
@@ -93,6 +95,7 @@ namespace GameLike.UI.Tuning
         private void CollectGroups()
         {
             _groups.Add(new Group { section = "Testar", title = "Simulação da economia", simulation = true });
+            _groups.Add(new Group { section = "Testar", title = "Simulação de carreira", career = true });
             // Garante que os parâmetros gerais existam mesmo sem asset criado.
             BalanceProvider.Get<GameTuningBalanceSO>();
             foreach (var asset in BalanceProvider.All())
@@ -204,6 +207,7 @@ namespace GameLike.UI.Tuning
             _content.Clear();
             if (_current == null) return;
             if (_current.simulation) { _content.Add(TuningSimulationView.Build()); return; }
+            if (_current.career) { _content.Add(TuningCareerView.Build()); return; }
             var target = _current.target;
 
             var head = Kit.Row();

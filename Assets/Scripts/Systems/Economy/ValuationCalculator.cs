@@ -18,7 +18,7 @@ namespace GameLike.Systems.Economy
             if (company == null) return 0;
 
             double v = 0;
-            v += Mathf.Max(0, company.cash);                 // liquidez
+            v += company.cash;                               // liquidez (dívida desconta, GDD 23.15)
             v += company.lifetimeRevenue * 0.5;              // receita histórica
             v += company.gamesReleased * 10_000.0;           // catálogo
             v += company.reputation01 * 100_000.0;           // reputação/sentimento público
@@ -37,7 +37,7 @@ namespace GameLike.Systems.Economy
         {
             var parts = new List<KeyValuePair<string, long>>();
             if (company == null) return parts;
-            parts.Add(new KeyValuePair<string, long>("Liquidez (caixa)", System.Math.Max(0, company.cash)));
+            parts.Add(new KeyValuePair<string, long>("Liquidez (caixa)", company.cash));
             parts.Add(new KeyValuePair<string, long>("Receita dos jogos", (long)(company.lifetimeRevenue * 0.5)));
             parts.Add(new KeyValuePair<string, long>("Catálogo e diversidade",
                 company.gamesReleased * 10_000L + (company.genresReleased?.Count ?? 0) * 8_000L));

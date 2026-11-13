@@ -880,3 +880,17 @@ Pedido: montar os cenarios DENTRO do jogo, vendo o 3D, movendo e girando as peca
 1. "Dar certo" = nota >= 7; metas e alvo de 30% de lucro do jogo medio sao propostas (EconomyReport/BalanceSearch).
 2. Nota 5 conta como fracasso (vende o mesmo piso que a nota 3).
 3. Simulador nao usa tema/plataforma (neutros) nem sorteio das criticas.
+
+## 2026-11-13 (noite 2) — SIMULACAO LONGA (carreiras) + "avanca, mas nao tudo" (GDD 23.15)
+- `Systems/Simulation/CareerSimulator` + `CareerReport`: carreira = 5 runs seguidas (o dinheiro da venda vira capital
+  da proxima), run inteira semana a semana com valuation real, expansao, pesquisa de tamanhos, contratacao, inflacao,
+  estagnacao e falencia. 10 perfis (iniciante/medio/bom/expert x equipe enxuta-junior/cheia-pleno, + medio que nao
+  vende antes de quebrar, + medio com fundador nivel 3). 100 carreiras por perfil em ~1,5 s. Painel "Simulacao de
+  carreira" na tela de Parametros; relatorio Docs/Simulacao/carreira.md; 5 testes.
+- Decisoes do David: valuation desconta a divida (caixa negativo), pesquisa de tamanho continua exigindo a fase
+  (armadilha do Indie mantida), metas de carreira propostas aceitas (GDD 23.15).
+- Busca guiada pela simulacao longa (BalanceSearch.BatchCareerSearch, ~35 s): curva nota->vendas mais linear
+  (expoente 1,5 -> 1) e jogo Grande vendendo menos (375 mil -> 225 mil un.). Resultado: 5/5 metas de carreira,
+  21/21 metas de chances/lucro. 125/125 testes. NAO publicado.
+- Pendencias: vender empresa quebrada ainda rende ~R$ 150 mil (valuation soma reputacao, nota media, catalogo mesmo
+  sem caixa); equipe cheia trava o expert (salarios comem o lucro); a inflacao sobe custos mas nao precos.
