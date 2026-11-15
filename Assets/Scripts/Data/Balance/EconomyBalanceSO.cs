@@ -14,6 +14,8 @@ namespace GameLike.Data.Balance
     {
         [Header("Valuation para mudar de fase (GDD 19.1)")]
         [SerializeField] private long garageToIndieThreshold = 250_000;
+        [Tooltip("Jogos lançados na fase atual antes de poder expandir, além do valuation (GDD 23.19).")]
+        [SerializeField] private int minGamesPerPhase = 2;
         [SerializeField] private long indieToOfficeThreshold = 500_000;
         [SerializeField] private long officeToStudioThreshold = 5_000_000;
 
@@ -60,6 +62,7 @@ namespace GameLike.Data.Balance
         };
 
         public long GarageToIndieThreshold => garageToIndieThreshold;
+        public int MinGamesPerPhase => Mathf.Max(0, minGamesPerPhase);
         public long IndieToOfficeThreshold => indieToOfficeThreshold;
         public long OfficeToStudioThreshold => officeToStudioThreshold;
 

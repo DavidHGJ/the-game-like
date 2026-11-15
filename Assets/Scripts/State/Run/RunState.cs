@@ -33,6 +33,8 @@ namespace GameLike.State
         public bool hadMajorCrisis;
         /// <summary>Dinheiro pessoal investido como capital inicial (aviso de prejuízo, GDD 2.4).</summary>
         public long capitalInvested;
+        /// <summary>Aptidão do fundador nesta run por área (1..10, índice de DevArea) — cresce com prática e treino (GDD 23.16).</summary>
+        public float[] founderAptitude = new float[0];
 
         public RunState(CompanyState company)
         {
@@ -56,6 +58,7 @@ namespace GameLike.State
             if (research == null) research = new ResearchState();
             if (rivals == null) rivals = new List<RivalState>();
             if (pendingOffer == null) pendingOffer = new AcquisitionOffer();
+            if (founderAptitude == null) founderAptitude = new float[0];
             if (week < 1) week = 1;
             if (year < 1) year = 1;
             currentProject?.EnsureCollections();

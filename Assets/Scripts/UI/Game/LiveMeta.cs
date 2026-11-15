@@ -180,6 +180,9 @@ namespace GameLike.UI.Game
 
         private const float CellW = 452f, CellH = 318f, RootSize = 74f, ChildSize = 44f;
 
+        private static float PerkY(int index, int count) =>
+            52f + index * (count > 1 ? Mathf.Min(62f, (CellH - 66f - ChildSize) / (count - 1)) : 0f);
+
         private readonly List<Node> _nodes = new List<Node>();
         private readonly List<(VisualElement layer, SkillTreeDef tree)> _links = new List<(VisualElement, SkillTreeDef)>();
         private Node _selected;
@@ -301,7 +304,7 @@ namespace GameLike.UI.Game
 
             for (int i = 0; i < tree.Perks.Length; i++)
             {
-                var node = new Node { tree = tree, perk = tree.Perks[i], color = style.color, icon = Kit.IcGem, pos = new Vector2(214f, 52f + i * 62f) };
+                var node = new Node { tree = tree, perk = tree.Perks[i], color = style.color, icon = Kit.IcGem, pos = new Vector2(214f, PerkY(i, tree.Perks.Length)) };
                 PlaceNode(cell, node, ChildSize);
                 var lbl = Kit.Col(); lbl.style.position = Position.Absolute; lbl.style.left = node.pos.x + ChildSize + 10; lbl.style.top = node.pos.y + 4;
                 lbl.style.width = 170;
@@ -452,7 +455,7 @@ namespace GameLike.UI.Game
             Vector2 from = new Vector2(34f + RootSize, 120f + RootSize * 0.5f);
             for (int i = 0; i < tree.Perks.Length; i++)
             {
-                Vector2 to = new Vector2(214f, 52f + i * 62f + ChildSize * 0.5f);
+                Vector2 to = new Vector2(214f, PerkY(i, tree.Perks.Length) + ChildSize * 0.5f);
                 Vector2 c1 = new Vector2(from.x + 50f, from.y), c2 = new Vector2(to.x - 50f, to.y);
                 bool on = Meta.perks.Contains(tree.Perks[i].Id);
                 p.strokeColor = on ? color : Kit.Track; p.lineWidth = on ? 4f : 3f;

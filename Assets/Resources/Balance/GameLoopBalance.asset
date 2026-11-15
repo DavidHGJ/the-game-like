@@ -21,23 +21,35 @@ MonoBehaviour:
   mediumTeam: 2
   largeTeam: 4
   aaaTeam: 8
-  smallBaseUnits: 40000
-  mediumBaseUnits: 180000
-  largeBaseUnits: 225000
-  aaaBaseUnits: 1500000
+  smallFirstWeekUnits: 9000
+  mediumFirstWeekUnits: 30938
+  largeFirstWeekUnits: 31500
+  aaaFirstWeekUnits: 296875
   smallPrice: 15
-  mediumPrice: 30
-  largePrice: 60
+  mediumPrice: 38
+  largePrice: 75
   aaaPrice: 60
-  salesScoreExponent: 1
+  salesScoreExponent: 1.4
   salesFloorShare: 0.2
   salesScoreThreshold: 5
-  pointsPerPersonPerPhase: 100
+  basePointsPerWeek: 3
+  practicePerPoint: 0.02
+  trainingGain: 0.5
+  trainingCostPerLevel: 2000
+  themeShare: 0.5
+  themeAccuracyByWeight:
+  - 0
+  - 0.15
+  - 0.35
+  - 0.5
+  - 0.65
+  - 0.85
+  - 1
+  blockTolerance: 0.05
+  pointsBonusFactor: 0.5
+  engineReliefPerLevel: 0.1
+  engineReliefMax: 0.4
   productionPhaseCount: 5
-  smallParamCap: 300
-  mediumParamCap: 450
-  largeParamCap: 550
-  aaaParamCap: 600
   smallReferenceTeam: 1
   mediumReferenceTeam: 3
   largeReferenceTeam: 6
@@ -47,17 +59,28 @@ MonoBehaviour:
   officeMaxTeam: 6
   studioMaxTeam: 9
   scopeCoverageFloor: 0.15
-  bugBasePerWeek: 2.5
-  bugToleranceFree: 5
-  bugScorePenaltyMax: 3
+  bugsPerPoint: 0.1
+  bugPenaltyWeight: 1
+  bugPenaltyMax: 0.5
   smallBaseWishlists: 4000
   mediumBaseWishlists: 18000
   largeBaseWishlists: 60000
   aaaBaseWishlists: 220000
-  salesTailWeeks: 26
-  tailRetentionWorst: 0.4
-  tailRetentionBest: 0.65
-  priceElasticity: 1.3
+  weeklyDecayBase: 0.25
+  hypeDecayReductionMax: 0.6
+  salesEndShare: 0.1
+  weeklyVariationDown: 0.25
+  weeklyVariationUp: 0.15
+  bugDecayWeight: 0.3
+  hypeBacklashWeight: 1.5
+  hypeBacklashReputationMax: 0.1
+  hypeSalesFactorMin: 0.9
+  hypeSalesFactorMax: 1.5
+  cheapPriceRatio: 0.8
+  expensivePriceRatio: 1.2
+  cheapPriceFactor: 1.25
+  expensivePriceFactor: 0.7
+  trendingThemeHypeBonus: 0.2
   launchBudgetHypePer10k: 0.12
   reviewerNoise: 1
   bugFixPerWeekBase: 3

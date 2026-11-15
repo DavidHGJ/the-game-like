@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using GameLike.Core.Events;
+using GameLike.Data.Balance;
 using GameLike.Data.Definitions;
 using GameLike.State;
 using GameLike.State.Meta;
@@ -94,36 +95,13 @@ namespace GameLike.Tests.EditMode.Systems
 
         // ---------------- vendas ----------------
 
-        [Test]
-        public void TailUnits_SumToTotal_AndDecay()
-        {
-            const long total = 100_000;
-            const int weeks = 26;
-            long sum = 0;
-            long previous = long.MaxValue;
-            for (int w = 0; w < weeks; w++)
-            {
-                long u = SalesCalculator.TailUnitsForWeek(total, w, weeks, 0.8f);
-                Assert.LessOrEqual(u, previous, "a cauda só cai depois do pico de lançamento");
-                previous = u;
-                sum += u;
-            }
-            Assert.AreEqual(total, sum, total * 0.001, "a cauda distribui o total previsto");
-            Assert.AreEqual(0, SalesCalculator.TailUnitsForWeek(total, weeks, weeks, 0.8f), "depois da cauda não vende");
-        }
-
-        [Test]
-        public void TailRetention_BetterScore_SlowerDecay()
-        {
-            Assert.Greater(SalesCalculator.TailRetention(9f, null), SalesCalculator.TailRetention(4f, null));
-        }
 
         [Test]
         public void PriceFactor_HigherPrice_SellsLess()
         {
-            Assert.AreEqual(1f, SalesCalculator.PriceFactor(20, 20, 1.3f), 0.0001f);
-            Assert.Less(SalesCalculator.PriceFactor(40, 20, 1.3f), 1f);
-            Assert.Greater(SalesCalculator.PriceFactor(10, 20, 1.3f), 1f);
+            Assert.AreEqual(1f, SalesCalculator.PriceFactor(20, 20, null), 0.0001f);
+            Assert.Less(SalesCalculator.PriceFactor(40, 20, null), 1f);
+            Assert.Greater(SalesCalculator.PriceFactor(10, 20, null), 1f);
         }
 
         [Test]
@@ -162,15 +140,16 @@ namespace GameLike.Tests.EditMode.Systems
         // ---------------- árvore de habilidades (GDD 14 / 19.5) ----------------
 
         [Test]
-        public void SkillTree_HasSixTreesWithFourPerksEach_AndCostsInRange()
+        public void SkillTree_HasSixTreesWithAtLeastFourPerks_AndCostsInRange()
         {
             Assert.AreEqual(6, SkillTreeCatalog.All.Count);
             foreach (var tree in SkillTreeCatalog.All)
             {
-                Assert.AreEqual(4, tree.Perks.Length, tree.Name);
+                Assert.GreaterOrEqual(tree.Perks.Length, 4, tree.Name);
                 foreach (var perk in tree.Perks)
                     Assert.That(perk.CostPL, Is.InRange(5, 25), perk.Name + " (GDD 19.5: 5 a 25 PL)");
             }
+            Assert.IsNotNull(SkillTreeCatalog.FindPerk(SkillTreeCatalog.RitmoAcelerado), "tempo acelerado virou perk de legado (GDD 23.16)");
         }
 
         [Test]
@@ -245,7 +224,9 @@ namespace GameLike.Tests.EditMode.Systems
             var project = new ProjectState("Jogo", genre.Id, "G", ProjectSize.Small, null);
             pm.StartProject(genre, null, project);
             Assert.IsTrue(project.awaitingAllocation, "a 1ª fase espera a distribuição de pontos");
-            Assert.AreEqual(100, project.phasePointBudget, "fundador sozinho = 100 pontos por fase (GDD 5.3)");
+            Assert.Greater(project.phasePointBudget, 0, "a previsão da fase vem da aptidão do fundador (GDD 23.16)");
+            float aptitudeBefore = 0f;
+            foreach (float a in pm.FounderAptitude) aptitudeBefore += a;
 
             int guard = 0;
             int phasesConfirmed = 0;
@@ -260,6 +241,13 @@ namespace GameLike.Tests.EditMode.Systems
             }
 
             Assert.AreEqual(5, phasesConfirmed, "5 fases de produção (GDD 5.2)");
+            float delivered = 0f;
+            foreach (float v in project.paramPoints) delivered += v;
+            Assert.AreEqual(ProductionCalculator.RequiredPoints(ProjectSize.Small, BalanceProvider.Get<GameLoopBalanceSO>()), delivered, 6f,
+                "fundador com aptidão 5 entrega ~os pontos esperados de um Pequeno (GDD 23.16)");
+            float aptitudeAfter = 0f;
+            foreach (float a in pm.FounderAptitude) aptitudeAfter += a;
+            Assert.Greater(aptitudeAfter, aptitudeBefore, "produzir pratica e sobe a aptidão");
             Assert.AreEqual(ProjectStatus.ReadyToLaunch, project.status, "fim da produção não lança sozinho");
             Assert.IsTrue(run.HasActiveProject);
 
@@ -291,7 +279,7 @@ namespace GameLike.Tests.EditMode.Systems
         }
 
         [Test]
-        public void ConfirmAllocation_ClampsToPhaseBudget()
+        public void ConfirmAllocation_NormalizesSharesOfThePhase()
         {
             var go = new GameObject("project-test");
             _spawned.Add(go);
@@ -315,7 +303,7 @@ namespace GameLike.Tests.EditMode.Systems
 
             float total = 0f;
             foreach (float v in project.paramAllocated) total += v;
-            Assert.AreEqual(project.phasePointBudget, total, 0.01f, "não dá para gastar mais que o orçamento da fase");
+            Assert.AreEqual(1f, total, 0.001f, "a distribuição é em fração dos pontos gerados e soma 100% (GDD 23.16)");
             Assert.AreEqual(0f, project.paramAllocated[(int)GameParameter.Programming]);
         }
     }

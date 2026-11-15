@@ -18,6 +18,8 @@ namespace GameLike.State
         public long valuation;
         public CompanyPhase phase = CompanyPhase.Garage;
         public int gamesReleased;
+        /// <summary>Jogos lançados desde a última mudança de fase (requisito da expansão, GDD 23.19).</summary>
+        public int gamesInPhase;
         public long lifetimeRevenue;
 
         /// <summary>Semanas de run já passadas — base da inflação (GDD 23.12).</summary>

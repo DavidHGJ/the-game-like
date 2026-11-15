@@ -68,6 +68,7 @@ namespace GameLike.UI.Game
             Add("Opções", Kit.IcGear, ShowOptions);
             if (MapBuilderBoot.IsAvailable) Add(MapBuilderBoot.MenuLabel, Kit.IcCubes, MapBuilderBoot.Open);
             if (Tuning.TuningScreen.IsAvailable) Add("Parâmetros", Kit.IcSliders, Tuning.TuningScreen.Open);
+            if (Tuning.OrbGalleryScreen.IsAvailable) Add("Bolinhas de ponto", Kit.IcMagic, Tuning.OrbGalleryScreen.Open);
             Add("Sair", Kit.IcPower, Quit);
 
             var menuGo = MakeDoc("Menu", panel, 0, out _);
@@ -256,6 +257,39 @@ namespace GameLike.UI.Game
         /// </summary>
         private System.Collections.IEnumerator Start()
         {
+            int orbShot = Array.IndexOf(Environment.GetCommandLineArgs(), "-glorbs");
+            if (orbShot >= 0)
+            {
+                // prints de validação das bolinhas de ponto (GDD 23.16), e encerra
+                string shot = Environment.GetCommandLineArgs()[orbShot + 1];
+                System.IO.Directory.CreateDirectory(System.IO.Path.GetDirectoryName(shot));
+                string stem = System.IO.Path.ChangeExtension(shot, null);
+                Tuning.OrbGalleryScreen.Open();
+                yield return new WaitForSecondsRealtime(1.5f);
+                var gallery = FindFirstObjectByType<Tuning.OrbGalleryScreen>();
+                gallery.FireAll();
+                float[] at = { 0.15f, 0.45f, 0.8f, 1.15f, 1.55f, 2.4f };
+                float waited = 0f;
+                for (int i = 0; i < at.Length; i++)
+                {
+                    yield return new WaitForSecondsRealtime(at[i] - waited);
+                    waited = at[i];
+                    ScreenCapture.CaptureScreenshot(stem + "_" + i + ".png");
+                }
+                gallery.StartRain(3f);
+                yield return new WaitForSecondsRealtime(1.6f);
+                ScreenCapture.CaptureScreenshot(stem + "_chuva.png");
+                yield return new WaitForSecondsRealtime(3f);
+                ScreenCapture.CaptureScreenshot(stem + "_fim.png");
+                yield return new WaitForSecondsRealtime(1f);
+                Debug.Log("GAMELIKE_ORBS_SHOT_DONE");
+#if UNITY_EDITOR
+                UnityEditor.EditorApplication.Exit(0);
+#else
+                Application.Quit();
+#endif
+                yield break;
+            }
             int tune = Array.IndexOf(Environment.GetCommandLineArgs(), "-gltuning");
             if (tune >= 0)
             {

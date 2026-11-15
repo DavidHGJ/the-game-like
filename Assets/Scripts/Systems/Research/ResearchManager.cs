@@ -103,6 +103,20 @@ namespace GameLike.Systems.Research
         public long EngineWeeklyCost =>
             EngineCalculator.WeeklyCost(_catalog, _run?.research, BalanceProvider.Get<EngineBalanceSO>());
 
+        /// <summary>Níveis de módulo de engine ligados a cada bloco (19 itens), dos módulos já pesquisados (adendo 23.18).</summary>
+        public float[] EngineLevelsByParameter()
+        {
+            var levels = new float[ParameterCatalog.ParameterCount];
+            if (_run == null) return levels;
+            foreach (var node in _catalog)
+            {
+                if (node.Kind != UnlockKind.Engine || !_run.research.IsUnlocked(node.Id)) continue;
+                foreach (var parameter in ResearchCatalog.ParametersHelpedBy(node.Group))
+                    levels[(int)parameter] += ResearchCatalog.ModuleLevel(node.ModuleWeight);
+            }
+            return levels;
+        }
+
         /// <summary>Pesquisas ainda não desbloqueadas e permitidas pela fase atual.</summary>
         public IEnumerable<ResearchNode> Available()
         {

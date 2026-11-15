@@ -80,6 +80,30 @@ namespace GameLike.Systems.Research
         /// <summary>Módulos que toda empresa já tem ao nascer — a "engine básica" (200 EB).</summary>
         public static readonly string[] StarterEngineModules = { "render2d_basic", "audio_basic" };
 
+        /// <summary>
+        /// Blocos (itens das fases) que os módulos de um grupo de engine amenizam (adendo 23.18). Um módulo
+        /// nunca ameniza outro bloco da fase.
+        /// </summary>
+        public static GameParameter[] ParametersHelpedBy(string group) => group switch
+        {
+            "Renderização" => new[] { GameParameter.Graphics, GameParameter.Vfx },
+            "Áudio" => new[] { GameParameter.SoundDesign },
+            "Animação" => new[] { GameParameter.Animation },
+            "Física" => new[] { GameParameter.GameFeel },
+            "IA" => new[] { GameParameter.Gameplay },
+            "Rede" => new[] { GameParameter.StabilityTesting },
+            _ => new GameParameter[0]
+        };
+
+        /// <summary>Nível de um módulo para a amenização: leve 1, médio 2, pesado 3.</summary>
+        public static int ModuleLevel(EngineModuleWeight weight) => weight switch
+        {
+            EngineModuleWeight.Light => 1,
+            EngineModuleWeight.Medium => 2,
+            EngineModuleWeight.Heavy => 3,
+            _ => 0
+        };
+
         public static List<ResearchNode> Build(IEnumerable<ThemeSO> themes)
         {
             var list = new List<ResearchNode>();

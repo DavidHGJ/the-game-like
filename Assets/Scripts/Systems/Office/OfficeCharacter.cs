@@ -77,6 +77,20 @@ namespace GameLike.Systems.Office
         private Act _act, _previousAct;
         private Pose _from;
         private float _blend = 1f, _actTime, _actDuration, _clock, _seed;
+        private Renderer[] _renderers;
+
+        /// <summary>Ponto logo acima da cabeça, em coordenadas de mundo (de onde saem as bolinhas de ponto, GDD 23.16).</summary>
+        public Vector3 HeadTop
+        {
+            get
+            {
+                if (_renderers == null || _renderers.Length == 0) _renderers = GetComponentsInChildren<Renderer>();
+                if (_renderers.Length == 0) return transform.position + Vector3.up;
+                var b = _renderers[0].bounds;
+                for (int i = 1; i < _renderers.Length; i++) if (_renderers[i] != null) b.Encapsulate(_renderers[i].bounds);
+                return new Vector3(b.center.x, b.max.y, b.center.z);
+            }
+        }
 
         /// <summary>Cria um boneco sob <paramref name="parent"/> (origem no quadril).</summary>
         public static OfficeCharacter Create(Transform parent, string name, CharacterLook look, SeatActivity activity, int seed)

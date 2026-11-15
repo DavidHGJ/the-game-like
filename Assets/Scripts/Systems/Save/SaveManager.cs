@@ -4,6 +4,8 @@ using System.IO.Compression;
 using System.Text;
 using GameLike.State;
 using GameLike.State.Meta;
+using GameLike.Systems.Projects;
+using GameLike.Systems.Staff;
 using UnityEngine;
 
 namespace GameLike.Systems.Save
@@ -34,7 +36,7 @@ namespace GameLike.Systems.Save
         /// (consoleId/Display/Key, consolePopularity01) — GDD 15. Saves v1 migram sem perda:
         /// projetos antigos ficam sem console (alcance de plataforma neutro).
         /// </remarks>
-        public const int CurrentSchemaVersion = 4;
+        public const int CurrentSchemaVersion = 7;
 
         private static string SlotPath(int slot) =>
             Path.Combine(Application.persistentDataPath, $"save_{slot}.gz");
@@ -138,6 +140,63 @@ namespace GameLike.Systems.Save
                 if (data.run != null && data.run.company != null && data.run.company.costVariation <= 0f)
                     data.run.company.costVariation = 1f;
                 data.schemaVersion = 4;
+            }
+
+            // v4 → v5: pontos por aptidão (GDD 23.16). A alocação da fase em andamento era em pontos
+            // absolutos e vira fração (soma 1); o fundador ganha aptidão de base sorteada e a run começa
+            // dela. Funcionários sem aptidão recebem a da especialidade na primeira consulta.
+            if (data.schemaVersion < 5)
+            {
+                var project = data.run?.currentProject;
+                if (project != null && project.paramAllocated != null && project.paramAllocated.Length == ProjectState.ParameterCount)
+                {
+                    var current = GameLike.Data.Definitions.ParameterCatalog.AvailableFor(
+                        (GameLike.Data.Definitions.ProductionPhase)Mathf.Clamp(project.phaseIndex, 0, GameLike.Data.Definitions.ParameterCatalog.PhaseCount - 1),
+                        project.size);
+                    var shares = new float[ProjectState.ParameterCount];
+                    float total = 0f;
+                    foreach (var gp in current) total += Mathf.Max(0f, project.paramAllocated[(int)gp]);
+                    foreach (var gp in current)
+                        shares[(int)gp] = total > 0f ? Mathf.Max(0f, project.paramAllocated[(int)gp]) / total : 1f / current.Count;
+                    project.paramAllocated = shares;
+                }
+                if (data.meta != null)
+                {
+                    data.meta.EnsureCollections();
+                    if (data.meta.founder.aptitude == null || data.meta.founder.aptitude.Length != ProjectState.AreaCount)
+                        data.meta.founder.aptitude = AptitudeCalculator.RollFounder(new System.Random());
+                    if (data.run != null) data.run.founderAptitude = AptitudeCalculator.Copy(data.meta.founder.aptitude);
+                }
+                data.schemaVersion = 5;
+            }
+
+            // v5 → v6: vendas semana a semana (GDD 23.19). Jogos lançados com a cauda antiga (total e duração fixos)
+            // continuam de onde estavam: a 1ª semana e a próxima saem da cauda antiga, e a queda vira 1 − retenção.
+            if (data.schemaVersion < 6)
+            {
+                if (data.run?.releasedProjects != null)
+                    foreach (var released in data.run.releasedProjects)
+                    {
+                        if (released == null || released.firstWeekUnits > 0) continue;
+                        if (released.salesWeeksTotal <= 0 || released.salesWeek >= released.salesWeeksTotal)
+                        {
+                            released.salesEnded = true;
+                            continue;
+                        }
+                        released.firstWeekUnits = SalesCalculator.LegacyTailUnitsForWeek(released.forecastUnits, 0, released.salesWeeksTotal, released.salesRetention);
+                        released.nextWeekUnits = SalesCalculator.LegacyTailUnitsForWeek(released.forecastUnits, released.salesWeek, released.salesWeeksTotal, released.salesRetention);
+                        released.salesDecay = Mathf.Clamp(1f - released.salesRetention, 0.005f, 0.95f);
+                        released.salesEnded = released.firstWeekUnits <= 0;
+                    }
+                data.schemaVersion = 6;
+            }
+
+            // v6 → v7: expansão também exige jogos lançados na fase (GDD 23.19). Saves antigos não contavam isso:
+            // vale o total de jogos já lançados, para não travar quem já estava pronto para expandir.
+            if (data.schemaVersion < 7)
+            {
+                if (data.run?.company != null) data.run.company.gamesInPhase = data.run.company.gamesReleased;
+                data.schemaVersion = 7;
             }
 
             data.run?.EnsureCollections();

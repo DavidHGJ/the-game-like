@@ -309,7 +309,7 @@ namespace GameLike.UI.Game
             s.Add(_sumCombo);
             s.Add(Kit.Divider(12));
             s.Add(LiveBits.Line(Kit.IcUsers, "Equipe", "", out _sumTeam));
-            s.Add(LiveBits.Line(Kit.IcSliders, "Pontos por fase", "", out _sumPoints));
+            s.Add(LiveBits.Line(Kit.IcSliders, "Pontos previstos no jogo", "", out _sumPoints));
             s.Add(LiveBits.Line(Kit.IcClock, "Duração", "", out _sumWeeks));
             s.Add(LiveBits.Line(Kit.IcChip, "Engine Budget", "", out _sumEngine));
             s.Add(LiveBits.Line(Kit.IcTag, "Licença", "", out _sumLicense));
@@ -348,7 +348,7 @@ namespace GameLike.UI.Game
             int team = Mathf.Clamp(gc.Run.company.EffectiveTeamSize, 1, maxTeam);
             var probe = new ProjectState("", "", "", _size, null) { teamSize = team };
             _sumTeam.text = team == 1 ? "só você" : team + " pessoas";
-            _sumPoints.text = gc.Projects.PhaseBudget(probe) + " pts";
+            _sumPoints.text = "≈ " + Mathf.RoundToInt(gc.Projects.ForecastProjectPoints(probe));
             _sumWeeks.text = "~" + (loop != null ? loop.WeeksFor(_size) : 0) + " semanas";
             int eb = gc.Research != null ? gc.Research.EngineBudget : 0;
             int reference = engine != null ? engine.ReferenceBudgetFor(_size) : 200;
@@ -390,12 +390,11 @@ namespace GameLike.UI.Game
 
         private ProjectState _p;
         private List<GameParameter> _params;
-        private float[] _points;
-        private Label[] _valueLabels;
-        private Label _sumLabel, _weeksLabel;
+        private int[] _pct;
+        private Label[] _valueLabels, _pointLabels;
+        private Label _sumLabel, _weeksLabel, _forecastLabel;
         private VisualElement _sumFill, _activePhase;
         private bool _crunch;
-        private int _budget, _cap;
 
         protected override void Build()
         {
@@ -405,17 +404,12 @@ namespace GameLike.UI.Game
             var phase = (ProductionPhase)_p.phaseIndex;
             Color col = Kit.PhaseColors[_p.phaseIndex];
             _params = ParameterCatalog.AvailableFor(phase, _p.size);
-            _budget = _p.phasePointBudget;
-            _cap = gc.Projects.ParameterCap(_p);
-            if (_points == null)
-            {
-                _points = new float[_params.Count];
-                for (int i = 0; i < _points.Length; i++) _points[i] = Mathf.Floor(Mathf.Min(_cap, _budget / (float)_params.Count));
-            }
+            if (_pct == null) _pct = EvenSplit(_params.Count);
             _valueLabels = new Label[_params.Count];
+            _pointLabels = new Label[_params.Count];
 
             var body = Window(ParameterCatalog.PhaseLabel(phase), PhaseIcons[_p.phaseIndex], col, 1140, 740, out _,
-                "Fase " + (_p.phaseIndex + 1) + " de 5 de \"" + _p.name + "\" — onde a equipe coloca o esforço?");
+                "Fase " + (_p.phaseIndex + 1) + " de 5 de \"" + _p.name + "\" — que parte do esforço vai para cada item?");
             body.Add(Enter(PhaseStrip()));
 
             var row = Kit.Row(Align.Stretch); row.style.flexGrow = 1; row.style.marginTop = 16;
@@ -424,7 +418,7 @@ namespace GameLike.UI.Game
             row.Add(left);
 
             var sumRow = Kit.Row();
-            sumRow.Add(Kit.Caps("Pontos da equipe nesta fase", 11, Kit.Soft));
+            sumRow.Add(Kit.Caps("Divisão do esforço nesta fase", 11, Kit.Soft));
             sumRow.Add(Kit.Spacer());
             _sumLabel = Kit.Text("", 15, Kit.Ink, true);
             sumRow.Add(_sumLabel);
@@ -444,7 +438,7 @@ namespace GameLike.UI.Game
 
             var info = Kit.Tile();
             info.Add(LiveBits.Line(Kit.IcClock, "Duração da fase", "", out _weeksLabel));
-            info.Add(LiveBits.Line(Kit.IcSliders, "Teto por parâmetro", _cap + " pts"));
+            info.Add(LiveBits.Line(Kit.IcSliders, "Pontos previstos", "", out _forecastLabel));
             info.Add(LiveBits.Line(Kit.IcBug, "Bugs até agora", _p.bugCount.ToString()));
             info.Add(LiveBits.Line(Kit.IcFire, "Hype", Mathf.RoundToInt(_p.hype01 * 100f).ToString()));
             right.Add(Enter(info));
@@ -460,20 +454,30 @@ namespace GameLike.UI.Game
             crunch.Add(cr);
             right.Add(Enter(crunch));
 
-            var tip = LiveBits.Note(Kit.IcQuestion, Kit.Blue, "Cada gênero pede uma mistura diferente. As notas da crítica dizem se você acertou.");
+            var tip = LiveBits.Note(Kit.IcQuestion, Kit.Blue,
+                "Cada gênero pede uma mistura diferente. As notas da crítica dizem se você acertou.");
             tip.style.marginTop = 12;
             right.Add(Enter(tip));
 
             right.Add(Kit.Spacer());
             var even = Kit.Ghost("Dividir por igual", Kit.IcScale, () =>
             {
-                for (int i = 0; i < _points.Length; i++) _points[i] = Mathf.Floor(Mathf.Min(_cap, _budget / (float)_points.Length));
+                _pct = EvenSplit(_params.Count);
                 Rebuild();
             });
             right.Add(Enter(even));
             var go = Kit.Button("Começar fase", Kit.IcPlay, col, Color.white, Confirm); go.style.marginTop = 8;
             right.Add(Enter(go));
             RefreshSum();
+        }
+
+        private static int[] EvenSplit(int count)
+        {
+            var pct = new int[count];
+            if (count == 0) return pct;
+            for (int i = 0; i < count; i++) pct[i] = 100 / count;
+            for (int i = 0; i < 100 % count; i++) pct[i]++;
+            return pct;
         }
 
         private VisualElement PhaseStrip()
@@ -506,25 +510,25 @@ namespace GameLike.UI.Game
             var row = Kit.Outline(14); row.style.flexDirection = FlexDirection.Row; row.style.alignItems = Align.Center;
             row.style.marginBottom = 10; Kit.Pad(row, 12, 16);
             row.Add(Kit.Badge(ParamIcons[(int)gp], col, 44));
-            var name = Kit.Text(ParameterCatalog.Label(gp), 15, Kit.Ink, true);
-            name.style.marginLeft = 12; name.style.width = 190; name.style.flexShrink = 0;
+            var name = Kit.Col(); name.style.marginLeft = 12; name.style.width = 190; name.style.flexShrink = 0;
+            name.Add(Kit.Text(ParameterCatalog.Label(gp), 15, Kit.Ink, true));
+            _pointLabels[index] = Kit.Text("", 11, Kit.Soft);
+            name.Add(_pointLabels[index]);
             row.Add(name);
-            float max = Mathf.Min(_cap, _budget);
-            var val = Kit.Text(Mathf.RoundToInt(_points[index]).ToString(), 20, col, true);
-            val.style.width = 60; val.style.unityTextAlign = TextAnchor.MiddleRight;
+            var val = Kit.Text(_pct[index] + "%", 20, col, true);
+            val.style.width = 64; val.style.unityTextAlign = TextAnchor.MiddleRight;
             _valueLabels[index] = val;
-            row.Add(Widgets.Slider(max > 0 ? _points[index] / max : 0f, col, v =>
+            row.Add(Widgets.Slider(_pct[index] / 100f, col, v =>
             {
-                _points[index] = Mathf.Round(v * max);
-                val.text = Mathf.RoundToInt(_points[index]).ToString();
+                _pct[index] = Mathf.RoundToInt(v * 100f);
+                val.text = _pct[index] + "%";
                 RefreshSum();
             }, v =>
             {
-                // O total da fase não passa do orçamento: o controle para no que ainda sobra.
-                float others = 0f;
-                for (int i = 0; i < _points.Length; i++) if (i != index) others += _points[i];
-                float allowed = Mathf.Max(0f, Mathf.Floor(_budget - others));
-                return max > 0 ? Mathf.Min(v, allowed / max) : 0f;
+                // A soma da fase não passa de 100%: o controle para no que ainda sobra.
+                int others = 0;
+                for (int i = 0; i < _pct.Length; i++) if (i != index) others += _pct[i];
+                return Mathf.Min(v, Mathf.Max(0, 100 - others) / 100f);
             }));
             row.Add(val);
             return row;
@@ -542,25 +546,43 @@ namespace GameLike.UI.Game
             return row;
         }
 
+        private float[] Shares()
+        {
+            var all = new float[ParameterCatalog.ParameterCount];
+            for (int i = 0; i < _params.Count; i++) all[(int)_params[i]] = _pct[i] / 100f;
+            return all;
+        }
+
         private void RefreshSum()
         {
-            float total = 0f;
-            foreach (float v in _points) total += v;
-            int pts = Mathf.RoundToInt(total);
-            bool over = pts > _budget;
-            _sumLabel.text = pts + " / " + _budget + " pts" + (over ? "  (será ajustado)" : pts < _budget ? "  (sobrando " + (_budget - pts) + ")" : "");
-            _sumLabel.style.color = over ? Kit.Red : Kit.Ink;
-            _sumFill.style.width = Length.Percent(Mathf.Clamp01(total / Mathf.Max(1, _budget)) * 100f);
-            _sumFill.style.backgroundColor = over ? Kit.Red : Kit.PhaseColors[_p.phaseIndex];
-            int weeks = Ui.Gc.Projects.WeeksForPhase(_p, _p.phaseIndex, _crunch);
+            int total = 0;
+            foreach (int v in _pct) total += v;
+            _sumLabel.text = total + "% de 100%" + (total < 100 ? "  (faltam " + (100 - total) + "%, divididos na proporção)" : "");
+            _sumLabel.style.color = total == 100 ? Kit.Ink : Kit.Red;
+            _sumFill.style.width = Length.Percent(Mathf.Clamp(total, 0, 100));
+            _sumFill.style.backgroundColor = Kit.PhaseColors[_p.phaseIndex];
+            var pm = Ui.Gc.Projects;
+            int weeks = pm.WeeksForPhase(_p, _p.phaseIndex, _crunch);
             _weeksLabel.text = weeks + (weeks == 1 ? " semana" : " semanas");
+
+            var shares = Shares();
+            float forecast = 0f;
+            var workers = pm.Workers(_p);
+            for (int i = 0; i < _params.Count; i++)
+            {
+                float pts = 0f;
+                foreach (var w in workers) pts += pm.WeeklyPointsFor(_p, w, _params[i], shares[(int)_params[i]], _crunch) * weeks;
+                forecast += pts;
+                _pointLabels[i].text = "≈ " + pts.ToString("0.#") + " pts na fase";
+            }
+            _forecastLabel.text = "≈ " + Mathf.RoundToInt(forecast);
         }
 
         private void Confirm()
         {
-            var all = new float[ParameterCatalog.ParameterCount];
-            for (int i = 0; i < _params.Count; i++) all[(int)_params[i]] = _points[i];
-            if (!Ui.Gc.Projects.ConfirmAllocation(all, _crunch)) { Sfx.Play(SfxId.Fail); return; }
+            int total = 0;
+            foreach (int v in _pct) total += v;
+            if (total <= 0 || !Ui.Gc.Projects.ConfirmAllocation(Shares(), _crunch)) { Sfx.Play(SfxId.Fail); return; }
             Ui.RefreshHudAttributes();
             RequestClose();
         }
@@ -783,13 +805,13 @@ namespace GameLike.UI.Game
             row.Add(right);
 
             var loop = BalanceProvider.Get<GameLoopBalanceSO>();
-            float penalty = BugCalculator.ScorePenalty(p.bugCount, p.size, loop);
+            float penalty = p.bugCount;
             var bugs = Kit.Tile(); bugs.style.backgroundColor = Kit.A(penalty > 0f ? Kit.Red : Kit.Green, 0.10f);
             var br = Kit.Row();
             br.Add(Kit.Badge(Kit.IcBug, penalty > 0f ? Kit.Red : Kit.Green, 34));
             var bt = Kit.Col(); bt.style.marginLeft = 10; bt.style.flexShrink = 1;
             bt.Add(Kit.Text(p.bugCount + (p.bugCount == 1 ? " bug conhecido" : " bugs conhecidos"), 14, Kit.Ink, true));
-            bt.Add(Kit.Wrap(penalty > 0f ? "Lançar assim derruba a nota da crítica." : "Dentro do tolerável — não afeta a nota.", 11, Kit.Soft));
+            bt.Add(Kit.Wrap(penalty > 0f ? "Bugs pesam na crítica e nas vendas." : "Nenhum bug conhecido.", 11, Kit.Soft));
             br.Add(bt);
             bugs.Add(br);
             if (p.bugCount > 0)
@@ -827,7 +849,7 @@ namespace GameLike.UI.Game
             _hypeNote.text = Labels.HypeBand(hype100);
             _wishNote.text = "≈ " + Kit.Short(preview.WishlistSales) + " vendas na 1ª semana";
             int pct = Mathf.RoundToInt((preview.PriceFactor - 1f) * 100f);
-            _priceNote.text = pct == 0 ? "Preço na média: procura normal." : pct > 0 ? "Mais barato: cerca de +" + pct + "% de unidades." : "Mais caro: cerca de " + pct + "% de unidades.";
+            _priceNote.text = pct == 0 ? "Preço na média do mercado." : pct > 0 ? "Mais barato que o normal: atrai mais compradores." : "Mais caro que o normal: menos compradores, mais por unidade.";
             _priceNote.style.color = pct < 0 ? Kit.Red : pct > 0 ? Kit.Green : Kit.Soft;
         }
 

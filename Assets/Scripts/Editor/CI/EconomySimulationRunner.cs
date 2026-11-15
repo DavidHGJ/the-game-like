@@ -47,6 +47,45 @@ namespace GameLike.Editor.CI
             EditorApplication.Exit(0);
         }
 
+        [MenuItem("Tools/GameLike/Balanceamento/Simular desenvolvimento (aptidão e pontos)")]
+        public static void RunDevelopmentFromMenu()
+        {
+            string path = WriteDevelopment();
+            EditorUtility.RevealInFinder(path);
+        }
+
+        /// <summary>Entrada batch da simulação de desenvolvimento: grava <c>Docs/Simulacao/desenvolvimento.md</c>.</summary>
+        public static void BatchDevelopment()
+        {
+            var watch = System.Diagnostics.Stopwatch.StartNew();
+            string path = WriteDevelopment();
+            Debug.Log("GAMELIKE_DEVELOPMENT report=" + path + " ms=" + watch.ElapsedMilliseconds);
+            EditorApplication.Exit(0);
+        }
+
+        private static string WriteDevelopment()
+        {
+            const int repetitions = 20;
+            var genres = new System.Collections.Generic.List<GameLike.Data.Definitions.GenreSO>();
+            foreach (string guid in AssetDatabase.FindAssets("t:GenreSO"))
+            {
+                var g = AssetDatabase.LoadAssetAtPath<GameLike.Data.Definitions.GenreSO>(AssetDatabase.GUIDToAssetPath(guid));
+                if (g != null) genres.Add(g);
+            }
+            var results = DevelopmentReport.RunAll(genres, repetitions);
+            Directory.CreateDirectory(OutputFolder);
+            string path = Path.GetFullPath(Path.Combine(OutputFolder, "desenvolvimento.md"));
+            File.WriteAllText(path, DevelopmentReport.ToMarkdown(results, genres.Count, repetitions), new UTF8Encoding(false));
+
+            const int sweepRepetitions = 5;
+            var sweep = DevelopmentSweep.RunAll(genres, sweepRepetitions);
+            File.WriteAllText(Path.Combine(OutputFolder, "desenvolvimento_varredura.md"),
+                DevelopmentSweep.ToMarkdown(sweep, genres.Count, sweepRepetitions), new UTF8Encoding(false));
+            File.WriteAllText(Path.Combine(OutputFolder, "desenvolvimento_varredura.csv"), DevelopmentSweep.ToCsv(sweep), new UTF8Encoding(true));
+            Debug.Log("GAMELIKE_SWEEP rows=" + sweep.Count + " violations=" + DevelopmentSweep.Violations(sweep).Count);
+            return path;
+        }
+
         private static string WriteCareer(int careers)
         {
             var results = CareerReport.RunAll(careers);

@@ -4,6 +4,8 @@ using GameLike.Data.Definitions;
 using GameLike.State;
 using GameLike.Systems.Core;
 using GameLike.Systems.Market;
+using GameLike.Systems.Meta;
+using GameLike.Systems.Office;
 using GameLike.Systems.Projects;
 using GameLike.UI.Gallery;
 using UnityEngine;
@@ -78,6 +80,7 @@ namespace GameLike.UI.Game
 
             Sfx.Ensure();
             Kit.UiSound = kind => Sfx.Play(kind == 0 ? SfxId.Hover : SfxId.Click);
+            PointOrbs.Sound = kind => Sfx.Play(kind == 0 ? SfxId.Plup : SfxId.Absorb, 0.92f + UnityEngine.Random.value * 0.16f);
             WireHud();
 
             _pauseAction = new InputAction("Pausar", binding: "<Keyboard>/space");
@@ -150,6 +153,7 @@ namespace GameLike.UI.Game
         {
             if (_locked && Gc != null && Gc.Time != null) Gc.Time.RemoveLock();
             Kit.UiSound = null;
+            PointOrbs.Sound = null;
         }
 
         private void WireHud()
@@ -157,7 +161,12 @@ namespace GameLike.UI.Game
             var a = _hud.Actions;
             a.Pause = () => Gc.Time.Pause();
             a.Play = () => { Gc.Time.SetSpeedIndex(0); Gc.Time.Resume(); };
-            a.Fast = () => { Gc.Time.SetSpeedIndex(Gc.Time.SpeedCount - 1); Gc.Time.Resume(); };
+            a.Fast = () =>
+            {
+                if (!FounderPerks.CanFastForward) return;
+                Gc.Time.SetSpeedIndex(Gc.Time.SpeedCount - 1);
+                Gc.Time.Resume();
+            };
             a.NewProject = OpenNewProject;
             a.Project = OpenProjectContext;
             a.Research = () => OpenPanel(4);
@@ -209,6 +218,8 @@ namespace GameLike.UI.Game
             _live.year = time.CurrentYear;
             _live.weekProgress01 = time.WeekProgress01;
             _live.paused = time.IsPaused;
+            _live.fastUnlocked = FounderPerks.CanFastForward;
+            FillCrewHeads();
             _live.speedIndex = time.SpeedIndex;
             _live.secondsPerWeek = time.SecondsPerWeek;
             _live.team = c.EffectiveTeamSize;
@@ -234,14 +245,14 @@ namespace GameLike.UI.Game
                 _live.hype100 = p.hype01 * 100f;
                 _live.phaseIndex = Mathf.Clamp(p.phaseIndex, 0, ParameterCatalog.PhaseCount - 1);
                 bool developing = run.IsDeveloping;
-                float frac = developing && !time.IsPaused ? time.WeekProgress01 : 0f;
+                float frac = developing ? time.WeekProgress01 : 0f;
                 var phaseParams = ParameterCatalog.ParametersOf((ProductionPhase)_live.phaseIndex);
                 for (int i = 0; i < HudLive.ParameterCount; i++)
                 {
                     _live.paramVisible[i] = ParameterCatalog.IsAvailable((GameParameter)i, p.size);
                     float pts = p.paramPoints[i];
                     if (developing && phaseParams.Contains((GameParameter)i))
-                        pts = Mathf.Min(p.paramAllocated[i], pts + frac * p.paramAllocated[i] / Mathf.Max(1, p.phaseWeeks));
+                        pts += frac * p.paramWeeklyRate[i];
                     _live.paramPoints[i] = pts;
                 }
 
@@ -281,6 +292,24 @@ namespace GameLike.UI.Game
         /// Gráfico de vendas do HUD: o jogo lançado mais recente que ainda vende. Antes das
         /// críticas (e antes da primeira semana de vendas) o card aparece vazio, avisando.
         /// </summary>
+
+        private OfficeCharacter[] _crew = new OfficeCharacter[0];
+        private float _crewRefresh;
+
+        /// <summary>Atualiza de onde saem as bolinhas: topo da cabeça de cada boneco (fundador primeiro).</summary>
+        private void FillCrewHeads()
+        {
+            _crewRefresh -= UnityEngine.Time.unscaledDeltaTime;
+            if (_crewRefresh <= 0f)
+            {
+                _crewRefresh = 1f;
+                _crew = FindObjectsByType<OfficeCharacter>(FindObjectsSortMode.None);
+                System.Array.Sort(_crew, (a, b) => (a.name == OfficeCrew.FounderName ? 0 : 1).CompareTo(b.name == OfficeCrew.FounderName ? 0 : 1));
+            }
+            _live.crewHeads.Clear();
+            foreach (var c in _crew)
+                if (c != null && c.isActiveAndEnabled) _live.crewHeads.Add(c.HeadTop + Vector3.up * 0.15f);
+        }
         private void FillSales(RunState run)
         {
             _live.salesBars.Clear();
@@ -533,7 +562,7 @@ namespace GameLike.UI.Game
                 if (released[i].name == e.GameName) { _pendingReview = released[i]; break; }
         }
 
-        private void OnResearchPoints(ResearchPointsChangedEvent e) => Sfx.Play(SfxId.Point, 1.2f);
+        private void OnResearchPoints(ResearchPointsChangedEvent e) { }
 
         private void OnResearchDone(ResearchCompletedEvent e)
         {

@@ -8,6 +8,7 @@ using GameLike.Systems.Economy;
 using GameLike.Systems.Meta;
 using GameLike.Systems.Projects;
 using GameLike.Systems.Research;
+using GameLike.Systems.Staff;
 using GameLike.UI.Gallery;
 using UnityEngine;
 using UnityEngine.UIElements;
@@ -54,7 +55,13 @@ namespace GameLike.UI.Game
             var ch = Kit.Row();
             ch.Add(Kit.Text("Histórico de valuation", 15, Kit.Ink, true));
             ch.Add(Kit.Spacer());
-            if (_threshold > 0) ch.Add(Kit.Chip("Próxima fase: " + Kit.Money(_threshold), Kit.Gold, false, Kit.IcFlag));
+            if (_threshold > 0)
+            {
+                var econ = BalanceProvider.Get<EconomyBalanceSO>();
+                int need = econ != null ? econ.MinGamesPerPhase : 0;
+                int done = gc.Run.company.gamesInPhase;
+                ch.Add(Kit.Chip("Próxima fase: " + Kit.Money(_threshold) + (need > 0 ? " e " + Mathf.Min(done, need) + "/" + need + " jogos nesta fase" : ""), Kit.Gold, false, Kit.IcFlag));
+            }
             chartCard.Add(ch);
             _chart = new VisualElement(); _chart.style.flexGrow = 1; _chart.style.marginTop = 10;
             _chart.generateVisualContent += DrawChart;
@@ -307,7 +314,7 @@ namespace GameLike.UI.Game
 
             var st = Kit.Row(); st.style.width = 150;
             st.Add(g.IsSelling
-                ? Kit.Chip("Vendendo · sem. " + g.salesWeek + "/" + g.salesWeeksTotal, Kit.Green)
+                ? Kit.Chip("Vendendo · semana " + g.salesWeek, Kit.Green)
                 : Kit.Chip("Vendas encerradas", Kit.Soft));
             r.Add(st);
             return r;
@@ -389,11 +396,54 @@ namespace GameLike.UI.Game
             t.Add(lv);
             top.Add(t);
             c.Add(top);
-            var n = Kit.Wrap("Rende 100 pontos por fase e cobre todas as áreas pela metade.", 11, Kit.Soft); n.style.marginTop = 10;
+            var n = Kit.Wrap("Faz de tudo um pouco. Melhora com a prática e com treinamento.", 11, Kit.Soft); n.style.marginTop = 10;
             c.Add(n);
+            c.Add(AptitudeBlock(Ui.Gc.Projects.FounderAptitude, ProjectManager.FounderId));
             c.Add(Kit.Divider(10));
             c.Add(Kit.Text("sem salário", 12, Kit.Soft, true));
             return c;
+        }
+
+        private static readonly string[] AreaNames = { "Design", "Arte", "Áudio", "Tecnologia", "Conteúdo" };
+
+        /// <summary>Aptidão por área (adendo 23.16) com o botão de treino de cada uma.</summary>
+        private VisualElement AptitudeBlock(float[] aptitude, string workerId)
+        {
+            var gc = Ui.Gc;
+            var loop = BalanceProvider.Get<GameLoopBalanceSO>();
+            var block = Kit.Col(); block.style.marginTop = 10;
+            var head = Kit.Row();
+            head.Add(Kit.Caps("Aptidão", 10, Kit.Soft));
+            head.Add(Kit.Spacer());
+            head.Add(Kit.Text("treinar", 10, Kit.Faint, true));
+            block.Add(head);
+            for (int a = 0; a < AreaNames.Length && a < aptitude.Length; a++)
+            {
+                int area = a;
+                Color color = Kit.PhaseColors[a % Kit.PhaseColors.Length];
+                var row = Kit.Row(); row.style.marginTop = 5;
+                var name = Kit.Text(AreaNames[a], 11, Kit.Ink, true); name.style.width = 74;
+                row.Add(name);
+                var bar = Kit.Bar(7, color, out _, Mathf.Clamp01(aptitude[a] / AptitudeCalculator.Max));
+                bar.style.flexGrow = 1; bar.style.flexShrink = 1;
+                row.Add(bar);
+                var val = Kit.Text(aptitude[a].ToString("0.0"), 11, color, true); val.style.width = 30; val.style.unityTextAlign = TextAnchor.MiddleRight;
+                row.Add(val);
+                long cost = AptitudeCalculator.TrainingCost(aptitude[a], loop);
+                bool can = aptitude[a] < AptitudeCalculator.Max && gc.Run.company.cash >= cost;
+                var train = Kit.Row(); train.style.marginLeft = 6; train.style.width = 64; train.style.justifyContent = Justify.Center;
+                train.style.backgroundColor = Kit.A(Kit.Blue, 0.14f); Kit.Radius(train, 7); Kit.Pad(train, 2, 4);
+                train.Add(Kit.Text("+ R$ " + Kit.Short(cost), 10, Color.Lerp(Kit.Blue, Kit.Ink, 0.3f), true));
+                Kit.Hover(train, 1.06f, 0.94f);
+                train.RegisterCallback<ClickEvent>(_ =>
+                {
+                    if (gc.Projects.Train(workerId, area, out long paid)) { Sfx.Play(SfxId.Spend); Rebuild(); } else Sfx.Play(SfxId.Fail);
+                });
+                LiveBits.SetEnabled(train, can);
+                row.Add(train);
+                block.Add(row);
+            }
+            return block;
         }
 
         private VisualElement Employee(EmployeeInstance e, int tone)
@@ -420,11 +470,12 @@ namespace GameLike.UI.Game
             c.Add(LiveBits.Meter("Experiência", next > 0 ? e.xp / (float)next : 1f, Kit.Blue, e.seniority == Seniority.Star ? "nível máximo" : e.xp + " / " + next + " XP"));
             c.Add(LiveBits.Meter("Humor", e.mood01, e.mood01 > 0.5f ? Kit.Green : Kit.Gold, e.mood01 > 0.5f ? "satisfeito" : "desanimado"));
             c.Add(LiveBits.Meter("Burnout", e.burnout01, e.burnout01 > 0.7f ? Kit.Red : Kit.Orange, e.burnout01 > 0.7f ? "no limite!" : "sob controle"));
+            c.Add(AptitudeBlock(AptitudeCalculator.Of(e), e.id));
             c.Add(Kit.Divider(10));
             c.Add(Kit.Text(Kit.Money(e.weeklySalary) + " / sem", 12, Kit.Ink, true));
 
             var acts = Kit.Row(); acts.style.marginTop = 8;
-            acts.Add(Action("Treinar", Kit.Short(staff.TrainingCost(e)), Kit.Blue, cash >= staff.TrainingCost(e), () => staff.Train(e)));
+            acts.Add(Action("Mentoria", Kit.Short(staff.TrainingCost(e)), Kit.Blue, cash >= staff.TrainingCost(e), () => staff.Train(e)));
             acts.Add(Action("Férias", Kit.Short(staff.VacationCost(e)), Kit.Teal, cash >= staff.VacationCost(e), () => staff.GiveVacation(e)));
             acts.Add(Action("Bônus", Kit.Short(staff.BonusCost(e)), Kit.Gold, cash >= staff.BonusCost(e), () => staff.GiveBonus(e)));
             c.Add(acts);

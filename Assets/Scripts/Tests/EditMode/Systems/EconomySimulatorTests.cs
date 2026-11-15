@@ -58,11 +58,11 @@ namespace GameLike.Tests.EditMode.Systems
         }
 
         [Test]
-        public void Run_SellsTheWholeForecastOverTheTail()
+        public void Run_SellsTheExpectedTotal_WeekByWeek()
         {
             var game = EconomySimulator.Run(Profitability(ProjectSize.Small, 7f)).games[0];
             Assert.Greater(game.forecastUnits, 0);
-            Assert.AreEqual(game.forecastUnits, game.units, game.forecastUnits * 0.02 + 2, "a cauda soma a venda prevista");
+            Assert.AreEqual(game.forecastUnits, game.units, game.forecastUnits * 0.02 + 10, "as vendas semana a semana somam o total esperado");
             Assert.AreEqual(game.units * BalanceProvider.Get<GameLoopBalanceSO>().PriceFor(ProjectSize.Small), game.revenue);
         }
 
@@ -72,8 +72,10 @@ namespace GameLike.Tests.EditMode.Systems
             var loop = BalanceProvider.Get<GameLoopBalanceSO>();
             var quality = BalanceProvider.Get<QualityFormulaBalanceSO>();
             var game = EconomySimulator.Run(Profitability(ProjectSize.Medium, 6.5f)).games[0];
-            var expected = SalesCalculator.Compute(6.5f, ProjectSize.Medium, game.hypeAtLaunch, game.wishlists, loop, quality);
-            Assert.AreEqual(expected.units, game.forecastUnits);
+            int price = loop.PriceFor(ProjectSize.Medium);
+            long first = SalesCalculator.FirstWeekUnits(6.5f, ProjectSize.Medium, game.hypeAtLaunch, game.wishlists, price, price, 1f, loop, quality);
+            long expected = (long)SalesCalculator.ExpectedTotalUnits(first, SalesCalculator.WeeklyDecay(game.hypeAtLaunch, SalesCalculator.Delivery(6.5f, loop), 0.07f, loop), loop);
+            Assert.AreEqual(expected, game.forecastUnits);
         }
 
         [Test]

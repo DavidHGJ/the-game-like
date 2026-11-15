@@ -1,0 +1,2269 @@
+﻿tamanho;equipe;divisao;tema;engine;nota;acerto_divisao;acerto_fases;desconto_bugs;pontos;esperado
+Pequeno (Garagem);Fraca;Perfeita;−−−;Sem engine;4,56;100%;100%;9%;15;24
+Pequeno (Garagem);Fraca;Perfeita;−−−;Engine inicial;4,56;100%;100%;9%;15;24
+Pequeno (Garagem);Fraca;Perfeita;−−−;Engine completa;4,56;100%;100%;9%;15;24
+Pequeno (Garagem);Fraca;Perfeita;−−;Sem engine;5,25;100%;100%;9%;15;24
+Pequeno (Garagem);Fraca;Perfeita;−−;Engine inicial;5,25;100%;100%;9%;15;24
+Pequeno (Garagem);Fraca;Perfeita;−−;Engine completa;5,25;100%;100%;9%;15;24
+Pequeno (Garagem);Fraca;Perfeita;−;Sem engine;6,16;100%;100%;9%;15;24
+Pequeno (Garagem);Fraca;Perfeita;−;Engine inicial;6,16;100%;100%;9%;15;24
+Pequeno (Garagem);Fraca;Perfeita;−;Engine completa;6,16;100%;100%;9%;15;24
+Pequeno (Garagem);Fraca;Perfeita;Neutro;Sem engine;6,84;100%;100%;9%;15;24
+Pequeno (Garagem);Fraca;Perfeita;Neutro;Engine inicial;6,84;100%;100%;9%;15;24
+Pequeno (Garagem);Fraca;Perfeita;Neutro;Engine completa;6,84;100%;100%;9%;15;24
+Pequeno (Garagem);Fraca;Perfeita;+;Sem engine;7,53;100%;100%;9%;15;24
+Pequeno (Garagem);Fraca;Perfeita;+;Engine inicial;7,53;100%;100%;9%;15;24
+Pequeno (Garagem);Fraca;Perfeita;+;Engine completa;7,53;100%;100%;9%;15;24
+Pequeno (Garagem);Fraca;Perfeita;++;Sem engine;8,44;100%;100%;9%;15;24
+Pequeno (Garagem);Fraca;Perfeita;++;Engine inicial;8,44;100%;100%;9%;15;24
+Pequeno (Garagem);Fraca;Perfeita;++;Engine completa;8,44;100%;100%;9%;15;24
+Pequeno (Garagem);Fraca;Perfeita;+++;Sem engine;9,13;100%;100%;9%;15;24
+Pequeno (Garagem);Fraca;Perfeita;+++;Engine inicial;9,13;100%;100%;9%;15;24
+Pequeno (Garagem);Fraca;Perfeita;+++;Engine completa;9,13;100%;100%;9%;15;24
+Pequeno (Garagem);Fraca;Boa (erro 25%);−−−;Sem engine;4,05;67%;89%;9%;15;24
+Pequeno (Garagem);Fraca;Boa (erro 25%);−−−;Engine inicial;4,06;67%;89%;9%;15;24
+Pequeno (Garagem);Fraca;Boa (erro 25%);−−−;Engine completa;4,12;67%;90%;9%;15;24
+Pequeno (Garagem);Fraca;Boa (erro 25%);−−;Sem engine;4,73;67%;89%;9%;15;24
+Pequeno (Garagem);Fraca;Boa (erro 25%);−−;Engine inicial;4,74;67%;89%;9%;15;24
+Pequeno (Garagem);Fraca;Boa (erro 25%);−−;Engine completa;4,80;67%;90%;9%;15;24
+Pequeno (Garagem);Fraca;Boa (erro 25%);−;Sem engine;5,64;67%;89%;9%;15;24
+Pequeno (Garagem);Fraca;Boa (erro 25%);−;Engine inicial;5,65;67%;89%;9%;15;24
+Pequeno (Garagem);Fraca;Boa (erro 25%);−;Engine completa;5,71;67%;90%;9%;15;24
+Pequeno (Garagem);Fraca;Boa (erro 25%);Neutro;Sem engine;6,33;67%;89%;9%;15;24
+Pequeno (Garagem);Fraca;Boa (erro 25%);Neutro;Engine inicial;6,34;67%;89%;9%;15;24
+Pequeno (Garagem);Fraca;Boa (erro 25%);Neutro;Engine completa;6,40;67%;90%;9%;15;24
+Pequeno (Garagem);Fraca;Boa (erro 25%);+;Sem engine;7,01;67%;89%;9%;15;24
+Pequeno (Garagem);Fraca;Boa (erro 25%);+;Engine inicial;7,02;67%;89%;9%;15;24
+Pequeno (Garagem);Fraca;Boa (erro 25%);+;Engine completa;7,08;67%;90%;9%;15;24
+Pequeno (Garagem);Fraca;Boa (erro 25%);++;Sem engine;7,93;67%;89%;9%;15;24
+Pequeno (Garagem);Fraca;Boa (erro 25%);++;Engine inicial;7,94;67%;89%;9%;15;24
+Pequeno (Garagem);Fraca;Boa (erro 25%);++;Engine completa;7,99;67%;90%;9%;15;24
+Pequeno (Garagem);Fraca;Boa (erro 25%);+++;Sem engine;8,61;67%;89%;9%;15;24
+Pequeno (Garagem);Fraca;Boa (erro 25%);+++;Engine inicial;8,62;67%;89%;9%;15;24
+Pequeno (Garagem);Fraca;Boa (erro 25%);+++;Engine completa;8,68;67%;90%;9%;15;24
+Pequeno (Garagem);Fraca;Média (erro 50%);−−−;Sem engine;3,13;47%;69%;9%;15;24
+Pequeno (Garagem);Fraca;Média (erro 50%);−−−;Engine inicial;3,17;47%;69%;9%;15;24
+Pequeno (Garagem);Fraca;Média (erro 50%);−−−;Engine completa;3,35;47%;73%;9%;15;24
+Pequeno (Garagem);Fraca;Média (erro 50%);−−;Sem engine;3,82;47%;69%;9%;15;24
+Pequeno (Garagem);Fraca;Média (erro 50%);−−;Engine inicial;3,85;47%;69%;9%;15;24
+Pequeno (Garagem);Fraca;Média (erro 50%);−−;Engine completa;4,04;47%;73%;9%;15;24
+Pequeno (Garagem);Fraca;Média (erro 50%);−;Sem engine;4,73;47%;69%;9%;15;24
+Pequeno (Garagem);Fraca;Média (erro 50%);−;Engine inicial;4,77;47%;69%;9%;15;24
+Pequeno (Garagem);Fraca;Média (erro 50%);−;Engine completa;4,95;47%;73%;9%;15;24
+Pequeno (Garagem);Fraca;Média (erro 50%);Neutro;Sem engine;5,41;47%;69%;9%;15;24
+Pequeno (Garagem);Fraca;Média (erro 50%);Neutro;Engine inicial;5,45;47%;69%;9%;15;24
+Pequeno (Garagem);Fraca;Média (erro 50%);Neutro;Engine completa;5,63;47%;73%;9%;15;24
+Pequeno (Garagem);Fraca;Média (erro 50%);+;Sem engine;6,10;47%;69%;9%;15;24
+Pequeno (Garagem);Fraca;Média (erro 50%);+;Engine inicial;6,14;47%;69%;9%;15;24
+Pequeno (Garagem);Fraca;Média (erro 50%);+;Engine completa;6,32;47%;73%;9%;15;24
+Pequeno (Garagem);Fraca;Média (erro 50%);++;Sem engine;7,01;47%;69%;9%;15;24
+Pequeno (Garagem);Fraca;Média (erro 50%);++;Engine inicial;7,05;47%;69%;9%;15;24
+Pequeno (Garagem);Fraca;Média (erro 50%);++;Engine completa;7,23;47%;73%;9%;15;24
+Pequeno (Garagem);Fraca;Média (erro 50%);+++;Sem engine;7,70;47%;69%;9%;15;24
+Pequeno (Garagem);Fraca;Média (erro 50%);+++;Engine inicial;7,73;47%;69%;9%;15;24
+Pequeno (Garagem);Fraca;Média (erro 50%);+++;Engine completa;7,92;47%;73%;9%;15;24
+Pequeno (Garagem);Fraca;Ruim (erro 75%);−−−;Sem engine;2,17;30%;47%;9%;15;24
+Pequeno (Garagem);Fraca;Ruim (erro 75%);−−−;Engine inicial;2,23;30%;49%;9%;15;24
+Pequeno (Garagem);Fraca;Ruim (erro 75%);−−−;Engine completa;2,58;30%;57%;9%;15;24
+Pequeno (Garagem);Fraca;Ruim (erro 75%);−−;Sem engine;2,85;30%;47%;9%;15;24
+Pequeno (Garagem);Fraca;Ruim (erro 75%);−−;Engine inicial;2,92;30%;49%;9%;15;24
+Pequeno (Garagem);Fraca;Ruim (erro 75%);−−;Engine completa;3,27;30%;57%;9%;15;24
+Pequeno (Garagem);Fraca;Ruim (erro 75%);−;Sem engine;3,76;30%;47%;9%;15;24
+Pequeno (Garagem);Fraca;Ruim (erro 75%);−;Engine inicial;3,83;30%;49%;9%;15;24
+Pequeno (Garagem);Fraca;Ruim (erro 75%);−;Engine completa;4,18;30%;57%;9%;15;24
+Pequeno (Garagem);Fraca;Ruim (erro 75%);Neutro;Sem engine;4,45;30%;47%;9%;15;24
+Pequeno (Garagem);Fraca;Ruim (erro 75%);Neutro;Engine inicial;4,51;30%;49%;9%;15;24
+Pequeno (Garagem);Fraca;Ruim (erro 75%);Neutro;Engine completa;4,87;30%;57%;9%;15;24
+Pequeno (Garagem);Fraca;Ruim (erro 75%);+;Sem engine;5,13;30%;47%;9%;15;24
+Pequeno (Garagem);Fraca;Ruim (erro 75%);+;Engine inicial;5,20;30%;49%;9%;15;24
+Pequeno (Garagem);Fraca;Ruim (erro 75%);+;Engine completa;5,55;30%;57%;9%;15;24
+Pequeno (Garagem);Fraca;Ruim (erro 75%);++;Sem engine;6,05;30%;47%;9%;15;24
+Pequeno (Garagem);Fraca;Ruim (erro 75%);++;Engine inicial;6,11;30%;49%;9%;15;24
+Pequeno (Garagem);Fraca;Ruim (erro 75%);++;Engine completa;6,46;30%;57%;9%;15;24
+Pequeno (Garagem);Fraca;Ruim (erro 75%);+++;Sem engine;6,73;30%;47%;9%;15;24
+Pequeno (Garagem);Fraca;Ruim (erro 75%);+++;Engine inicial;6,80;30%;49%;9%;15;24
+Pequeno (Garagem);Fraca;Ruim (erro 75%);+++;Engine completa;7,15;30%;57%;9%;15;24
+Pequeno (Garagem);Fraca;Péssima (tudo no bloco menos importante);−−−;Sem engine;0,92;9%;20%;9%;14;24
+Pequeno (Garagem);Fraca;Péssima (tudo no bloco menos importante);−−−;Engine inicial;1,02;9%;22%;9%;14;24
+Pequeno (Garagem);Fraca;Péssima (tudo no bloco menos importante);−−−;Engine completa;1,60;9%;35%;9%;14;24
+Pequeno (Garagem);Fraca;Péssima (tudo no bloco menos importante);−−;Sem engine;1,61;9%;20%;9%;14;24
+Pequeno (Garagem);Fraca;Péssima (tudo no bloco menos importante);−−;Engine inicial;1,71;9%;22%;9%;14;24
+Pequeno (Garagem);Fraca;Péssima (tudo no bloco menos importante);−−;Engine completa;2,29;9%;35%;9%;14;24
+Pequeno (Garagem);Fraca;Péssima (tudo no bloco menos importante);−;Sem engine;2,52;9%;20%;9%;14;24
+Pequeno (Garagem);Fraca;Péssima (tudo no bloco menos importante);−;Engine inicial;2,62;9%;22%;9%;14;24
+Pequeno (Garagem);Fraca;Péssima (tudo no bloco menos importante);−;Engine completa;3,20;9%;35%;9%;14;24
+Pequeno (Garagem);Fraca;Péssima (tudo no bloco menos importante);Neutro;Sem engine;3,20;9%;20%;9%;14;24
+Pequeno (Garagem);Fraca;Péssima (tudo no bloco menos importante);Neutro;Engine inicial;3,31;9%;22%;9%;14;24
+Pequeno (Garagem);Fraca;Péssima (tudo no bloco menos importante);Neutro;Engine completa;3,88;9%;35%;9%;14;24
+Pequeno (Garagem);Fraca;Péssima (tudo no bloco menos importante);+;Sem engine;3,89;9%;20%;9%;14;24
+Pequeno (Garagem);Fraca;Péssima (tudo no bloco menos importante);+;Engine inicial;3,99;9%;22%;9%;14;24
+Pequeno (Garagem);Fraca;Péssima (tudo no bloco menos importante);+;Engine completa;4,57;9%;35%;9%;14;24
+Pequeno (Garagem);Fraca;Péssima (tudo no bloco menos importante);++;Sem engine;4,80;9%;20%;9%;14;24
+Pequeno (Garagem);Fraca;Péssima (tudo no bloco menos importante);++;Engine inicial;4,90;9%;22%;9%;14;24
+Pequeno (Garagem);Fraca;Péssima (tudo no bloco menos importante);++;Engine completa;5,48;9%;35%;9%;14;24
+Pequeno (Garagem);Fraca;Péssima (tudo no bloco menos importante);+++;Sem engine;5,49;9%;20%;9%;14;24
+Pequeno (Garagem);Fraca;Péssima (tudo no bloco menos importante);+++;Engine inicial;5,59;9%;22%;9%;14;24
+Pequeno (Garagem);Fraca;Péssima (tudo no bloco menos importante);+++;Engine completa;6,16;9%;35%;9%;14;24
+Pequeno (Garagem);Fraca;Divide igual;−−−;Sem engine;3,77;58%;83%;9%;15;24
+Pequeno (Garagem);Fraca;Divide igual;−−−;Engine inicial;3,79;58%;83%;9%;15;24
+Pequeno (Garagem);Fraca;Divide igual;−−−;Engine completa;3,85;58%;84%;9%;15;24
+Pequeno (Garagem);Fraca;Divide igual;−−;Sem engine;4,46;58%;83%;9%;15;24
+Pequeno (Garagem);Fraca;Divide igual;−−;Engine inicial;4,47;58%;83%;9%;15;24
+Pequeno (Garagem);Fraca;Divide igual;−−;Engine completa;4,54;58%;84%;9%;15;24
+Pequeno (Garagem);Fraca;Divide igual;−;Sem engine;5,37;58%;83%;9%;15;24
+Pequeno (Garagem);Fraca;Divide igual;−;Engine inicial;5,38;58%;83%;9%;15;24
+Pequeno (Garagem);Fraca;Divide igual;−;Engine completa;5,45;58%;84%;9%;15;24
+Pequeno (Garagem);Fraca;Divide igual;Neutro;Sem engine;6,05;58%;83%;9%;15;24
+Pequeno (Garagem);Fraca;Divide igual;Neutro;Engine inicial;6,07;58%;83%;9%;15;24
+Pequeno (Garagem);Fraca;Divide igual;Neutro;Engine completa;6,13;58%;84%;9%;15;24
+Pequeno (Garagem);Fraca;Divide igual;+;Sem engine;6,74;58%;83%;9%;15;24
+Pequeno (Garagem);Fraca;Divide igual;+;Engine inicial;6,75;58%;83%;9%;15;24
+Pequeno (Garagem);Fraca;Divide igual;+;Engine completa;6,82;58%;84%;9%;15;24
+Pequeno (Garagem);Fraca;Divide igual;++;Sem engine;7,65;58%;83%;9%;15;24
+Pequeno (Garagem);Fraca;Divide igual;++;Engine inicial;7,66;58%;83%;9%;15;24
+Pequeno (Garagem);Fraca;Divide igual;++;Engine completa;7,73;58%;84%;9%;15;24
+Pequeno (Garagem);Fraca;Divide igual;+++;Sem engine;8,34;58%;83%;9%;15;24
+Pequeno (Garagem);Fraca;Divide igual;+++;Engine inicial;8,35;58%;83%;9%;15;24
+Pequeno (Garagem);Fraca;Divide igual;+++;Engine completa;8,41;58%;84%;9%;15;24
+Pequeno (Garagem);Fraca;Invertida;−−−;Sem engine;2,15;29%;47%;9%;14;24
+Pequeno (Garagem);Fraca;Invertida;−−−;Engine inicial;2,20;29%;48%;9%;14;24
+Pequeno (Garagem);Fraca;Invertida;−−−;Engine completa;2,56;29%;56%;9%;14;24
+Pequeno (Garagem);Fraca;Invertida;−−;Sem engine;2,84;29%;47%;9%;14;24
+Pequeno (Garagem);Fraca;Invertida;−−;Engine inicial;2,89;29%;48%;9%;14;24
+Pequeno (Garagem);Fraca;Invertida;−−;Engine completa;3,25;29%;56%;9%;14;24
+Pequeno (Garagem);Fraca;Invertida;−;Sem engine;3,75;29%;47%;9%;14;24
+Pequeno (Garagem);Fraca;Invertida;−;Engine inicial;3,80;29%;48%;9%;14;24
+Pequeno (Garagem);Fraca;Invertida;−;Engine completa;4,16;29%;56%;9%;14;24
+Pequeno (Garagem);Fraca;Invertida;Neutro;Sem engine;4,43;29%;47%;9%;14;24
+Pequeno (Garagem);Fraca;Invertida;Neutro;Engine inicial;4,49;29%;48%;9%;14;24
+Pequeno (Garagem);Fraca;Invertida;Neutro;Engine completa;4,85;29%;56%;9%;14;24
+Pequeno (Garagem);Fraca;Invertida;+;Sem engine;5,12;29%;47%;9%;14;24
+Pequeno (Garagem);Fraca;Invertida;+;Engine inicial;5,17;29%;48%;9%;14;24
+Pequeno (Garagem);Fraca;Invertida;+;Engine completa;5,53;29%;56%;9%;14;24
+Pequeno (Garagem);Fraca;Invertida;++;Sem engine;6,03;29%;47%;9%;14;24
+Pequeno (Garagem);Fraca;Invertida;++;Engine inicial;6,08;29%;48%;9%;14;24
+Pequeno (Garagem);Fraca;Invertida;++;Engine completa;6,44;29%;56%;9%;14;24
+Pequeno (Garagem);Fraca;Invertida;+++;Sem engine;6,72;29%;47%;9%;14;24
+Pequeno (Garagem);Fraca;Invertida;+++;Engine inicial;6,77;29%;48%;9%;14;24
+Pequeno (Garagem);Fraca;Invertida;+++;Engine completa;7,13;29%;56%;9%;14;24
+Pequeno (Garagem);Fraca;Mista: 3 fases certas, 2 péssimas;−−−;Sem engine;3,56;67%;78%;9%;15;24
+Pequeno (Garagem);Fraca;Mista: 3 fases certas, 2 péssimas;−−−;Engine inicial;3,62;67%;79%;9%;15;24
+Pequeno (Garagem);Fraca;Mista: 3 fases certas, 2 péssimas;−−−;Engine completa;3,86;67%;85%;9%;15;24
+Pequeno (Garagem);Fraca;Mista: 3 fases certas, 2 péssimas;−−;Sem engine;4,25;67%;78%;9%;15;24
+Pequeno (Garagem);Fraca;Mista: 3 fases certas, 2 péssimas;−−;Engine inicial;4,30;67%;79%;9%;15;24
+Pequeno (Garagem);Fraca;Mista: 3 fases certas, 2 péssimas;−−;Engine completa;4,54;67%;85%;9%;15;24
+Pequeno (Garagem);Fraca;Mista: 3 fases certas, 2 péssimas;−;Sem engine;5,16;67%;78%;9%;15;24
+Pequeno (Garagem);Fraca;Mista: 3 fases certas, 2 péssimas;−;Engine inicial;5,21;67%;79%;9%;15;24
+Pequeno (Garagem);Fraca;Mista: 3 fases certas, 2 péssimas;−;Engine completa;5,45;67%;85%;9%;15;24
+Pequeno (Garagem);Fraca;Mista: 3 fases certas, 2 péssimas;Neutro;Sem engine;5,85;67%;78%;9%;15;24
+Pequeno (Garagem);Fraca;Mista: 3 fases certas, 2 péssimas;Neutro;Engine inicial;5,90;67%;79%;9%;15;24
+Pequeno (Garagem);Fraca;Mista: 3 fases certas, 2 péssimas;Neutro;Engine completa;6,14;67%;85%;9%;15;24
+Pequeno (Garagem);Fraca;Mista: 3 fases certas, 2 péssimas;+;Sem engine;6,53;67%;78%;9%;15;24
+Pequeno (Garagem);Fraca;Mista: 3 fases certas, 2 péssimas;+;Engine inicial;6,58;67%;79%;9%;15;24
+Pequeno (Garagem);Fraca;Mista: 3 fases certas, 2 péssimas;+;Engine completa;6,82;67%;85%;9%;15;24
+Pequeno (Garagem);Fraca;Mista: 3 fases certas, 2 péssimas;++;Sem engine;7,44;67%;78%;9%;15;24
+Pequeno (Garagem);Fraca;Mista: 3 fases certas, 2 péssimas;++;Engine inicial;7,50;67%;79%;9%;15;24
+Pequeno (Garagem);Fraca;Mista: 3 fases certas, 2 péssimas;++;Engine completa;7,74;67%;85%;9%;15;24
+Pequeno (Garagem);Fraca;Mista: 3 fases certas, 2 péssimas;+++;Sem engine;8,13;67%;78%;9%;15;24
+Pequeno (Garagem);Fraca;Mista: 3 fases certas, 2 péssimas;+++;Engine inicial;8,18;67%;79%;9%;15;24
+Pequeno (Garagem);Fraca;Mista: 3 fases certas, 2 péssimas;+++;Engine completa;8,42;67%;85%;9%;15;24
+Pequeno (Garagem);Fraca;Mista: só a Pré-produção péssima;−−−;Sem engine;3,61;75%;79%;9%;15;24
+Pequeno (Garagem);Fraca;Mista: só a Pré-produção péssima;−−−;Engine inicial;3,61;75%;79%;9%;15;24
+Pequeno (Garagem);Fraca;Mista: só a Pré-produção péssima;−−−;Engine completa;3,61;75%;79%;9%;15;24
+Pequeno (Garagem);Fraca;Mista: só a Pré-produção péssima;−−;Sem engine;4,30;75%;79%;9%;15;24
+Pequeno (Garagem);Fraca;Mista: só a Pré-produção péssima;−−;Engine inicial;4,30;75%;79%;9%;15;24
+Pequeno (Garagem);Fraca;Mista: só a Pré-produção péssima;−−;Engine completa;4,30;75%;79%;9%;15;24
+Pequeno (Garagem);Fraca;Mista: só a Pré-produção péssima;−;Sem engine;5,21;75%;79%;9%;15;24
+Pequeno (Garagem);Fraca;Mista: só a Pré-produção péssima;−;Engine inicial;5,21;75%;79%;9%;15;24
+Pequeno (Garagem);Fraca;Mista: só a Pré-produção péssima;−;Engine completa;5,21;75%;79%;9%;15;24
+Pequeno (Garagem);Fraca;Mista: só a Pré-produção péssima;Neutro;Sem engine;5,89;75%;79%;9%;15;24
+Pequeno (Garagem);Fraca;Mista: só a Pré-produção péssima;Neutro;Engine inicial;5,89;75%;79%;9%;15;24
+Pequeno (Garagem);Fraca;Mista: só a Pré-produção péssima;Neutro;Engine completa;5,89;75%;79%;9%;15;24
+Pequeno (Garagem);Fraca;Mista: só a Pré-produção péssima;+;Sem engine;6,58;75%;79%;9%;15;24
+Pequeno (Garagem);Fraca;Mista: só a Pré-produção péssima;+;Engine inicial;6,58;75%;79%;9%;15;24
+Pequeno (Garagem);Fraca;Mista: só a Pré-produção péssima;+;Engine completa;6,58;75%;79%;9%;15;24
+Pequeno (Garagem);Fraca;Mista: só a Pré-produção péssima;++;Sem engine;7,49;75%;79%;9%;15;24
+Pequeno (Garagem);Fraca;Mista: só a Pré-produção péssima;++;Engine inicial;7,49;75%;79%;9%;15;24
+Pequeno (Garagem);Fraca;Mista: só a Pré-produção péssima;++;Engine completa;7,49;75%;79%;9%;15;24
+Pequeno (Garagem);Fraca;Mista: só a Pré-produção péssima;+++;Sem engine;8,18;75%;79%;9%;15;24
+Pequeno (Garagem);Fraca;Mista: só a Pré-produção péssima;+++;Engine inicial;8,18;75%;79%;9%;15;24
+Pequeno (Garagem);Fraca;Mista: só a Pré-produção péssima;+++;Engine completa;8,18;75%;79%;9%;15;24
+Pequeno (Garagem);Média;Perfeita;−−−;Sem engine;4,58;100%;100%;8%;21;24
+Pequeno (Garagem);Média;Perfeita;−−−;Engine inicial;4,58;100%;100%;8%;21;24
+Pequeno (Garagem);Média;Perfeita;−−−;Engine completa;4,58;100%;100%;8%;21;24
+Pequeno (Garagem);Média;Perfeita;−−;Sem engine;5,27;100%;100%;8%;21;24
+Pequeno (Garagem);Média;Perfeita;−−;Engine inicial;5,27;100%;100%;8%;21;24
+Pequeno (Garagem);Média;Perfeita;−−;Engine completa;5,27;100%;100%;8%;21;24
+Pequeno (Garagem);Média;Perfeita;−;Sem engine;6,19;100%;100%;8%;21;24
+Pequeno (Garagem);Média;Perfeita;−;Engine inicial;6,19;100%;100%;8%;21;24
+Pequeno (Garagem);Média;Perfeita;−;Engine completa;6,19;100%;100%;8%;21;24
+Pequeno (Garagem);Média;Perfeita;Neutro;Sem engine;6,88;100%;100%;8%;21;24
+Pequeno (Garagem);Média;Perfeita;Neutro;Engine inicial;6,88;100%;100%;8%;21;24
+Pequeno (Garagem);Média;Perfeita;Neutro;Engine completa;6,88;100%;100%;8%;21;24
+Pequeno (Garagem);Média;Perfeita;+;Sem engine;7,56;100%;100%;8%;21;24
+Pequeno (Garagem);Média;Perfeita;+;Engine inicial;7,56;100%;100%;8%;21;24
+Pequeno (Garagem);Média;Perfeita;+;Engine completa;7,56;100%;100%;8%;21;24
+Pequeno (Garagem);Média;Perfeita;++;Sem engine;8,48;100%;100%;8%;21;24
+Pequeno (Garagem);Média;Perfeita;++;Engine inicial;8,48;100%;100%;8%;21;24
+Pequeno (Garagem);Média;Perfeita;++;Engine completa;8,48;100%;100%;8%;21;24
+Pequeno (Garagem);Média;Perfeita;+++;Sem engine;9,17;100%;100%;8%;21;24
+Pequeno (Garagem);Média;Perfeita;+++;Engine inicial;9,17;100%;100%;8%;21;24
+Pequeno (Garagem);Média;Perfeita;+++;Engine completa;9,17;100%;100%;8%;21;24
+Pequeno (Garagem);Média;Boa (erro 25%);−−−;Sem engine;4,09;67%;89%;8%;21;24
+Pequeno (Garagem);Média;Boa (erro 25%);−−−;Engine inicial;4,10;67%;89%;8%;21;24
+Pequeno (Garagem);Média;Boa (erro 25%);−−−;Engine completa;4,16;67%;91%;8%;21;24
+Pequeno (Garagem);Média;Boa (erro 25%);−−;Sem engine;4,78;67%;89%;8%;21;24
+Pequeno (Garagem);Média;Boa (erro 25%);−−;Engine inicial;4,79;67%;89%;8%;21;24
+Pequeno (Garagem);Média;Boa (erro 25%);−−;Engine completa;4,84;67%;91%;8%;21;24
+Pequeno (Garagem);Média;Boa (erro 25%);−;Sem engine;5,70;67%;89%;8%;21;24
+Pequeno (Garagem);Média;Boa (erro 25%);−;Engine inicial;5,70;67%;89%;8%;21;24
+Pequeno (Garagem);Média;Boa (erro 25%);−;Engine completa;5,76;67%;91%;8%;21;24
+Pequeno (Garagem);Média;Boa (erro 25%);Neutro;Sem engine;6,38;67%;89%;8%;21;24
+Pequeno (Garagem);Média;Boa (erro 25%);Neutro;Engine inicial;6,39;67%;89%;8%;21;24
+Pequeno (Garagem);Média;Boa (erro 25%);Neutro;Engine completa;6,45;67%;91%;8%;21;24
+Pequeno (Garagem);Média;Boa (erro 25%);+;Sem engine;7,07;67%;89%;8%;21;24
+Pequeno (Garagem);Média;Boa (erro 25%);+;Engine inicial;7,08;67%;89%;8%;21;24
+Pequeno (Garagem);Média;Boa (erro 25%);+;Engine completa;7,14;67%;91%;8%;21;24
+Pequeno (Garagem);Média;Boa (erro 25%);++;Sem engine;7,99;67%;89%;8%;21;24
+Pequeno (Garagem);Média;Boa (erro 25%);++;Engine inicial;8,00;67%;89%;8%;21;24
+Pequeno (Garagem);Média;Boa (erro 25%);++;Engine completa;8,05;67%;91%;8%;21;24
+Pequeno (Garagem);Média;Boa (erro 25%);+++;Sem engine;8,68;67%;89%;8%;21;24
+Pequeno (Garagem);Média;Boa (erro 25%);+++;Engine inicial;8,68;67%;89%;8%;21;24
+Pequeno (Garagem);Média;Boa (erro 25%);+++;Engine completa;8,74;67%;91%;8%;21;24
+Pequeno (Garagem);Média;Média (erro 50%);−−−;Sem engine;3,37;47%;74%;8%;21;24
+Pequeno (Garagem);Média;Média (erro 50%);−−−;Engine inicial;3,40;47%;74%;8%;21;24
+Pequeno (Garagem);Média;Média (erro 50%);−−−;Engine completa;3,55;47%;77%;8%;21;24
+Pequeno (Garagem);Média;Média (erro 50%);−−;Sem engine;4,06;47%;74%;8%;21;24
+Pequeno (Garagem);Média;Média (erro 50%);−−;Engine inicial;4,09;47%;74%;8%;21;24
+Pequeno (Garagem);Média;Média (erro 50%);−−;Engine completa;4,24;47%;77%;8%;21;24
+Pequeno (Garagem);Média;Média (erro 50%);−;Sem engine;4,98;47%;74%;8%;21;24
+Pequeno (Garagem);Média;Média (erro 50%);−;Engine inicial;5,01;47%;74%;8%;21;24
+Pequeno (Garagem);Média;Média (erro 50%);−;Engine completa;5,15;47%;77%;8%;21;24
+Pequeno (Garagem);Média;Média (erro 50%);Neutro;Sem engine;5,67;47%;74%;8%;21;24
+Pequeno (Garagem);Média;Média (erro 50%);Neutro;Engine inicial;5,69;47%;74%;8%;21;24
+Pequeno (Garagem);Média;Média (erro 50%);Neutro;Engine completa;5,84;47%;77%;8%;21;24
+Pequeno (Garagem);Média;Média (erro 50%);+;Sem engine;6,35;47%;74%;8%;21;24
+Pequeno (Garagem);Média;Média (erro 50%);+;Engine inicial;6,38;47%;74%;8%;21;24
+Pequeno (Garagem);Média;Média (erro 50%);+;Engine completa;6,53;47%;77%;8%;21;24
+Pequeno (Garagem);Média;Média (erro 50%);++;Sem engine;7,27;47%;74%;8%;21;24
+Pequeno (Garagem);Média;Média (erro 50%);++;Engine inicial;7,30;47%;74%;8%;21;24
+Pequeno (Garagem);Média;Média (erro 50%);++;Engine completa;7,45;47%;77%;8%;21;24
+Pequeno (Garagem);Média;Média (erro 50%);+++;Sem engine;7,96;47%;74%;8%;21;24
+Pequeno (Garagem);Média;Média (erro 50%);+++;Engine inicial;7,99;47%;74%;8%;21;24
+Pequeno (Garagem);Média;Média (erro 50%);+++;Engine completa;8,13;47%;77%;8%;21;24
+Pequeno (Garagem);Média;Ruim (erro 75%);−−−;Sem engine;2,29;30%;50%;8%;21;24
+Pequeno (Garagem);Média;Ruim (erro 75%);−−−;Engine inicial;2,35;30%;51%;8%;21;24
+Pequeno (Garagem);Média;Ruim (erro 75%);−−−;Engine completa;2,69;30%;59%;8%;21;24
+Pequeno (Garagem);Média;Ruim (erro 75%);−−;Sem engine;2,98;30%;50%;8%;21;24
+Pequeno (Garagem);Média;Ruim (erro 75%);−−;Engine inicial;3,04;30%;51%;8%;21;24
+Pequeno (Garagem);Média;Ruim (erro 75%);−−;Engine completa;3,37;30%;59%;8%;21;24
+Pequeno (Garagem);Média;Ruim (erro 75%);−;Sem engine;3,89;30%;50%;8%;21;24
+Pequeno (Garagem);Média;Ruim (erro 75%);−;Engine inicial;3,95;30%;51%;8%;21;24
+Pequeno (Garagem);Média;Ruim (erro 75%);−;Engine completa;4,29;30%;59%;8%;21;24
+Pequeno (Garagem);Média;Ruim (erro 75%);Neutro;Sem engine;4,58;30%;50%;8%;21;24
+Pequeno (Garagem);Média;Ruim (erro 75%);Neutro;Engine inicial;4,64;30%;51%;8%;21;24
+Pequeno (Garagem);Média;Ruim (erro 75%);Neutro;Engine completa;4,98;30%;59%;8%;21;24
+Pequeno (Garagem);Média;Ruim (erro 75%);+;Sem engine;5,27;30%;50%;8%;21;24
+Pequeno (Garagem);Média;Ruim (erro 75%);+;Engine inicial;5,33;30%;51%;8%;21;24
+Pequeno (Garagem);Média;Ruim (erro 75%);+;Engine completa;5,67;30%;59%;8%;21;24
+Pequeno (Garagem);Média;Ruim (erro 75%);++;Sem engine;6,19;30%;50%;8%;21;24
+Pequeno (Garagem);Média;Ruim (erro 75%);++;Engine inicial;6,25;30%;51%;8%;21;24
+Pequeno (Garagem);Média;Ruim (erro 75%);++;Engine completa;6,58;30%;59%;8%;21;24
+Pequeno (Garagem);Média;Ruim (erro 75%);+++;Sem engine;6,87;30%;50%;8%;21;24
+Pequeno (Garagem);Média;Ruim (erro 75%);+++;Engine inicial;6,93;30%;51%;8%;21;24
+Pequeno (Garagem);Média;Ruim (erro 75%);+++;Engine completa;7,27;30%;59%;8%;21;24
+Pequeno (Garagem);Média;Péssima (tudo no bloco menos importante);−−−;Sem engine;0,94;9%;20%;8%;21;24
+Pequeno (Garagem);Média;Péssima (tudo no bloco menos importante);−−−;Engine inicial;1,04;9%;23%;8%;21;24
+Pequeno (Garagem);Média;Péssima (tudo no bloco menos importante);−−−;Engine completa;1,62;9%;35%;8%;21;24
+Pequeno (Garagem);Média;Péssima (tudo no bloco menos importante);−−;Sem engine;1,62;9%;20%;8%;21;24
+Pequeno (Garagem);Média;Péssima (tudo no bloco menos importante);−−;Engine inicial;1,73;9%;23%;8%;21;24
+Pequeno (Garagem);Média;Péssima (tudo no bloco menos importante);−−;Engine completa;2,30;9%;35%;8%;21;24
+Pequeno (Garagem);Média;Péssima (tudo no bloco menos importante);−;Sem engine;2,54;9%;20%;8%;21;24
+Pequeno (Garagem);Média;Péssima (tudo no bloco menos importante);−;Engine inicial;2,64;9%;23%;8%;21;24
+Pequeno (Garagem);Média;Péssima (tudo no bloco menos importante);−;Engine completa;3,22;9%;35%;8%;21;24
+Pequeno (Garagem);Média;Péssima (tudo no bloco menos importante);Neutro;Sem engine;3,23;9%;20%;8%;21;24
+Pequeno (Garagem);Média;Péssima (tudo no bloco menos importante);Neutro;Engine inicial;3,33;9%;23%;8%;21;24
+Pequeno (Garagem);Média;Péssima (tudo no bloco menos importante);Neutro;Engine completa;3,91;9%;35%;8%;21;24
+Pequeno (Garagem);Média;Péssima (tudo no bloco menos importante);+;Sem engine;3,92;9%;20%;8%;21;24
+Pequeno (Garagem);Média;Péssima (tudo no bloco menos importante);+;Engine inicial;4,02;9%;23%;8%;21;24
+Pequeno (Garagem);Média;Péssima (tudo no bloco menos importante);+;Engine completa;4,60;9%;35%;8%;21;24
+Pequeno (Garagem);Média;Péssima (tudo no bloco menos importante);++;Sem engine;4,83;9%;20%;8%;21;24
+Pequeno (Garagem);Média;Péssima (tudo no bloco menos importante);++;Engine inicial;4,93;9%;23%;8%;21;24
+Pequeno (Garagem);Média;Péssima (tudo no bloco menos importante);++;Engine completa;5,51;9%;35%;8%;21;24
+Pequeno (Garagem);Média;Péssima (tudo no bloco menos importante);+++;Sem engine;5,52;9%;20%;8%;21;24
+Pequeno (Garagem);Média;Péssima (tudo no bloco menos importante);+++;Engine inicial;5,62;9%;23%;8%;21;24
+Pequeno (Garagem);Média;Péssima (tudo no bloco menos importante);+++;Engine completa;6,20;9%;35%;8%;21;24
+Pequeno (Garagem);Média;Divide igual;−−−;Sem engine;3,84;58%;84%;8%;21;24
+Pequeno (Garagem);Média;Divide igual;−−−;Engine inicial;3,85;58%;84%;8%;21;24
+Pequeno (Garagem);Média;Divide igual;−−−;Engine completa;3,92;58%;85%;8%;21;24
+Pequeno (Garagem);Média;Divide igual;−−;Sem engine;4,53;58%;84%;8%;21;24
+Pequeno (Garagem);Média;Divide igual;−−;Engine inicial;4,54;58%;84%;8%;21;24
+Pequeno (Garagem);Média;Divide igual;−−;Engine completa;4,60;58%;85%;8%;21;24
+Pequeno (Garagem);Média;Divide igual;−;Sem engine;5,44;58%;84%;8%;21;24
+Pequeno (Garagem);Média;Divide igual;−;Engine inicial;5,46;58%;84%;8%;21;24
+Pequeno (Garagem);Média;Divide igual;−;Engine completa;5,52;58%;85%;8%;21;24
+Pequeno (Garagem);Média;Divide igual;Neutro;Sem engine;6,13;58%;84%;8%;21;24
+Pequeno (Garagem);Média;Divide igual;Neutro;Engine inicial;6,14;58%;84%;8%;21;24
+Pequeno (Garagem);Média;Divide igual;Neutro;Engine completa;6,21;58%;85%;8%;21;24
+Pequeno (Garagem);Média;Divide igual;+;Sem engine;6,82;58%;84%;8%;21;24
+Pequeno (Garagem);Média;Divide igual;+;Engine inicial;6,83;58%;84%;8%;21;24
+Pequeno (Garagem);Média;Divide igual;+;Engine completa;6,90;58%;85%;8%;21;24
+Pequeno (Garagem);Média;Divide igual;++;Sem engine;7,74;58%;84%;8%;21;24
+Pequeno (Garagem);Média;Divide igual;++;Engine inicial;7,75;58%;84%;8%;21;24
+Pequeno (Garagem);Média;Divide igual;++;Engine completa;7,81;58%;85%;8%;21;24
+Pequeno (Garagem);Média;Divide igual;+++;Sem engine;8,42;58%;84%;8%;21;24
+Pequeno (Garagem);Média;Divide igual;+++;Engine inicial;8,44;58%;84%;8%;21;24
+Pequeno (Garagem);Média;Divide igual;+++;Engine completa;8,50;58%;85%;8%;21;24
+Pequeno (Garagem);Média;Invertida;−−−;Sem engine;2,17;29%;47%;8%;21;24
+Pequeno (Garagem);Média;Invertida;−−−;Engine inicial;2,22;29%;49%;8%;21;24
+Pequeno (Garagem);Média;Invertida;−−−;Engine completa;2,58;29%;56%;8%;21;24
+Pequeno (Garagem);Média;Invertida;−−;Sem engine;2,86;29%;47%;8%;21;24
+Pequeno (Garagem);Média;Invertida;−−;Engine inicial;2,91;29%;49%;8%;21;24
+Pequeno (Garagem);Média;Invertida;−−;Engine completa;3,27;29%;56%;8%;21;24
+Pequeno (Garagem);Média;Invertida;−;Sem engine;3,78;29%;47%;8%;21;24
+Pequeno (Garagem);Média;Invertida;−;Engine inicial;3,83;29%;49%;8%;21;24
+Pequeno (Garagem);Média;Invertida;−;Engine completa;4,19;29%;56%;8%;21;24
+Pequeno (Garagem);Média;Invertida;Neutro;Sem engine;4,46;29%;47%;8%;21;24
+Pequeno (Garagem);Média;Invertida;Neutro;Engine inicial;4,52;29%;49%;8%;21;24
+Pequeno (Garagem);Média;Invertida;Neutro;Engine completa;4,88;29%;56%;8%;21;24
+Pequeno (Garagem);Média;Invertida;+;Sem engine;5,15;29%;47%;8%;21;24
+Pequeno (Garagem);Média;Invertida;+;Engine inicial;5,20;29%;49%;8%;21;24
+Pequeno (Garagem);Média;Invertida;+;Engine completa;5,56;29%;56%;8%;21;24
+Pequeno (Garagem);Média;Invertida;++;Sem engine;6,07;29%;47%;8%;21;24
+Pequeno (Garagem);Média;Invertida;++;Engine inicial;6,12;29%;49%;8%;21;24
+Pequeno (Garagem);Média;Invertida;++;Engine completa;6,48;29%;56%;8%;21;24
+Pequeno (Garagem);Média;Invertida;+++;Sem engine;6,76;29%;47%;8%;21;24
+Pequeno (Garagem);Média;Invertida;+++;Engine inicial;6,81;29%;49%;8%;21;24
+Pequeno (Garagem);Média;Invertida;+++;Engine completa;7,17;29%;56%;8%;21;24
+Pequeno (Garagem);Média;Mista: 3 fases certas, 2 péssimas;−−−;Sem engine;3,58;67%;78%;8%;21;24
+Pequeno (Garagem);Média;Mista: 3 fases certas, 2 péssimas;−−−;Engine inicial;3,63;67%;79%;8%;21;24
+Pequeno (Garagem);Média;Mista: 3 fases certas, 2 péssimas;−−−;Engine completa;3,88;67%;85%;8%;21;24
+Pequeno (Garagem);Média;Mista: 3 fases certas, 2 péssimas;−−;Sem engine;4,27;67%;78%;8%;21;24
+Pequeno (Garagem);Média;Mista: 3 fases certas, 2 péssimas;−−;Engine inicial;4,32;67%;79%;8%;21;24
+Pequeno (Garagem);Média;Mista: 3 fases certas, 2 péssimas;−−;Engine completa;4,56;67%;85%;8%;21;24
+Pequeno (Garagem);Média;Mista: 3 fases certas, 2 péssimas;−;Sem engine;5,19;67%;78%;8%;21;24
+Pequeno (Garagem);Média;Mista: 3 fases certas, 2 péssimas;−;Engine inicial;5,24;67%;79%;8%;21;24
+Pequeno (Garagem);Média;Mista: 3 fases certas, 2 péssimas;−;Engine completa;5,48;67%;85%;8%;21;24
+Pequeno (Garagem);Média;Mista: 3 fases certas, 2 péssimas;Neutro;Sem engine;5,87;67%;78%;8%;21;24
+Pequeno (Garagem);Média;Mista: 3 fases certas, 2 péssimas;Neutro;Engine inicial;5,93;67%;79%;8%;21;24
+Pequeno (Garagem);Média;Mista: 3 fases certas, 2 péssimas;Neutro;Engine completa;6,17;67%;85%;8%;21;24
+Pequeno (Garagem);Média;Mista: 3 fases certas, 2 péssimas;+;Sem engine;6,56;67%;78%;8%;21;24
+Pequeno (Garagem);Média;Mista: 3 fases certas, 2 péssimas;+;Engine inicial;6,61;67%;79%;8%;21;24
+Pequeno (Garagem);Média;Mista: 3 fases certas, 2 péssimas;+;Engine completa;6,86;67%;85%;8%;21;24
+Pequeno (Garagem);Média;Mista: 3 fases certas, 2 péssimas;++;Sem engine;7,48;67%;78%;8%;21;24
+Pequeno (Garagem);Média;Mista: 3 fases certas, 2 péssimas;++;Engine inicial;7,53;67%;79%;8%;21;24
+Pequeno (Garagem);Média;Mista: 3 fases certas, 2 péssimas;++;Engine completa;7,77;67%;85%;8%;21;24
+Pequeno (Garagem);Média;Mista: 3 fases certas, 2 péssimas;+++;Sem engine;8,17;67%;78%;8%;21;24
+Pequeno (Garagem);Média;Mista: 3 fases certas, 2 péssimas;+++;Engine inicial;8,22;67%;79%;8%;21;24
+Pequeno (Garagem);Média;Mista: 3 fases certas, 2 péssimas;+++;Engine completa;8,46;67%;85%;8%;21;24
+Pequeno (Garagem);Média;Mista: só a Pré-produção péssima;−−−;Sem engine;3,63;75%;79%;8%;21;24
+Pequeno (Garagem);Média;Mista: só a Pré-produção péssima;−−−;Engine inicial;3,63;75%;79%;8%;21;24
+Pequeno (Garagem);Média;Mista: só a Pré-produção péssima;−−−;Engine completa;3,63;75%;79%;8%;21;24
+Pequeno (Garagem);Média;Mista: só a Pré-produção péssima;−−;Sem engine;4,32;75%;79%;8%;21;24
+Pequeno (Garagem);Média;Mista: só a Pré-produção péssima;−−;Engine inicial;4,32;75%;79%;8%;21;24
+Pequeno (Garagem);Média;Mista: só a Pré-produção péssima;−−;Engine completa;4,32;75%;79%;8%;21;24
+Pequeno (Garagem);Média;Mista: só a Pré-produção péssima;−;Sem engine;5,23;75%;79%;8%;21;24
+Pequeno (Garagem);Média;Mista: só a Pré-produção péssima;−;Engine inicial;5,23;75%;79%;8%;21;24
+Pequeno (Garagem);Média;Mista: só a Pré-produção péssima;−;Engine completa;5,23;75%;79%;8%;21;24
+Pequeno (Garagem);Média;Mista: só a Pré-produção péssima;Neutro;Sem engine;5,92;75%;79%;8%;21;24
+Pequeno (Garagem);Média;Mista: só a Pré-produção péssima;Neutro;Engine inicial;5,92;75%;79%;8%;21;24
+Pequeno (Garagem);Média;Mista: só a Pré-produção péssima;Neutro;Engine completa;5,92;75%;79%;8%;21;24
+Pequeno (Garagem);Média;Mista: só a Pré-produção péssima;+;Sem engine;6,61;75%;79%;8%;21;24
+Pequeno (Garagem);Média;Mista: só a Pré-produção péssima;+;Engine inicial;6,61;75%;79%;8%;21;24
+Pequeno (Garagem);Média;Mista: só a Pré-produção péssima;+;Engine completa;6,61;75%;79%;8%;21;24
+Pequeno (Garagem);Média;Mista: só a Pré-produção péssima;++;Sem engine;7,53;75%;79%;8%;21;24
+Pequeno (Garagem);Média;Mista: só a Pré-produção péssima;++;Engine inicial;7,53;75%;79%;8%;21;24
+Pequeno (Garagem);Média;Mista: só a Pré-produção péssima;++;Engine completa;7,53;75%;79%;8%;21;24
+Pequeno (Garagem);Média;Mista: só a Pré-produção péssima;+++;Sem engine;8,21;75%;79%;8%;21;24
+Pequeno (Garagem);Média;Mista: só a Pré-produção péssima;+++;Engine inicial;8,21;75%;79%;8%;21;24
+Pequeno (Garagem);Média;Mista: só a Pré-produção péssima;+++;Engine completa;8,21;75%;79%;8%;21;24
+Pequeno (Garagem);Forte;Perfeita;−−−;Sem engine;4,78;100%;100%;4%;38;24
+Pequeno (Garagem);Forte;Perfeita;−−−;Engine inicial;4,78;100%;100%;4%;38;24
+Pequeno (Garagem);Forte;Perfeita;−−−;Engine completa;4,78;100%;100%;4%;38;24
+Pequeno (Garagem);Forte;Perfeita;−−;Sem engine;5,50;100%;100%;4%;38;24
+Pequeno (Garagem);Forte;Perfeita;−−;Engine inicial;5,50;100%;100%;4%;38;24
+Pequeno (Garagem);Forte;Perfeita;−−;Engine completa;5,50;100%;100%;4%;38;24
+Pequeno (Garagem);Forte;Perfeita;−;Sem engine;6,46;100%;100%;4%;38;24
+Pequeno (Garagem);Forte;Perfeita;−;Engine inicial;6,46;100%;100%;4%;38;24
+Pequeno (Garagem);Forte;Perfeita;−;Engine completa;6,46;100%;100%;4%;38;24
+Pequeno (Garagem);Forte;Perfeita;Neutro;Sem engine;7,17;100%;100%;4%;38;24
+Pequeno (Garagem);Forte;Perfeita;Neutro;Engine inicial;7,17;100%;100%;4%;38;24
+Pequeno (Garagem);Forte;Perfeita;Neutro;Engine completa;7,17;100%;100%;4%;38;24
+Pequeno (Garagem);Forte;Perfeita;+;Sem engine;7,89;100%;100%;4%;38;24
+Pequeno (Garagem);Forte;Perfeita;+;Engine inicial;7,89;100%;100%;4%;38;24
+Pequeno (Garagem);Forte;Perfeita;+;Engine completa;7,89;100%;100%;4%;38;24
+Pequeno (Garagem);Forte;Perfeita;++;Sem engine;8,85;100%;100%;4%;38;24
+Pequeno (Garagem);Forte;Perfeita;++;Engine inicial;8,85;100%;100%;4%;38;24
+Pequeno (Garagem);Forte;Perfeita;++;Engine completa;8,85;100%;100%;4%;38;24
+Pequeno (Garagem);Forte;Perfeita;+++;Sem engine;9,56;100%;100%;4%;38;24
+Pequeno (Garagem);Forte;Perfeita;+++;Engine inicial;9,56;100%;100%;4%;38;24
+Pequeno (Garagem);Forte;Perfeita;+++;Engine completa;9,56;100%;100%;4%;38;24
+Pequeno (Garagem);Forte;Boa (erro 25%);−−−;Sem engine;4,28;67%;90%;4%;38;24
+Pequeno (Garagem);Forte;Boa (erro 25%);−−−;Engine inicial;4,29;67%;90%;4%;38;24
+Pequeno (Garagem);Forte;Boa (erro 25%);−−−;Engine completa;4,35;67%;91%;4%;38;24
+Pequeno (Garagem);Forte;Boa (erro 25%);−−;Sem engine;5,00;67%;90%;4%;38;24
+Pequeno (Garagem);Forte;Boa (erro 25%);−−;Engine inicial;5,01;67%;90%;4%;38;24
+Pequeno (Garagem);Forte;Boa (erro 25%);−−;Engine completa;5,06;67%;91%;4%;38;24
+Pequeno (Garagem);Forte;Boa (erro 25%);−;Sem engine;5,96;67%;90%;4%;38;24
+Pequeno (Garagem);Forte;Boa (erro 25%);−;Engine inicial;5,96;67%;90%;4%;38;24
+Pequeno (Garagem);Forte;Boa (erro 25%);−;Engine completa;6,02;67%;91%;4%;38;24
+Pequeno (Garagem);Forte;Boa (erro 25%);Neutro;Sem engine;6,67;67%;90%;4%;38;24
+Pequeno (Garagem);Forte;Boa (erro 25%);Neutro;Engine inicial;6,68;67%;90%;4%;38;24
+Pequeno (Garagem);Forte;Boa (erro 25%);Neutro;Engine completa;6,74;67%;91%;4%;38;24
+Pequeno (Garagem);Forte;Boa (erro 25%);+;Sem engine;7,39;67%;90%;4%;38;24
+Pequeno (Garagem);Forte;Boa (erro 25%);+;Engine inicial;7,40;67%;90%;4%;38;24
+Pequeno (Garagem);Forte;Boa (erro 25%);+;Engine completa;7,46;67%;91%;4%;38;24
+Pequeno (Garagem);Forte;Boa (erro 25%);++;Sem engine;8,35;67%;90%;4%;38;24
+Pequeno (Garagem);Forte;Boa (erro 25%);++;Engine inicial;8,36;67%;90%;4%;38;24
+Pequeno (Garagem);Forte;Boa (erro 25%);++;Engine completa;8,41;67%;91%;4%;38;24
+Pequeno (Garagem);Forte;Boa (erro 25%);+++;Sem engine;9,06;67%;90%;4%;38;24
+Pequeno (Garagem);Forte;Boa (erro 25%);+++;Engine inicial;9,07;67%;90%;4%;38;24
+Pequeno (Garagem);Forte;Boa (erro 25%);+++;Engine completa;9,13;67%;91%;4%;38;24
+Pequeno (Garagem);Forte;Média (erro 50%);−−−;Sem engine;3,96;47%;83%;4%;38;24
+Pequeno (Garagem);Forte;Média (erro 50%);−−−;Engine inicial;3,97;47%;83%;4%;38;24
+Pequeno (Garagem);Forte;Média (erro 50%);−−−;Engine completa;4,05;47%;85%;4%;38;24
+Pequeno (Garagem);Forte;Média (erro 50%);−−;Sem engine;4,67;47%;83%;4%;38;24
+Pequeno (Garagem);Forte;Média (erro 50%);−−;Engine inicial;4,69;47%;83%;4%;38;24
+Pequeno (Garagem);Forte;Média (erro 50%);−−;Engine completa;4,77;47%;85%;4%;38;24
+Pequeno (Garagem);Forte;Média (erro 50%);−;Sem engine;5,63;47%;83%;4%;38;24
+Pequeno (Garagem);Forte;Média (erro 50%);−;Engine inicial;5,64;47%;83%;4%;38;24
+Pequeno (Garagem);Forte;Média (erro 50%);−;Engine completa;5,72;47%;85%;4%;38;24
+Pequeno (Garagem);Forte;Média (erro 50%);Neutro;Sem engine;6,35;47%;83%;4%;38;24
+Pequeno (Garagem);Forte;Média (erro 50%);Neutro;Engine inicial;6,36;47%;83%;4%;38;24
+Pequeno (Garagem);Forte;Média (erro 50%);Neutro;Engine completa;6,44;47%;85%;4%;38;24
+Pequeno (Garagem);Forte;Média (erro 50%);+;Sem engine;7,06;47%;83%;4%;38;24
+Pequeno (Garagem);Forte;Média (erro 50%);+;Engine inicial;7,08;47%;83%;4%;38;24
+Pequeno (Garagem);Forte;Média (erro 50%);+;Engine completa;7,16;47%;85%;4%;38;24
+Pequeno (Garagem);Forte;Média (erro 50%);++;Sem engine;8,02;47%;83%;4%;38;24
+Pequeno (Garagem);Forte;Média (erro 50%);++;Engine inicial;8,04;47%;83%;4%;38;24
+Pequeno (Garagem);Forte;Média (erro 50%);++;Engine completa;8,11;47%;85%;4%;38;24
+Pequeno (Garagem);Forte;Média (erro 50%);+++;Sem engine;8,74;47%;83%;4%;38;24
+Pequeno (Garagem);Forte;Média (erro 50%);+++;Engine inicial;8,75;47%;83%;4%;38;24
+Pequeno (Garagem);Forte;Média (erro 50%);+++;Engine completa;8,83;47%;85%;4%;38;24
+Pequeno (Garagem);Forte;Ruim (erro 75%);−−−;Sem engine;2,64;30%;55%;4%;38;24
+Pequeno (Garagem);Forte;Ruim (erro 75%);−−−;Engine inicial;2,70;30%;56%;4%;38;24
+Pequeno (Garagem);Forte;Ruim (erro 75%);−−−;Engine completa;3,00;30%;63%;4%;38;24
+Pequeno (Garagem);Forte;Ruim (erro 75%);−−;Sem engine;3,36;30%;55%;4%;38;24
+Pequeno (Garagem);Forte;Ruim (erro 75%);−−;Engine inicial;3,41;30%;56%;4%;38;24
+Pequeno (Garagem);Forte;Ruim (erro 75%);−−;Engine completa;3,72;30%;63%;4%;38;24
+Pequeno (Garagem);Forte;Ruim (erro 75%);−;Sem engine;4,31;30%;55%;4%;38;24
+Pequeno (Garagem);Forte;Ruim (erro 75%);−;Engine inicial;4,37;30%;56%;4%;38;24
+Pequeno (Garagem);Forte;Ruim (erro 75%);−;Engine completa;4,67;30%;63%;4%;38;24
+Pequeno (Garagem);Forte;Ruim (erro 75%);Neutro;Sem engine;5,03;30%;55%;4%;38;24
+Pequeno (Garagem);Forte;Ruim (erro 75%);Neutro;Engine inicial;5,09;30%;56%;4%;38;24
+Pequeno (Garagem);Forte;Ruim (erro 75%);Neutro;Engine completa;5,39;30%;63%;4%;38;24
+Pequeno (Garagem);Forte;Ruim (erro 75%);+;Sem engine;5,75;30%;55%;4%;38;24
+Pequeno (Garagem);Forte;Ruim (erro 75%);+;Engine inicial;5,80;30%;56%;4%;38;24
+Pequeno (Garagem);Forte;Ruim (erro 75%);+;Engine completa;6,11;30%;63%;4%;38;24
+Pequeno (Garagem);Forte;Ruim (erro 75%);++;Sem engine;6,70;30%;55%;4%;38;24
+Pequeno (Garagem);Forte;Ruim (erro 75%);++;Engine inicial;6,76;30%;56%;4%;38;24
+Pequeno (Garagem);Forte;Ruim (erro 75%);++;Engine completa;7,07;30%;63%;4%;38;24
+Pequeno (Garagem);Forte;Ruim (erro 75%);+++;Sem engine;7,42;30%;55%;4%;38;24
+Pequeno (Garagem);Forte;Ruim (erro 75%);+++;Engine inicial;7,48;30%;56%;4%;38;24
+Pequeno (Garagem);Forte;Ruim (erro 75%);+++;Engine completa;7,78;30%;63%;4%;38;24
+Pequeno (Garagem);Forte;Péssima (tudo no bloco menos importante);−−−;Sem engine;0,98;9%;21%;4%;39;24
+Pequeno (Garagem);Forte;Péssima (tudo no bloco menos importante);−−−;Engine inicial;1,09;9%;23%;4%;39;24
+Pequeno (Garagem);Forte;Péssima (tudo no bloco menos importante);−−−;Engine completa;1,69;9%;35%;4%;39;24
+Pequeno (Garagem);Forte;Péssima (tudo no bloco menos importante);−−;Sem engine;1,70;9%;21%;4%;39;24
+Pequeno (Garagem);Forte;Péssima (tudo no bloco menos importante);−−;Engine inicial;1,80;9%;23%;4%;39;24
+Pequeno (Garagem);Forte;Péssima (tudo no bloco menos importante);−−;Engine completa;2,41;9%;35%;4%;39;24
+Pequeno (Garagem);Forte;Péssima (tudo no bloco menos importante);−;Sem engine;2,65;9%;21%;4%;39;24
+Pequeno (Garagem);Forte;Péssima (tudo no bloco menos importante);−;Engine inicial;2,76;9%;23%;4%;39;24
+Pequeno (Garagem);Forte;Péssima (tudo no bloco menos importante);−;Engine completa;3,36;9%;35%;4%;39;24
+Pequeno (Garagem);Forte;Péssima (tudo no bloco menos importante);Neutro;Sem engine;3,37;9%;21%;4%;39;24
+Pequeno (Garagem);Forte;Péssima (tudo no bloco menos importante);Neutro;Engine inicial;3,48;9%;23%;4%;39;24
+Pequeno (Garagem);Forte;Péssima (tudo no bloco menos importante);Neutro;Engine completa;4,08;9%;35%;4%;39;24
+Pequeno (Garagem);Forte;Péssima (tudo no bloco menos importante);+;Sem engine;4,09;9%;21%;4%;39;24
+Pequeno (Garagem);Forte;Péssima (tudo no bloco menos importante);+;Engine inicial;4,20;9%;23%;4%;39;24
+Pequeno (Garagem);Forte;Péssima (tudo no bloco menos importante);+;Engine completa;4,80;9%;35%;4%;39;24
+Pequeno (Garagem);Forte;Péssima (tudo no bloco menos importante);++;Sem engine;5,05;9%;21%;4%;39;24
+Pequeno (Garagem);Forte;Péssima (tudo no bloco menos importante);++;Engine inicial;5,15;9%;23%;4%;39;24
+Pequeno (Garagem);Forte;Péssima (tudo no bloco menos importante);++;Engine completa;5,76;9%;35%;4%;39;24
+Pequeno (Garagem);Forte;Péssima (tudo no bloco menos importante);+++;Sem engine;5,76;9%;21%;4%;39;24
+Pequeno (Garagem);Forte;Péssima (tudo no bloco menos importante);+++;Engine inicial;5,87;9%;23%;4%;39;24
+Pequeno (Garagem);Forte;Péssima (tudo no bloco menos importante);+++;Engine completa;6,47;9%;35%;4%;39;24
+Pequeno (Garagem);Forte;Divide igual;−−−;Sem engine;4,08;58%;85%;4%;38;24
+Pequeno (Garagem);Forte;Divide igual;−−−;Engine inicial;4,09;58%;86%;4%;38;24
+Pequeno (Garagem);Forte;Divide igual;−−−;Engine completa;4,16;58%;87%;4%;38;24
+Pequeno (Garagem);Forte;Divide igual;−−;Sem engine;4,80;58%;85%;4%;38;24
+Pequeno (Garagem);Forte;Divide igual;−−;Engine inicial;4,81;58%;86%;4%;38;24
+Pequeno (Garagem);Forte;Divide igual;−−;Engine completa;4,87;58%;87%;4%;38;24
+Pequeno (Garagem);Forte;Divide igual;−;Sem engine;5,75;58%;85%;4%;38;24
+Pequeno (Garagem);Forte;Divide igual;−;Engine inicial;5,77;58%;86%;4%;38;24
+Pequeno (Garagem);Forte;Divide igual;−;Engine completa;5,83;58%;87%;4%;38;24
+Pequeno (Garagem);Forte;Divide igual;Neutro;Sem engine;6,47;58%;85%;4%;38;24
+Pequeno (Garagem);Forte;Divide igual;Neutro;Engine inicial;6,48;58%;86%;4%;38;24
+Pequeno (Garagem);Forte;Divide igual;Neutro;Engine completa;6,55;58%;87%;4%;38;24
+Pequeno (Garagem);Forte;Divide igual;+;Sem engine;7,19;58%;85%;4%;38;24
+Pequeno (Garagem);Forte;Divide igual;+;Engine inicial;7,20;58%;86%;4%;38;24
+Pequeno (Garagem);Forte;Divide igual;+;Engine completa;7,26;58%;87%;4%;38;24
+Pequeno (Garagem);Forte;Divide igual;++;Sem engine;8,15;58%;85%;4%;38;24
+Pequeno (Garagem);Forte;Divide igual;++;Engine inicial;8,16;58%;86%;4%;38;24
+Pequeno (Garagem);Forte;Divide igual;++;Engine completa;8,22;58%;87%;4%;38;24
+Pequeno (Garagem);Forte;Divide igual;+++;Sem engine;8,86;58%;85%;4%;38;24
+Pequeno (Garagem);Forte;Divide igual;+++;Engine inicial;8,88;58%;86%;4%;38;24
+Pequeno (Garagem);Forte;Divide igual;+++;Engine completa;8,94;58%;87%;4%;38;24
+Pequeno (Garagem);Forte;Invertida;−−−;Sem engine;2,29;29%;48%;4%;39;24
+Pequeno (Garagem);Forte;Invertida;−−−;Engine inicial;2,35;29%;49%;4%;39;24
+Pequeno (Garagem);Forte;Invertida;−−−;Engine completa;2,72;29%;57%;4%;39;24
+Pequeno (Garagem);Forte;Invertida;−−;Sem engine;3,01;29%;48%;4%;39;24
+Pequeno (Garagem);Forte;Invertida;−−;Engine inicial;3,06;29%;49%;4%;39;24
+Pequeno (Garagem);Forte;Invertida;−−;Engine completa;3,43;29%;57%;4%;39;24
+Pequeno (Garagem);Forte;Invertida;−;Sem engine;3,97;29%;48%;4%;39;24
+Pequeno (Garagem);Forte;Invertida;−;Engine inicial;4,02;29%;49%;4%;39;24
+Pequeno (Garagem);Forte;Invertida;−;Engine completa;4,39;29%;57%;4%;39;24
+Pequeno (Garagem);Forte;Invertida;Neutro;Sem engine;4,68;29%;48%;4%;39;24
+Pequeno (Garagem);Forte;Invertida;Neutro;Engine inicial;4,74;29%;49%;4%;39;24
+Pequeno (Garagem);Forte;Invertida;Neutro;Engine completa;5,11;29%;57%;4%;39;24
+Pequeno (Garagem);Forte;Invertida;+;Sem engine;5,40;29%;48%;4%;39;24
+Pequeno (Garagem);Forte;Invertida;+;Engine inicial;5,45;29%;49%;4%;39;24
+Pequeno (Garagem);Forte;Invertida;+;Engine completa;5,82;29%;57%;4%;39;24
+Pequeno (Garagem);Forte;Invertida;++;Sem engine;6,36;29%;48%;4%;39;24
+Pequeno (Garagem);Forte;Invertida;++;Engine inicial;6,41;29%;49%;4%;39;24
+Pequeno (Garagem);Forte;Invertida;++;Engine completa;6,78;29%;57%;4%;39;24
+Pequeno (Garagem);Forte;Invertida;+++;Sem engine;7,08;29%;48%;4%;39;24
+Pequeno (Garagem);Forte;Invertida;+++;Engine inicial;7,13;29%;49%;4%;39;24
+Pequeno (Garagem);Forte;Invertida;+++;Engine completa;7,50;29%;57%;4%;39;24
+Pequeno (Garagem);Forte;Mista: 3 fases certas, 2 péssimas;−−−;Sem engine;3,74;67%;78%;4%;38;24
+Pequeno (Garagem);Forte;Mista: 3 fases certas, 2 péssimas;−−−;Engine inicial;3,79;67%;79%;4%;38;24
+Pequeno (Garagem);Forte;Mista: 3 fases certas, 2 péssimas;−−−;Engine completa;4,04;67%;85%;4%;38;24
+Pequeno (Garagem);Forte;Mista: 3 fases certas, 2 péssimas;−−;Sem engine;4,45;67%;78%;4%;38;24
+Pequeno (Garagem);Forte;Mista: 3 fases certas, 2 péssimas;−−;Engine inicial;4,51;67%;79%;4%;38;24
+Pequeno (Garagem);Forte;Mista: 3 fases certas, 2 péssimas;−−;Engine completa;4,76;67%;85%;4%;38;24
+Pequeno (Garagem);Forte;Mista: 3 fases certas, 2 péssimas;−;Sem engine;5,41;67%;78%;4%;38;24
+Pequeno (Garagem);Forte;Mista: 3 fases certas, 2 péssimas;−;Engine inicial;5,47;67%;79%;4%;38;24
+Pequeno (Garagem);Forte;Mista: 3 fases certas, 2 péssimas;−;Engine completa;5,72;67%;85%;4%;38;24
+Pequeno (Garagem);Forte;Mista: 3 fases certas, 2 péssimas;Neutro;Sem engine;6,13;67%;78%;4%;38;24
+Pequeno (Garagem);Forte;Mista: 3 fases certas, 2 péssimas;Neutro;Engine inicial;6,18;67%;79%;4%;38;24
+Pequeno (Garagem);Forte;Mista: 3 fases certas, 2 péssimas;Neutro;Engine completa;6,43;67%;85%;4%;38;24
+Pequeno (Garagem);Forte;Mista: 3 fases certas, 2 péssimas;+;Sem engine;6,84;67%;78%;4%;38;24
+Pequeno (Garagem);Forte;Mista: 3 fases certas, 2 péssimas;+;Engine inicial;6,90;67%;79%;4%;38;24
+Pequeno (Garagem);Forte;Mista: 3 fases certas, 2 péssimas;+;Engine completa;7,15;67%;85%;4%;38;24
+Pequeno (Garagem);Forte;Mista: 3 fases certas, 2 péssimas;++;Sem engine;7,80;67%;78%;4%;38;24
+Pequeno (Garagem);Forte;Mista: 3 fases certas, 2 péssimas;++;Engine inicial;7,86;67%;79%;4%;38;24
+Pequeno (Garagem);Forte;Mista: 3 fases certas, 2 péssimas;++;Engine completa;8,11;67%;85%;4%;38;24
+Pequeno (Garagem);Forte;Mista: 3 fases certas, 2 péssimas;+++;Sem engine;8,52;67%;78%;4%;38;24
+Pequeno (Garagem);Forte;Mista: 3 fases certas, 2 péssimas;+++;Engine inicial;8,57;67%;79%;4%;38;24
+Pequeno (Garagem);Forte;Mista: 3 fases certas, 2 péssimas;+++;Engine completa;8,83;67%;85%;4%;38;24
+Pequeno (Garagem);Forte;Mista: só a Pré-produção péssima;−−−;Sem engine;3,79;75%;79%;4%;38;24
+Pequeno (Garagem);Forte;Mista: só a Pré-produção péssima;−−−;Engine inicial;3,79;75%;79%;4%;38;24
+Pequeno (Garagem);Forte;Mista: só a Pré-produção péssima;−−−;Engine completa;3,79;75%;79%;4%;38;24
+Pequeno (Garagem);Forte;Mista: só a Pré-produção péssima;−−;Sem engine;4,50;75%;79%;4%;38;24
+Pequeno (Garagem);Forte;Mista: só a Pré-produção péssima;−−;Engine inicial;4,50;75%;79%;4%;38;24
+Pequeno (Garagem);Forte;Mista: só a Pré-produção péssima;−−;Engine completa;4,50;75%;79%;4%;38;24
+Pequeno (Garagem);Forte;Mista: só a Pré-produção péssima;−;Sem engine;5,46;75%;79%;4%;38;24
+Pequeno (Garagem);Forte;Mista: só a Pré-produção péssima;−;Engine inicial;5,46;75%;79%;4%;38;24
+Pequeno (Garagem);Forte;Mista: só a Pré-produção péssima;−;Engine completa;5,46;75%;79%;4%;38;24
+Pequeno (Garagem);Forte;Mista: só a Pré-produção péssima;Neutro;Sem engine;6,18;75%;79%;4%;38;24
+Pequeno (Garagem);Forte;Mista: só a Pré-produção péssima;Neutro;Engine inicial;6,18;75%;79%;4%;38;24
+Pequeno (Garagem);Forte;Mista: só a Pré-produção péssima;Neutro;Engine completa;6,18;75%;79%;4%;38;24
+Pequeno (Garagem);Forte;Mista: só a Pré-produção péssima;+;Sem engine;6,89;75%;79%;4%;38;24
+Pequeno (Garagem);Forte;Mista: só a Pré-produção péssima;+;Engine inicial;6,89;75%;79%;4%;38;24
+Pequeno (Garagem);Forte;Mista: só a Pré-produção péssima;+;Engine completa;6,89;75%;79%;4%;38;24
+Pequeno (Garagem);Forte;Mista: só a Pré-produção péssima;++;Sem engine;7,85;75%;79%;4%;38;24
+Pequeno (Garagem);Forte;Mista: só a Pré-produção péssima;++;Engine inicial;7,85;75%;79%;4%;38;24
+Pequeno (Garagem);Forte;Mista: só a Pré-produção péssima;++;Engine completa;7,85;75%;79%;4%;38;24
+Pequeno (Garagem);Forte;Mista: só a Pré-produção péssima;+++;Sem engine;8,57;75%;79%;4%;38;24
+Pequeno (Garagem);Forte;Mista: só a Pré-produção péssima;+++;Engine inicial;8,57;75%;79%;4%;38;24
+Pequeno (Garagem);Forte;Mista: só a Pré-produção péssima;+++;Engine completa;8,57;75%;79%;4%;38;24
+Médio (Indie);Fraca;Perfeita;−−−;Sem engine;4,62;100%;100%;8%;71;126
+Médio (Indie);Fraca;Perfeita;−−−;Engine inicial;4,62;100%;100%;8%;71;126
+Médio (Indie);Fraca;Perfeita;−−−;Engine completa;4,62;100%;100%;8%;71;126
+Médio (Indie);Fraca;Perfeita;−−;Sem engine;5,31;100%;100%;8%;71;126
+Médio (Indie);Fraca;Perfeita;−−;Engine inicial;5,31;100%;100%;8%;71;126
+Médio (Indie);Fraca;Perfeita;−−;Engine completa;5,31;100%;100%;8%;71;126
+Médio (Indie);Fraca;Perfeita;−;Sem engine;6,23;100%;100%;8%;71;126
+Médio (Indie);Fraca;Perfeita;−;Engine inicial;6,23;100%;100%;8%;71;126
+Médio (Indie);Fraca;Perfeita;−;Engine completa;6,23;100%;100%;8%;71;126
+Médio (Indie);Fraca;Perfeita;Neutro;Sem engine;6,92;100%;100%;8%;71;126
+Médio (Indie);Fraca;Perfeita;Neutro;Engine inicial;6,92;100%;100%;8%;71;126
+Médio (Indie);Fraca;Perfeita;Neutro;Engine completa;6,92;100%;100%;8%;71;126
+Médio (Indie);Fraca;Perfeita;+;Sem engine;7,62;100%;100%;8%;71;126
+Médio (Indie);Fraca;Perfeita;+;Engine inicial;7,62;100%;100%;8%;71;126
+Médio (Indie);Fraca;Perfeita;+;Engine completa;7,62;100%;100%;8%;71;126
+Médio (Indie);Fraca;Perfeita;++;Sem engine;8,54;100%;100%;8%;71;126
+Médio (Indie);Fraca;Perfeita;++;Engine inicial;8,54;100%;100%;8%;71;126
+Médio (Indie);Fraca;Perfeita;++;Engine completa;8,54;100%;100%;8%;71;126
+Médio (Indie);Fraca;Perfeita;+++;Sem engine;9,23;100%;100%;8%;71;126
+Médio (Indie);Fraca;Perfeita;+++;Engine inicial;9,23;100%;100%;8%;71;126
+Médio (Indie);Fraca;Perfeita;+++;Engine completa;9,23;100%;100%;8%;71;126
+Médio (Indie);Fraca;Boa (erro 25%);−−−;Sem engine;4,20;67%;91%;7%;71;126
+Médio (Indie);Fraca;Boa (erro 25%);−−−;Engine inicial;4,21;67%;91%;7%;71;126
+Médio (Indie);Fraca;Boa (erro 25%);−−−;Engine completa;4,26;67%;92%;7%;71;126
+Médio (Indie);Fraca;Boa (erro 25%);−−;Sem engine;4,89;67%;91%;7%;71;126
+Médio (Indie);Fraca;Boa (erro 25%);−−;Engine inicial;4,90;67%;91%;7%;71;126
+Médio (Indie);Fraca;Boa (erro 25%);−−;Engine completa;4,95;67%;92%;7%;71;126
+Médio (Indie);Fraca;Boa (erro 25%);−;Sem engine;5,82;67%;91%;7%;71;126
+Médio (Indie);Fraca;Boa (erro 25%);−;Engine inicial;5,83;67%;91%;7%;71;126
+Médio (Indie);Fraca;Boa (erro 25%);−;Engine completa;5,88;67%;92%;7%;71;126
+Médio (Indie);Fraca;Boa (erro 25%);Neutro;Sem engine;6,51;67%;91%;7%;71;126
+Médio (Indie);Fraca;Boa (erro 25%);Neutro;Engine inicial;6,52;67%;91%;7%;71;126
+Médio (Indie);Fraca;Boa (erro 25%);Neutro;Engine completa;6,57;67%;92%;7%;71;126
+Médio (Indie);Fraca;Boa (erro 25%);+;Sem engine;7,20;67%;91%;7%;71;126
+Médio (Indie);Fraca;Boa (erro 25%);+;Engine inicial;7,21;67%;91%;7%;71;126
+Médio (Indie);Fraca;Boa (erro 25%);+;Engine completa;7,26;67%;92%;7%;71;126
+Médio (Indie);Fraca;Boa (erro 25%);++;Sem engine;8,13;67%;91%;7%;71;126
+Médio (Indie);Fraca;Boa (erro 25%);++;Engine inicial;8,14;67%;91%;7%;71;126
+Médio (Indie);Fraca;Boa (erro 25%);++;Engine completa;8,19;67%;92%;7%;71;126
+Médio (Indie);Fraca;Boa (erro 25%);+++;Sem engine;8,82;67%;91%;7%;71;126
+Médio (Indie);Fraca;Boa (erro 25%);+++;Engine inicial;8,83;67%;91%;7%;71;126
+Médio (Indie);Fraca;Boa (erro 25%);+++;Engine completa;8,88;67%;92%;7%;71;126
+Médio (Indie);Fraca;Média (erro 50%);−−−;Sem engine;3,18;45%;69%;8%;70;126
+Médio (Indie);Fraca;Média (erro 50%);−−−;Engine inicial;3,21;45%;70%;8%;70;126
+Médio (Indie);Fraca;Média (erro 50%);−−−;Engine completa;3,46;45%;75%;8%;70;126
+Médio (Indie);Fraca;Média (erro 50%);−−;Sem engine;3,88;45%;69%;8%;70;126
+Médio (Indie);Fraca;Média (erro 50%);−−;Engine inicial;3,91;45%;70%;8%;70;126
+Médio (Indie);Fraca;Média (erro 50%);−−;Engine completa;4,15;45%;75%;8%;70;126
+Médio (Indie);Fraca;Média (erro 50%);−;Sem engine;4,80;45%;69%;8%;70;126
+Médio (Indie);Fraca;Média (erro 50%);−;Engine inicial;4,83;45%;70%;8%;70;126
+Médio (Indie);Fraca;Média (erro 50%);−;Engine completa;5,07;45%;75%;8%;70;126
+Médio (Indie);Fraca;Média (erro 50%);Neutro;Sem engine;5,50;45%;69%;8%;70;126
+Médio (Indie);Fraca;Média (erro 50%);Neutro;Engine inicial;5,53;45%;70%;8%;70;126
+Médio (Indie);Fraca;Média (erro 50%);Neutro;Engine completa;5,77;45%;75%;8%;70;126
+Médio (Indie);Fraca;Média (erro 50%);+;Sem engine;6,19;45%;69%;8%;70;126
+Médio (Indie);Fraca;Média (erro 50%);+;Engine inicial;6,22;45%;70%;8%;70;126
+Médio (Indie);Fraca;Média (erro 50%);+;Engine completa;6,46;45%;75%;8%;70;126
+Médio (Indie);Fraca;Média (erro 50%);++;Sem engine;7,11;45%;69%;8%;70;126
+Médio (Indie);Fraca;Média (erro 50%);++;Engine inicial;7,14;45%;70%;8%;70;126
+Médio (Indie);Fraca;Média (erro 50%);++;Engine completa;7,39;45%;75%;8%;70;126
+Médio (Indie);Fraca;Média (erro 50%);+++;Sem engine;7,81;45%;69%;8%;70;126
+Médio (Indie);Fraca;Média (erro 50%);+++;Engine inicial;7,84;45%;70%;8%;70;126
+Médio (Indie);Fraca;Média (erro 50%);+++;Engine completa;8,08;45%;75%;8%;70;126
+Médio (Indie);Fraca;Ruim (erro 75%);−−−;Sem engine;2,12;26%;46%;8%;70;126
+Médio (Indie);Fraca;Ruim (erro 75%);−−−;Engine inicial;2,18;26%;47%;8%;70;126
+Médio (Indie);Fraca;Ruim (erro 75%);−−−;Engine completa;2,58;26%;56%;8%;70;126
+Médio (Indie);Fraca;Ruim (erro 75%);−−;Sem engine;2,82;26%;46%;8%;70;126
+Médio (Indie);Fraca;Ruim (erro 75%);−−;Engine inicial;2,87;26%;47%;8%;70;126
+Médio (Indie);Fraca;Ruim (erro 75%);−−;Engine completa;3,28;26%;56%;8%;70;126
+Médio (Indie);Fraca;Ruim (erro 75%);−;Sem engine;3,74;26%;46%;8%;70;126
+Médio (Indie);Fraca;Ruim (erro 75%);−;Engine inicial;3,79;26%;47%;8%;70;126
+Médio (Indie);Fraca;Ruim (erro 75%);−;Engine completa;4,20;26%;56%;8%;70;126
+Médio (Indie);Fraca;Ruim (erro 75%);Neutro;Sem engine;4,44;26%;46%;8%;70;126
+Médio (Indie);Fraca;Ruim (erro 75%);Neutro;Engine inicial;4,49;26%;47%;8%;70;126
+Médio (Indie);Fraca;Ruim (erro 75%);Neutro;Engine completa;4,90;26%;56%;8%;70;126
+Médio (Indie);Fraca;Ruim (erro 75%);+;Sem engine;5,13;26%;46%;8%;70;126
+Médio (Indie);Fraca;Ruim (erro 75%);+;Engine inicial;5,18;26%;47%;8%;70;126
+Médio (Indie);Fraca;Ruim (erro 75%);+;Engine completa;5,59;26%;56%;8%;70;126
+Médio (Indie);Fraca;Ruim (erro 75%);++;Sem engine;6,05;26%;46%;8%;70;126
+Médio (Indie);Fraca;Ruim (erro 75%);++;Engine inicial;6,11;26%;47%;8%;70;126
+Médio (Indie);Fraca;Ruim (erro 75%);++;Engine completa;6,51;26%;56%;8%;70;126
+Médio (Indie);Fraca;Ruim (erro 75%);+++;Sem engine;6,75;26%;46%;8%;70;126
+Médio (Indie);Fraca;Ruim (erro 75%);+++;Engine inicial;6,80;26%;47%;8%;70;126
+Médio (Indie);Fraca;Ruim (erro 75%);+++;Engine completa;7,21;26%;56%;8%;70;126
+Médio (Indie);Fraca;Péssima (tudo no bloco menos importante);−−−;Sem engine;0,80;0%;17%;8%;70;126
+Médio (Indie);Fraca;Péssima (tudo no bloco menos importante);−−−;Engine inicial;0,88;0%;19%;8%;70;126
+Médio (Indie);Fraca;Péssima (tudo no bloco menos importante);−−−;Engine completa;1,49;0%;32%;8%;70;126
+Médio (Indie);Fraca;Péssima (tudo no bloco menos importante);−−;Sem engine;1,49;0%;17%;8%;70;126
+Médio (Indie);Fraca;Péssima (tudo no bloco menos importante);−−;Engine inicial;1,58;0%;19%;8%;70;126
+Médio (Indie);Fraca;Péssima (tudo no bloco menos importante);−−;Engine completa;2,18;0%;32%;8%;70;126
+Médio (Indie);Fraca;Péssima (tudo no bloco menos importante);−;Sem engine;2,42;0%;17%;8%;70;126
+Médio (Indie);Fraca;Péssima (tudo no bloco menos importante);−;Engine inicial;2,50;0%;19%;8%;70;126
+Médio (Indie);Fraca;Péssima (tudo no bloco menos importante);−;Engine completa;3,11;0%;32%;8%;70;126
+Médio (Indie);Fraca;Péssima (tudo no bloco menos importante);Neutro;Sem engine;3,11;0%;17%;8%;70;126
+Médio (Indie);Fraca;Péssima (tudo no bloco menos importante);Neutro;Engine inicial;3,19;0%;19%;8%;70;126
+Médio (Indie);Fraca;Péssima (tudo no bloco menos importante);Neutro;Engine completa;3,80;0%;32%;8%;70;126
+Médio (Indie);Fraca;Péssima (tudo no bloco menos importante);+;Sem engine;3,80;0%;17%;8%;70;126
+Médio (Indie);Fraca;Péssima (tudo no bloco menos importante);+;Engine inicial;3,89;0%;19%;8%;70;126
+Médio (Indie);Fraca;Péssima (tudo no bloco menos importante);+;Engine completa;4,49;0%;32%;8%;70;126
+Médio (Indie);Fraca;Péssima (tudo no bloco menos importante);++;Sem engine;4,73;0%;17%;8%;70;126
+Médio (Indie);Fraca;Péssima (tudo no bloco menos importante);++;Engine inicial;4,81;0%;19%;8%;70;126
+Médio (Indie);Fraca;Péssima (tudo no bloco menos importante);++;Engine completa;5,42;0%;32%;8%;70;126
+Médio (Indie);Fraca;Péssima (tudo no bloco menos importante);+++;Sem engine;5,42;0%;17%;8%;70;126
+Médio (Indie);Fraca;Péssima (tudo no bloco menos importante);+++;Engine inicial;5,50;0%;19%;8%;70;126
+Médio (Indie);Fraca;Péssima (tudo no bloco menos importante);+++;Engine completa;6,11;0%;32%;8%;70;126
+Médio (Indie);Fraca;Divide igual;−−−;Sem engine;4,07;64%;88%;7%;71;126
+Médio (Indie);Fraca;Divide igual;−−−;Engine inicial;4,08;64%;88%;7%;71;126
+Médio (Indie);Fraca;Divide igual;−−−;Engine completa;4,15;64%;90%;7%;71;126
+Médio (Indie);Fraca;Divide igual;−−;Sem engine;4,76;64%;88%;7%;71;126
+Médio (Indie);Fraca;Divide igual;−−;Engine inicial;4,77;64%;88%;7%;71;126
+Médio (Indie);Fraca;Divide igual;−−;Engine completa;4,84;64%;90%;7%;71;126
+Médio (Indie);Fraca;Divide igual;−;Sem engine;5,69;64%;88%;7%;71;126
+Médio (Indie);Fraca;Divide igual;−;Engine inicial;5,70;64%;88%;7%;71;126
+Médio (Indie);Fraca;Divide igual;−;Engine completa;5,77;64%;90%;7%;71;126
+Médio (Indie);Fraca;Divide igual;Neutro;Sem engine;6,38;64%;88%;7%;71;126
+Médio (Indie);Fraca;Divide igual;Neutro;Engine inicial;6,39;64%;88%;7%;71;126
+Médio (Indie);Fraca;Divide igual;Neutro;Engine completa;6,46;64%;90%;7%;71;126
+Médio (Indie);Fraca;Divide igual;+;Sem engine;7,07;64%;88%;7%;71;126
+Médio (Indie);Fraca;Divide igual;+;Engine inicial;7,08;64%;88%;7%;71;126
+Médio (Indie);Fraca;Divide igual;+;Engine completa;7,16;64%;90%;7%;71;126
+Médio (Indie);Fraca;Divide igual;++;Sem engine;8,00;64%;88%;7%;71;126
+Médio (Indie);Fraca;Divide igual;++;Engine inicial;8,01;64%;88%;7%;71;126
+Médio (Indie);Fraca;Divide igual;++;Engine completa;8,08;64%;90%;7%;71;126
+Médio (Indie);Fraca;Divide igual;+++;Sem engine;8,69;64%;88%;7%;71;126
+Médio (Indie);Fraca;Divide igual;+++;Engine inicial;8,70;64%;88%;7%;71;126
+Médio (Indie);Fraca;Divide igual;+++;Engine completa;8,78;64%;90%;7%;71;126
+Médio (Indie);Fraca;Invertida;−−−;Sem engine;2,52;31%;54%;7%;71;126
+Médio (Indie);Fraca;Invertida;−−−;Engine inicial;2,54;31%;55%;7%;71;126
+Médio (Indie);Fraca;Invertida;−−−;Engine completa;2,86;31%;62%;7%;71;126
+Médio (Indie);Fraca;Invertida;−−;Sem engine;3,21;31%;54%;7%;71;126
+Médio (Indie);Fraca;Invertida;−−;Engine inicial;3,24;31%;55%;7%;71;126
+Médio (Indie);Fraca;Invertida;−−;Engine completa;3,56;31%;62%;7%;71;126
+Médio (Indie);Fraca;Invertida;−;Sem engine;4,14;31%;54%;7%;71;126
+Médio (Indie);Fraca;Invertida;−;Engine inicial;4,16;31%;55%;7%;71;126
+Médio (Indie);Fraca;Invertida;−;Engine completa;4,48;31%;62%;7%;71;126
+Médio (Indie);Fraca;Invertida;Neutro;Sem engine;4,83;31%;54%;7%;71;126
+Médio (Indie);Fraca;Invertida;Neutro;Engine inicial;4,86;31%;55%;7%;71;126
+Médio (Indie);Fraca;Invertida;Neutro;Engine completa;5,18;31%;62%;7%;71;126
+Médio (Indie);Fraca;Invertida;+;Sem engine;5,53;31%;54%;7%;71;126
+Médio (Indie);Fraca;Invertida;+;Engine inicial;5,55;31%;55%;7%;71;126
+Médio (Indie);Fraca;Invertida;+;Engine completa;5,87;31%;62%;7%;71;126
+Médio (Indie);Fraca;Invertida;++;Sem engine;6,45;31%;54%;7%;71;126
+Médio (Indie);Fraca;Invertida;++;Engine inicial;6,48;31%;55%;7%;71;126
+Médio (Indie);Fraca;Invertida;++;Engine completa;6,80;31%;62%;7%;71;126
+Médio (Indie);Fraca;Invertida;+++;Sem engine;7,15;31%;54%;7%;71;126
+Médio (Indie);Fraca;Invertida;+++;Engine inicial;7,17;31%;55%;7%;71;126
+Médio (Indie);Fraca;Invertida;+++;Engine completa;7,49;31%;62%;7%;71;126
+Médio (Indie);Fraca;Mista: 3 fases certas, 2 péssimas;−−−;Sem engine;3,13;63%;68%;8%;71;126
+Médio (Indie);Fraca;Mista: 3 fases certas, 2 péssimas;−−−;Engine inicial;3,17;63%;69%;8%;71;126
+Médio (Indie);Fraca;Mista: 3 fases certas, 2 péssimas;−−−;Engine completa;3,48;63%;75%;8%;71;126
+Médio (Indie);Fraca;Mista: 3 fases certas, 2 péssimas;−−;Sem engine;3,82;63%;68%;8%;71;126
+Médio (Indie);Fraca;Mista: 3 fases certas, 2 péssimas;−−;Engine inicial;3,86;63%;69%;8%;71;126
+Médio (Indie);Fraca;Mista: 3 fases certas, 2 péssimas;−−;Engine completa;4,18;63%;75%;8%;71;126
+Médio (Indie);Fraca;Mista: 3 fases certas, 2 péssimas;−;Sem engine;4,74;63%;68%;8%;71;126
+Médio (Indie);Fraca;Mista: 3 fases certas, 2 péssimas;−;Engine inicial;4,79;63%;69%;8%;71;126
+Médio (Indie);Fraca;Mista: 3 fases certas, 2 péssimas;−;Engine completa;5,10;63%;75%;8%;71;126
+Médio (Indie);Fraca;Mista: 3 fases certas, 2 péssimas;Neutro;Sem engine;5,44;63%;68%;8%;71;126
+Médio (Indie);Fraca;Mista: 3 fases certas, 2 péssimas;Neutro;Engine inicial;5,48;63%;69%;8%;71;126
+Médio (Indie);Fraca;Mista: 3 fases certas, 2 péssimas;Neutro;Engine completa;5,79;63%;75%;8%;71;126
+Médio (Indie);Fraca;Mista: 3 fases certas, 2 péssimas;+;Sem engine;6,13;63%;68%;8%;71;126
+Médio (Indie);Fraca;Mista: 3 fases certas, 2 péssimas;+;Engine inicial;6,17;63%;69%;8%;71;126
+Médio (Indie);Fraca;Mista: 3 fases certas, 2 péssimas;+;Engine completa;6,49;63%;75%;8%;71;126
+Médio (Indie);Fraca;Mista: 3 fases certas, 2 péssimas;++;Sem engine;7,06;63%;68%;8%;71;126
+Médio (Indie);Fraca;Mista: 3 fases certas, 2 péssimas;++;Engine inicial;7,10;63%;69%;8%;71;126
+Médio (Indie);Fraca;Mista: 3 fases certas, 2 péssimas;++;Engine completa;7,41;63%;75%;8%;71;126
+Médio (Indie);Fraca;Mista: 3 fases certas, 2 péssimas;+++;Sem engine;7,75;63%;68%;8%;71;126
+Médio (Indie);Fraca;Mista: 3 fases certas, 2 péssimas;+++;Engine inicial;7,79;63%;69%;8%;71;126
+Médio (Indie);Fraca;Mista: 3 fases certas, 2 péssimas;+++;Engine completa;8,10;63%;75%;8%;71;126
+Médio (Indie);Fraca;Mista: só a Pré-produção péssima;−−−;Sem engine;3,81;75%;83%;8%;70;126
+Médio (Indie);Fraca;Mista: só a Pré-produção péssima;−−−;Engine inicial;3,81;75%;83%;8%;70;126
+Médio (Indie);Fraca;Mista: só a Pré-produção péssima;−−−;Engine completa;3,89;75%;84%;8%;70;126
+Médio (Indie);Fraca;Mista: só a Pré-produção péssima;−−;Sem engine;4,50;75%;83%;8%;70;126
+Médio (Indie);Fraca;Mista: só a Pré-produção péssima;−−;Engine inicial;4,50;75%;83%;8%;70;126
+Médio (Indie);Fraca;Mista: só a Pré-produção péssima;−−;Engine completa;4,59;75%;84%;8%;70;126
+Médio (Indie);Fraca;Mista: só a Pré-produção péssima;−;Sem engine;5,42;75%;83%;8%;70;126
+Médio (Indie);Fraca;Mista: só a Pré-produção péssima;−;Engine inicial;5,42;75%;83%;8%;70;126
+Médio (Indie);Fraca;Mista: só a Pré-produção péssima;−;Engine completa;5,51;75%;84%;8%;70;126
+Médio (Indie);Fraca;Mista: só a Pré-produção péssima;Neutro;Sem engine;6,12;75%;83%;8%;70;126
+Médio (Indie);Fraca;Mista: só a Pré-produção péssima;Neutro;Engine inicial;6,12;75%;83%;8%;70;126
+Médio (Indie);Fraca;Mista: só a Pré-produção péssima;Neutro;Engine completa;6,20;75%;84%;8%;70;126
+Médio (Indie);Fraca;Mista: só a Pré-produção péssima;+;Sem engine;6,81;75%;83%;8%;70;126
+Médio (Indie);Fraca;Mista: só a Pré-produção péssima;+;Engine inicial;6,81;75%;83%;8%;70;126
+Médio (Indie);Fraca;Mista: só a Pré-produção péssima;+;Engine completa;6,89;75%;84%;8%;70;126
+Médio (Indie);Fraca;Mista: só a Pré-produção péssima;++;Sem engine;7,73;75%;83%;8%;70;126
+Médio (Indie);Fraca;Mista: só a Pré-produção péssima;++;Engine inicial;7,73;75%;83%;8%;70;126
+Médio (Indie);Fraca;Mista: só a Pré-produção péssima;++;Engine completa;7,82;75%;84%;8%;70;126
+Médio (Indie);Fraca;Mista: só a Pré-produção péssima;+++;Sem engine;8,42;75%;83%;8%;70;126
+Médio (Indie);Fraca;Mista: só a Pré-produção péssima;+++;Engine inicial;8,42;75%;83%;8%;70;126
+Médio (Indie);Fraca;Mista: só a Pré-produção péssima;+++;Engine completa;8,51;75%;84%;8%;70;126
+Médio (Indie);Média;Perfeita;−−−;Sem engine;4,64;100%;100%;7%;98;126
+Médio (Indie);Média;Perfeita;−−−;Engine inicial;4,64;100%;100%;7%;98;126
+Médio (Indie);Média;Perfeita;−−−;Engine completa;4,64;100%;100%;7%;98;126
+Médio (Indie);Média;Perfeita;−−;Sem engine;5,34;100%;100%;7%;98;126
+Médio (Indie);Média;Perfeita;−−;Engine inicial;5,34;100%;100%;7%;98;126
+Médio (Indie);Média;Perfeita;−−;Engine completa;5,34;100%;100%;7%;98;126
+Médio (Indie);Média;Perfeita;−;Sem engine;6,27;100%;100%;7%;98;126
+Médio (Indie);Média;Perfeita;−;Engine inicial;6,27;100%;100%;7%;98;126
+Médio (Indie);Média;Perfeita;−;Engine completa;6,27;100%;100%;7%;98;126
+Médio (Indie);Média;Perfeita;Neutro;Sem engine;6,97;100%;100%;7%;98;126
+Médio (Indie);Média;Perfeita;Neutro;Engine inicial;6,97;100%;100%;7%;98;126
+Médio (Indie);Média;Perfeita;Neutro;Engine completa;6,97;100%;100%;7%;98;126
+Médio (Indie);Média;Perfeita;+;Sem engine;7,66;100%;100%;7%;98;126
+Médio (Indie);Média;Perfeita;+;Engine inicial;7,66;100%;100%;7%;98;126
+Médio (Indie);Média;Perfeita;+;Engine completa;7,66;100%;100%;7%;98;126
+Médio (Indie);Média;Perfeita;++;Sem engine;8,59;100%;100%;7%;98;126
+Médio (Indie);Média;Perfeita;++;Engine inicial;8,59;100%;100%;7%;98;126
+Médio (Indie);Média;Perfeita;++;Engine completa;8,59;100%;100%;7%;98;126
+Médio (Indie);Média;Perfeita;+++;Sem engine;9,29;100%;100%;7%;98;126
+Médio (Indie);Média;Perfeita;+++;Engine inicial;9,29;100%;100%;7%;98;126
+Médio (Indie);Média;Perfeita;+++;Engine completa;9,29;100%;100%;7%;98;126
+Médio (Indie);Média;Boa (erro 25%);−−−;Sem engine;4,26;67%;92%;7%;98;126
+Médio (Indie);Média;Boa (erro 25%);−−−;Engine inicial;4,27;67%;92%;7%;98;126
+Médio (Indie);Média;Boa (erro 25%);−−−;Engine completa;4,31;67%;93%;7%;98;126
+Médio (Indie);Média;Boa (erro 25%);−−;Sem engine;4,96;67%;92%;7%;98;126
+Médio (Indie);Média;Boa (erro 25%);−−;Engine inicial;4,96;67%;92%;7%;98;126
+Médio (Indie);Média;Boa (erro 25%);−−;Engine completa;5,01;67%;93%;7%;98;126
+Médio (Indie);Média;Boa (erro 25%);−;Sem engine;5,89;67%;92%;7%;98;126
+Médio (Indie);Média;Boa (erro 25%);−;Engine inicial;5,90;67%;92%;7%;98;126
+Médio (Indie);Média;Boa (erro 25%);−;Engine completa;5,94;67%;93%;7%;98;126
+Médio (Indie);Média;Boa (erro 25%);Neutro;Sem engine;6,59;67%;92%;7%;98;126
+Médio (Indie);Média;Boa (erro 25%);Neutro;Engine inicial;6,59;67%;92%;7%;98;126
+Médio (Indie);Média;Boa (erro 25%);Neutro;Engine completa;6,64;67%;93%;7%;98;126
+Médio (Indie);Média;Boa (erro 25%);+;Sem engine;7,29;67%;92%;7%;98;126
+Médio (Indie);Média;Boa (erro 25%);+;Engine inicial;7,29;67%;92%;7%;98;126
+Médio (Indie);Média;Boa (erro 25%);+;Engine completa;7,33;67%;93%;7%;98;126
+Médio (Indie);Média;Boa (erro 25%);++;Sem engine;8,22;67%;92%;7%;98;126
+Médio (Indie);Média;Boa (erro 25%);++;Engine inicial;8,22;67%;92%;7%;98;126
+Médio (Indie);Média;Boa (erro 25%);++;Engine completa;8,26;67%;93%;7%;98;126
+Médio (Indie);Média;Boa (erro 25%);+++;Sem engine;8,91;67%;92%;7%;98;126
+Médio (Indie);Média;Boa (erro 25%);+++;Engine inicial;8,92;67%;92%;7%;98;126
+Médio (Indie);Média;Boa (erro 25%);+++;Engine completa;8,96;67%;93%;7%;98;126
+Médio (Indie);Média;Média (erro 50%);−−−;Sem engine;3,40;45%;73%;7%;97;126
+Médio (Indie);Média;Média (erro 50%);−−−;Engine inicial;3,42;45%;74%;7%;97;126
+Médio (Indie);Média;Média (erro 50%);−−−;Engine completa;3,64;45%;78%;7%;97;126
+Médio (Indie);Média;Média (erro 50%);−−;Sem engine;4,10;45%;73%;7%;97;126
+Médio (Indie);Média;Média (erro 50%);−−;Engine inicial;4,12;45%;74%;7%;97;126
+Médio (Indie);Média;Média (erro 50%);−−;Engine completa;4,34;45%;78%;7%;97;126
+Médio (Indie);Média;Média (erro 50%);−;Sem engine;5,03;45%;73%;7%;97;126
+Médio (Indie);Média;Média (erro 50%);−;Engine inicial;5,05;45%;74%;7%;97;126
+Médio (Indie);Média;Média (erro 50%);−;Engine completa;5,27;45%;78%;7%;97;126
+Médio (Indie);Média;Média (erro 50%);Neutro;Sem engine;5,72;45%;73%;7%;97;126
+Médio (Indie);Média;Média (erro 50%);Neutro;Engine inicial;5,75;45%;74%;7%;97;126
+Médio (Indie);Média;Média (erro 50%);Neutro;Engine completa;5,96;45%;78%;7%;97;126
+Médio (Indie);Média;Média (erro 50%);+;Sem engine;6,42;45%;73%;7%;97;126
+Médio (Indie);Média;Média (erro 50%);+;Engine inicial;6,45;45%;74%;7%;97;126
+Médio (Indie);Média;Média (erro 50%);+;Engine completa;6,66;45%;78%;7%;97;126
+Médio (Indie);Média;Média (erro 50%);++;Sem engine;7,35;45%;73%;7%;97;126
+Médio (Indie);Média;Média (erro 50%);++;Engine inicial;7,38;45%;74%;7%;97;126
+Médio (Indie);Média;Média (erro 50%);++;Engine completa;7,59;45%;78%;7%;97;126
+Médio (Indie);Média;Média (erro 50%);+++;Sem engine;8,05;45%;73%;7%;97;126
+Médio (Indie);Média;Média (erro 50%);+++;Engine inicial;8,07;45%;74%;7%;97;126
+Médio (Indie);Média;Média (erro 50%);+++;Engine completa;8,29;45%;78%;7%;97;126
+Médio (Indie);Média;Ruim (erro 75%);−−−;Sem engine;2,26;26%;49%;7%;97;126
+Médio (Indie);Média;Ruim (erro 75%);−−−;Engine inicial;2,31;26%;50%;7%;97;126
+Médio (Indie);Média;Ruim (erro 75%);−−−;Engine completa;2,70;26%;58%;7%;97;126
+Médio (Indie);Média;Ruim (erro 75%);−−;Sem engine;2,95;26%;49%;7%;97;126
+Médio (Indie);Média;Ruim (erro 75%);−−;Engine inicial;3,01;26%;50%;7%;97;126
+Médio (Indie);Média;Ruim (erro 75%);−−;Engine completa;3,40;26%;58%;7%;97;126
+Médio (Indie);Média;Ruim (erro 75%);−;Sem engine;3,88;26%;49%;7%;97;126
+Médio (Indie);Média;Ruim (erro 75%);−;Engine inicial;3,93;26%;50%;7%;97;126
+Médio (Indie);Média;Ruim (erro 75%);−;Engine completa;4,33;26%;58%;7%;97;126
+Médio (Indie);Média;Ruim (erro 75%);Neutro;Sem engine;4,58;26%;49%;7%;97;126
+Médio (Indie);Média;Ruim (erro 75%);Neutro;Engine inicial;4,63;26%;50%;7%;97;126
+Médio (Indie);Média;Ruim (erro 75%);Neutro;Engine completa;5,03;26%;58%;7%;97;126
+Médio (Indie);Média;Ruim (erro 75%);+;Sem engine;5,28;26%;49%;7%;97;126
+Médio (Indie);Média;Ruim (erro 75%);+;Engine inicial;5,33;26%;50%;7%;97;126
+Médio (Indie);Média;Ruim (erro 75%);+;Engine completa;5,73;26%;58%;7%;97;126
+Médio (Indie);Média;Ruim (erro 75%);++;Sem engine;6,21;26%;49%;7%;97;126
+Médio (Indie);Média;Ruim (erro 75%);++;Engine inicial;6,26;26%;50%;7%;97;126
+Médio (Indie);Média;Ruim (erro 75%);++;Engine completa;6,66;26%;58%;7%;97;126
+Médio (Indie);Média;Ruim (erro 75%);+++;Sem engine;6,91;26%;49%;7%;97;126
+Médio (Indie);Média;Ruim (erro 75%);+++;Engine inicial;6,96;26%;50%;7%;97;126
+Médio (Indie);Média;Ruim (erro 75%);+++;Engine completa;7,35;26%;58%;7%;97;126
+Médio (Indie);Média;Péssima (tudo no bloco menos importante);−−−;Sem engine;0,84;0%;18%;7%;97;126
+Médio (Indie);Média;Péssima (tudo no bloco menos importante);−−−;Engine inicial;0,92;0%;20%;7%;97;126
+Médio (Indie);Média;Péssima (tudo no bloco menos importante);−−−;Engine completa;1,53;0%;33%;7%;97;126
+Médio (Indie);Média;Péssima (tudo no bloco menos importante);−−;Sem engine;1,54;0%;18%;7%;97;126
+Médio (Indie);Média;Péssima (tudo no bloco menos importante);−−;Engine inicial;1,62;0%;20%;7%;97;126
+Médio (Indie);Média;Péssima (tudo no bloco menos importante);−−;Engine completa;2,23;0%;33%;7%;97;126
+Médio (Indie);Média;Péssima (tudo no bloco menos importante);−;Sem engine;2,47;0%;18%;7%;97;126
+Médio (Indie);Média;Péssima (tudo no bloco menos importante);−;Engine inicial;2,55;0%;20%;7%;97;126
+Médio (Indie);Média;Péssima (tudo no bloco menos importante);−;Engine completa;3,16;0%;33%;7%;97;126
+Médio (Indie);Média;Péssima (tudo no bloco menos importante);Neutro;Sem engine;3,16;0%;18%;7%;97;126
+Médio (Indie);Média;Péssima (tudo no bloco menos importante);Neutro;Engine inicial;3,25;0%;20%;7%;97;126
+Médio (Indie);Média;Péssima (tudo no bloco menos importante);Neutro;Engine completa;3,85;0%;33%;7%;97;126
+Médio (Indie);Média;Péssima (tudo no bloco menos importante);+;Sem engine;3,86;0%;18%;7%;97;126
+Médio (Indie);Média;Péssima (tudo no bloco menos importante);+;Engine inicial;3,94;0%;20%;7%;97;126
+Médio (Indie);Média;Péssima (tudo no bloco menos importante);+;Engine completa;4,55;0%;33%;7%;97;126
+Médio (Indie);Média;Péssima (tudo no bloco menos importante);++;Sem engine;4,79;0%;18%;7%;97;126
+Médio (Indie);Média;Péssima (tudo no bloco menos importante);++;Engine inicial;4,87;0%;20%;7%;97;126
+Médio (Indie);Média;Péssima (tudo no bloco menos importante);++;Engine completa;5,48;0%;33%;7%;97;126
+Médio (Indie);Média;Péssima (tudo no bloco menos importante);+++;Sem engine;5,49;0%;18%;7%;97;126
+Médio (Indie);Média;Péssima (tudo no bloco menos importante);+++;Engine inicial;5,57;0%;20%;7%;97;126
+Médio (Indie);Média;Péssima (tudo no bloco menos importante);+++;Engine completa;6,18;0%;33%;7%;97;126
+Médio (Indie);Média;Divide igual;−−−;Sem engine;4,16;64%;89%;7%;98;126
+Médio (Indie);Média;Divide igual;−−−;Engine inicial;4,17;64%;90%;7%;98;126
+Médio (Indie);Média;Divide igual;−−−;Engine completa;4,23;64%;91%;7%;98;126
+Médio (Indie);Média;Divide igual;−−;Sem engine;4,86;64%;89%;7%;98;126
+Médio (Indie);Média;Divide igual;−−;Engine inicial;4,87;64%;90%;7%;98;126
+Médio (Indie);Média;Divide igual;−−;Engine completa;4,93;64%;91%;7%;98;126
+Médio (Indie);Média;Divide igual;−;Sem engine;5,79;64%;89%;7%;98;126
+Médio (Indie);Média;Divide igual;−;Engine inicial;5,80;64%;90%;7%;98;126
+Médio (Indie);Média;Divide igual;−;Engine completa;5,86;64%;91%;7%;98;126
+Médio (Indie);Média;Divide igual;Neutro;Sem engine;6,49;64%;89%;7%;98;126
+Médio (Indie);Média;Divide igual;Neutro;Engine inicial;6,50;64%;90%;7%;98;126
+Médio (Indie);Média;Divide igual;Neutro;Engine completa;6,56;64%;91%;7%;98;126
+Médio (Indie);Média;Divide igual;+;Sem engine;7,19;64%;89%;7%;98;126
+Médio (Indie);Média;Divide igual;+;Engine inicial;7,20;64%;90%;7%;98;126
+Médio (Indie);Média;Divide igual;+;Engine completa;7,26;64%;91%;7%;98;126
+Médio (Indie);Média;Divide igual;++;Sem engine;8,12;64%;89%;7%;98;126
+Médio (Indie);Média;Divide igual;++;Engine inicial;8,13;64%;90%;7%;98;126
+Médio (Indie);Média;Divide igual;++;Engine completa;8,19;64%;91%;7%;98;126
+Médio (Indie);Média;Divide igual;+++;Sem engine;8,82;64%;89%;7%;98;126
+Médio (Indie);Média;Divide igual;+++;Engine inicial;8,82;64%;90%;7%;98;126
+Médio (Indie);Média;Divide igual;+++;Engine completa;8,88;64%;91%;7%;98;126
+Médio (Indie);Média;Invertida;−−−;Sem engine;2,55;31%;55%;7%;99;126
+Médio (Indie);Média;Invertida;−−−;Engine inicial;2,57;31%;55%;7%;99;126
+Médio (Indie);Média;Invertida;−−−;Engine completa;2,89;31%;62%;7%;99;126
+Médio (Indie);Média;Invertida;−−;Sem engine;3,25;31%;55%;7%;99;126
+Médio (Indie);Média;Invertida;−−;Engine inicial;3,27;31%;55%;7%;99;126
+Médio (Indie);Média;Invertida;−−;Engine completa;3,59;31%;62%;7%;99;126
+Médio (Indie);Média;Invertida;−;Sem engine;4,18;31%;55%;7%;99;126
+Médio (Indie);Média;Invertida;−;Engine inicial;4,20;31%;55%;7%;99;126
+Médio (Indie);Média;Invertida;−;Engine completa;4,52;31%;62%;7%;99;126
+Médio (Indie);Média;Invertida;Neutro;Sem engine;4,87;31%;55%;7%;99;126
+Médio (Indie);Média;Invertida;Neutro;Engine inicial;4,90;31%;55%;7%;99;126
+Médio (Indie);Média;Invertida;Neutro;Engine completa;5,22;31%;62%;7%;99;126
+Médio (Indie);Média;Invertida;+;Sem engine;5,57;31%;55%;7%;99;126
+Médio (Indie);Média;Invertida;+;Engine inicial;5,60;31%;55%;7%;99;126
+Médio (Indie);Média;Invertida;+;Engine completa;5,92;31%;62%;7%;99;126
+Médio (Indie);Média;Invertida;++;Sem engine;6,50;31%;55%;7%;99;126
+Médio (Indie);Média;Invertida;++;Engine inicial;6,53;31%;55%;7%;99;126
+Médio (Indie);Média;Invertida;++;Engine completa;6,85;31%;62%;7%;99;126
+Médio (Indie);Média;Invertida;+++;Sem engine;7,20;31%;55%;7%;99;126
+Médio (Indie);Média;Invertida;+++;Engine inicial;7,23;31%;55%;7%;99;126
+Médio (Indie);Média;Invertida;+++;Engine completa;7,55;31%;62%;7%;99;126
+Médio (Indie);Média;Mista: 3 fases certas, 2 péssimas;−−−;Sem engine;3,14;63%;68%;7%;98;126
+Médio (Indie);Média;Mista: 3 fases certas, 2 péssimas;−−−;Engine inicial;3,19;63%;69%;7%;98;126
+Médio (Indie);Média;Mista: 3 fases certas, 2 péssimas;−−−;Engine completa;3,50;63%;75%;7%;98;126
+Médio (Indie);Média;Mista: 3 fases certas, 2 péssimas;−−;Sem engine;3,84;63%;68%;7%;98;126
+Médio (Indie);Média;Mista: 3 fases certas, 2 péssimas;−−;Engine inicial;3,89;63%;69%;7%;98;126
+Médio (Indie);Média;Mista: 3 fases certas, 2 péssimas;−−;Engine completa;4,20;63%;75%;7%;98;126
+Médio (Indie);Média;Mista: 3 fases certas, 2 péssimas;−;Sem engine;4,77;63%;68%;7%;98;126
+Médio (Indie);Média;Mista: 3 fases certas, 2 péssimas;−;Engine inicial;4,82;63%;69%;7%;98;126
+Médio (Indie);Média;Mista: 3 fases certas, 2 péssimas;−;Engine completa;5,13;63%;75%;7%;98;126
+Médio (Indie);Média;Mista: 3 fases certas, 2 péssimas;Neutro;Sem engine;5,47;63%;68%;7%;98;126
+Médio (Indie);Média;Mista: 3 fases certas, 2 péssimas;Neutro;Engine inicial;5,51;63%;69%;7%;98;126
+Médio (Indie);Média;Mista: 3 fases certas, 2 péssimas;Neutro;Engine completa;5,83;63%;75%;7%;98;126
+Médio (Indie);Média;Mista: 3 fases certas, 2 péssimas;+;Sem engine;6,17;63%;68%;7%;98;126
+Médio (Indie);Média;Mista: 3 fases certas, 2 péssimas;+;Engine inicial;6,21;63%;69%;7%;98;126
+Médio (Indie);Média;Mista: 3 fases certas, 2 péssimas;+;Engine completa;6,53;63%;75%;7%;98;126
+Médio (Indie);Média;Mista: 3 fases certas, 2 péssimas;++;Sem engine;7,10;63%;68%;7%;98;126
+Médio (Indie);Média;Mista: 3 fases certas, 2 péssimas;++;Engine inicial;7,14;63%;69%;7%;98;126
+Médio (Indie);Média;Mista: 3 fases certas, 2 péssimas;++;Engine completa;7,46;63%;75%;7%;98;126
+Médio (Indie);Média;Mista: 3 fases certas, 2 péssimas;+++;Sem engine;7,79;63%;68%;7%;98;126
+Médio (Indie);Média;Mista: 3 fases certas, 2 péssimas;+++;Engine inicial;7,84;63%;69%;7%;98;126
+Médio (Indie);Média;Mista: 3 fases certas, 2 péssimas;+++;Engine completa;8,15;63%;75%;7%;98;126
+Médio (Indie);Média;Mista: só a Pré-produção péssima;−−−;Sem engine;3,83;75%;83%;7%;97;126
+Médio (Indie);Média;Mista: só a Pré-produção péssima;−−−;Engine inicial;3,83;75%;83%;7%;97;126
+Médio (Indie);Média;Mista: só a Pré-produção péssima;−−−;Engine completa;3,92;75%;84%;7%;97;126
+Médio (Indie);Média;Mista: só a Pré-produção péssima;−−;Sem engine;4,53;75%;83%;7%;97;126
+Médio (Indie);Média;Mista: só a Pré-produção péssima;−−;Engine inicial;4,53;75%;83%;7%;97;126
+Médio (Indie);Média;Mista: só a Pré-produção péssima;−−;Engine completa;4,61;75%;84%;7%;97;126
+Médio (Indie);Média;Mista: só a Pré-produção péssima;−;Sem engine;5,45;75%;83%;7%;97;126
+Médio (Indie);Média;Mista: só a Pré-produção péssima;−;Engine inicial;5,45;75%;83%;7%;97;126
+Médio (Indie);Média;Mista: só a Pré-produção péssima;−;Engine completa;5,54;75%;84%;7%;97;126
+Médio (Indie);Média;Mista: só a Pré-produção péssima;Neutro;Sem engine;6,15;75%;83%;7%;97;126
+Médio (Indie);Média;Mista: só a Pré-produção péssima;Neutro;Engine inicial;6,15;75%;83%;7%;97;126
+Médio (Indie);Média;Mista: só a Pré-produção péssima;Neutro;Engine completa;6,24;75%;84%;7%;97;126
+Médio (Indie);Média;Mista: só a Pré-produção péssima;+;Sem engine;6,85;75%;83%;7%;97;126
+Médio (Indie);Média;Mista: só a Pré-produção péssima;+;Engine inicial;6,85;75%;83%;7%;97;126
+Médio (Indie);Média;Mista: só a Pré-produção péssima;+;Engine completa;6,93;75%;84%;7%;97;126
+Médio (Indie);Média;Mista: só a Pré-produção péssima;++;Sem engine;7,78;75%;83%;7%;97;126
+Médio (Indie);Média;Mista: só a Pré-produção péssima;++;Engine inicial;7,78;75%;83%;7%;97;126
+Médio (Indie);Média;Mista: só a Pré-produção péssima;++;Engine completa;7,86;75%;84%;7%;97;126
+Médio (Indie);Média;Mista: só a Pré-produção péssima;+++;Sem engine;8,47;75%;83%;7%;97;126
+Médio (Indie);Média;Mista: só a Pré-produção péssima;+++;Engine inicial;8,47;75%;83%;7%;97;126
+Médio (Indie);Média;Mista: só a Pré-produção péssima;+++;Engine completa;8,56;75%;84%;7%;97;126
+Médio (Indie);Forte;Perfeita;−−−;Sem engine;4,73;100%;100%;5%;145;126
+Médio (Indie);Forte;Perfeita;−−−;Engine inicial;4,73;100%;100%;5%;145;126
+Médio (Indie);Forte;Perfeita;−−−;Engine completa;4,73;100%;100%;5%;145;126
+Médio (Indie);Forte;Perfeita;−−;Sem engine;5,44;100%;100%;5%;145;126
+Médio (Indie);Forte;Perfeita;−−;Engine inicial;5,44;100%;100%;5%;145;126
+Médio (Indie);Forte;Perfeita;−−;Engine completa;5,44;100%;100%;5%;145;126
+Médio (Indie);Forte;Perfeita;−;Sem engine;6,38;100%;100%;5%;145;126
+Médio (Indie);Forte;Perfeita;−;Engine inicial;6,38;100%;100%;5%;145;126
+Médio (Indie);Forte;Perfeita;−;Engine completa;6,38;100%;100%;5%;145;126
+Médio (Indie);Forte;Perfeita;Neutro;Sem engine;7,09;100%;100%;5%;145;126
+Médio (Indie);Forte;Perfeita;Neutro;Engine inicial;7,09;100%;100%;5%;145;126
+Médio (Indie);Forte;Perfeita;Neutro;Engine completa;7,09;100%;100%;5%;145;126
+Médio (Indie);Forte;Perfeita;+;Sem engine;7,80;100%;100%;5%;145;126
+Médio (Indie);Forte;Perfeita;+;Engine inicial;7,80;100%;100%;5%;145;126
+Médio (Indie);Forte;Perfeita;+;Engine completa;7,80;100%;100%;5%;145;126
+Médio (Indie);Forte;Perfeita;++;Sem engine;8,75;100%;100%;5%;145;126
+Médio (Indie);Forte;Perfeita;++;Engine inicial;8,75;100%;100%;5%;145;126
+Médio (Indie);Forte;Perfeita;++;Engine completa;8,75;100%;100%;5%;145;126
+Médio (Indie);Forte;Perfeita;+++;Sem engine;9,46;100%;100%;5%;145;126
+Médio (Indie);Forte;Perfeita;+++;Engine inicial;9,46;100%;100%;5%;145;126
+Médio (Indie);Forte;Perfeita;+++;Engine completa;9,46;100%;100%;5%;145;126
+Médio (Indie);Forte;Boa (erro 25%);−−−;Sem engine;4,34;67%;92%;5%;144;126
+Médio (Indie);Forte;Boa (erro 25%);−−−;Engine inicial;4,35;67%;92%;5%;144;126
+Médio (Indie);Forte;Boa (erro 25%);−−−;Engine completa;4,39;67%;93%;5%;144;126
+Médio (Indie);Forte;Boa (erro 25%);−−;Sem engine;5,05;67%;92%;5%;144;126
+Médio (Indie);Forte;Boa (erro 25%);−−;Engine inicial;5,06;67%;92%;5%;144;126
+Médio (Indie);Forte;Boa (erro 25%);−−;Engine completa;5,10;67%;93%;5%;144;126
+Médio (Indie);Forte;Boa (erro 25%);−;Sem engine;6,00;67%;92%;5%;144;126
+Médio (Indie);Forte;Boa (erro 25%);−;Engine inicial;6,01;67%;92%;5%;144;126
+Médio (Indie);Forte;Boa (erro 25%);−;Engine completa;6,05;67%;93%;5%;144;126
+Médio (Indie);Forte;Boa (erro 25%);Neutro;Sem engine;6,71;67%;92%;5%;144;126
+Médio (Indie);Forte;Boa (erro 25%);Neutro;Engine inicial;6,72;67%;92%;5%;144;126
+Médio (Indie);Forte;Boa (erro 25%);Neutro;Engine completa;6,76;67%;93%;5%;144;126
+Médio (Indie);Forte;Boa (erro 25%);+;Sem engine;7,42;67%;92%;5%;144;126
+Médio (Indie);Forte;Boa (erro 25%);+;Engine inicial;7,43;67%;92%;5%;144;126
+Médio (Indie);Forte;Boa (erro 25%);+;Engine completa;7,47;67%;93%;5%;144;126
+Médio (Indie);Forte;Boa (erro 25%);++;Sem engine;8,37;67%;92%;5%;144;126
+Médio (Indie);Forte;Boa (erro 25%);++;Engine inicial;8,37;67%;92%;5%;144;126
+Médio (Indie);Forte;Boa (erro 25%);++;Engine completa;8,42;67%;93%;5%;144;126
+Médio (Indie);Forte;Boa (erro 25%);+++;Sem engine;9,08;67%;92%;5%;144;126
+Médio (Indie);Forte;Boa (erro 25%);+++;Engine inicial;9,08;67%;92%;5%;144;126
+Médio (Indie);Forte;Boa (erro 25%);+++;Engine completa;9,13;67%;93%;5%;144;126
+Médio (Indie);Forte;Média (erro 50%);−−−;Sem engine;3,74;45%;79%;5%;144;126
+Médio (Indie);Forte;Média (erro 50%);−−−;Engine inicial;3,76;45%;79%;5%;144;126
+Médio (Indie);Forte;Média (erro 50%);−−−;Engine completa;3,94;45%;83%;5%;144;126
+Médio (Indie);Forte;Média (erro 50%);−−;Sem engine;4,45;45%;79%;5%;144;126
+Médio (Indie);Forte;Média (erro 50%);−−;Engine inicial;4,47;45%;79%;5%;144;126
+Médio (Indie);Forte;Média (erro 50%);−−;Engine completa;4,65;45%;83%;5%;144;126
+Médio (Indie);Forte;Média (erro 50%);−;Sem engine;5,40;45%;79%;5%;144;126
+Médio (Indie);Forte;Média (erro 50%);−;Engine inicial;5,42;45%;79%;5%;144;126
+Médio (Indie);Forte;Média (erro 50%);−;Engine completa;5,59;45%;83%;5%;144;126
+Médio (Indie);Forte;Média (erro 50%);Neutro;Sem engine;6,11;45%;79%;5%;144;126
+Médio (Indie);Forte;Média (erro 50%);Neutro;Engine inicial;6,13;45%;79%;5%;144;126
+Médio (Indie);Forte;Média (erro 50%);Neutro;Engine completa;6,30;45%;83%;5%;144;126
+Médio (Indie);Forte;Média (erro 50%);+;Sem engine;6,82;45%;79%;5%;144;126
+Médio (Indie);Forte;Média (erro 50%);+;Engine inicial;6,84;45%;79%;5%;144;126
+Médio (Indie);Forte;Média (erro 50%);+;Engine completa;7,01;45%;83%;5%;144;126
+Médio (Indie);Forte;Média (erro 50%);++;Sem engine;7,77;45%;79%;5%;144;126
+Médio (Indie);Forte;Média (erro 50%);++;Engine inicial;7,79;45%;79%;5%;144;126
+Médio (Indie);Forte;Média (erro 50%);++;Engine completa;7,96;45%;83%;5%;144;126
+Médio (Indie);Forte;Média (erro 50%);+++;Sem engine;8,48;45%;79%;5%;144;126
+Médio (Indie);Forte;Média (erro 50%);+++;Engine inicial;8,50;45%;79%;5%;144;126
+Médio (Indie);Forte;Média (erro 50%);+++;Engine completa;8,67;45%;83%;5%;144;126
+Médio (Indie);Forte;Ruim (erro 75%);−−−;Sem engine;2,45;26%;52%;5%;143;126
+Médio (Indie);Forte;Ruim (erro 75%);−−−;Engine inicial;2,50;26%;53%;5%;143;126
+Médio (Indie);Forte;Ruim (erro 75%);−−−;Engine completa;2,88;26%;61%;5%;143;126
+Médio (Indie);Forte;Ruim (erro 75%);−−;Sem engine;3,16;26%;52%;5%;143;126
+Médio (Indie);Forte;Ruim (erro 75%);−−;Engine inicial;3,21;26%;53%;5%;143;126
+Médio (Indie);Forte;Ruim (erro 75%);−−;Engine completa;3,59;26%;61%;5%;143;126
+Médio (Indie);Forte;Ruim (erro 75%);−;Sem engine;4,11;26%;52%;5%;143;126
+Médio (Indie);Forte;Ruim (erro 75%);−;Engine inicial;4,15;26%;53%;5%;143;126
+Médio (Indie);Forte;Ruim (erro 75%);−;Engine completa;4,54;26%;61%;5%;143;126
+Médio (Indie);Forte;Ruim (erro 75%);Neutro;Sem engine;4,82;26%;52%;5%;143;126
+Médio (Indie);Forte;Ruim (erro 75%);Neutro;Engine inicial;4,86;26%;53%;5%;143;126
+Médio (Indie);Forte;Ruim (erro 75%);Neutro;Engine completa;5,25;26%;61%;5%;143;126
+Médio (Indie);Forte;Ruim (erro 75%);+;Sem engine;5,53;26%;52%;5%;143;126
+Médio (Indie);Forte;Ruim (erro 75%);+;Engine inicial;5,57;26%;53%;5%;143;126
+Médio (Indie);Forte;Ruim (erro 75%);+;Engine completa;5,96;26%;61%;5%;143;126
+Médio (Indie);Forte;Ruim (erro 75%);++;Sem engine;6,47;26%;52%;5%;143;126
+Médio (Indie);Forte;Ruim (erro 75%);++;Engine inicial;6,52;26%;53%;5%;143;126
+Médio (Indie);Forte;Ruim (erro 75%);++;Engine completa;6,90;26%;61%;5%;143;126
+Médio (Indie);Forte;Ruim (erro 75%);+++;Sem engine;7,18;26%;52%;5%;143;126
+Médio (Indie);Forte;Ruim (erro 75%);+++;Engine inicial;7,23;26%;53%;5%;143;126
+Médio (Indie);Forte;Ruim (erro 75%);+++;Engine completa;7,61;26%;61%;5%;143;126
+Médio (Indie);Forte;Péssima (tudo no bloco menos importante);−−−;Sem engine;0,86;0%;18%;5%;143;126
+Médio (Indie);Forte;Péssima (tudo no bloco menos importante);−−−;Engine inicial;0,95;0%;20%;5%;143;126
+Médio (Indie);Forte;Péssima (tudo no bloco menos importante);−−−;Engine completa;1,56;0%;33%;5%;143;126
+Médio (Indie);Forte;Péssima (tudo no bloco menos importante);−−;Sem engine;1,57;0%;18%;5%;143;126
+Médio (Indie);Forte;Péssima (tudo no bloco menos importante);−−;Engine inicial;1,66;0%;20%;5%;143;126
+Médio (Indie);Forte;Péssima (tudo no bloco menos importante);−−;Engine completa;2,27;0%;33%;5%;143;126
+Médio (Indie);Forte;Péssima (tudo no bloco menos importante);−;Sem engine;2,52;0%;18%;5%;143;126
+Médio (Indie);Forte;Péssima (tudo no bloco menos importante);−;Engine inicial;2,60;0%;20%;5%;143;126
+Médio (Indie);Forte;Péssima (tudo no bloco menos importante);−;Engine completa;3,22;0%;33%;5%;143;126
+Médio (Indie);Forte;Péssima (tudo no bloco menos importante);Neutro;Sem engine;3,23;0%;18%;5%;143;126
+Médio (Indie);Forte;Péssima (tudo no bloco menos importante);Neutro;Engine inicial;3,31;0%;20%;5%;143;126
+Médio (Indie);Forte;Péssima (tudo no bloco menos importante);Neutro;Engine completa;3,93;0%;33%;5%;143;126
+Médio (Indie);Forte;Péssima (tudo no bloco menos importante);+;Sem engine;3,94;0%;18%;5%;143;126
+Médio (Indie);Forte;Péssima (tudo no bloco menos importante);+;Engine inicial;4,02;0%;20%;5%;143;126
+Médio (Indie);Forte;Péssima (tudo no bloco menos importante);+;Engine completa;4,64;0%;33%;5%;143;126
+Médio (Indie);Forte;Péssima (tudo no bloco menos importante);++;Sem engine;4,88;0%;18%;5%;143;126
+Médio (Indie);Forte;Péssima (tudo no bloco menos importante);++;Engine inicial;4,97;0%;20%;5%;143;126
+Médio (Indie);Forte;Péssima (tudo no bloco menos importante);++;Engine completa;5,59;0%;33%;5%;143;126
+Médio (Indie);Forte;Péssima (tudo no bloco menos importante);+++;Sem engine;5,59;0%;18%;5%;143;126
+Médio (Indie);Forte;Péssima (tudo no bloco menos importante);+++;Engine inicial;5,68;0%;20%;5%;143;126
+Médio (Indie);Forte;Péssima (tudo no bloco menos importante);+++;Engine completa;6,30;0%;33%;5%;143;126
+Médio (Indie);Forte;Divide igual;−−−;Sem engine;4,29;64%;91%;5%;145;126
+Médio (Indie);Forte;Divide igual;−−−;Engine inicial;4,30;64%;91%;5%;145;126
+Médio (Indie);Forte;Divide igual;−−−;Engine completa;4,35;64%;92%;5%;145;126
+Médio (Indie);Forte;Divide igual;−−;Sem engine;5,00;64%;91%;5%;145;126
+Médio (Indie);Forte;Divide igual;−−;Engine inicial;5,01;64%;91%;5%;145;126
+Médio (Indie);Forte;Divide igual;−−;Engine completa;5,06;64%;92%;5%;145;126
+Médio (Indie);Forte;Divide igual;−;Sem engine;5,95;64%;91%;5%;145;126
+Médio (Indie);Forte;Divide igual;−;Engine inicial;5,96;64%;91%;5%;145;126
+Médio (Indie);Forte;Divide igual;−;Engine completa;6,01;64%;92%;5%;145;126
+Médio (Indie);Forte;Divide igual;Neutro;Sem engine;6,66;64%;91%;5%;145;126
+Médio (Indie);Forte;Divide igual;Neutro;Engine inicial;6,67;64%;91%;5%;145;126
+Médio (Indie);Forte;Divide igual;Neutro;Engine completa;6,72;64%;92%;5%;145;126
+Médio (Indie);Forte;Divide igual;+;Sem engine;7,37;64%;91%;5%;145;126
+Médio (Indie);Forte;Divide igual;+;Engine inicial;7,38;64%;91%;5%;145;126
+Médio (Indie);Forte;Divide igual;+;Engine completa;7,43;64%;92%;5%;145;126
+Médio (Indie);Forte;Divide igual;++;Sem engine;8,32;64%;91%;5%;145;126
+Médio (Indie);Forte;Divide igual;++;Engine inicial;8,32;64%;91%;5%;145;126
+Médio (Indie);Forte;Divide igual;++;Engine completa;8,38;64%;92%;5%;145;126
+Médio (Indie);Forte;Divide igual;+++;Sem engine;9,03;64%;91%;5%;145;126
+Médio (Indie);Forte;Divide igual;+++;Engine inicial;9,04;64%;91%;5%;145;126
+Médio (Indie);Forte;Divide igual;+++;Engine completa;9,09;64%;92%;5%;145;126
+Médio (Indie);Forte;Invertida;−−−;Sem engine;2,61;31%;55%;5%;145;126
+Médio (Indie);Forte;Invertida;−−−;Engine inicial;2,63;31%;56%;5%;145;126
+Médio (Indie);Forte;Invertida;−−−;Engine completa;2,96;31%;62%;5%;145;126
+Médio (Indie);Forte;Invertida;−−;Sem engine;3,32;31%;55%;5%;145;126
+Médio (Indie);Forte;Invertida;−−;Engine inicial;3,34;31%;56%;5%;145;126
+Médio (Indie);Forte;Invertida;−−;Engine completa;3,67;31%;62%;5%;145;126
+Médio (Indie);Forte;Invertida;−;Sem engine;4,27;31%;55%;5%;145;126
+Médio (Indie);Forte;Invertida;−;Engine inicial;4,29;31%;56%;5%;145;126
+Médio (Indie);Forte;Invertida;−;Engine completa;4,62;31%;62%;5%;145;126
+Médio (Indie);Forte;Invertida;Neutro;Sem engine;4,98;31%;55%;5%;145;126
+Médio (Indie);Forte;Invertida;Neutro;Engine inicial;5,00;31%;56%;5%;145;126
+Médio (Indie);Forte;Invertida;Neutro;Engine completa;5,33;31%;62%;5%;145;126
+Médio (Indie);Forte;Invertida;+;Sem engine;5,69;31%;55%;5%;145;126
+Médio (Indie);Forte;Invertida;+;Engine inicial;5,71;31%;56%;5%;145;126
+Médio (Indie);Forte;Invertida;+;Engine completa;6,04;31%;62%;5%;145;126
+Médio (Indie);Forte;Invertida;++;Sem engine;6,63;31%;55%;5%;145;126
+Médio (Indie);Forte;Invertida;++;Engine inicial;6,66;31%;56%;5%;145;126
+Médio (Indie);Forte;Invertida;++;Engine completa;6,98;31%;62%;5%;145;126
+Médio (Indie);Forte;Invertida;+++;Sem engine;7,34;31%;55%;5%;145;126
+Médio (Indie);Forte;Invertida;+++;Engine inicial;7,37;31%;56%;5%;145;126
+Médio (Indie);Forte;Invertida;+++;Engine completa;7,69;31%;62%;5%;145;126
+Médio (Indie);Forte;Mista: 3 fases certas, 2 péssimas;−−−;Sem engine;3,20;63%;68%;5%;145;126
+Médio (Indie);Forte;Mista: 3 fases certas, 2 péssimas;−−−;Engine inicial;3,25;63%;69%;5%;145;126
+Médio (Indie);Forte;Mista: 3 fases certas, 2 péssimas;−−−;Engine completa;3,57;63%;75%;5%;145;126
+Médio (Indie);Forte;Mista: 3 fases certas, 2 péssimas;−−;Sem engine;3,91;63%;68%;5%;145;126
+Médio (Indie);Forte;Mista: 3 fases certas, 2 péssimas;−−;Engine inicial;3,96;63%;69%;5%;145;126
+Médio (Indie);Forte;Mista: 3 fases certas, 2 péssimas;−−;Engine completa;4,28;63%;75%;5%;145;126
+Médio (Indie);Forte;Mista: 3 fases certas, 2 péssimas;−;Sem engine;4,86;63%;68%;5%;145;126
+Médio (Indie);Forte;Mista: 3 fases certas, 2 péssimas;−;Engine inicial;4,90;63%;69%;5%;145;126
+Médio (Indie);Forte;Mista: 3 fases certas, 2 péssimas;−;Engine completa;5,22;63%;75%;5%;145;126
+Médio (Indie);Forte;Mista: 3 fases certas, 2 péssimas;Neutro;Sem engine;5,57;63%;68%;5%;145;126
+Médio (Indie);Forte;Mista: 3 fases certas, 2 péssimas;Neutro;Engine inicial;5,61;63%;69%;5%;145;126
+Médio (Indie);Forte;Mista: 3 fases certas, 2 péssimas;Neutro;Engine completa;5,93;63%;75%;5%;145;126
+Médio (Indie);Forte;Mista: 3 fases certas, 2 péssimas;+;Sem engine;6,28;63%;68%;5%;145;126
+Médio (Indie);Forte;Mista: 3 fases certas, 2 péssimas;+;Engine inicial;6,32;63%;69%;5%;145;126
+Médio (Indie);Forte;Mista: 3 fases certas, 2 péssimas;+;Engine completa;6,64;63%;75%;5%;145;126
+Médio (Indie);Forte;Mista: 3 fases certas, 2 péssimas;++;Sem engine;7,22;63%;68%;5%;145;126
+Médio (Indie);Forte;Mista: 3 fases certas, 2 péssimas;++;Engine inicial;7,27;63%;69%;5%;145;126
+Médio (Indie);Forte;Mista: 3 fases certas, 2 péssimas;++;Engine completa;7,59;63%;75%;5%;145;126
+Médio (Indie);Forte;Mista: 3 fases certas, 2 péssimas;+++;Sem engine;7,93;63%;68%;5%;145;126
+Médio (Indie);Forte;Mista: 3 fases certas, 2 péssimas;+++;Engine inicial;7,98;63%;69%;5%;145;126
+Médio (Indie);Forte;Mista: 3 fases certas, 2 péssimas;+++;Engine completa;8,30;63%;75%;5%;145;126
+Médio (Indie);Forte;Mista: só a Pré-produção péssima;−−−;Sem engine;3,90;75%;83%;5%;143;126
+Médio (Indie);Forte;Mista: só a Pré-produção péssima;−−−;Engine inicial;3,90;75%;83%;5%;143;126
+Médio (Indie);Forte;Mista: só a Pré-produção péssima;−−−;Engine completa;3,99;75%;84%;5%;143;126
+Médio (Indie);Forte;Mista: só a Pré-produção péssima;−−;Sem engine;4,61;75%;83%;5%;143;126
+Médio (Indie);Forte;Mista: só a Pré-produção péssima;−−;Engine inicial;4,61;75%;83%;5%;143;126
+Médio (Indie);Forte;Mista: só a Pré-produção péssima;−−;Engine completa;4,70;75%;84%;5%;143;126
+Médio (Indie);Forte;Mista: só a Pré-produção péssima;−;Sem engine;5,55;75%;83%;5%;143;126
+Médio (Indie);Forte;Mista: só a Pré-produção péssima;−;Engine inicial;5,55;75%;83%;5%;143;126
+Médio (Indie);Forte;Mista: só a Pré-produção péssima;−;Engine completa;5,64;75%;84%;5%;143;126
+Médio (Indie);Forte;Mista: só a Pré-produção péssima;Neutro;Sem engine;6,26;75%;83%;5%;143;126
+Médio (Indie);Forte;Mista: só a Pré-produção péssima;Neutro;Engine inicial;6,26;75%;83%;5%;143;126
+Médio (Indie);Forte;Mista: só a Pré-produção péssima;Neutro;Engine completa;6,35;75%;84%;5%;143;126
+Médio (Indie);Forte;Mista: só a Pré-produção péssima;+;Sem engine;6,97;75%;83%;5%;143;126
+Médio (Indie);Forte;Mista: só a Pré-produção péssima;+;Engine inicial;6,97;75%;83%;5%;143;126
+Médio (Indie);Forte;Mista: só a Pré-produção péssima;+;Engine completa;7,06;75%;84%;5%;143;126
+Médio (Indie);Forte;Mista: só a Pré-produção péssima;++;Sem engine;7,92;75%;83%;5%;143;126
+Médio (Indie);Forte;Mista: só a Pré-produção péssima;++;Engine inicial;7,92;75%;83%;5%;143;126
+Médio (Indie);Forte;Mista: só a Pré-produção péssima;++;Engine completa;8,01;75%;84%;5%;143;126
+Médio (Indie);Forte;Mista: só a Pré-produção péssima;+++;Sem engine;8,63;75%;83%;5%;143;126
+Médio (Indie);Forte;Mista: só a Pré-produção péssima;+++;Engine inicial;8,63;75%;83%;5%;143;126
+Médio (Indie);Forte;Mista: só a Pré-produção péssima;+++;Engine completa;8,72;75%;84%;5%;143;126
+Grande (Escritório);Fraca;Perfeita;−−−;Sem engine;4,60;100%;100%;8%;186;396
+Grande (Escritório);Fraca;Perfeita;−−−;Engine inicial;4,60;100%;100%;8%;186;396
+Grande (Escritório);Fraca;Perfeita;−−−;Engine completa;4,60;100%;100%;8%;186;396
+Grande (Escritório);Fraca;Perfeita;−−;Sem engine;5,29;100%;100%;8%;186;396
+Grande (Escritório);Fraca;Perfeita;−−;Engine inicial;5,29;100%;100%;8%;186;396
+Grande (Escritório);Fraca;Perfeita;−−;Engine completa;5,29;100%;100%;8%;186;396
+Grande (Escritório);Fraca;Perfeita;−;Sem engine;6,21;100%;100%;8%;186;396
+Grande (Escritório);Fraca;Perfeita;−;Engine inicial;6,21;100%;100%;8%;186;396
+Grande (Escritório);Fraca;Perfeita;−;Engine completa;6,21;100%;100%;8%;186;396
+Grande (Escritório);Fraca;Perfeita;Neutro;Sem engine;6,90;100%;100%;8%;186;396
+Grande (Escritório);Fraca;Perfeita;Neutro;Engine inicial;6,90;100%;100%;8%;186;396
+Grande (Escritório);Fraca;Perfeita;Neutro;Engine completa;6,90;100%;100%;8%;186;396
+Grande (Escritório);Fraca;Perfeita;+;Sem engine;7,59;100%;100%;8%;186;396
+Grande (Escritório);Fraca;Perfeita;+;Engine inicial;7,59;100%;100%;8%;186;396
+Grande (Escritório);Fraca;Perfeita;+;Engine completa;7,59;100%;100%;8%;186;396
+Grande (Escritório);Fraca;Perfeita;++;Sem engine;8,51;100%;100%;8%;186;396
+Grande (Escritório);Fraca;Perfeita;++;Engine inicial;8,51;100%;100%;8%;186;396
+Grande (Escritório);Fraca;Perfeita;++;Engine completa;8,51;100%;100%;8%;186;396
+Grande (Escritório);Fraca;Perfeita;+++;Sem engine;9,20;100%;100%;8%;186;396
+Grande (Escritório);Fraca;Perfeita;+++;Engine inicial;9,20;100%;100%;8%;186;396
+Grande (Escritório);Fraca;Perfeita;+++;Engine completa;9,20;100%;100%;8%;186;396
+Grande (Escritório);Fraca;Boa (erro 25%);−−−;Sem engine;4,02;64%;87%;8%;186;396
+Grande (Escritório);Fraca;Boa (erro 25%);−−−;Engine inicial;4,03;64%;88%;8%;186;396
+Grande (Escritório);Fraca;Boa (erro 25%);−−−;Engine completa;4,08;64%;89%;8%;186;396
+Grande (Escritório);Fraca;Boa (erro 25%);−−;Sem engine;4,71;64%;87%;8%;186;396
+Grande (Escritório);Fraca;Boa (erro 25%);−−;Engine inicial;4,72;64%;88%;8%;186;396
+Grande (Escritório);Fraca;Boa (erro 25%);−−;Engine completa;4,77;64%;89%;8%;186;396
+Grande (Escritório);Fraca;Boa (erro 25%);−;Sem engine;5,63;64%;87%;8%;186;396
+Grande (Escritório);Fraca;Boa (erro 25%);−;Engine inicial;5,64;64%;88%;8%;186;396
+Grande (Escritório);Fraca;Boa (erro 25%);−;Engine completa;5,69;64%;89%;8%;186;396
+Grande (Escritório);Fraca;Boa (erro 25%);Neutro;Sem engine;6,32;64%;87%;8%;186;396
+Grande (Escritório);Fraca;Boa (erro 25%);Neutro;Engine inicial;6,33;64%;88%;8%;186;396
+Grande (Escritório);Fraca;Boa (erro 25%);Neutro;Engine completa;6,38;64%;89%;8%;186;396
+Grande (Escritório);Fraca;Boa (erro 25%);+;Sem engine;7,01;64%;87%;8%;186;396
+Grande (Escritório);Fraca;Boa (erro 25%);+;Engine inicial;7,02;64%;88%;8%;186;396
+Grande (Escritório);Fraca;Boa (erro 25%);+;Engine completa;7,07;64%;89%;8%;186;396
+Grande (Escritório);Fraca;Boa (erro 25%);++;Sem engine;7,93;64%;87%;8%;186;396
+Grande (Escritório);Fraca;Boa (erro 25%);++;Engine inicial;7,94;64%;88%;8%;186;396
+Grande (Escritório);Fraca;Boa (erro 25%);++;Engine completa;7,99;64%;89%;8%;186;396
+Grande (Escritório);Fraca;Boa (erro 25%);+++;Sem engine;8,62;64%;87%;8%;186;396
+Grande (Escritório);Fraca;Boa (erro 25%);+++;Engine inicial;8,63;64%;88%;8%;186;396
+Grande (Escritório);Fraca;Boa (erro 25%);+++;Engine completa;8,68;64%;89%;8%;186;396
+Grande (Escritório);Fraca;Média (erro 50%);−−−;Sem engine;3,02;44%;66%;8%;186;396
+Grande (Escritório);Fraca;Média (erro 50%);−−−;Engine inicial;3,04;44%;66%;8%;186;396
+Grande (Escritório);Fraca;Média (erro 50%);−−−;Engine completa;3,24;44%;71%;8%;186;396
+Grande (Escritório);Fraca;Média (erro 50%);−−;Sem engine;3,71;44%;66%;8%;186;396
+Grande (Escritório);Fraca;Média (erro 50%);−−;Engine inicial;3,73;44%;66%;8%;186;396
+Grande (Escritório);Fraca;Média (erro 50%);−−;Engine completa;3,93;44%;71%;8%;186;396
+Grande (Escritório);Fraca;Média (erro 50%);−;Sem engine;4,63;44%;66%;8%;186;396
+Grande (Escritório);Fraca;Média (erro 50%);−;Engine inicial;4,65;44%;66%;8%;186;396
+Grande (Escritório);Fraca;Média (erro 50%);−;Engine completa;4,85;44%;71%;8%;186;396
+Grande (Escritório);Fraca;Média (erro 50%);Neutro;Sem engine;5,32;44%;66%;8%;186;396
+Grande (Escritório);Fraca;Média (erro 50%);Neutro;Engine inicial;5,34;44%;66%;8%;186;396
+Grande (Escritório);Fraca;Média (erro 50%);Neutro;Engine completa;5,54;44%;71%;8%;186;396
+Grande (Escritório);Fraca;Média (erro 50%);+;Sem engine;6,00;44%;66%;8%;186;396
+Grande (Escritório);Fraca;Média (erro 50%);+;Engine inicial;6,03;44%;66%;8%;186;396
+Grande (Escritório);Fraca;Média (erro 50%);+;Engine completa;6,23;44%;71%;8%;186;396
+Grande (Escritório);Fraca;Média (erro 50%);++;Sem engine;6,92;44%;66%;8%;186;396
+Grande (Escritório);Fraca;Média (erro 50%);++;Engine inicial;6,95;44%;66%;8%;186;396
+Grande (Escritório);Fraca;Média (erro 50%);++;Engine completa;7,15;44%;71%;8%;186;396
+Grande (Escritório);Fraca;Média (erro 50%);+++;Sem engine;7,61;44%;66%;8%;186;396
+Grande (Escritório);Fraca;Média (erro 50%);+++;Engine inicial;7,64;44%;66%;8%;186;396
+Grande (Escritório);Fraca;Média (erro 50%);+++;Engine completa;7,84;44%;71%;8%;186;396
+Grande (Escritório);Fraca;Ruim (erro 75%);−−−;Sem engine;1,99;26%;43%;8%;186;396
+Grande (Escritório);Fraca;Ruim (erro 75%);−−−;Engine inicial;2,03;26%;44%;8%;186;396
+Grande (Escritório);Fraca;Ruim (erro 75%);−−−;Engine completa;2,38;26%;52%;8%;186;396
+Grande (Escritório);Fraca;Ruim (erro 75%);−−;Sem engine;2,67;26%;43%;8%;186;396
+Grande (Escritório);Fraca;Ruim (erro 75%);−−;Engine inicial;2,72;26%;44%;8%;186;396
+Grande (Escritório);Fraca;Ruim (erro 75%);−−;Engine completa;3,07;26%;52%;8%;186;396
+Grande (Escritório);Fraca;Ruim (erro 75%);−;Sem engine;3,59;26%;43%;8%;186;396
+Grande (Escritório);Fraca;Ruim (erro 75%);−;Engine inicial;3,64;26%;44%;8%;186;396
+Grande (Escritório);Fraca;Ruim (erro 75%);−;Engine completa;3,98;26%;52%;8%;186;396
+Grande (Escritório);Fraca;Ruim (erro 75%);Neutro;Sem engine;4,28;26%;43%;8%;186;396
+Grande (Escritório);Fraca;Ruim (erro 75%);Neutro;Engine inicial;4,32;26%;44%;8%;186;396
+Grande (Escritório);Fraca;Ruim (erro 75%);Neutro;Engine completa;4,67;26%;52%;8%;186;396
+Grande (Escritório);Fraca;Ruim (erro 75%);+;Sem engine;4,97;26%;43%;8%;186;396
+Grande (Escritório);Fraca;Ruim (erro 75%);+;Engine inicial;5,01;26%;44%;8%;186;396
+Grande (Escritório);Fraca;Ruim (erro 75%);+;Engine completa;5,36;26%;52%;8%;186;396
+Grande (Escritório);Fraca;Ruim (erro 75%);++;Sem engine;5,89;26%;43%;8%;186;396
+Grande (Escritório);Fraca;Ruim (erro 75%);++;Engine inicial;5,93;26%;44%;8%;186;396
+Grande (Escritório);Fraca;Ruim (erro 75%);++;Engine completa;6,28;26%;52%;8%;186;396
+Grande (Escritório);Fraca;Ruim (erro 75%);+++;Sem engine;6,58;26%;43%;8%;186;396
+Grande (Escritório);Fraca;Ruim (erro 75%);+++;Engine inicial;6,62;26%;44%;8%;186;396
+Grande (Escritório);Fraca;Ruim (erro 75%);+++;Engine completa;6,97;26%;52%;8%;186;396
+Grande (Escritório);Fraca;Péssima (tudo no bloco menos importante);−−−;Sem engine;0,63;0%;14%;8%;186;396
+Grande (Escritório);Fraca;Péssima (tudo no bloco menos importante);−−−;Engine inicial;0,70;0%;15%;8%;186;396
+Grande (Escritório);Fraca;Péssima (tudo no bloco menos importante);−−−;Engine completa;1,24;0%;27%;8%;186;396
+Grande (Escritório);Fraca;Péssima (tudo no bloco menos importante);−−;Sem engine;1,31;0%;14%;8%;186;396
+Grande (Escritório);Fraca;Péssima (tudo no bloco menos importante);−−;Engine inicial;1,38;0%;15%;8%;186;396
+Grande (Escritório);Fraca;Péssima (tudo no bloco menos importante);−−;Engine completa;1,93;0%;27%;8%;186;396
+Grande (Escritório);Fraca;Péssima (tudo no bloco menos importante);−;Sem engine;2,23;0%;14%;8%;186;396
+Grande (Escritório);Fraca;Péssima (tudo no bloco menos importante);−;Engine inicial;2,30;0%;15%;8%;186;396
+Grande (Escritório);Fraca;Péssima (tudo no bloco menos importante);−;Engine completa;2,84;0%;27%;8%;186;396
+Grande (Escritório);Fraca;Péssima (tudo no bloco menos importante);Neutro;Sem engine;2,92;0%;14%;8%;186;396
+Grande (Escritório);Fraca;Péssima (tudo no bloco menos importante);Neutro;Engine inicial;2,99;0%;15%;8%;186;396
+Grande (Escritório);Fraca;Péssima (tudo no bloco menos importante);Neutro;Engine completa;3,53;0%;27%;8%;186;396
+Grande (Escritório);Fraca;Péssima (tudo no bloco menos importante);+;Sem engine;3,61;0%;14%;8%;186;396
+Grande (Escritório);Fraca;Péssima (tudo no bloco menos importante);+;Engine inicial;3,68;0%;15%;8%;186;396
+Grande (Escritório);Fraca;Péssima (tudo no bloco menos importante);+;Engine completa;4,22;0%;27%;8%;186;396
+Grande (Escritório);Fraca;Péssima (tudo no bloco menos importante);++;Sem engine;4,52;0%;14%;8%;186;396
+Grande (Escritório);Fraca;Péssima (tudo no bloco menos importante);++;Engine inicial;4,59;0%;15%;8%;186;396
+Grande (Escritório);Fraca;Péssima (tudo no bloco menos importante);++;Engine completa;5,14;0%;27%;8%;186;396
+Grande (Escritório);Fraca;Péssima (tudo no bloco menos importante);+++;Sem engine;5,21;0%;14%;8%;186;396
+Grande (Escritório);Fraca;Péssima (tudo no bloco menos importante);+++;Engine inicial;5,28;0%;15%;8%;186;396
+Grande (Escritório);Fraca;Péssima (tudo no bloco menos importante);+++;Engine completa;5,82;0%;27%;8%;186;396
+Grande (Escritório);Fraca;Divide igual;−−−;Sem engine;3,89;63%;84%;8%;186;396
+Grande (Escritório);Fraca;Divide igual;−−−;Engine inicial;3,90;63%;85%;8%;186;396
+Grande (Escritório);Fraca;Divide igual;−−−;Engine completa;3,98;63%;86%;8%;186;396
+Grande (Escritório);Fraca;Divide igual;−−;Sem engine;4,58;63%;84%;8%;186;396
+Grande (Escritório);Fraca;Divide igual;−−;Engine inicial;4,59;63%;85%;8%;186;396
+Grande (Escritório);Fraca;Divide igual;−−;Engine completa;4,67;63%;86%;8%;186;396
+Grande (Escritório);Fraca;Divide igual;−;Sem engine;5,50;63%;84%;8%;186;396
+Grande (Escritório);Fraca;Divide igual;−;Engine inicial;5,51;63%;85%;8%;186;396
+Grande (Escritório);Fraca;Divide igual;−;Engine completa;5,59;63%;86%;8%;186;396
+Grande (Escritório);Fraca;Divide igual;Neutro;Sem engine;6,19;63%;84%;8%;186;396
+Grande (Escritório);Fraca;Divide igual;Neutro;Engine inicial;6,20;63%;85%;8%;186;396
+Grande (Escritório);Fraca;Divide igual;Neutro;Engine completa;6,28;63%;86%;8%;186;396
+Grande (Escritório);Fraca;Divide igual;+;Sem engine;6,88;63%;84%;8%;186;396
+Grande (Escritório);Fraca;Divide igual;+;Engine inicial;6,89;63%;85%;8%;186;396
+Grande (Escritório);Fraca;Divide igual;+;Engine completa;6,97;63%;86%;8%;186;396
+Grande (Escritório);Fraca;Divide igual;++;Sem engine;7,80;63%;84%;8%;186;396
+Grande (Escritório);Fraca;Divide igual;++;Engine inicial;7,81;63%;85%;8%;186;396
+Grande (Escritório);Fraca;Divide igual;++;Engine completa;7,89;63%;86%;8%;186;396
+Grande (Escritório);Fraca;Divide igual;+++;Sem engine;8,49;63%;84%;8%;186;396
+Grande (Escritório);Fraca;Divide igual;+++;Engine inicial;8,50;63%;85%;8%;186;396
+Grande (Escritório);Fraca;Divide igual;+++;Engine completa;8,58;63%;86%;8%;186;396
+Grande (Escritório);Fraca;Invertida;−−−;Sem engine;2,20;26%;48%;8%;186;396
+Grande (Escritório);Fraca;Invertida;−−−;Engine inicial;2,24;26%;49%;8%;186;396
+Grande (Escritório);Fraca;Invertida;−−−;Engine completa;2,56;26%;56%;8%;186;396
+Grande (Escritório);Fraca;Invertida;−−;Sem engine;2,89;26%;48%;8%;186;396
+Grande (Escritório);Fraca;Invertida;−−;Engine inicial;2,93;26%;49%;8%;186;396
+Grande (Escritório);Fraca;Invertida;−−;Engine completa;3,25;26%;56%;8%;186;396
+Grande (Escritório);Fraca;Invertida;−;Sem engine;3,81;26%;48%;8%;186;396
+Grande (Escritório);Fraca;Invertida;−;Engine inicial;3,85;26%;49%;8%;186;396
+Grande (Escritório);Fraca;Invertida;−;Engine completa;4,17;26%;56%;8%;186;396
+Grande (Escritório);Fraca;Invertida;Neutro;Sem engine;4,50;26%;48%;8%;186;396
+Grande (Escritório);Fraca;Invertida;Neutro;Engine inicial;4,54;26%;49%;8%;186;396
+Grande (Escritório);Fraca;Invertida;Neutro;Engine completa;4,86;26%;56%;8%;186;396
+Grande (Escritório);Fraca;Invertida;+;Sem engine;5,19;26%;48%;8%;186;396
+Grande (Escritório);Fraca;Invertida;+;Engine inicial;5,23;26%;49%;8%;186;396
+Grande (Escritório);Fraca;Invertida;+;Engine completa;5,55;26%;56%;8%;186;396
+Grande (Escritório);Fraca;Invertida;++;Sem engine;6,11;26%;48%;8%;186;396
+Grande (Escritório);Fraca;Invertida;++;Engine inicial;6,15;26%;49%;8%;186;396
+Grande (Escritório);Fraca;Invertida;++;Engine completa;6,47;26%;56%;8%;186;396
+Grande (Escritório);Fraca;Invertida;+++;Sem engine;6,80;26%;48%;8%;186;396
+Grande (Escritório);Fraca;Invertida;+++;Engine inicial;6,84;26%;49%;8%;186;396
+Grande (Escritório);Fraca;Invertida;+++;Engine completa;7,16;26%;56%;8%;186;396
+Grande (Escritório);Fraca;Mista: 3 fases certas, 2 péssimas;−−−;Sem engine;3,02;63%;66%;8%;186;396
+Grande (Escritório);Fraca;Mista: 3 fases certas, 2 péssimas;−−−;Engine inicial;3,06;63%;67%;8%;186;396
+Grande (Escritório);Fraca;Mista: 3 fases certas, 2 péssimas;−−−;Engine completa;3,37;63%;73%;8%;186;396
+Grande (Escritório);Fraca;Mista: 3 fases certas, 2 péssimas;−−;Sem engine;3,71;63%;66%;8%;186;396
+Grande (Escritório);Fraca;Mista: 3 fases certas, 2 péssimas;−−;Engine inicial;3,75;63%;67%;8%;186;396
+Grande (Escritório);Fraca;Mista: 3 fases certas, 2 péssimas;−−;Engine completa;4,06;63%;73%;8%;186;396
+Grande (Escritório);Fraca;Mista: 3 fases certas, 2 péssimas;−;Sem engine;4,63;63%;66%;8%;186;396
+Grande (Escritório);Fraca;Mista: 3 fases certas, 2 péssimas;−;Engine inicial;4,67;63%;67%;8%;186;396
+Grande (Escritório);Fraca;Mista: 3 fases certas, 2 péssimas;−;Engine completa;4,97;63%;73%;8%;186;396
+Grande (Escritório);Fraca;Mista: 3 fases certas, 2 péssimas;Neutro;Sem engine;5,31;63%;66%;8%;186;396
+Grande (Escritório);Fraca;Mista: 3 fases certas, 2 péssimas;Neutro;Engine inicial;5,35;63%;67%;8%;186;396
+Grande (Escritório);Fraca;Mista: 3 fases certas, 2 péssimas;Neutro;Engine completa;5,66;63%;73%;8%;186;396
+Grande (Escritório);Fraca;Mista: 3 fases certas, 2 péssimas;+;Sem engine;6,00;63%;66%;8%;186;396
+Grande (Escritório);Fraca;Mista: 3 fases certas, 2 péssimas;+;Engine inicial;6,04;63%;67%;8%;186;396
+Grande (Escritório);Fraca;Mista: 3 fases certas, 2 péssimas;+;Engine completa;6,35;63%;73%;8%;186;396
+Grande (Escritório);Fraca;Mista: 3 fases certas, 2 péssimas;++;Sem engine;6,92;63%;66%;8%;186;396
+Grande (Escritório);Fraca;Mista: 3 fases certas, 2 péssimas;++;Engine inicial;6,96;63%;67%;8%;186;396
+Grande (Escritório);Fraca;Mista: 3 fases certas, 2 péssimas;++;Engine completa;7,27;63%;73%;8%;186;396
+Grande (Escritório);Fraca;Mista: 3 fases certas, 2 péssimas;+++;Sem engine;7,61;63%;66%;8%;186;396
+Grande (Escritório);Fraca;Mista: 3 fases certas, 2 péssimas;+++;Engine inicial;7,65;63%;67%;8%;186;396
+Grande (Escritório);Fraca;Mista: 3 fases certas, 2 péssimas;+++;Engine completa;7,95;63%;73%;8%;186;396
+Grande (Escritório);Fraca;Mista: só a Pré-produção péssima;−−−;Sem engine;3,77;74%;82%;8%;186;396
+Grande (Escritório);Fraca;Mista: só a Pré-produção péssima;−−−;Engine inicial;3,77;74%;82%;8%;186;396
+Grande (Escritório);Fraca;Mista: só a Pré-produção péssima;−−−;Engine completa;3,84;74%;83%;8%;186;396
+Grande (Escritório);Fraca;Mista: só a Pré-produção péssima;−−;Sem engine;4,46;74%;82%;8%;186;396
+Grande (Escritório);Fraca;Mista: só a Pré-produção péssima;−−;Engine inicial;4,46;74%;82%;8%;186;396
+Grande (Escritório);Fraca;Mista: só a Pré-produção péssima;−−;Engine completa;4,53;74%;83%;8%;186;396
+Grande (Escritório);Fraca;Mista: só a Pré-produção péssima;−;Sem engine;5,38;74%;82%;8%;186;396
+Grande (Escritório);Fraca;Mista: só a Pré-produção péssima;−;Engine inicial;5,38;74%;82%;8%;186;396
+Grande (Escritório);Fraca;Mista: só a Pré-produção péssima;−;Engine completa;5,45;74%;83%;8%;186;396
+Grande (Escritório);Fraca;Mista: só a Pré-produção péssima;Neutro;Sem engine;6,07;74%;82%;8%;186;396
+Grande (Escritório);Fraca;Mista: só a Pré-produção péssima;Neutro;Engine inicial;6,07;74%;82%;8%;186;396
+Grande (Escritório);Fraca;Mista: só a Pré-produção péssima;Neutro;Engine completa;6,14;74%;83%;8%;186;396
+Grande (Escritório);Fraca;Mista: só a Pré-produção péssima;+;Sem engine;6,76;74%;82%;8%;186;396
+Grande (Escritório);Fraca;Mista: só a Pré-produção péssima;+;Engine inicial;6,76;74%;82%;8%;186;396
+Grande (Escritório);Fraca;Mista: só a Pré-produção péssima;+;Engine completa;6,83;74%;83%;8%;186;396
+Grande (Escritório);Fraca;Mista: só a Pré-produção péssima;++;Sem engine;7,68;74%;82%;8%;186;396
+Grande (Escritório);Fraca;Mista: só a Pré-produção péssima;++;Engine inicial;7,68;74%;82%;8%;186;396
+Grande (Escritório);Fraca;Mista: só a Pré-produção péssima;++;Engine completa;7,75;74%;83%;8%;186;396
+Grande (Escritório);Fraca;Mista: só a Pré-produção péssima;+++;Sem engine;8,37;74%;82%;8%;186;396
+Grande (Escritório);Fraca;Mista: só a Pré-produção péssima;+++;Engine inicial;8,37;74%;82%;8%;186;396
+Grande (Escritório);Fraca;Mista: só a Pré-produção péssima;+++;Engine completa;8,44;74%;83%;8%;186;396
+Grande (Escritório);Média;Perfeita;−−−;Sem engine;4,60;100%;100%;8%;250;396
+Grande (Escritório);Média;Perfeita;−−−;Engine inicial;4,60;100%;100%;8%;250;396
+Grande (Escritório);Média;Perfeita;−−−;Engine completa;4,60;100%;100%;8%;250;396
+Grande (Escritório);Média;Perfeita;−−;Sem engine;5,29;100%;100%;8%;250;396
+Grande (Escritório);Média;Perfeita;−−;Engine inicial;5,29;100%;100%;8%;250;396
+Grande (Escritório);Média;Perfeita;−−;Engine completa;5,29;100%;100%;8%;250;396
+Grande (Escritório);Média;Perfeita;−;Sem engine;6,21;100%;100%;8%;250;396
+Grande (Escritório);Média;Perfeita;−;Engine inicial;6,21;100%;100%;8%;250;396
+Grande (Escritório);Média;Perfeita;−;Engine completa;6,21;100%;100%;8%;250;396
+Grande (Escritório);Média;Perfeita;Neutro;Sem engine;6,90;100%;100%;8%;250;396
+Grande (Escritório);Média;Perfeita;Neutro;Engine inicial;6,90;100%;100%;8%;250;396
+Grande (Escritório);Média;Perfeita;Neutro;Engine completa;6,90;100%;100%;8%;250;396
+Grande (Escritório);Média;Perfeita;+;Sem engine;7,59;100%;100%;8%;250;396
+Grande (Escritório);Média;Perfeita;+;Engine inicial;7,59;100%;100%;8%;250;396
+Grande (Escritório);Média;Perfeita;+;Engine completa;7,59;100%;100%;8%;250;396
+Grande (Escritório);Média;Perfeita;++;Sem engine;8,51;100%;100%;8%;250;396
+Grande (Escritório);Média;Perfeita;++;Engine inicial;8,51;100%;100%;8%;250;396
+Grande (Escritório);Média;Perfeita;++;Engine completa;8,51;100%;100%;8%;250;396
+Grande (Escritório);Média;Perfeita;+++;Sem engine;9,20;100%;100%;8%;250;396
+Grande (Escritório);Média;Perfeita;+++;Engine inicial;9,20;100%;100%;8%;250;396
+Grande (Escritório);Média;Perfeita;+++;Engine completa;9,20;100%;100%;8%;250;396
+Grande (Escritório);Média;Boa (erro 25%);−−−;Sem engine;4,04;64%;88%;8%;249;396
+Grande (Escritório);Média;Boa (erro 25%);−−−;Engine inicial;4,04;64%;88%;8%;249;396
+Grande (Escritório);Média;Boa (erro 25%);−−−;Engine completa;4,10;64%;89%;8%;249;396
+Grande (Escritório);Média;Boa (erro 25%);−−;Sem engine;4,72;64%;88%;8%;249;396
+Grande (Escritório);Média;Boa (erro 25%);−−;Engine inicial;4,73;64%;88%;8%;249;396
+Grande (Escritório);Média;Boa (erro 25%);−−;Engine completa;4,79;64%;89%;8%;249;396
+Grande (Escritório);Média;Boa (erro 25%);−;Sem engine;5,64;64%;88%;8%;249;396
+Grande (Escritório);Média;Boa (erro 25%);−;Engine inicial;5,65;64%;88%;8%;249;396
+Grande (Escritório);Média;Boa (erro 25%);−;Engine completa;5,71;64%;89%;8%;249;396
+Grande (Escritório);Média;Boa (erro 25%);Neutro;Sem engine;6,33;64%;88%;8%;249;396
+Grande (Escritório);Média;Boa (erro 25%);Neutro;Engine inicial;6,34;64%;88%;8%;249;396
+Grande (Escritório);Média;Boa (erro 25%);Neutro;Engine completa;6,40;64%;89%;8%;249;396
+Grande (Escritório);Média;Boa (erro 25%);+;Sem engine;7,02;64%;88%;8%;249;396
+Grande (Escritório);Média;Boa (erro 25%);+;Engine inicial;7,03;64%;88%;8%;249;396
+Grande (Escritório);Média;Boa (erro 25%);+;Engine completa;7,08;64%;89%;8%;249;396
+Grande (Escritório);Média;Boa (erro 25%);++;Sem engine;7,94;64%;88%;8%;249;396
+Grande (Escritório);Média;Boa (erro 25%);++;Engine inicial;7,95;64%;88%;8%;249;396
+Grande (Escritório);Média;Boa (erro 25%);++;Engine completa;8,00;64%;89%;8%;249;396
+Grande (Escritório);Média;Boa (erro 25%);+++;Sem engine;8,63;64%;88%;8%;249;396
+Grande (Escritório);Média;Boa (erro 25%);+++;Engine inicial;8,64;64%;88%;8%;249;396
+Grande (Escritório);Média;Boa (erro 25%);+++;Engine completa;8,69;64%;89%;8%;249;396
+Grande (Escritório);Média;Média (erro 50%);−−−;Sem engine;3,15;44%;69%;8%;249;396
+Grande (Escritório);Média;Média (erro 50%);−−−;Engine inicial;3,17;44%;69%;8%;249;396
+Grande (Escritório);Média;Média (erro 50%);−−−;Engine completa;3,35;44%;73%;8%;249;396
+Grande (Escritório);Média;Média (erro 50%);−−;Sem engine;3,84;44%;69%;8%;249;396
+Grande (Escritório);Média;Média (erro 50%);−−;Engine inicial;3,86;44%;69%;8%;249;396
+Grande (Escritório);Média;Média (erro 50%);−−;Engine completa;4,04;44%;73%;8%;249;396
+Grande (Escritório);Média;Média (erro 50%);−;Sem engine;4,76;44%;69%;8%;249;396
+Grande (Escritório);Média;Média (erro 50%);−;Engine inicial;4,78;44%;69%;8%;249;396
+Grande (Escritório);Média;Média (erro 50%);−;Engine completa;4,96;44%;73%;8%;249;396
+Grande (Escritório);Média;Média (erro 50%);Neutro;Sem engine;5,45;44%;69%;8%;249;396
+Grande (Escritório);Média;Média (erro 50%);Neutro;Engine inicial;5,47;44%;69%;8%;249;396
+Grande (Escritório);Média;Média (erro 50%);Neutro;Engine completa;5,65;44%;73%;8%;249;396
+Grande (Escritório);Média;Média (erro 50%);+;Sem engine;6,13;44%;69%;8%;249;396
+Grande (Escritório);Média;Média (erro 50%);+;Engine inicial;6,16;44%;69%;8%;249;396
+Grande (Escritório);Média;Média (erro 50%);+;Engine completa;6,34;44%;73%;8%;249;396
+Grande (Escritório);Média;Média (erro 50%);++;Sem engine;7,05;44%;69%;8%;249;396
+Grande (Escritório);Média;Média (erro 50%);++;Engine inicial;7,07;44%;69%;8%;249;396
+Grande (Escritório);Média;Média (erro 50%);++;Engine completa;7,25;44%;73%;8%;249;396
+Grande (Escritório);Média;Média (erro 50%);+++;Sem engine;7,74;44%;69%;8%;249;396
+Grande (Escritório);Média;Média (erro 50%);+++;Engine inicial;7,76;44%;69%;8%;249;396
+Grande (Escritório);Média;Média (erro 50%);+++;Engine completa;7,94;44%;73%;8%;249;396
+Grande (Escritório);Média;Ruim (erro 75%);−−−;Sem engine;2,05;26%;45%;8%;250;396
+Grande (Escritório);Média;Ruim (erro 75%);−−−;Engine inicial;2,09;26%;46%;8%;250;396
+Grande (Escritório);Média;Ruim (erro 75%);−−−;Engine completa;2,43;26%;53%;8%;250;396
+Grande (Escritório);Média;Ruim (erro 75%);−−;Sem engine;2,74;26%;45%;8%;250;396
+Grande (Escritório);Média;Ruim (erro 75%);−−;Engine inicial;2,78;26%;46%;8%;250;396
+Grande (Escritório);Média;Ruim (erro 75%);−−;Engine completa;3,12;26%;53%;8%;250;396
+Grande (Escritório);Média;Ruim (erro 75%);−;Sem engine;3,66;26%;45%;8%;250;396
+Grande (Escritório);Média;Ruim (erro 75%);−;Engine inicial;3,70;26%;46%;8%;250;396
+Grande (Escritório);Média;Ruim (erro 75%);−;Engine completa;4,04;26%;53%;8%;250;396
+Grande (Escritório);Média;Ruim (erro 75%);Neutro;Sem engine;4,34;26%;45%;8%;250;396
+Grande (Escritório);Média;Ruim (erro 75%);Neutro;Engine inicial;4,39;26%;46%;8%;250;396
+Grande (Escritório);Média;Ruim (erro 75%);Neutro;Engine completa;4,73;26%;53%;8%;250;396
+Grande (Escritório);Média;Ruim (erro 75%);+;Sem engine;5,03;26%;45%;8%;250;396
+Grande (Escritório);Média;Ruim (erro 75%);+;Engine inicial;5,08;26%;46%;8%;250;396
+Grande (Escritório);Média;Ruim (erro 75%);+;Engine completa;5,41;26%;53%;8%;250;396
+Grande (Escritório);Média;Ruim (erro 75%);++;Sem engine;5,95;26%;45%;8%;250;396
+Grande (Escritório);Média;Ruim (erro 75%);++;Engine inicial;5,99;26%;46%;8%;250;396
+Grande (Escritório);Média;Ruim (erro 75%);++;Engine completa;6,33;26%;53%;8%;250;396
+Grande (Escritório);Média;Ruim (erro 75%);+++;Sem engine;6,64;26%;45%;8%;250;396
+Grande (Escritório);Média;Ruim (erro 75%);+++;Engine inicial;6,68;26%;46%;8%;250;396
+Grande (Escritório);Média;Ruim (erro 75%);+++;Engine completa;7,02;26%;53%;8%;250;396
+Grande (Escritório);Média;Péssima (tudo no bloco menos importante);−−−;Sem engine;0,63;0%;14%;8%;251;396
+Grande (Escritório);Média;Péssima (tudo no bloco menos importante);−−−;Engine inicial;0,70;0%;15%;8%;251;396
+Grande (Escritório);Média;Péssima (tudo no bloco menos importante);−−−;Engine completa;1,24;0%;27%;8%;251;396
+Grande (Escritório);Média;Péssima (tudo no bloco menos importante);−−;Sem engine;1,31;0%;14%;8%;251;396
+Grande (Escritório);Média;Péssima (tudo no bloco menos importante);−−;Engine inicial;1,38;0%;15%;8%;251;396
+Grande (Escritório);Média;Péssima (tudo no bloco menos importante);−−;Engine completa;1,93;0%;27%;8%;251;396
+Grande (Escritório);Média;Péssima (tudo no bloco menos importante);−;Sem engine;2,23;0%;14%;8%;251;396
+Grande (Escritório);Média;Péssima (tudo no bloco menos importante);−;Engine inicial;2,30;0%;15%;8%;251;396
+Grande (Escritório);Média;Péssima (tudo no bloco menos importante);−;Engine completa;2,84;0%;27%;8%;251;396
+Grande (Escritório);Média;Péssima (tudo no bloco menos importante);Neutro;Sem engine;2,92;0%;14%;8%;251;396
+Grande (Escritório);Média;Péssima (tudo no bloco menos importante);Neutro;Engine inicial;2,99;0%;15%;8%;251;396
+Grande (Escritório);Média;Péssima (tudo no bloco menos importante);Neutro;Engine completa;3,53;0%;27%;8%;251;396
+Grande (Escritório);Média;Péssima (tudo no bloco menos importante);+;Sem engine;3,61;0%;14%;8%;251;396
+Grande (Escritório);Média;Péssima (tudo no bloco menos importante);+;Engine inicial;3,67;0%;15%;8%;251;396
+Grande (Escritório);Média;Péssima (tudo no bloco menos importante);+;Engine completa;4,22;0%;27%;8%;251;396
+Grande (Escritório);Média;Péssima (tudo no bloco menos importante);++;Sem engine;4,52;0%;14%;8%;251;396
+Grande (Escritório);Média;Péssima (tudo no bloco menos importante);++;Engine inicial;4,59;0%;15%;8%;251;396
+Grande (Escritório);Média;Péssima (tudo no bloco menos importante);++;Engine completa;5,14;0%;27%;8%;251;396
+Grande (Escritório);Média;Péssima (tudo no bloco menos importante);+++;Sem engine;5,21;0%;14%;8%;251;396
+Grande (Escritório);Média;Péssima (tudo no bloco menos importante);+++;Engine inicial;5,28;0%;15%;8%;251;396
+Grande (Escritório);Média;Péssima (tudo no bloco menos importante);+++;Engine completa;5,82;0%;27%;8%;251;396
+Grande (Escritório);Média;Divide igual;−−−;Sem engine;3,98;63%;87%;8%;250;396
+Grande (Escritório);Média;Divide igual;−−−;Engine inicial;3,99;63%;87%;8%;250;396
+Grande (Escritório);Média;Divide igual;−−−;Engine completa;4,06;63%;88%;8%;250;396
+Grande (Escritório);Média;Divide igual;−−;Sem engine;4,67;63%;87%;8%;250;396
+Grande (Escritório);Média;Divide igual;−−;Engine inicial;4,68;63%;87%;8%;250;396
+Grande (Escritório);Média;Divide igual;−−;Engine completa;4,75;63%;88%;8%;250;396
+Grande (Escritório);Média;Divide igual;−;Sem engine;5,59;63%;87%;8%;250;396
+Grande (Escritório);Média;Divide igual;−;Engine inicial;5,60;63%;87%;8%;250;396
+Grande (Escritório);Média;Divide igual;−;Engine completa;5,67;63%;88%;8%;250;396
+Grande (Escritório);Média;Divide igual;Neutro;Sem engine;6,28;63%;87%;8%;250;396
+Grande (Escritório);Média;Divide igual;Neutro;Engine inicial;6,29;63%;87%;8%;250;396
+Grande (Escritório);Média;Divide igual;Neutro;Engine completa;6,36;63%;88%;8%;250;396
+Grande (Escritório);Média;Divide igual;+;Sem engine;6,97;63%;87%;8%;250;396
+Grande (Escritório);Média;Divide igual;+;Engine inicial;6,98;63%;87%;8%;250;396
+Grande (Escritório);Média;Divide igual;+;Engine completa;7,05;63%;88%;8%;250;396
+Grande (Escritório);Média;Divide igual;++;Sem engine;7,89;63%;87%;8%;250;396
+Grande (Escritório);Média;Divide igual;++;Engine inicial;7,90;63%;87%;8%;250;396
+Grande (Escritório);Média;Divide igual;++;Engine completa;7,97;63%;88%;8%;250;396
+Grande (Escritório);Média;Divide igual;+++;Sem engine;8,58;63%;87%;8%;250;396
+Grande (Escritório);Média;Divide igual;+++;Engine inicial;8,59;63%;87%;8%;250;396
+Grande (Escritório);Média;Divide igual;+++;Engine completa;8,66;63%;88%;8%;250;396
+Grande (Escritório);Média;Invertida;−−−;Sem engine;2,23;26%;49%;8%;250;396
+Grande (Escritório);Média;Invertida;−−−;Engine inicial;2,27;26%;49%;8%;250;396
+Grande (Escritório);Média;Invertida;−−−;Engine completa;2,59;26%;56%;8%;250;396
+Grande (Escritório);Média;Invertida;−−;Sem engine;2,92;26%;49%;8%;250;396
+Grande (Escritório);Média;Invertida;−−;Engine inicial;2,96;26%;49%;8%;250;396
+Grande (Escritório);Média;Invertida;−−;Engine completa;3,27;26%;56%;8%;250;396
+Grande (Escritório);Média;Invertida;−;Sem engine;3,84;26%;49%;8%;250;396
+Grande (Escritório);Média;Invertida;−;Engine inicial;3,88;26%;49%;8%;250;396
+Grande (Escritório);Média;Invertida;−;Engine completa;4,19;26%;56%;8%;250;396
+Grande (Escritório);Média;Invertida;Neutro;Sem engine;4,53;26%;49%;8%;250;396
+Grande (Escritório);Média;Invertida;Neutro;Engine inicial;4,57;26%;49%;8%;250;396
+Grande (Escritório);Média;Invertida;Neutro;Engine completa;4,88;26%;56%;8%;250;396
+Grande (Escritório);Média;Invertida;+;Sem engine;5,22;26%;49%;8%;250;396
+Grande (Escritório);Média;Invertida;+;Engine inicial;5,25;26%;49%;8%;250;396
+Grande (Escritório);Média;Invertida;+;Engine completa;5,57;26%;56%;8%;250;396
+Grande (Escritório);Média;Invertida;++;Sem engine;6,14;26%;49%;8%;250;396
+Grande (Escritório);Média;Invertida;++;Engine inicial;6,17;26%;49%;8%;250;396
+Grande (Escritório);Média;Invertida;++;Engine completa;6,49;26%;56%;8%;250;396
+Grande (Escritório);Média;Invertida;+++;Sem engine;6,83;26%;49%;8%;250;396
+Grande (Escritório);Média;Invertida;+++;Engine inicial;6,86;26%;49%;8%;250;396
+Grande (Escritório);Média;Invertida;+++;Engine completa;7,18;26%;56%;8%;250;396
+Grande (Escritório);Média;Mista: 3 fases certas, 2 péssimas;−−−;Sem engine;3,02;63%;66%;8%;250;396
+Grande (Escritório);Média;Mista: 3 fases certas, 2 péssimas;−−−;Engine inicial;3,06;63%;67%;8%;250;396
+Grande (Escritório);Média;Mista: 3 fases certas, 2 péssimas;−−−;Engine completa;3,37;63%;73%;8%;250;396
+Grande (Escritório);Média;Mista: 3 fases certas, 2 péssimas;−−;Sem engine;3,71;63%;66%;8%;250;396
+Grande (Escritório);Média;Mista: 3 fases certas, 2 péssimas;−−;Engine inicial;3,75;63%;67%;8%;250;396
+Grande (Escritório);Média;Mista: 3 fases certas, 2 péssimas;−−;Engine completa;4,05;63%;73%;8%;250;396
+Grande (Escritório);Média;Mista: 3 fases certas, 2 péssimas;−;Sem engine;4,62;63%;66%;8%;250;396
+Grande (Escritório);Média;Mista: 3 fases certas, 2 péssimas;−;Engine inicial;4,67;63%;67%;8%;250;396
+Grande (Escritório);Média;Mista: 3 fases certas, 2 péssimas;−;Engine completa;4,97;63%;73%;8%;250;396
+Grande (Escritório);Média;Mista: 3 fases certas, 2 péssimas;Neutro;Sem engine;5,31;63%;66%;8%;250;396
+Grande (Escritório);Média;Mista: 3 fases certas, 2 péssimas;Neutro;Engine inicial;5,35;63%;67%;8%;250;396
+Grande (Escritório);Média;Mista: 3 fases certas, 2 péssimas;Neutro;Engine completa;5,66;63%;73%;8%;250;396
+Grande (Escritório);Média;Mista: 3 fases certas, 2 péssimas;+;Sem engine;6,00;63%;66%;8%;250;396
+Grande (Escritório);Média;Mista: 3 fases certas, 2 péssimas;+;Engine inicial;6,04;63%;67%;8%;250;396
+Grande (Escritório);Média;Mista: 3 fases certas, 2 péssimas;+;Engine completa;6,35;63%;73%;8%;250;396
+Grande (Escritório);Média;Mista: 3 fases certas, 2 péssimas;++;Sem engine;6,92;63%;66%;8%;250;396
+Grande (Escritório);Média;Mista: 3 fases certas, 2 péssimas;++;Engine inicial;6,96;63%;67%;8%;250;396
+Grande (Escritório);Média;Mista: 3 fases certas, 2 péssimas;++;Engine completa;7,26;63%;73%;8%;250;396
+Grande (Escritório);Média;Mista: 3 fases certas, 2 péssimas;+++;Sem engine;7,61;63%;66%;8%;250;396
+Grande (Escritório);Média;Mista: 3 fases certas, 2 péssimas;+++;Engine inicial;7,65;63%;67%;8%;250;396
+Grande (Escritório);Média;Mista: 3 fases certas, 2 péssimas;+++;Engine completa;7,95;63%;73%;8%;250;396
+Grande (Escritório);Média;Mista: só a Pré-produção péssima;−−−;Sem engine;3,77;74%;82%;8%;249;396
+Grande (Escritório);Média;Mista: só a Pré-produção péssima;−−−;Engine inicial;3,77;74%;82%;8%;249;396
+Grande (Escritório);Média;Mista: só a Pré-produção péssima;−−−;Engine completa;3,84;74%;83%;8%;249;396
+Grande (Escritório);Média;Mista: só a Pré-produção péssima;−−;Sem engine;4,46;74%;82%;8%;249;396
+Grande (Escritório);Média;Mista: só a Pré-produção péssima;−−;Engine inicial;4,46;74%;82%;8%;249;396
+Grande (Escritório);Média;Mista: só a Pré-produção péssima;−−;Engine completa;4,53;74%;83%;8%;249;396
+Grande (Escritório);Média;Mista: só a Pré-produção péssima;−;Sem engine;5,38;74%;82%;8%;249;396
+Grande (Escritório);Média;Mista: só a Pré-produção péssima;−;Engine inicial;5,38;74%;82%;8%;249;396
+Grande (Escritório);Média;Mista: só a Pré-produção péssima;−;Engine completa;5,44;74%;83%;8%;249;396
+Grande (Escritório);Média;Mista: só a Pré-produção péssima;Neutro;Sem engine;6,07;74%;82%;8%;249;396
+Grande (Escritório);Média;Mista: só a Pré-produção péssima;Neutro;Engine inicial;6,07;74%;82%;8%;249;396
+Grande (Escritório);Média;Mista: só a Pré-produção péssima;Neutro;Engine completa;6,13;74%;83%;8%;249;396
+Grande (Escritório);Média;Mista: só a Pré-produção péssima;+;Sem engine;6,75;74%;82%;8%;249;396
+Grande (Escritório);Média;Mista: só a Pré-produção péssima;+;Engine inicial;6,75;74%;82%;8%;249;396
+Grande (Escritório);Média;Mista: só a Pré-produção péssima;+;Engine completa;6,82;74%;83%;8%;249;396
+Grande (Escritório);Média;Mista: só a Pré-produção péssima;++;Sem engine;7,67;74%;82%;8%;249;396
+Grande (Escritório);Média;Mista: só a Pré-produção péssima;++;Engine inicial;7,67;74%;82%;8%;249;396
+Grande (Escritório);Média;Mista: só a Pré-produção péssima;++;Engine completa;7,74;74%;83%;8%;249;396
+Grande (Escritório);Média;Mista: só a Pré-produção péssima;+++;Sem engine;8,36;74%;82%;8%;249;396
+Grande (Escritório);Média;Mista: só a Pré-produção péssima;+++;Engine inicial;8,36;74%;82%;8%;249;396
+Grande (Escritório);Média;Mista: só a Pré-produção péssima;+++;Engine completa;8,43;74%;83%;8%;249;396
+Grande (Escritório);Forte;Perfeita;−−−;Sem engine;4,65;100%;100%;7%;345;396
+Grande (Escritório);Forte;Perfeita;−−−;Engine inicial;4,65;100%;100%;7%;345;396
+Grande (Escritório);Forte;Perfeita;−−−;Engine completa;4,65;100%;100%;7%;345;396
+Grande (Escritório);Forte;Perfeita;−−;Sem engine;5,35;100%;100%;7%;345;396
+Grande (Escritório);Forte;Perfeita;−−;Engine inicial;5,35;100%;100%;7%;345;396
+Grande (Escritório);Forte;Perfeita;−−;Engine completa;5,35;100%;100%;7%;345;396
+Grande (Escritório);Forte;Perfeita;−;Sem engine;6,28;100%;100%;7%;345;396
+Grande (Escritório);Forte;Perfeita;−;Engine inicial;6,28;100%;100%;7%;345;396
+Grande (Escritório);Forte;Perfeita;−;Engine completa;6,28;100%;100%;7%;345;396
+Grande (Escritório);Forte;Perfeita;Neutro;Sem engine;6,98;100%;100%;7%;345;396
+Grande (Escritório);Forte;Perfeita;Neutro;Engine inicial;6,98;100%;100%;7%;345;396
+Grande (Escritório);Forte;Perfeita;Neutro;Engine completa;6,98;100%;100%;7%;345;396
+Grande (Escritório);Forte;Perfeita;+;Sem engine;7,68;100%;100%;7%;345;396
+Grande (Escritório);Forte;Perfeita;+;Engine inicial;7,68;100%;100%;7%;345;396
+Grande (Escritório);Forte;Perfeita;+;Engine completa;7,68;100%;100%;7%;345;396
+Grande (Escritório);Forte;Perfeita;++;Sem engine;8,61;100%;100%;7%;345;396
+Grande (Escritório);Forte;Perfeita;++;Engine inicial;8,61;100%;100%;7%;345;396
+Grande (Escritório);Forte;Perfeita;++;Engine completa;8,61;100%;100%;7%;345;396
+Grande (Escritório);Forte;Perfeita;+++;Sem engine;9,31;100%;100%;7%;345;396
+Grande (Escritório);Forte;Perfeita;+++;Engine inicial;9,31;100%;100%;7%;345;396
+Grande (Escritório);Forte;Perfeita;+++;Engine completa;9,31;100%;100%;7%;345;396
+Grande (Escritório);Forte;Boa (erro 25%);−−−;Sem engine;4,09;64%;88%;7%;345;396
+Grande (Escritório);Forte;Boa (erro 25%);−−−;Engine inicial;4,09;64%;88%;7%;345;396
+Grande (Escritório);Forte;Boa (erro 25%);−−−;Engine completa;4,15;64%;89%;7%;345;396
+Grande (Escritório);Forte;Boa (erro 25%);−−;Sem engine;4,78;64%;88%;7%;345;396
+Grande (Escritório);Forte;Boa (erro 25%);−−;Engine inicial;4,79;64%;88%;7%;345;396
+Grande (Escritório);Forte;Boa (erro 25%);−−;Engine completa;4,85;64%;89%;7%;345;396
+Grande (Escritório);Forte;Boa (erro 25%);−;Sem engine;5,71;64%;88%;7%;345;396
+Grande (Escritório);Forte;Boa (erro 25%);−;Engine inicial;5,72;64%;88%;7%;345;396
+Grande (Escritório);Forte;Boa (erro 25%);−;Engine completa;5,78;64%;89%;7%;345;396
+Grande (Escritório);Forte;Boa (erro 25%);Neutro;Sem engine;6,41;64%;88%;7%;345;396
+Grande (Escritório);Forte;Boa (erro 25%);Neutro;Engine inicial;6,42;64%;88%;7%;345;396
+Grande (Escritório);Forte;Boa (erro 25%);Neutro;Engine completa;6,47;64%;89%;7%;345;396
+Grande (Escritório);Forte;Boa (erro 25%);+;Sem engine;7,11;64%;88%;7%;345;396
+Grande (Escritório);Forte;Boa (erro 25%);+;Engine inicial;7,12;64%;88%;7%;345;396
+Grande (Escritório);Forte;Boa (erro 25%);+;Engine completa;7,17;64%;89%;7%;345;396
+Grande (Escritório);Forte;Boa (erro 25%);++;Sem engine;8,04;64%;88%;7%;345;396
+Grande (Escritório);Forte;Boa (erro 25%);++;Engine inicial;8,05;64%;88%;7%;345;396
+Grande (Escritório);Forte;Boa (erro 25%);++;Engine completa;8,10;64%;89%;7%;345;396
+Grande (Escritório);Forte;Boa (erro 25%);+++;Sem engine;8,74;64%;88%;7%;345;396
+Grande (Escritório);Forte;Boa (erro 25%);+++;Engine inicial;8,75;64%;88%;7%;345;396
+Grande (Escritório);Forte;Boa (erro 25%);+++;Engine completa;8,80;64%;89%;7%;345;396
+Grande (Escritório);Forte;Média (erro 50%);−−−;Sem engine;3,39;44%;73%;7%;345;396
+Grande (Escritório);Forte;Média (erro 50%);−−−;Engine inicial;3,40;44%;73%;7%;345;396
+Grande (Escritório);Forte;Média (erro 50%);−−−;Engine completa;3,56;44%;76%;7%;345;396
+Grande (Escritório);Forte;Média (erro 50%);−−;Sem engine;4,08;44%;73%;7%;345;396
+Grande (Escritório);Forte;Média (erro 50%);−−;Engine inicial;4,10;44%;73%;7%;345;396
+Grande (Escritório);Forte;Média (erro 50%);−−;Engine completa;4,25;44%;76%;7%;345;396
+Grande (Escritório);Forte;Média (erro 50%);−;Sem engine;5,01;44%;73%;7%;345;396
+Grande (Escritório);Forte;Média (erro 50%);−;Engine inicial;5,03;44%;73%;7%;345;396
+Grande (Escritório);Forte;Média (erro 50%);−;Engine completa;5,18;44%;76%;7%;345;396
+Grande (Escritório);Forte;Média (erro 50%);Neutro;Sem engine;5,71;44%;73%;7%;345;396
+Grande (Escritório);Forte;Média (erro 50%);Neutro;Engine inicial;5,73;44%;73%;7%;345;396
+Grande (Escritório);Forte;Média (erro 50%);Neutro;Engine completa;5,88;44%;76%;7%;345;396
+Grande (Escritório);Forte;Média (erro 50%);+;Sem engine;6,41;44%;73%;7%;345;396
+Grande (Escritório);Forte;Média (erro 50%);+;Engine inicial;6,43;44%;73%;7%;345;396
+Grande (Escritório);Forte;Média (erro 50%);+;Engine completa;6,58;44%;76%;7%;345;396
+Grande (Escritório);Forte;Média (erro 50%);++;Sem engine;7,34;44%;73%;7%;345;396
+Grande (Escritório);Forte;Média (erro 50%);++;Engine inicial;7,36;44%;73%;7%;345;396
+Grande (Escritório);Forte;Média (erro 50%);++;Engine completa;7,51;44%;76%;7%;345;396
+Grande (Escritório);Forte;Média (erro 50%);+++;Sem engine;8,04;44%;73%;7%;345;396
+Grande (Escritório);Forte;Média (erro 50%);+++;Engine inicial;8,05;44%;73%;7%;345;396
+Grande (Escritório);Forte;Média (erro 50%);+++;Engine completa;8,21;44%;76%;7%;345;396
+Grande (Escritório);Forte;Ruim (erro 75%);−−−;Sem engine;2,17;26%;47%;7%;346;396
+Grande (Escritório);Forte;Ruim (erro 75%);−−−;Engine inicial;2,22;26%;48%;7%;346;396
+Grande (Escritório);Forte;Ruim (erro 75%);−−−;Engine completa;2,54;26%;55%;7%;346;396
+Grande (Escritório);Forte;Ruim (erro 75%);−−;Sem engine;2,87;26%;47%;7%;346;396
+Grande (Escritório);Forte;Ruim (erro 75%);−−;Engine inicial;2,91;26%;48%;7%;346;396
+Grande (Escritório);Forte;Ruim (erro 75%);−−;Engine completa;3,24;26%;55%;7%;346;396
+Grande (Escritório);Forte;Ruim (erro 75%);−;Sem engine;3,80;26%;47%;7%;346;396
+Grande (Escritório);Forte;Ruim (erro 75%);−;Engine inicial;3,84;26%;48%;7%;346;396
+Grande (Escritório);Forte;Ruim (erro 75%);−;Engine completa;4,17;26%;55%;7%;346;396
+Grande (Escritório);Forte;Ruim (erro 75%);Neutro;Sem engine;4,50;26%;47%;7%;346;396
+Grande (Escritório);Forte;Ruim (erro 75%);Neutro;Engine inicial;4,54;26%;48%;7%;346;396
+Grande (Escritório);Forte;Ruim (erro 75%);Neutro;Engine completa;4,87;26%;55%;7%;346;396
+Grande (Escritório);Forte;Ruim (erro 75%);+;Sem engine;5,19;26%;47%;7%;346;396
+Grande (Escritório);Forte;Ruim (erro 75%);+;Engine inicial;5,24;26%;48%;7%;346;396
+Grande (Escritório);Forte;Ruim (erro 75%);+;Engine completa;5,56;26%;55%;7%;346;396
+Grande (Escritório);Forte;Ruim (erro 75%);++;Sem engine;6,12;26%;47%;7%;346;396
+Grande (Escritório);Forte;Ruim (erro 75%);++;Engine inicial;6,16;26%;48%;7%;346;396
+Grande (Escritório);Forte;Ruim (erro 75%);++;Engine completa;6,49;26%;55%;7%;346;396
+Grande (Escritório);Forte;Ruim (erro 75%);+++;Sem engine;6,82;26%;47%;7%;346;396
+Grande (Escritório);Forte;Ruim (erro 75%);+++;Engine inicial;6,86;26%;48%;7%;346;396
+Grande (Escritório);Forte;Ruim (erro 75%);+++;Engine completa;7,19;26%;55%;7%;346;396
+Grande (Escritório);Forte;Péssima (tudo no bloco menos importante);−−−;Sem engine;0,63;0%;14%;7%;346;396
+Grande (Escritório);Forte;Péssima (tudo no bloco menos importante);−−−;Engine inicial;0,70;0%;15%;7%;346;396
+Grande (Escritório);Forte;Péssima (tudo no bloco menos importante);−−−;Engine completa;1,26;0%;27%;7%;346;396
+Grande (Escritório);Forte;Péssima (tudo no bloco menos importante);−−;Sem engine;1,33;0%;14%;7%;346;396
+Grande (Escritório);Forte;Péssima (tudo no bloco menos importante);−−;Engine inicial;1,40;0%;15%;7%;346;396
+Grande (Escritório);Forte;Péssima (tudo no bloco menos importante);−−;Engine completa;1,95;0%;27%;7%;346;396
+Grande (Escritório);Forte;Péssima (tudo no bloco menos importante);−;Sem engine;2,26;0%;14%;7%;346;396
+Grande (Escritório);Forte;Péssima (tudo no bloco menos importante);−;Engine inicial;2,33;0%;15%;7%;346;396
+Grande (Escritório);Forte;Péssima (tudo no bloco menos importante);−;Engine completa;2,88;0%;27%;7%;346;396
+Grande (Escritório);Forte;Péssima (tudo no bloco menos importante);Neutro;Sem engine;2,95;0%;14%;7%;346;396
+Grande (Escritório);Forte;Péssima (tudo no bloco menos importante);Neutro;Engine inicial;3,02;0%;15%;7%;346;396
+Grande (Escritório);Forte;Péssima (tudo no bloco menos importante);Neutro;Engine completa;3,58;0%;27%;7%;346;396
+Grande (Escritório);Forte;Péssima (tudo no bloco menos importante);+;Sem engine;3,65;0%;14%;7%;346;396
+Grande (Escritório);Forte;Péssima (tudo no bloco menos importante);+;Engine inicial;3,72;0%;15%;7%;346;396
+Grande (Escritório);Forte;Péssima (tudo no bloco menos importante);+;Engine completa;4,27;0%;27%;7%;346;396
+Grande (Escritório);Forte;Péssima (tudo no bloco menos importante);++;Sem engine;4,58;0%;14%;7%;346;396
+Grande (Escritório);Forte;Péssima (tudo no bloco menos importante);++;Engine inicial;4,65;0%;15%;7%;346;396
+Grande (Escritório);Forte;Péssima (tudo no bloco menos importante);++;Engine completa;5,20;0%;27%;7%;346;396
+Grande (Escritório);Forte;Péssima (tudo no bloco menos importante);+++;Sem engine;5,28;0%;14%;7%;346;396
+Grande (Escritório);Forte;Péssima (tudo no bloco menos importante);+++;Engine inicial;5,35;0%;15%;7%;346;396
+Grande (Escritório);Forte;Péssima (tudo no bloco menos importante);+++;Engine completa;5,90;0%;27%;7%;346;396
+Grande (Escritório);Forte;Divide igual;−−−;Sem engine;4,08;63%;88%;7%;345;396
+Grande (Escritório);Forte;Divide igual;−−−;Engine inicial;4,09;63%;88%;7%;345;396
+Grande (Escritório);Forte;Divide igual;−−−;Engine completa;4,15;63%;89%;7%;345;396
+Grande (Escritório);Forte;Divide igual;−−;Sem engine;4,78;63%;88%;7%;345;396
+Grande (Escritório);Forte;Divide igual;−−;Engine inicial;4,79;63%;88%;7%;345;396
+Grande (Escritório);Forte;Divide igual;−−;Engine completa;4,85;63%;89%;7%;345;396
+Grande (Escritório);Forte;Divide igual;−;Sem engine;5,71;63%;88%;7%;345;396
+Grande (Escritório);Forte;Divide igual;−;Engine inicial;5,72;63%;88%;7%;345;396
+Grande (Escritório);Forte;Divide igual;−;Engine completa;5,78;63%;89%;7%;345;396
+Grande (Escritório);Forte;Divide igual;Neutro;Sem engine;6,41;63%;88%;7%;345;396
+Grande (Escritório);Forte;Divide igual;Neutro;Engine inicial;6,42;63%;88%;7%;345;396
+Grande (Escritório);Forte;Divide igual;Neutro;Engine completa;6,48;63%;89%;7%;345;396
+Grande (Escritório);Forte;Divide igual;+;Sem engine;7,11;63%;88%;7%;345;396
+Grande (Escritório);Forte;Divide igual;+;Engine inicial;7,12;63%;88%;7%;345;396
+Grande (Escritório);Forte;Divide igual;+;Engine completa;7,18;63%;89%;7%;345;396
+Grande (Escritório);Forte;Divide igual;++;Sem engine;8,04;63%;88%;7%;345;396
+Grande (Escritório);Forte;Divide igual;++;Engine inicial;8,05;63%;88%;7%;345;396
+Grande (Escritório);Forte;Divide igual;++;Engine completa;8,11;63%;89%;7%;345;396
+Grande (Escritório);Forte;Divide igual;+++;Sem engine;8,74;63%;88%;7%;345;396
+Grande (Escritório);Forte;Divide igual;+++;Engine inicial;8,75;63%;88%;7%;345;396
+Grande (Escritório);Forte;Divide igual;+++;Engine completa;8,81;63%;89%;7%;345;396
+Grande (Escritório);Forte;Invertida;−−−;Sem engine;2,28;26%;49%;7%;346;396
+Grande (Escritório);Forte;Invertida;−−−;Engine inicial;2,32;26%;50%;7%;346;396
+Grande (Escritório);Forte;Invertida;−−−;Engine completa;2,63;26%;57%;7%;346;396
+Grande (Escritório);Forte;Invertida;−−;Sem engine;2,98;26%;49%;7%;346;396
+Grande (Escritório);Forte;Invertida;−−;Engine inicial;3,01;26%;50%;7%;346;396
+Grande (Escritório);Forte;Invertida;−−;Engine completa;3,33;26%;57%;7%;346;396
+Grande (Escritório);Forte;Invertida;−;Sem engine;3,91;26%;49%;7%;346;396
+Grande (Escritório);Forte;Invertida;−;Engine inicial;3,94;26%;50%;7%;346;396
+Grande (Escritório);Forte;Invertida;−;Engine completa;4,26;26%;57%;7%;346;396
+Grande (Escritório);Forte;Invertida;Neutro;Sem engine;4,60;26%;49%;7%;346;396
+Grande (Escritório);Forte;Invertida;Neutro;Engine inicial;4,64;26%;50%;7%;346;396
+Grande (Escritório);Forte;Invertida;Neutro;Engine completa;4,96;26%;57%;7%;346;396
+Grande (Escritório);Forte;Invertida;+;Sem engine;5,30;26%;49%;7%;346;396
+Grande (Escritório);Forte;Invertida;+;Engine inicial;5,34;26%;50%;7%;346;396
+Grande (Escritório);Forte;Invertida;+;Engine completa;5,66;26%;57%;7%;346;396
+Grande (Escritório);Forte;Invertida;++;Sem engine;6,23;26%;49%;7%;346;396
+Grande (Escritório);Forte;Invertida;++;Engine inicial;6,27;26%;50%;7%;346;396
+Grande (Escritório);Forte;Invertida;++;Engine completa;6,59;26%;57%;7%;346;396
+Grande (Escritório);Forte;Invertida;+++;Sem engine;6,93;26%;49%;7%;346;396
+Grande (Escritório);Forte;Invertida;+++;Engine inicial;6,97;26%;50%;7%;346;396
+Grande (Escritório);Forte;Invertida;+++;Engine completa;7,28;26%;57%;7%;346;396
+Grande (Escritório);Forte;Mista: 3 fases certas, 2 péssimas;−−−;Sem engine;3,06;63%;66%;7%;345;396
+Grande (Escritório);Forte;Mista: 3 fases certas, 2 péssimas;−−−;Engine inicial;3,10;63%;67%;7%;345;396
+Grande (Escritório);Forte;Mista: 3 fases certas, 2 péssimas;−−−;Engine completa;3,41;63%;73%;7%;345;396
+Grande (Escritório);Forte;Mista: 3 fases certas, 2 péssimas;−−;Sem engine;3,75;63%;66%;7%;345;396
+Grande (Escritório);Forte;Mista: 3 fases certas, 2 péssimas;−−;Engine inicial;3,80;63%;67%;7%;345;396
+Grande (Escritório);Forte;Mista: 3 fases certas, 2 péssimas;−−;Engine completa;4,11;63%;73%;7%;345;396
+Grande (Escritório);Forte;Mista: 3 fases certas, 2 péssimas;−;Sem engine;4,68;63%;66%;7%;345;396
+Grande (Escritório);Forte;Mista: 3 fases certas, 2 péssimas;−;Engine inicial;4,72;63%;67%;7%;345;396
+Grande (Escritório);Forte;Mista: 3 fases certas, 2 péssimas;−;Engine completa;5,03;63%;73%;7%;345;396
+Grande (Escritório);Forte;Mista: 3 fases certas, 2 péssimas;Neutro;Sem engine;5,38;63%;66%;7%;345;396
+Grande (Escritório);Forte;Mista: 3 fases certas, 2 péssimas;Neutro;Engine inicial;5,42;63%;67%;7%;345;396
+Grande (Escritório);Forte;Mista: 3 fases certas, 2 péssimas;Neutro;Engine completa;5,73;63%;73%;7%;345;396
+Grande (Escritório);Forte;Mista: 3 fases certas, 2 péssimas;+;Sem engine;6,08;63%;66%;7%;345;396
+Grande (Escritório);Forte;Mista: 3 fases certas, 2 péssimas;+;Engine inicial;6,12;63%;67%;7%;345;396
+Grande (Escritório);Forte;Mista: 3 fases certas, 2 péssimas;+;Engine completa;6,43;63%;73%;7%;345;396
+Grande (Escritório);Forte;Mista: 3 fases certas, 2 péssimas;++;Sem engine;7,00;63%;66%;7%;345;396
+Grande (Escritório);Forte;Mista: 3 fases certas, 2 péssimas;++;Engine inicial;7,05;63%;67%;7%;345;396
+Grande (Escritório);Forte;Mista: 3 fases certas, 2 péssimas;++;Engine completa;7,36;63%;73%;7%;345;396
+Grande (Escritório);Forte;Mista: 3 fases certas, 2 péssimas;+++;Sem engine;7,70;63%;66%;7%;345;396
+Grande (Escritório);Forte;Mista: 3 fases certas, 2 péssimas;+++;Engine inicial;7,74;63%;67%;7%;345;396
+Grande (Escritório);Forte;Mista: 3 fases certas, 2 péssimas;+++;Engine completa;8,05;63%;73%;7%;345;396
+Grande (Escritório);Forte;Mista: só a Pré-produção péssima;−−−;Sem engine;3,81;74%;82%;7%;345;396
+Grande (Escritório);Forte;Mista: só a Pré-produção péssima;−−−;Engine inicial;3,81;74%;82%;7%;345;396
+Grande (Escritório);Forte;Mista: só a Pré-produção péssima;−−−;Engine completa;3,88;74%;83%;7%;345;396
+Grande (Escritório);Forte;Mista: só a Pré-produção péssima;−−;Sem engine;4,51;74%;82%;7%;345;396
+Grande (Escritório);Forte;Mista: só a Pré-produção péssima;−−;Engine inicial;4,51;74%;82%;7%;345;396
+Grande (Escritório);Forte;Mista: só a Pré-produção péssima;−−;Engine completa;4,58;74%;83%;7%;345;396
+Grande (Escritório);Forte;Mista: só a Pré-produção péssima;−;Sem engine;5,44;74%;82%;7%;345;396
+Grande (Escritório);Forte;Mista: só a Pré-produção péssima;−;Engine inicial;5,44;74%;82%;7%;345;396
+Grande (Escritório);Forte;Mista: só a Pré-produção péssima;−;Engine completa;5,51;74%;83%;7%;345;396
+Grande (Escritório);Forte;Mista: só a Pré-produção péssima;Neutro;Sem engine;6,14;74%;82%;7%;345;396
+Grande (Escritório);Forte;Mista: só a Pré-produção péssima;Neutro;Engine inicial;6,14;74%;82%;7%;345;396
+Grande (Escritório);Forte;Mista: só a Pré-produção péssima;Neutro;Engine completa;6,21;74%;83%;7%;345;396
+Grande (Escritório);Forte;Mista: só a Pré-produção péssima;+;Sem engine;6,84;74%;82%;7%;345;396
+Grande (Escritório);Forte;Mista: só a Pré-produção péssima;+;Engine inicial;6,84;74%;82%;7%;345;396
+Grande (Escritório);Forte;Mista: só a Pré-produção péssima;+;Engine completa;6,91;74%;83%;7%;345;396
+Grande (Escritório);Forte;Mista: só a Pré-produção péssima;++;Sem engine;7,77;74%;82%;7%;345;396
+Grande (Escritório);Forte;Mista: só a Pré-produção péssima;++;Engine inicial;7,77;74%;82%;7%;345;396
+Grande (Escritório);Forte;Mista: só a Pré-produção péssima;++;Engine completa;7,84;74%;83%;7%;345;396
+Grande (Escritório);Forte;Mista: só a Pré-produção péssima;+++;Sem engine;8,47;74%;82%;7%;345;396
+Grande (Escritório);Forte;Mista: só a Pré-produção péssima;+++;Engine inicial;8,47;74%;82%;7%;345;396
+Grande (Escritório);Forte;Mista: só a Pré-produção péssima;+++;Engine completa;8,53;74%;83%;7%;345;396
+AAA (Estúdio);Fraca;Perfeita;−−−;Sem engine;4,59;100%;100%;8%;417;918
+AAA (Estúdio);Fraca;Perfeita;−−−;Engine inicial;4,59;100%;100%;8%;417;918
+AAA (Estúdio);Fraca;Perfeita;−−−;Engine completa;4,59;100%;100%;8%;417;918
+AAA (Estúdio);Fraca;Perfeita;−−;Sem engine;5,28;100%;100%;8%;417;918
+AAA (Estúdio);Fraca;Perfeita;−−;Engine inicial;5,28;100%;100%;8%;417;918
+AAA (Estúdio);Fraca;Perfeita;−−;Engine completa;5,28;100%;100%;8%;417;918
+AAA (Estúdio);Fraca;Perfeita;−;Sem engine;6,20;100%;100%;8%;417;918
+AAA (Estúdio);Fraca;Perfeita;−;Engine inicial;6,20;100%;100%;8%;417;918
+AAA (Estúdio);Fraca;Perfeita;−;Engine completa;6,20;100%;100%;8%;417;918
+AAA (Estúdio);Fraca;Perfeita;Neutro;Sem engine;6,89;100%;100%;8%;417;918
+AAA (Estúdio);Fraca;Perfeita;Neutro;Engine inicial;6,89;100%;100%;8%;417;918
+AAA (Estúdio);Fraca;Perfeita;Neutro;Engine completa;6,89;100%;100%;8%;417;918
+AAA (Estúdio);Fraca;Perfeita;+;Sem engine;7,58;100%;100%;8%;417;918
+AAA (Estúdio);Fraca;Perfeita;+;Engine inicial;7,58;100%;100%;8%;417;918
+AAA (Estúdio);Fraca;Perfeita;+;Engine completa;7,58;100%;100%;8%;417;918
+AAA (Estúdio);Fraca;Perfeita;++;Sem engine;8,50;100%;100%;8%;417;918
+AAA (Estúdio);Fraca;Perfeita;++;Engine inicial;8,50;100%;100%;8%;417;918
+AAA (Estúdio);Fraca;Perfeita;++;Engine completa;8,50;100%;100%;8%;417;918
+AAA (Estúdio);Fraca;Perfeita;+++;Sem engine;9,18;100%;100%;8%;417;918
+AAA (Estúdio);Fraca;Perfeita;+++;Engine inicial;9,18;100%;100%;8%;417;918
+AAA (Estúdio);Fraca;Perfeita;+++;Engine completa;9,18;100%;100%;8%;417;918
+AAA (Estúdio);Fraca;Boa (erro 25%);−−−;Sem engine;4,09;66%;89%;8%;418;918
+AAA (Estúdio);Fraca;Boa (erro 25%);−−−;Engine inicial;4,09;66%;89%;8%;418;918
+AAA (Estúdio);Fraca;Boa (erro 25%);−−−;Engine completa;4,14;66%;90%;8%;418;918
+AAA (Estúdio);Fraca;Boa (erro 25%);−−;Sem engine;4,77;66%;89%;8%;418;918
+AAA (Estúdio);Fraca;Boa (erro 25%);−−;Engine inicial;4,78;66%;89%;8%;418;918
+AAA (Estúdio);Fraca;Boa (erro 25%);−−;Engine completa;4,83;66%;90%;8%;418;918
+AAA (Estúdio);Fraca;Boa (erro 25%);−;Sem engine;5,69;66%;89%;8%;418;918
+AAA (Estúdio);Fraca;Boa (erro 25%);−;Engine inicial;5,70;66%;89%;8%;418;918
+AAA (Estúdio);Fraca;Boa (erro 25%);−;Engine completa;5,74;66%;90%;8%;418;918
+AAA (Estúdio);Fraca;Boa (erro 25%);Neutro;Sem engine;6,38;66%;89%;8%;418;918
+AAA (Estúdio);Fraca;Boa (erro 25%);Neutro;Engine inicial;6,38;66%;89%;8%;418;918
+AAA (Estúdio);Fraca;Boa (erro 25%);Neutro;Engine completa;6,43;66%;90%;8%;418;918
+AAA (Estúdio);Fraca;Boa (erro 25%);+;Sem engine;7,07;66%;89%;8%;418;918
+AAA (Estúdio);Fraca;Boa (erro 25%);+;Engine inicial;7,07;66%;89%;8%;418;918
+AAA (Estúdio);Fraca;Boa (erro 25%);+;Engine completa;7,12;66%;90%;8%;418;918
+AAA (Estúdio);Fraca;Boa (erro 25%);++;Sem engine;7,98;66%;89%;8%;418;918
+AAA (Estúdio);Fraca;Boa (erro 25%);++;Engine inicial;7,99;66%;89%;8%;418;918
+AAA (Estúdio);Fraca;Boa (erro 25%);++;Engine completa;8,04;66%;90%;8%;418;918
+AAA (Estúdio);Fraca;Boa (erro 25%);+++;Sem engine;8,67;66%;89%;8%;418;918
+AAA (Estúdio);Fraca;Boa (erro 25%);+++;Engine inicial;8,68;66%;89%;8%;418;918
+AAA (Estúdio);Fraca;Boa (erro 25%);+++;Engine completa;8,72;66%;90%;8%;418;918
+AAA (Estúdio);Fraca;Média (erro 50%);−−−;Sem engine;3,00;44%;66%;8%;420;918
+AAA (Estúdio);Fraca;Média (erro 50%);−−−;Engine inicial;3,03;44%;66%;8%;420;918
+AAA (Estúdio);Fraca;Média (erro 50%);−−−;Engine completa;3,23;44%;70%;8%;420;918
+AAA (Estúdio);Fraca;Média (erro 50%);−−;Sem engine;3,69;44%;66%;8%;420;918
+AAA (Estúdio);Fraca;Média (erro 50%);−−;Engine inicial;3,71;44%;66%;8%;420;918
+AAA (Estúdio);Fraca;Média (erro 50%);−−;Engine completa;3,91;44%;70%;8%;420;918
+AAA (Estúdio);Fraca;Média (erro 50%);−;Sem engine;4,61;44%;66%;8%;420;918
+AAA (Estúdio);Fraca;Média (erro 50%);−;Engine inicial;4,63;44%;66%;8%;420;918
+AAA (Estúdio);Fraca;Média (erro 50%);−;Engine completa;4,83;44%;70%;8%;420;918
+AAA (Estúdio);Fraca;Média (erro 50%);Neutro;Sem engine;5,29;44%;66%;8%;420;918
+AAA (Estúdio);Fraca;Média (erro 50%);Neutro;Engine inicial;5,32;44%;66%;8%;420;918
+AAA (Estúdio);Fraca;Média (erro 50%);Neutro;Engine completa;5,52;44%;70%;8%;420;918
+AAA (Estúdio);Fraca;Média (erro 50%);+;Sem engine;5,98;44%;66%;8%;420;918
+AAA (Estúdio);Fraca;Média (erro 50%);+;Engine inicial;6,01;44%;66%;8%;420;918
+AAA (Estúdio);Fraca;Média (erro 50%);+;Engine completa;6,20;44%;70%;8%;420;918
+AAA (Estúdio);Fraca;Média (erro 50%);++;Sem engine;6,90;44%;66%;8%;420;918
+AAA (Estúdio);Fraca;Média (erro 50%);++;Engine inicial;6,92;44%;66%;8%;420;918
+AAA (Estúdio);Fraca;Média (erro 50%);++;Engine completa;7,12;44%;70%;8%;420;918
+AAA (Estúdio);Fraca;Média (erro 50%);+++;Sem engine;7,58;44%;66%;8%;420;918
+AAA (Estúdio);Fraca;Média (erro 50%);+++;Engine inicial;7,61;44%;66%;8%;420;918
+AAA (Estúdio);Fraca;Média (erro 50%);+++;Engine completa;7,81;44%;70%;8%;420;918
+AAA (Estúdio);Fraca;Ruim (erro 75%);−−−;Sem engine;1,97;26%;43%;9%;423;918
+AAA (Estúdio);Fraca;Ruim (erro 75%);−−−;Engine inicial;2,02;26%;44%;9%;423;918
+AAA (Estúdio);Fraca;Ruim (erro 75%);−−−;Engine completa;2,37;26%;52%;9%;423;918
+AAA (Estúdio);Fraca;Ruim (erro 75%);−−;Sem engine;2,66;26%;43%;9%;423;918
+AAA (Estúdio);Fraca;Ruim (erro 75%);−−;Engine inicial;2,70;26%;44%;9%;423;918
+AAA (Estúdio);Fraca;Ruim (erro 75%);−−;Engine completa;3,05;26%;52%;9%;423;918
+AAA (Estúdio);Fraca;Ruim (erro 75%);−;Sem engine;3,58;26%;43%;9%;423;918
+AAA (Estúdio);Fraca;Ruim (erro 75%);−;Engine inicial;3,62;26%;44%;9%;423;918
+AAA (Estúdio);Fraca;Ruim (erro 75%);−;Engine completa;3,97;26%;52%;9%;423;918
+AAA (Estúdio);Fraca;Ruim (erro 75%);Neutro;Sem engine;4,26;26%;43%;9%;423;918
+AAA (Estúdio);Fraca;Ruim (erro 75%);Neutro;Engine inicial;4,31;26%;44%;9%;423;918
+AAA (Estúdio);Fraca;Ruim (erro 75%);Neutro;Engine completa;4,66;26%;52%;9%;423;918
+AAA (Estúdio);Fraca;Ruim (erro 75%);+;Sem engine;4,95;26%;43%;9%;423;918
+AAA (Estúdio);Fraca;Ruim (erro 75%);+;Engine inicial;4,99;26%;44%;9%;423;918
+AAA (Estúdio);Fraca;Ruim (erro 75%);+;Engine completa;5,34;26%;52%;9%;423;918
+AAA (Estúdio);Fraca;Ruim (erro 75%);++;Sem engine;5,86;26%;43%;9%;423;918
+AAA (Estúdio);Fraca;Ruim (erro 75%);++;Engine inicial;5,91;26%;44%;9%;423;918
+AAA (Estúdio);Fraca;Ruim (erro 75%);++;Engine completa;6,26;26%;52%;9%;423;918
+AAA (Estúdio);Fraca;Ruim (erro 75%);+++;Sem engine;6,55;26%;43%;9%;423;918
+AAA (Estúdio);Fraca;Ruim (erro 75%);+++;Engine inicial;6,59;26%;44%;9%;423;918
+AAA (Estúdio);Fraca;Ruim (erro 75%);+++;Engine completa;6,94;26%;52%;9%;423;918
+AAA (Estúdio);Fraca;Péssima (tudo no bloco menos importante);−−−;Sem engine;0,62;0%;14%;9%;427;918
+AAA (Estúdio);Fraca;Péssima (tudo no bloco menos importante);−−−;Engine inicial;0,69;0%;15%;9%;427;918
+AAA (Estúdio);Fraca;Péssima (tudo no bloco menos importante);−−−;Engine completa;1,24;0%;27%;9%;427;918
+AAA (Estúdio);Fraca;Péssima (tudo no bloco menos importante);−−;Sem engine;1,31;0%;14%;9%;427;918
+AAA (Estúdio);Fraca;Péssima (tudo no bloco menos importante);−−;Engine inicial;1,38;0%;15%;9%;427;918
+AAA (Estúdio);Fraca;Péssima (tudo no bloco menos importante);−−;Engine completa;1,93;0%;27%;9%;427;918
+AAA (Estúdio);Fraca;Péssima (tudo no bloco menos importante);−;Sem engine;2,22;0%;14%;9%;427;918
+AAA (Estúdio);Fraca;Péssima (tudo no bloco menos importante);−;Engine inicial;2,29;0%;15%;9%;427;918
+AAA (Estúdio);Fraca;Péssima (tudo no bloco menos importante);−;Engine completa;2,84;0%;27%;9%;427;918
+AAA (Estúdio);Fraca;Péssima (tudo no bloco menos importante);Neutro;Sem engine;2,91;0%;14%;9%;427;918
+AAA (Estúdio);Fraca;Péssima (tudo no bloco menos importante);Neutro;Engine inicial;2,98;0%;15%;9%;427;918
+AAA (Estúdio);Fraca;Péssima (tudo no bloco menos importante);Neutro;Engine completa;3,53;0%;27%;9%;427;918
+AAA (Estúdio);Fraca;Péssima (tudo no bloco menos importante);+;Sem engine;3,59;0%;14%;9%;427;918
+AAA (Estúdio);Fraca;Péssima (tudo no bloco menos importante);+;Engine inicial;3,66;0%;15%;9%;427;918
+AAA (Estúdio);Fraca;Péssima (tudo no bloco menos importante);+;Engine completa;4,21;0%;27%;9%;427;918
+AAA (Estúdio);Fraca;Péssima (tudo no bloco menos importante);++;Sem engine;4,51;0%;14%;9%;427;918
+AAA (Estúdio);Fraca;Péssima (tudo no bloco menos importante);++;Engine inicial;4,58;0%;15%;9%;427;918
+AAA (Estúdio);Fraca;Péssima (tudo no bloco menos importante);++;Engine completa;5,13;0%;27%;9%;427;918
+AAA (Estúdio);Fraca;Péssima (tudo no bloco menos importante);+++;Sem engine;5,19;0%;14%;9%;427;918
+AAA (Estúdio);Fraca;Péssima (tudo no bloco menos importante);+++;Engine inicial;5,26;0%;15%;9%;427;918
+AAA (Estúdio);Fraca;Péssima (tudo no bloco menos importante);+++;Engine completa;5,81;0%;27%;9%;427;918
+AAA (Estúdio);Fraca;Divide igual;−−−;Sem engine;4,13;72%;90%;8%;418;918
+AAA (Estúdio);Fraca;Divide igual;−−−;Engine inicial;4,14;72%;90%;8%;418;918
+AAA (Estúdio);Fraca;Divide igual;−−−;Engine completa;4,18;72%;91%;8%;418;918
+AAA (Estúdio);Fraca;Divide igual;−−;Sem engine;4,82;72%;90%;8%;418;918
+AAA (Estúdio);Fraca;Divide igual;−−;Engine inicial;4,83;72%;90%;8%;418;918
+AAA (Estúdio);Fraca;Divide igual;−−;Engine completa;4,87;72%;91%;8%;418;918
+AAA (Estúdio);Fraca;Divide igual;−;Sem engine;5,74;72%;90%;8%;418;918
+AAA (Estúdio);Fraca;Divide igual;−;Engine inicial;5,75;72%;90%;8%;418;918
+AAA (Estúdio);Fraca;Divide igual;−;Engine completa;5,78;72%;91%;8%;418;918
+AAA (Estúdio);Fraca;Divide igual;Neutro;Sem engine;6,43;72%;90%;8%;418;918
+AAA (Estúdio);Fraca;Divide igual;Neutro;Engine inicial;6,44;72%;90%;8%;418;918
+AAA (Estúdio);Fraca;Divide igual;Neutro;Engine completa;6,47;72%;91%;8%;418;918
+AAA (Estúdio);Fraca;Divide igual;+;Sem engine;7,12;72%;90%;8%;418;918
+AAA (Estúdio);Fraca;Divide igual;+;Engine inicial;7,13;72%;90%;8%;418;918
+AAA (Estúdio);Fraca;Divide igual;+;Engine completa;7,16;72%;91%;8%;418;918
+AAA (Estúdio);Fraca;Divide igual;++;Sem engine;8,04;72%;90%;8%;418;918
+AAA (Estúdio);Fraca;Divide igual;++;Engine inicial;8,04;72%;90%;8%;418;918
+AAA (Estúdio);Fraca;Divide igual;++;Engine completa;8,08;72%;91%;8%;418;918
+AAA (Estúdio);Fraca;Divide igual;+++;Sem engine;8,73;72%;90%;8%;418;918
+AAA (Estúdio);Fraca;Divide igual;+++;Engine inicial;8,73;72%;90%;8%;418;918
+AAA (Estúdio);Fraca;Divide igual;+++;Engine completa;8,77;72%;91%;8%;418;918
+AAA (Estúdio);Fraca;Invertida;−−−;Sem engine;2,33;31%;51%;8%;423;918
+AAA (Estúdio);Fraca;Invertida;−−−;Engine inicial;2,37;31%;52%;8%;423;918
+AAA (Estúdio);Fraca;Invertida;−−−;Engine completa;2,65;31%;58%;8%;423;918
+AAA (Estúdio);Fraca;Invertida;−−;Sem engine;3,02;31%;51%;8%;423;918
+AAA (Estúdio);Fraca;Invertida;−−;Engine inicial;3,06;31%;52%;8%;423;918
+AAA (Estúdio);Fraca;Invertida;−−;Engine completa;3,33;31%;58%;8%;423;918
+AAA (Estúdio);Fraca;Invertida;−;Sem engine;3,94;31%;51%;8%;423;918
+AAA (Estúdio);Fraca;Invertida;−;Engine inicial;3,98;31%;52%;8%;423;918
+AAA (Estúdio);Fraca;Invertida;−;Engine completa;4,25;31%;58%;8%;423;918
+AAA (Estúdio);Fraca;Invertida;Neutro;Sem engine;4,62;31%;51%;8%;423;918
+AAA (Estúdio);Fraca;Invertida;Neutro;Engine inicial;4,66;31%;52%;8%;423;918
+AAA (Estúdio);Fraca;Invertida;Neutro;Engine completa;4,94;31%;58%;8%;423;918
+AAA (Estúdio);Fraca;Invertida;+;Sem engine;5,31;31%;51%;8%;423;918
+AAA (Estúdio);Fraca;Invertida;+;Engine inicial;5,35;31%;52%;8%;423;918
+AAA (Estúdio);Fraca;Invertida;+;Engine completa;5,63;31%;58%;8%;423;918
+AAA (Estúdio);Fraca;Invertida;++;Sem engine;6,23;31%;51%;8%;423;918
+AAA (Estúdio);Fraca;Invertida;++;Engine inicial;6,27;31%;52%;8%;423;918
+AAA (Estúdio);Fraca;Invertida;++;Engine completa;6,55;31%;58%;8%;423;918
+AAA (Estúdio);Fraca;Invertida;+++;Sem engine;6,92;31%;51%;8%;423;918
+AAA (Estúdio);Fraca;Invertida;+++;Engine inicial;6,96;31%;52%;8%;423;918
+AAA (Estúdio);Fraca;Invertida;+++;Engine completa;7,24;31%;58%;8%;423;918
+AAA (Estúdio);Fraca;Mista: 3 fases certas, 2 péssimas;−−−;Sem engine;3,01;63%;66%;9%;417;918
+AAA (Estúdio);Fraca;Mista: 3 fases certas, 2 péssimas;−−−;Engine inicial;3,05;63%;67%;9%;417;918
+AAA (Estúdio);Fraca;Mista: 3 fases certas, 2 péssimas;−−−;Engine completa;3,38;63%;74%;9%;417;918
+AAA (Estúdio);Fraca;Mista: 3 fases certas, 2 péssimas;−−;Sem engine;3,70;63%;66%;9%;417;918
+AAA (Estúdio);Fraca;Mista: 3 fases certas, 2 péssimas;−−;Engine inicial;3,74;63%;67%;9%;417;918
+AAA (Estúdio);Fraca;Mista: 3 fases certas, 2 péssimas;−−;Engine completa;4,07;63%;74%;9%;417;918
+AAA (Estúdio);Fraca;Mista: 3 fases certas, 2 péssimas;−;Sem engine;4,61;63%;66%;9%;417;918
+AAA (Estúdio);Fraca;Mista: 3 fases certas, 2 péssimas;−;Engine inicial;4,65;63%;67%;9%;417;918
+AAA (Estúdio);Fraca;Mista: 3 fases certas, 2 péssimas;−;Engine completa;4,98;63%;74%;9%;417;918
+AAA (Estúdio);Fraca;Mista: 3 fases certas, 2 péssimas;Neutro;Sem engine;5,30;63%;66%;9%;417;918
+AAA (Estúdio);Fraca;Mista: 3 fases certas, 2 péssimas;Neutro;Engine inicial;5,34;63%;67%;9%;417;918
+AAA (Estúdio);Fraca;Mista: 3 fases certas, 2 péssimas;Neutro;Engine completa;5,67;63%;74%;9%;417;918
+AAA (Estúdio);Fraca;Mista: 3 fases certas, 2 péssimas;+;Sem engine;5,98;63%;66%;9%;417;918
+AAA (Estúdio);Fraca;Mista: 3 fases certas, 2 péssimas;+;Engine inicial;6,03;63%;67%;9%;417;918
+AAA (Estúdio);Fraca;Mista: 3 fases certas, 2 péssimas;+;Engine completa;6,35;63%;74%;9%;417;918
+AAA (Estúdio);Fraca;Mista: 3 fases certas, 2 péssimas;++;Sem engine;6,90;63%;66%;9%;417;918
+AAA (Estúdio);Fraca;Mista: 3 fases certas, 2 péssimas;++;Engine inicial;6,94;63%;67%;9%;417;918
+AAA (Estúdio);Fraca;Mista: 3 fases certas, 2 péssimas;++;Engine completa;7,27;63%;74%;9%;417;918
+AAA (Estúdio);Fraca;Mista: 3 fases certas, 2 péssimas;+++;Sem engine;7,58;63%;66%;9%;417;918
+AAA (Estúdio);Fraca;Mista: 3 fases certas, 2 péssimas;+++;Engine inicial;7,63;63%;67%;9%;417;918
+AAA (Estúdio);Fraca;Mista: 3 fases certas, 2 péssimas;+++;Engine completa;7,95;63%;74%;9%;417;918
+AAA (Estúdio);Fraca;Mista: só a Pré-produção péssima;−−−;Sem engine;3,76;74%;82%;8%;419;918
+AAA (Estúdio);Fraca;Mista: só a Pré-produção péssima;−−−;Engine inicial;3,76;74%;82%;8%;419;918
+AAA (Estúdio);Fraca;Mista: só a Pré-produção péssima;−−−;Engine completa;3,83;74%;83%;8%;419;918
+AAA (Estúdio);Fraca;Mista: só a Pré-produção péssima;−−;Sem engine;4,45;74%;82%;8%;419;918
+AAA (Estúdio);Fraca;Mista: só a Pré-produção péssima;−−;Engine inicial;4,45;74%;82%;8%;419;918
+AAA (Estúdio);Fraca;Mista: só a Pré-produção péssima;−−;Engine completa;4,52;74%;83%;8%;419;918
+AAA (Estúdio);Fraca;Mista: só a Pré-produção péssima;−;Sem engine;5,37;74%;82%;8%;419;918
+AAA (Estúdio);Fraca;Mista: só a Pré-produção péssima;−;Engine inicial;5,37;74%;82%;8%;419;918
+AAA (Estúdio);Fraca;Mista: só a Pré-produção péssima;−;Engine completa;5,44;74%;83%;8%;419;918
+AAA (Estúdio);Fraca;Mista: só a Pré-produção péssima;Neutro;Sem engine;6,06;74%;82%;8%;419;918
+AAA (Estúdio);Fraca;Mista: só a Pré-produção péssima;Neutro;Engine inicial;6,06;74%;82%;8%;419;918
+AAA (Estúdio);Fraca;Mista: só a Pré-produção péssima;Neutro;Engine completa;6,13;74%;83%;8%;419;918
+AAA (Estúdio);Fraca;Mista: só a Pré-produção péssima;+;Sem engine;6,75;74%;82%;8%;419;918
+AAA (Estúdio);Fraca;Mista: só a Pré-produção péssima;+;Engine inicial;6,75;74%;82%;8%;419;918
+AAA (Estúdio);Fraca;Mista: só a Pré-produção péssima;+;Engine completa;6,82;74%;83%;8%;419;918
+AAA (Estúdio);Fraca;Mista: só a Pré-produção péssima;++;Sem engine;7,67;74%;82%;8%;419;918
+AAA (Estúdio);Fraca;Mista: só a Pré-produção péssima;++;Engine inicial;7,67;74%;82%;8%;419;918
+AAA (Estúdio);Fraca;Mista: só a Pré-produção péssima;++;Engine completa;7,73;74%;83%;8%;419;918
+AAA (Estúdio);Fraca;Mista: só a Pré-produção péssima;+++;Sem engine;8,35;74%;82%;8%;419;918
+AAA (Estúdio);Fraca;Mista: só a Pré-produção péssima;+++;Engine inicial;8,35;74%;82%;8%;419;918
+AAA (Estúdio);Fraca;Mista: só a Pré-produção péssima;+++;Engine completa;8,42;74%;83%;8%;419;918
+AAA (Estúdio);Média;Perfeita;−−−;Sem engine;4,60;100%;100%;8%;558;918
+AAA (Estúdio);Média;Perfeita;−−−;Engine inicial;4,60;100%;100%;8%;558;918
+AAA (Estúdio);Média;Perfeita;−−−;Engine completa;4,60;100%;100%;8%;558;918
+AAA (Estúdio);Média;Perfeita;−−;Sem engine;5,29;100%;100%;8%;558;918
+AAA (Estúdio);Média;Perfeita;−−;Engine inicial;5,29;100%;100%;8%;558;918
+AAA (Estúdio);Média;Perfeita;−−;Engine completa;5,29;100%;100%;8%;558;918
+AAA (Estúdio);Média;Perfeita;−;Sem engine;6,21;100%;100%;8%;558;918
+AAA (Estúdio);Média;Perfeita;−;Engine inicial;6,21;100%;100%;8%;558;918
+AAA (Estúdio);Média;Perfeita;−;Engine completa;6,21;100%;100%;8%;558;918
+AAA (Estúdio);Média;Perfeita;Neutro;Sem engine;6,90;100%;100%;8%;558;918
+AAA (Estúdio);Média;Perfeita;Neutro;Engine inicial;6,90;100%;100%;8%;558;918
+AAA (Estúdio);Média;Perfeita;Neutro;Engine completa;6,90;100%;100%;8%;558;918
+AAA (Estúdio);Média;Perfeita;+;Sem engine;7,59;100%;100%;8%;558;918
+AAA (Estúdio);Média;Perfeita;+;Engine inicial;7,59;100%;100%;8%;558;918
+AAA (Estúdio);Média;Perfeita;+;Engine completa;7,59;100%;100%;8%;558;918
+AAA (Estúdio);Média;Perfeita;++;Sem engine;8,51;100%;100%;8%;558;918
+AAA (Estúdio);Média;Perfeita;++;Engine inicial;8,51;100%;100%;8%;558;918
+AAA (Estúdio);Média;Perfeita;++;Engine completa;8,51;100%;100%;8%;558;918
+AAA (Estúdio);Média;Perfeita;+++;Sem engine;9,20;100%;100%;8%;558;918
+AAA (Estúdio);Média;Perfeita;+++;Engine inicial;9,20;100%;100%;8%;558;918
+AAA (Estúdio);Média;Perfeita;+++;Engine completa;9,20;100%;100%;8%;558;918
+AAA (Estúdio);Média;Boa (erro 25%);−−−;Sem engine;4,14;66%;90%;8%;559;918
+AAA (Estúdio);Média;Boa (erro 25%);−−−;Engine inicial;4,14;66%;90%;8%;559;918
+AAA (Estúdio);Média;Boa (erro 25%);−−−;Engine completa;4,18;66%;91%;8%;559;918
+AAA (Estúdio);Média;Boa (erro 25%);−−;Sem engine;4,83;66%;90%;8%;559;918
+AAA (Estúdio);Média;Boa (erro 25%);−−;Engine inicial;4,83;66%;90%;8%;559;918
+AAA (Estúdio);Média;Boa (erro 25%);−−;Engine completa;4,87;66%;91%;8%;559;918
+AAA (Estúdio);Média;Boa (erro 25%);−;Sem engine;5,75;66%;90%;8%;559;918
+AAA (Estúdio);Média;Boa (erro 25%);−;Engine inicial;5,75;66%;90%;8%;559;918
+AAA (Estúdio);Média;Boa (erro 25%);−;Engine completa;5,79;66%;91%;8%;559;918
+AAA (Estúdio);Média;Boa (erro 25%);Neutro;Sem engine;6,43;66%;90%;8%;559;918
+AAA (Estúdio);Média;Boa (erro 25%);Neutro;Engine inicial;6,44;66%;90%;8%;559;918
+AAA (Estúdio);Média;Boa (erro 25%);Neutro;Engine completa;6,48;66%;91%;8%;559;918
+AAA (Estúdio);Média;Boa (erro 25%);+;Sem engine;7,12;66%;90%;8%;559;918
+AAA (Estúdio);Média;Boa (erro 25%);+;Engine inicial;7,13;66%;90%;8%;559;918
+AAA (Estúdio);Média;Boa (erro 25%);+;Engine completa;7,17;66%;91%;8%;559;918
+AAA (Estúdio);Média;Boa (erro 25%);++;Sem engine;8,04;66%;90%;8%;559;918
+AAA (Estúdio);Média;Boa (erro 25%);++;Engine inicial;8,05;66%;90%;8%;559;918
+AAA (Estúdio);Média;Boa (erro 25%);++;Engine completa;8,09;66%;91%;8%;559;918
+AAA (Estúdio);Média;Boa (erro 25%);+++;Sem engine;8,73;66%;90%;8%;559;918
+AAA (Estúdio);Média;Boa (erro 25%);+++;Engine inicial;8,73;66%;90%;8%;559;918
+AAA (Estúdio);Média;Boa (erro 25%);+++;Engine completa;8,77;66%;91%;8%;559;918
+AAA (Estúdio);Média;Média (erro 50%);−−−;Sem engine;3,14;44%;68%;8%;561;918
+AAA (Estúdio);Média;Média (erro 50%);−−−;Engine inicial;3,16;44%;69%;8%;561;918
+AAA (Estúdio);Média;Média (erro 50%);−−−;Engine completa;3,34;44%;73%;8%;561;918
+AAA (Estúdio);Média;Média (erro 50%);−−;Sem engine;3,83;44%;68%;8%;561;918
+AAA (Estúdio);Média;Média (erro 50%);−−;Engine inicial;3,85;44%;69%;8%;561;918
+AAA (Estúdio);Média;Média (erro 50%);−−;Engine completa;4,03;44%;73%;8%;561;918
+AAA (Estúdio);Média;Média (erro 50%);−;Sem engine;4,75;44%;68%;8%;561;918
+AAA (Estúdio);Média;Média (erro 50%);−;Engine inicial;4,77;44%;69%;8%;561;918
+AAA (Estúdio);Média;Média (erro 50%);−;Engine completa;4,95;44%;73%;8%;561;918
+AAA (Estúdio);Média;Média (erro 50%);Neutro;Sem engine;5,43;44%;68%;8%;561;918
+AAA (Estúdio);Média;Média (erro 50%);Neutro;Engine inicial;5,46;44%;69%;8%;561;918
+AAA (Estúdio);Média;Média (erro 50%);Neutro;Engine completa;5,63;44%;73%;8%;561;918
+AAA (Estúdio);Média;Média (erro 50%);+;Sem engine;6,12;44%;68%;8%;561;918
+AAA (Estúdio);Média;Média (erro 50%);+;Engine inicial;6,14;44%;69%;8%;561;918
+AAA (Estúdio);Média;Média (erro 50%);+;Engine completa;6,32;44%;73%;8%;561;918
+AAA (Estúdio);Média;Média (erro 50%);++;Sem engine;7,04;44%;68%;8%;561;918
+AAA (Estúdio);Média;Média (erro 50%);++;Engine inicial;7,06;44%;69%;8%;561;918
+AAA (Estúdio);Média;Média (erro 50%);++;Engine completa;7,24;44%;73%;8%;561;918
+AAA (Estúdio);Média;Média (erro 50%);+++;Sem engine;7,73;44%;68%;8%;561;918
+AAA (Estúdio);Média;Média (erro 50%);+++;Engine inicial;7,75;44%;69%;8%;561;918
+AAA (Estúdio);Média;Média (erro 50%);+++;Engine completa;7,93;44%;73%;8%;561;918
+AAA (Estúdio);Média;Ruim (erro 75%);−−−;Sem engine;2,04;26%;45%;8%;565;918
+AAA (Estúdio);Média;Ruim (erro 75%);−−−;Engine inicial;2,08;26%;45%;8%;565;918
+AAA (Estúdio);Média;Ruim (erro 75%);−−−;Engine completa;2,42;26%;53%;8%;565;918
+AAA (Estúdio);Média;Ruim (erro 75%);−−;Sem engine;2,73;26%;45%;8%;565;918
+AAA (Estúdio);Média;Ruim (erro 75%);−−;Engine inicial;2,77;26%;45%;8%;565;918
+AAA (Estúdio);Média;Ruim (erro 75%);−−;Engine completa;3,11;26%;53%;8%;565;918
+AAA (Estúdio);Média;Ruim (erro 75%);−;Sem engine;3,64;26%;45%;8%;565;918
+AAA (Estúdio);Média;Ruim (erro 75%);−;Engine inicial;3,69;26%;45%;8%;565;918
+AAA (Estúdio);Média;Ruim (erro 75%);−;Engine completa;4,03;26%;53%;8%;565;918
+AAA (Estúdio);Média;Ruim (erro 75%);Neutro;Sem engine;4,33;26%;45%;8%;565;918
+AAA (Estúdio);Média;Ruim (erro 75%);Neutro;Engine inicial;4,37;26%;45%;8%;565;918
+AAA (Estúdio);Média;Ruim (erro 75%);Neutro;Engine completa;4,71;26%;53%;8%;565;918
+AAA (Estúdio);Média;Ruim (erro 75%);+;Sem engine;5,02;26%;45%;8%;565;918
+AAA (Estúdio);Média;Ruim (erro 75%);+;Engine inicial;5,06;26%;45%;8%;565;918
+AAA (Estúdio);Média;Ruim (erro 75%);+;Engine completa;5,40;26%;53%;8%;565;918
+AAA (Estúdio);Média;Ruim (erro 75%);++;Sem engine;5,93;26%;45%;8%;565;918
+AAA (Estúdio);Média;Ruim (erro 75%);++;Engine inicial;5,98;26%;45%;8%;565;918
+AAA (Estúdio);Média;Ruim (erro 75%);++;Engine completa;6,32;26%;53%;8%;565;918
+AAA (Estúdio);Média;Ruim (erro 75%);+++;Sem engine;6,62;26%;45%;8%;565;918
+AAA (Estúdio);Média;Ruim (erro 75%);+++;Engine inicial;6,66;26%;45%;8%;565;918
+AAA (Estúdio);Média;Ruim (erro 75%);+++;Engine completa;7,01;26%;53%;8%;565;918
+AAA (Estúdio);Média;Péssima (tudo no bloco menos importante);−−−;Sem engine;0,63;0%;14%;8%;570;918
+AAA (Estúdio);Média;Péssima (tudo no bloco menos importante);−−−;Engine inicial;0,70;0%;15%;8%;570;918
+AAA (Estúdio);Média;Péssima (tudo no bloco menos importante);−−−;Engine completa;1,25;0%;27%;8%;570;918
+AAA (Estúdio);Média;Péssima (tudo no bloco menos importante);−−;Sem engine;1,31;0%;14%;8%;570;918
+AAA (Estúdio);Média;Péssima (tudo no bloco menos importante);−−;Engine inicial;1,38;0%;15%;8%;570;918
+AAA (Estúdio);Média;Péssima (tudo no bloco menos importante);−−;Engine completa;1,93;0%;27%;8%;570;918
+AAA (Estúdio);Média;Péssima (tudo no bloco menos importante);−;Sem engine;2,23;0%;14%;8%;570;918
+AAA (Estúdio);Média;Péssima (tudo no bloco menos importante);−;Engine inicial;2,30;0%;15%;8%;570;918
+AAA (Estúdio);Média;Péssima (tudo no bloco menos importante);−;Engine completa;2,85;0%;27%;8%;570;918
+AAA (Estúdio);Média;Péssima (tudo no bloco menos importante);Neutro;Sem engine;2,91;0%;14%;8%;570;918
+AAA (Estúdio);Média;Péssima (tudo no bloco menos importante);Neutro;Engine inicial;2,98;0%;15%;8%;570;918
+AAA (Estúdio);Média;Péssima (tudo no bloco menos importante);Neutro;Engine completa;3,53;0%;27%;8%;570;918
+AAA (Estúdio);Média;Péssima (tudo no bloco menos importante);+;Sem engine;3,60;0%;14%;8%;570;918
+AAA (Estúdio);Média;Péssima (tudo no bloco menos importante);+;Engine inicial;3,67;0%;15%;8%;570;918
+AAA (Estúdio);Média;Péssima (tudo no bloco menos importante);+;Engine completa;4,22;0%;27%;8%;570;918
+AAA (Estúdio);Média;Péssima (tudo no bloco menos importante);++;Sem engine;4,51;0%;14%;8%;570;918
+AAA (Estúdio);Média;Péssima (tudo no bloco menos importante);++;Engine inicial;4,58;0%;15%;8%;570;918
+AAA (Estúdio);Média;Péssima (tudo no bloco menos importante);++;Engine completa;5,14;0%;27%;8%;570;918
+AAA (Estúdio);Média;Péssima (tudo no bloco menos importante);+++;Sem engine;5,20;0%;14%;8%;570;918
+AAA (Estúdio);Média;Péssima (tudo no bloco menos importante);+++;Engine inicial;5,27;0%;15%;8%;570;918
+AAA (Estúdio);Média;Péssima (tudo no bloco menos importante);+++;Engine completa;5,82;0%;27%;8%;570;918
+AAA (Estúdio);Média;Divide igual;−−−;Sem engine;4,22;72%;92%;8%;559;918
+AAA (Estúdio);Média;Divide igual;−−−;Engine inicial;4,22;72%;92%;8%;559;918
+AAA (Estúdio);Média;Divide igual;−−−;Engine completa;4,25;72%;92%;8%;559;918
+AAA (Estúdio);Média;Divide igual;−−;Sem engine;4,91;72%;92%;8%;559;918
+AAA (Estúdio);Média;Divide igual;−−;Engine inicial;4,91;72%;92%;8%;559;918
+AAA (Estúdio);Média;Divide igual;−−;Engine completa;4,94;72%;92%;8%;559;918
+AAA (Estúdio);Média;Divide igual;−;Sem engine;5,83;72%;92%;8%;559;918
+AAA (Estúdio);Média;Divide igual;−;Engine inicial;5,83;72%;92%;8%;559;918
+AAA (Estúdio);Média;Divide igual;−;Engine completa;5,86;72%;92%;8%;559;918
+AAA (Estúdio);Média;Divide igual;Neutro;Sem engine;6,52;72%;92%;8%;559;918
+AAA (Estúdio);Média;Divide igual;Neutro;Engine inicial;6,52;72%;92%;8%;559;918
+AAA (Estúdio);Média;Divide igual;Neutro;Engine completa;6,55;72%;92%;8%;559;918
+AAA (Estúdio);Média;Divide igual;+;Sem engine;7,21;72%;92%;8%;559;918
+AAA (Estúdio);Média;Divide igual;+;Engine inicial;7,21;72%;92%;8%;559;918
+AAA (Estúdio);Média;Divide igual;+;Engine completa;7,24;72%;92%;8%;559;918
+AAA (Estúdio);Média;Divide igual;++;Sem engine;8,13;72%;92%;8%;559;918
+AAA (Estúdio);Média;Divide igual;++;Engine inicial;8,13;72%;92%;8%;559;918
+AAA (Estúdio);Média;Divide igual;++;Engine completa;8,16;72%;92%;8%;559;918
+AAA (Estúdio);Média;Divide igual;+++;Sem engine;8,82;72%;92%;8%;559;918
+AAA (Estúdio);Média;Divide igual;+++;Engine inicial;8,82;72%;92%;8%;559;918
+AAA (Estúdio);Média;Divide igual;+++;Engine completa;8,85;72%;92%;8%;559;918
+AAA (Estúdio);Média;Invertida;−−−;Sem engine;2,41;31%;52%;8%;566;918
+AAA (Estúdio);Média;Invertida;−−−;Engine inicial;2,44;31%;53%;8%;566;918
+AAA (Estúdio);Média;Invertida;−−−;Engine completa;2,71;31%;59%;8%;566;918
+AAA (Estúdio);Média;Invertida;−−;Sem engine;3,10;31%;52%;8%;566;918
+AAA (Estúdio);Média;Invertida;−−;Engine inicial;3,13;31%;53%;8%;566;918
+AAA (Estúdio);Média;Invertida;−−;Engine completa;3,40;31%;59%;8%;566;918
+AAA (Estúdio);Média;Invertida;−;Sem engine;4,02;31%;52%;8%;566;918
+AAA (Estúdio);Média;Invertida;−;Engine inicial;4,05;31%;53%;8%;566;918
+AAA (Estúdio);Média;Invertida;−;Engine completa;4,32;31%;59%;8%;566;918
+AAA (Estúdio);Média;Invertida;Neutro;Sem engine;4,71;31%;52%;8%;566;918
+AAA (Estúdio);Média;Invertida;Neutro;Engine inicial;4,75;31%;53%;8%;566;918
+AAA (Estúdio);Média;Invertida;Neutro;Engine completa;5,01;31%;59%;8%;566;918
+AAA (Estúdio);Média;Invertida;+;Sem engine;5,40;31%;52%;8%;566;918
+AAA (Estúdio);Média;Invertida;+;Engine inicial;5,44;31%;53%;8%;566;918
+AAA (Estúdio);Média;Invertida;+;Engine completa;5,70;31%;59%;8%;566;918
+AAA (Estúdio);Média;Invertida;++;Sem engine;6,32;31%;52%;8%;566;918
+AAA (Estúdio);Média;Invertida;++;Engine inicial;6,36;31%;53%;8%;566;918
+AAA (Estúdio);Média;Invertida;++;Engine completa;6,62;31%;59%;8%;566;918
+AAA (Estúdio);Média;Invertida;+++;Sem engine;7,01;31%;52%;8%;566;918
+AAA (Estúdio);Média;Invertida;+++;Engine inicial;7,05;31%;53%;8%;566;918
+AAA (Estúdio);Média;Invertida;+++;Engine completa;7,31;31%;59%;8%;566;918
+AAA (Estúdio);Média;Mista: 3 fases certas, 2 péssimas;−−−;Sem engine;3,01;63%;66%;8%;558;918
+AAA (Estúdio);Média;Mista: 3 fases certas, 2 péssimas;−−−;Engine inicial;3,06;63%;67%;8%;558;918
+AAA (Estúdio);Média;Mista: 3 fases certas, 2 péssimas;−−−;Engine completa;3,38;63%;74%;8%;558;918
+AAA (Estúdio);Média;Mista: 3 fases certas, 2 péssimas;−−;Sem engine;3,70;63%;66%;8%;558;918
+AAA (Estúdio);Média;Mista: 3 fases certas, 2 péssimas;−−;Engine inicial;3,74;63%;67%;8%;558;918
+AAA (Estúdio);Média;Mista: 3 fases certas, 2 péssimas;−−;Engine completa;4,07;63%;74%;8%;558;918
+AAA (Estúdio);Média;Mista: 3 fases certas, 2 péssimas;−;Sem engine;4,62;63%;66%;8%;558;918
+AAA (Estúdio);Média;Mista: 3 fases certas, 2 péssimas;−;Engine inicial;4,66;63%;67%;8%;558;918
+AAA (Estúdio);Média;Mista: 3 fases certas, 2 péssimas;−;Engine completa;4,99;63%;74%;8%;558;918
+AAA (Estúdio);Média;Mista: 3 fases certas, 2 péssimas;Neutro;Sem engine;5,30;63%;66%;8%;558;918
+AAA (Estúdio);Média;Mista: 3 fases certas, 2 péssimas;Neutro;Engine inicial;5,35;63%;67%;8%;558;918
+AAA (Estúdio);Média;Mista: 3 fases certas, 2 péssimas;Neutro;Engine completa;5,67;63%;74%;8%;558;918
+AAA (Estúdio);Média;Mista: 3 fases certas, 2 péssimas;+;Sem engine;5,99;63%;66%;8%;558;918
+AAA (Estúdio);Média;Mista: 3 fases certas, 2 péssimas;+;Engine inicial;6,03;63%;67%;8%;558;918
+AAA (Estúdio);Média;Mista: 3 fases certas, 2 péssimas;+;Engine completa;6,36;63%;74%;8%;558;918
+AAA (Estúdio);Média;Mista: 3 fases certas, 2 péssimas;++;Sem engine;6,91;63%;66%;8%;558;918
+AAA (Estúdio);Média;Mista: 3 fases certas, 2 péssimas;++;Engine inicial;6,95;63%;67%;8%;558;918
+AAA (Estúdio);Média;Mista: 3 fases certas, 2 péssimas;++;Engine completa;7,28;63%;74%;8%;558;918
+AAA (Estúdio);Média;Mista: 3 fases certas, 2 péssimas;+++;Sem engine;7,59;63%;66%;8%;558;918
+AAA (Estúdio);Média;Mista: 3 fases certas, 2 péssimas;+++;Engine inicial;7,64;63%;67%;8%;558;918
+AAA (Estúdio);Média;Mista: 3 fases certas, 2 péssimas;+++;Engine completa;7,96;63%;74%;8%;558;918
+AAA (Estúdio);Média;Mista: só a Pré-produção péssima;−−−;Sem engine;3,77;74%;82%;8%;560;918
+AAA (Estúdio);Média;Mista: só a Pré-produção péssima;−−−;Engine inicial;3,77;74%;82%;8%;560;918
+AAA (Estúdio);Média;Mista: só a Pré-produção péssima;−−−;Engine completa;3,84;74%;83%;8%;560;918
+AAA (Estúdio);Média;Mista: só a Pré-produção péssima;−−;Sem engine;4,46;74%;82%;8%;560;918
+AAA (Estúdio);Média;Mista: só a Pré-produção péssima;−−;Engine inicial;4,46;74%;82%;8%;560;918
+AAA (Estúdio);Média;Mista: só a Pré-produção péssima;−−;Engine completa;4,53;74%;83%;8%;560;918
+AAA (Estúdio);Média;Mista: só a Pré-produção péssima;−;Sem engine;5,38;74%;82%;8%;560;918
+AAA (Estúdio);Média;Mista: só a Pré-produção péssima;−;Engine inicial;5,38;74%;82%;8%;560;918
+AAA (Estúdio);Média;Mista: só a Pré-produção péssima;−;Engine completa;5,44;74%;83%;8%;560;918
+AAA (Estúdio);Média;Mista: só a Pré-produção péssima;Neutro;Sem engine;6,07;74%;82%;8%;560;918
+AAA (Estúdio);Média;Mista: só a Pré-produção péssima;Neutro;Engine inicial;6,07;74%;82%;8%;560;918
+AAA (Estúdio);Média;Mista: só a Pré-produção péssima;Neutro;Engine completa;6,13;74%;83%;8%;560;918
+AAA (Estúdio);Média;Mista: só a Pré-produção péssima;+;Sem engine;6,76;74%;82%;8%;560;918
+AAA (Estúdio);Média;Mista: só a Pré-produção péssima;+;Engine inicial;6,76;74%;82%;8%;560;918
+AAA (Estúdio);Média;Mista: só a Pré-produção péssima;+;Engine completa;6,82;74%;83%;8%;560;918
+AAA (Estúdio);Média;Mista: só a Pré-produção péssima;++;Sem engine;7,67;74%;82%;8%;560;918
+AAA (Estúdio);Média;Mista: só a Pré-produção péssima;++;Engine inicial;7,67;74%;82%;8%;560;918
+AAA (Estúdio);Média;Mista: só a Pré-produção péssima;++;Engine completa;7,74;74%;83%;8%;560;918
+AAA (Estúdio);Média;Mista: só a Pré-produção péssima;+++;Sem engine;8,36;74%;82%;8%;560;918
+AAA (Estúdio);Média;Mista: só a Pré-produção péssima;+++;Engine inicial;8,36;74%;82%;8%;560;918
+AAA (Estúdio);Média;Mista: só a Pré-produção péssima;+++;Engine completa;8,43;74%;83%;8%;560;918
+AAA (Estúdio);Forte;Perfeita;−−−;Sem engine;4,65;100%;100%;7%;743;918
+AAA (Estúdio);Forte;Perfeita;−−−;Engine inicial;4,65;100%;100%;7%;743;918
+AAA (Estúdio);Forte;Perfeita;−−−;Engine completa;4,65;100%;100%;7%;743;918
+AAA (Estúdio);Forte;Perfeita;−−;Sem engine;5,34;100%;100%;7%;743;918
+AAA (Estúdio);Forte;Perfeita;−−;Engine inicial;5,34;100%;100%;7%;743;918
+AAA (Estúdio);Forte;Perfeita;−−;Engine completa;5,34;100%;100%;7%;743;918
+AAA (Estúdio);Forte;Perfeita;−;Sem engine;6,27;100%;100%;7%;743;918
+AAA (Estúdio);Forte;Perfeita;−;Engine inicial;6,27;100%;100%;7%;743;918
+AAA (Estúdio);Forte;Perfeita;−;Engine completa;6,27;100%;100%;7%;743;918
+AAA (Estúdio);Forte;Perfeita;Neutro;Sem engine;6,97;100%;100%;7%;743;918
+AAA (Estúdio);Forte;Perfeita;Neutro;Engine inicial;6,97;100%;100%;7%;743;918
+AAA (Estúdio);Forte;Perfeita;Neutro;Engine completa;6,97;100%;100%;7%;743;918
+AAA (Estúdio);Forte;Perfeita;+;Sem engine;7,67;100%;100%;7%;743;918
+AAA (Estúdio);Forte;Perfeita;+;Engine inicial;7,67;100%;100%;7%;743;918
+AAA (Estúdio);Forte;Perfeita;+;Engine completa;7,67;100%;100%;7%;743;918
+AAA (Estúdio);Forte;Perfeita;++;Sem engine;8,60;100%;100%;7%;743;918
+AAA (Estúdio);Forte;Perfeita;++;Engine inicial;8,60;100%;100%;7%;743;918
+AAA (Estúdio);Forte;Perfeita;++;Engine completa;8,60;100%;100%;7%;743;918
+AAA (Estúdio);Forte;Perfeita;+++;Sem engine;9,29;100%;100%;7%;743;918
+AAA (Estúdio);Forte;Perfeita;+++;Engine inicial;9,29;100%;100%;7%;743;918
+AAA (Estúdio);Forte;Perfeita;+++;Engine completa;9,29;100%;100%;7%;743;918
+AAA (Estúdio);Forte;Boa (erro 25%);−−−;Sem engine;4,19;66%;90%;7%;745;918
+AAA (Estúdio);Forte;Boa (erro 25%);−−−;Engine inicial;4,19;66%;90%;7%;745;918
+AAA (Estúdio);Forte;Boa (erro 25%);−−−;Engine completa;4,23;66%;91%;7%;745;918
+AAA (Estúdio);Forte;Boa (erro 25%);−−;Sem engine;4,88;66%;90%;7%;745;918
+AAA (Estúdio);Forte;Boa (erro 25%);−−;Engine inicial;4,89;66%;90%;7%;745;918
+AAA (Estúdio);Forte;Boa (erro 25%);−−;Engine completa;4,93;66%;91%;7%;745;918
+AAA (Estúdio);Forte;Boa (erro 25%);−;Sem engine;5,81;66%;90%;7%;745;918
+AAA (Estúdio);Forte;Boa (erro 25%);−;Engine inicial;5,81;66%;90%;7%;745;918
+AAA (Estúdio);Forte;Boa (erro 25%);−;Engine completa;5,85;66%;91%;7%;745;918
+AAA (Estúdio);Forte;Boa (erro 25%);Neutro;Sem engine;6,51;66%;90%;7%;745;918
+AAA (Estúdio);Forte;Boa (erro 25%);Neutro;Engine inicial;6,51;66%;90%;7%;745;918
+AAA (Estúdio);Forte;Boa (erro 25%);Neutro;Engine completa;6,55;66%;91%;7%;745;918
+AAA (Estúdio);Forte;Boa (erro 25%);+;Sem engine;7,20;66%;90%;7%;745;918
+AAA (Estúdio);Forte;Boa (erro 25%);+;Engine inicial;7,21;66%;90%;7%;745;918
+AAA (Estúdio);Forte;Boa (erro 25%);+;Engine completa;7,25;66%;91%;7%;745;918
+AAA (Estúdio);Forte;Boa (erro 25%);++;Sem engine;8,13;66%;90%;7%;745;918
+AAA (Estúdio);Forte;Boa (erro 25%);++;Engine inicial;8,13;66%;90%;7%;745;918
+AAA (Estúdio);Forte;Boa (erro 25%);++;Engine completa;8,18;66%;91%;7%;745;918
+AAA (Estúdio);Forte;Boa (erro 25%);+++;Sem engine;8,83;66%;90%;7%;745;918
+AAA (Estúdio);Forte;Boa (erro 25%);+++;Engine inicial;8,83;66%;90%;7%;745;918
+AAA (Estúdio);Forte;Boa (erro 25%);+++;Engine completa;8,87;66%;91%;7%;745;918
+AAA (Estúdio);Forte;Média (erro 50%);−−−;Sem engine;3,34;44%;72%;7%;748;918
+AAA (Estúdio);Forte;Média (erro 50%);−−−;Engine inicial;3,36;44%;73%;7%;748;918
+AAA (Estúdio);Forte;Média (erro 50%);−−−;Engine completa;3,52;44%;76%;7%;748;918
+AAA (Estúdio);Forte;Média (erro 50%);−−;Sem engine;4,04;44%;72%;7%;748;918
+AAA (Estúdio);Forte;Média (erro 50%);−−;Engine inicial;4,06;44%;73%;7%;748;918
+AAA (Estúdio);Forte;Média (erro 50%);−−;Engine completa;4,21;44%;76%;7%;748;918
+AAA (Estúdio);Forte;Média (erro 50%);−;Sem engine;4,97;44%;72%;7%;748;918
+AAA (Estúdio);Forte;Média (erro 50%);−;Engine inicial;4,98;44%;73%;7%;748;918
+AAA (Estúdio);Forte;Média (erro 50%);−;Engine completa;5,14;44%;76%;7%;748;918
+AAA (Estúdio);Forte;Média (erro 50%);Neutro;Sem engine;5,66;44%;72%;7%;748;918
+AAA (Estúdio);Forte;Média (erro 50%);Neutro;Engine inicial;5,68;44%;73%;7%;748;918
+AAA (Estúdio);Forte;Média (erro 50%);Neutro;Engine completa;5,84;44%;76%;7%;748;918
+AAA (Estúdio);Forte;Média (erro 50%);+;Sem engine;6,36;44%;72%;7%;748;918
+AAA (Estúdio);Forte;Média (erro 50%);+;Engine inicial;6,38;44%;73%;7%;748;918
+AAA (Estúdio);Forte;Média (erro 50%);+;Engine completa;6,53;44%;76%;7%;748;918
+AAA (Estúdio);Forte;Média (erro 50%);++;Sem engine;7,28;44%;72%;7%;748;918
+AAA (Estúdio);Forte;Média (erro 50%);++;Engine inicial;7,30;44%;73%;7%;748;918
+AAA (Estúdio);Forte;Média (erro 50%);++;Engine completa;7,46;44%;76%;7%;748;918
+AAA (Estúdio);Forte;Média (erro 50%);+++;Sem engine;7,98;44%;72%;7%;748;918
+AAA (Estúdio);Forte;Média (erro 50%);+++;Engine inicial;8,00;44%;73%;7%;748;918
+AAA (Estúdio);Forte;Média (erro 50%);+++;Engine completa;8,15;44%;76%;7%;748;918
+AAA (Estúdio);Forte;Ruim (erro 75%);−−−;Sem engine;2,15;26%;46%;7%;752;918
+AAA (Estúdio);Forte;Ruim (erro 75%);−−−;Engine inicial;2,19;26%;47%;7%;752;918
+AAA (Estúdio);Forte;Ruim (erro 75%);−−−;Engine completa;2,52;26%;54%;7%;752;918
+AAA (Estúdio);Forte;Ruim (erro 75%);−−;Sem engine;2,84;26%;46%;7%;752;918
+AAA (Estúdio);Forte;Ruim (erro 75%);−−;Engine inicial;2,88;26%;47%;7%;752;918
+AAA (Estúdio);Forte;Ruim (erro 75%);−−;Engine completa;3,22;26%;54%;7%;752;918
+AAA (Estúdio);Forte;Ruim (erro 75%);−;Sem engine;3,77;26%;46%;7%;752;918
+AAA (Estúdio);Forte;Ruim (erro 75%);−;Engine inicial;3,81;26%;47%;7%;752;918
+AAA (Estúdio);Forte;Ruim (erro 75%);−;Engine completa;4,14;26%;54%;7%;752;918
+AAA (Estúdio);Forte;Ruim (erro 75%);Neutro;Sem engine;4,46;26%;46%;7%;752;918
+AAA (Estúdio);Forte;Ruim (erro 75%);Neutro;Engine inicial;4,50;26%;47%;7%;752;918
+AAA (Estúdio);Forte;Ruim (erro 75%);Neutro;Engine completa;4,84;26%;54%;7%;752;918
+AAA (Estúdio);Forte;Ruim (erro 75%);+;Sem engine;5,16;26%;46%;7%;752;918
+AAA (Estúdio);Forte;Ruim (erro 75%);+;Engine inicial;5,20;26%;47%;7%;752;918
+AAA (Estúdio);Forte;Ruim (erro 75%);+;Engine completa;5,53;26%;54%;7%;752;918
+AAA (Estúdio);Forte;Ruim (erro 75%);++;Sem engine;6,08;26%;46%;7%;752;918
+AAA (Estúdio);Forte;Ruim (erro 75%);++;Engine inicial;6,13;26%;47%;7%;752;918
+AAA (Estúdio);Forte;Ruim (erro 75%);++;Engine completa;6,46;26%;54%;7%;752;918
+AAA (Estúdio);Forte;Ruim (erro 75%);+++;Sem engine;6,78;26%;46%;7%;752;918
+AAA (Estúdio);Forte;Ruim (erro 75%);+++;Engine inicial;6,82;26%;47%;7%;752;918
+AAA (Estúdio);Forte;Ruim (erro 75%);+++;Engine completa;7,15;26%;54%;7%;752;918
+AAA (Estúdio);Forte;Péssima (tudo no bloco menos importante);−−−;Sem engine;0,63;0%;14%;7%;757;918
+AAA (Estúdio);Forte;Péssima (tudo no bloco menos importante);−−−;Engine inicial;0,70;0%;15%;7%;757;918
+AAA (Estúdio);Forte;Péssima (tudo no bloco menos importante);−−−;Engine completa;1,26;0%;27%;7%;757;918
+AAA (Estúdio);Forte;Péssima (tudo no bloco menos importante);−−;Sem engine;1,33;0%;14%;7%;757;918
+AAA (Estúdio);Forte;Péssima (tudo no bloco menos importante);−−;Engine inicial;1,40;0%;15%;7%;757;918
+AAA (Estúdio);Forte;Péssima (tudo no bloco menos importante);−−;Engine completa;1,95;0%;27%;7%;757;918
+AAA (Estúdio);Forte;Péssima (tudo no bloco menos importante);−;Sem engine;2,25;0%;14%;7%;757;918
+AAA (Estúdio);Forte;Péssima (tudo no bloco menos importante);−;Engine inicial;2,32;0%;15%;7%;757;918
+AAA (Estúdio);Forte;Péssima (tudo no bloco menos importante);−;Engine completa;2,88;0%;27%;7%;757;918
+AAA (Estúdio);Forte;Péssima (tudo no bloco menos importante);Neutro;Sem engine;2,95;0%;14%;7%;757;918
+AAA (Estúdio);Forte;Péssima (tudo no bloco menos importante);Neutro;Engine inicial;3,02;0%;15%;7%;757;918
+AAA (Estúdio);Forte;Péssima (tudo no bloco menos importante);Neutro;Engine completa;3,57;0%;27%;7%;757;918
+AAA (Estúdio);Forte;Péssima (tudo no bloco menos importante);+;Sem engine;3,64;0%;14%;7%;757;918
+AAA (Estúdio);Forte;Péssima (tudo no bloco menos importante);+;Engine inicial;3,71;0%;15%;7%;757;918
+AAA (Estúdio);Forte;Péssima (tudo no bloco menos importante);+;Engine completa;4,27;0%;27%;7%;757;918
+AAA (Estúdio);Forte;Péssima (tudo no bloco menos importante);++;Sem engine;4,56;0%;14%;7%;757;918
+AAA (Estúdio);Forte;Péssima (tudo no bloco menos importante);++;Engine inicial;4,64;0%;15%;7%;757;918
+AAA (Estúdio);Forte;Péssima (tudo no bloco menos importante);++;Engine completa;5,19;0%;27%;7%;757;918
+AAA (Estúdio);Forte;Péssima (tudo no bloco menos importante);+++;Sem engine;5,26;0%;14%;7%;757;918
+AAA (Estúdio);Forte;Péssima (tudo no bloco menos importante);+++;Engine inicial;5,33;0%;15%;7%;757;918
+AAA (Estúdio);Forte;Péssima (tudo no bloco menos importante);+++;Engine completa;5,89;0%;27%;7%;757;918
+AAA (Estúdio);Forte;Divide igual;−−−;Sem engine;4,30;72%;92%;7%;745;918
+AAA (Estúdio);Forte;Divide igual;−−−;Engine inicial;4,30;72%;93%;7%;745;918
+AAA (Estúdio);Forte;Divide igual;−−−;Engine completa;4,33;72%;93%;7%;745;918
+AAA (Estúdio);Forte;Divide igual;−−;Sem engine;4,99;72%;92%;7%;745;918
+AAA (Estúdio);Forte;Divide igual;−−;Engine inicial;5,00;72%;93%;7%;745;918
+AAA (Estúdio);Forte;Divide igual;−−;Engine completa;5,02;72%;93%;7%;745;918
+AAA (Estúdio);Forte;Divide igual;−;Sem engine;5,92;72%;92%;7%;745;918
+AAA (Estúdio);Forte;Divide igual;−;Engine inicial;5,93;72%;93%;7%;745;918
+AAA (Estúdio);Forte;Divide igual;−;Engine completa;5,95;72%;93%;7%;745;918
+AAA (Estúdio);Forte;Divide igual;Neutro;Sem engine;6,62;72%;92%;7%;745;918
+AAA (Estúdio);Forte;Divide igual;Neutro;Engine inicial;6,62;72%;93%;7%;745;918
+AAA (Estúdio);Forte;Divide igual;Neutro;Engine completa;6,65;72%;93%;7%;745;918
+AAA (Estúdio);Forte;Divide igual;+;Sem engine;7,32;72%;92%;7%;745;918
+AAA (Estúdio);Forte;Divide igual;+;Engine inicial;7,32;72%;93%;7%;745;918
+AAA (Estúdio);Forte;Divide igual;+;Engine completa;7,35;72%;93%;7%;745;918
+AAA (Estúdio);Forte;Divide igual;++;Sem engine;8,25;72%;92%;7%;745;918
+AAA (Estúdio);Forte;Divide igual;++;Engine inicial;8,25;72%;93%;7%;745;918
+AAA (Estúdio);Forte;Divide igual;++;Engine completa;8,28;72%;93%;7%;745;918
+AAA (Estúdio);Forte;Divide igual;+++;Sem engine;8,94;72%;92%;7%;745;918
+AAA (Estúdio);Forte;Divide igual;+++;Engine inicial;8,95;72%;93%;7%;745;918
+AAA (Estúdio);Forte;Divide igual;+++;Engine completa;8,97;72%;93%;7%;745;918
+AAA (Estúdio);Forte;Invertida;−−−;Sem engine;2,46;31%;53%;7%;753;918
+AAA (Estúdio);Forte;Invertida;−−−;Engine inicial;2,49;31%;54%;7%;753;918
+AAA (Estúdio);Forte;Invertida;−−−;Engine completa;2,76;31%;59%;7%;753;918
+AAA (Estúdio);Forte;Invertida;−−;Sem engine;3,15;31%;53%;7%;753;918
+AAA (Estúdio);Forte;Invertida;−−;Engine inicial;3,19;31%;54%;7%;753;918
+AAA (Estúdio);Forte;Invertida;−−;Engine completa;3,46;31%;59%;7%;753;918
+AAA (Estúdio);Forte;Invertida;−;Sem engine;4,08;31%;53%;7%;753;918
+AAA (Estúdio);Forte;Invertida;−;Engine inicial;4,12;31%;54%;7%;753;918
+AAA (Estúdio);Forte;Invertida;−;Engine completa;4,39;31%;59%;7%;753;918
+AAA (Estúdio);Forte;Invertida;Neutro;Sem engine;4,78;31%;53%;7%;753;918
+AAA (Estúdio);Forte;Invertida;Neutro;Engine inicial;4,82;31%;54%;7%;753;918
+AAA (Estúdio);Forte;Invertida;Neutro;Engine completa;5,09;31%;59%;7%;753;918
+AAA (Estúdio);Forte;Invertida;+;Sem engine;5,48;31%;53%;7%;753;918
+AAA (Estúdio);Forte;Invertida;+;Engine inicial;5,52;31%;54%;7%;753;918
+AAA (Estúdio);Forte;Invertida;+;Engine completa;5,78;31%;59%;7%;753;918
+AAA (Estúdio);Forte;Invertida;++;Sem engine;6,41;31%;53%;7%;753;918
+AAA (Estúdio);Forte;Invertida;++;Engine inicial;6,45;31%;54%;7%;753;918
+AAA (Estúdio);Forte;Invertida;++;Engine completa;6,71;31%;59%;7%;753;918
+AAA (Estúdio);Forte;Invertida;+++;Sem engine;7,11;31%;53%;7%;753;918
+AAA (Estúdio);Forte;Invertida;+++;Engine inicial;7,14;31%;54%;7%;753;918
+AAA (Estúdio);Forte;Invertida;+++;Engine completa;7,41;31%;59%;7%;753;918
+AAA (Estúdio);Forte;Mista: 3 fases certas, 2 péssimas;−−−;Sem engine;3,05;63%;66%;7%;743;918
+AAA (Estúdio);Forte;Mista: 3 fases certas, 2 péssimas;−−−;Engine inicial;3,09;63%;67%;7%;743;918
+AAA (Estúdio);Forte;Mista: 3 fases certas, 2 péssimas;−−−;Engine completa;3,42;63%;74%;7%;743;918
+AAA (Estúdio);Forte;Mista: 3 fases certas, 2 péssimas;−−;Sem engine;3,74;63%;66%;7%;743;918
+AAA (Estúdio);Forte;Mista: 3 fases certas, 2 péssimas;−−;Engine inicial;3,79;63%;67%;7%;743;918
+AAA (Estúdio);Forte;Mista: 3 fases certas, 2 péssimas;−−;Engine completa;4,12;63%;74%;7%;743;918
+AAA (Estúdio);Forte;Mista: 3 fases certas, 2 péssimas;−;Sem engine;4,67;63%;66%;7%;743;918
+AAA (Estúdio);Forte;Mista: 3 fases certas, 2 péssimas;−;Engine inicial;4,71;63%;67%;7%;743;918
+AAA (Estúdio);Forte;Mista: 3 fases certas, 2 péssimas;−;Engine completa;5,04;63%;74%;7%;743;918
+AAA (Estúdio);Forte;Mista: 3 fases certas, 2 péssimas;Neutro;Sem engine;5,36;63%;66%;7%;743;918
+AAA (Estúdio);Forte;Mista: 3 fases certas, 2 péssimas;Neutro;Engine inicial;5,41;63%;67%;7%;743;918
+AAA (Estúdio);Forte;Mista: 3 fases certas, 2 péssimas;Neutro;Engine completa;5,74;63%;74%;7%;743;918
+AAA (Estúdio);Forte;Mista: 3 fases certas, 2 péssimas;+;Sem engine;6,06;63%;66%;7%;743;918
+AAA (Estúdio);Forte;Mista: 3 fases certas, 2 péssimas;+;Engine inicial;6,10;63%;67%;7%;743;918
+AAA (Estúdio);Forte;Mista: 3 fases certas, 2 péssimas;+;Engine completa;6,43;63%;74%;7%;743;918
+AAA (Estúdio);Forte;Mista: 3 fases certas, 2 péssimas;++;Sem engine;6,98;63%;66%;7%;743;918
+AAA (Estúdio);Forte;Mista: 3 fases certas, 2 péssimas;++;Engine inicial;7,03;63%;67%;7%;743;918
+AAA (Estúdio);Forte;Mista: 3 fases certas, 2 péssimas;++;Engine completa;7,36;63%;74%;7%;743;918
+AAA (Estúdio);Forte;Mista: 3 fases certas, 2 péssimas;+++;Sem engine;7,68;63%;66%;7%;743;918
+AAA (Estúdio);Forte;Mista: 3 fases certas, 2 péssimas;+++;Engine inicial;7,72;63%;67%;7%;743;918
+AAA (Estúdio);Forte;Mista: 3 fases certas, 2 péssimas;+++;Engine completa;8,05;63%;74%;7%;743;918
+AAA (Estúdio);Forte;Mista: só a Pré-produção péssima;−−−;Sem engine;3,81;74%;82%;7%;746;918
+AAA (Estúdio);Forte;Mista: só a Pré-produção péssima;−−−;Engine inicial;3,81;74%;82%;7%;746;918
+AAA (Estúdio);Forte;Mista: só a Pré-produção péssima;−−−;Engine completa;3,88;74%;83%;7%;746;918
+AAA (Estúdio);Forte;Mista: só a Pré-produção péssima;−−;Sem engine;4,50;74%;82%;7%;746;918
+AAA (Estúdio);Forte;Mista: só a Pré-produção péssima;−−;Engine inicial;4,50;74%;82%;7%;746;918
+AAA (Estúdio);Forte;Mista: só a Pré-produção péssima;−−;Engine completa;4,57;74%;83%;7%;746;918
+AAA (Estúdio);Forte;Mista: só a Pré-produção péssima;−;Sem engine;5,43;74%;82%;7%;746;918
+AAA (Estúdio);Forte;Mista: só a Pré-produção péssima;−;Engine inicial;5,43;74%;82%;7%;746;918
+AAA (Estúdio);Forte;Mista: só a Pré-produção péssima;−;Engine completa;5,50;74%;83%;7%;746;918
+AAA (Estúdio);Forte;Mista: só a Pré-produção péssima;Neutro;Sem engine;6,13;74%;82%;7%;746;918
+AAA (Estúdio);Forte;Mista: só a Pré-produção péssima;Neutro;Engine inicial;6,13;74%;82%;7%;746;918
+AAA (Estúdio);Forte;Mista: só a Pré-produção péssima;Neutro;Engine completa;6,20;74%;83%;7%;746;918
+AAA (Estúdio);Forte;Mista: só a Pré-produção péssima;+;Sem engine;6,83;74%;82%;7%;746;918
+AAA (Estúdio);Forte;Mista: só a Pré-produção péssima;+;Engine inicial;6,83;74%;82%;7%;746;918
+AAA (Estúdio);Forte;Mista: só a Pré-produção péssima;+;Engine completa;6,90;74%;83%;7%;746;918
+AAA (Estúdio);Forte;Mista: só a Pré-produção péssima;++;Sem engine;7,76;74%;82%;7%;746;918
+AAA (Estúdio);Forte;Mista: só a Pré-produção péssima;++;Engine inicial;7,76;74%;82%;7%;746;918
+AAA (Estúdio);Forte;Mista: só a Pré-produção péssima;++;Engine completa;7,82;74%;83%;7%;746;918
+AAA (Estúdio);Forte;Mista: só a Pré-produção péssima;+++;Sem engine;8,45;74%;82%;7%;746;918
+AAA (Estúdio);Forte;Mista: só a Pré-produção péssima;+++;Engine inicial;8,45;74%;82%;7%;746;918
+AAA (Estúdio);Forte;Mista: só a Pré-produção péssima;+++;Engine completa;8,52;74%;83%;7%;746;918

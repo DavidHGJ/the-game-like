@@ -1,4 +1,6 @@
 using System;
+using System.Collections.Generic;
+using UnityEngine;
 
 namespace GameLike.UI.Gallery
 {
@@ -19,6 +21,10 @@ namespace GameLike.UI.Gallery
         public float weekProgress01;
         public bool paused;
         public int speedIndex;
+        /// <summary>Botão de tempo acelerado visível (perk de legado Ritmo Acelerado, GDD 23.16).</summary>
+        public bool fastUnlocked;
+        /// <summary>Topo da cabeça de cada personagem do escritório (mundo; fundador primeiro) — origem das bolinhas (GDD 23.16).</summary>
+        public readonly List<Vector3> crewHeads = new List<Vector3>();
         public int team = 1;
         public int bugs;
         public int research;

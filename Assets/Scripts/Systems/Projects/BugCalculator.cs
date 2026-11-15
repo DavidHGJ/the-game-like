@@ -1,15 +1,12 @@
 using GameLike.Data.Balance;
-using GameLike.Data.Definitions;
 using GameLike.State;
 using UnityEngine;
 
 namespace GameLike.Systems.Projects
 {
     /// <summary>
-    /// Modelo de bugs da produção (GDD 5.5): bugs acumulam passivamente quando há
-    /// pouca Programação/QA e a equipe é fraca; lançar com bugs acima da tolerância
-    /// penaliza a nota da crítica. Puro e determinístico (exceto o arredondamento),
-    /// testável fora do Unity.
+    /// Modelo de bugs (GDD 5.5 / adendo 23.18): bugs nascem de cada ponto produzido, menos com equipe
+    /// melhor e foco em Tecnologia; no lançamento pesam pela proporção bugs ÷ pontos do jogo.
     /// </summary>
     public static class BugCalculator
     {
@@ -25,42 +22,17 @@ namespace GameLike.Systems.Projects
             return Mathf.Clamp01(techWeight / sum);
         }
 
-        /// <summary>Bugs gerados numa semana de produção, dado o foco em Tech e a qualidade da equipe.</summary>
-        public static int BugsThisWeek(float[] allocation, float teamQuality01, GameLoopBalanceSO loop)
-        {
-            float basePerWeek = loop != null ? loop.BugBasePerWeek : 2.5f;
-            float techFactor = 1f - TechFocus01(allocation);        // mais foco em Tech → menos bugs
-            float teamFactor = Mathf.Clamp01(1.3f - teamQuality01); // equipe melhor → menos bugs
-            float bugs = basePerWeek * techFactor * teamFactor;
-            return Mathf.Max(0, Mathf.RoundToInt(bugs));
-        }
-
         /// <summary>
-        /// Penalidade de nota (0..penaltyMax) pelos bugs no lançamento. Bugs até a
-        /// tolerância não penalizam; acima disso a penalidade cresce e satura.
-        /// A escala de referência cresce com o tamanho do projeto (projetos maiores
-        /// toleram mais bugs em termos absolutos).
+        /// Desconto (0..máximo) da nota final pelos bugs: proporção bugs ÷ pontos do jogo × peso (adendo 23.18).
+        /// Mais bugs para os mesmos pontos = desconto maior.
         /// </summary>
-        public static float ScorePenalty(int bugCount, ProjectSize size, GameLoopBalanceSO loop)
+        public static float Penalty01(float bugs, float totalPoints, GameLoopBalanceSO loop)
         {
-            int tolerance = loop != null ? loop.BugToleranceFree : 5;
-            float penaltyMax = loop != null ? loop.BugScorePenaltyMax : 3f;
-
-            int excess = Mathf.Max(0, bugCount - tolerance);
-            if (excess <= 0) return 0f;
-
-            float referenceExcess = SizeReferenceBugs(size);
-            float t = Mathf.Clamp01(excess / referenceExcess);
-            return penaltyMax * t;
+            if (bugs <= 0f) return 0f;
+            float weight = loop != null ? loop.BugPenaltyWeight : 1f;
+            float max = loop != null ? loop.BugPenaltyMax : 0.5f;
+            float ratio = bugs / Mathf.Max(1f, totalPoints);
+            return Mathf.Clamp(ratio * weight, 0f, max);
         }
-
-        private static float SizeReferenceBugs(ProjectSize size) => size switch
-        {
-            ProjectSize.Small => 25f,
-            ProjectSize.Medium => 45f,
-            ProjectSize.Large => 70f,
-            ProjectSize.AAA => 110f,
-            _ => 45f
-        };
     }
 }

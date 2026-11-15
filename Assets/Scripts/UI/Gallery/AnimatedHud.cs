@@ -40,7 +40,8 @@ namespace GameLike.UI.Gallery
             public string name, icon;
             public Color color;
             public float value, rate, pop, phase, fillNow;
-            public int shown, kind, param = -1;
+            public int shown, kind, param = -1, launched;
+            public OrbKind orbKind;
             public float burstCooldown;
             public VisualElement disc, liquid, aura, holder;
             public Label countPill;
@@ -84,6 +85,10 @@ namespace GameLike.UI.Gallery
         private int _research = 22; private float _resFlash, _orbTimer;
         private readonly List<Ripple> _ripples = new List<Ripple>();
         private readonly List<Orb> _orbFx = new List<Orb>();
+        // bolinhas de ponto (GDD 23.16)
+        private PointOrbs _orbs;
+        private VisualElement _orbLayer;
+        private int _crewCursor, _bugsLaunched = -1, _shownResearch = -1;
         // dinheiro + relógio
         private VisualElement _moneyCard, _clockEl; private Label _cashVal, _dateVal;
         private int _week = 5, _year = 1;
@@ -176,6 +181,13 @@ namespace GameLike.UI.Gallery
             BuildCorner(root, false);
             // bottom: barra de comando
             BuildCommandBar(root);
+
+            // bolinhas de ponto por cima de tudo, sem bloquear clique
+            _orbLayer = new VisualElement();
+            _orbLayer.style.position = Position.Absolute;
+            _orbLayer.style.left = 0; _orbLayer.style.top = 0; _orbLayer.style.right = 0; _orbLayer.style.bottom = 0;
+            root.Add(_orbLayer);
+            _orbs = new PointOrbs(_orbLayer);
 
             _built = true;
         }
@@ -452,6 +464,8 @@ namespace GameLike.UI.Gallery
                     int start = Mathf.FloorToInt(Live.paramPoints[param]);
                     var live = AddCircle(row, at.n, at.icon, ph.color, 0f, start, at.aura, 56);
                     live.param = param; live.value = Live.paramPoints[param];
+                    live.launched = start;
+                    live.orbKind = (OrbKind)GameLike.Systems.Projects.QualityCalculator.AreaIndexOf((GameLike.Data.Definitions.GameParameter)param);
                     _attrAreas.Add(live);
                     continue;
                 }
@@ -713,7 +727,8 @@ namespace GameLike.UI.Gallery
 
         private void UpdateLiveChrome()
         {
-            int active = Live.paused ? 0 : Live.speedIndex <= 0 ? 1 : 2;
+            int active = Live.paused ? 0 : Live.speedIndex <= 0 || !Live.fastUnlocked ? 1 : 2;
+            _timeBtns[2].style.display = Live.fastUnlocked ? DisplayStyle.Flex : DisplayStyle.None;
             for (int i = 0; i < _timeBtns.Length; i++)
             {
                 bool on = i == active;
@@ -807,7 +822,23 @@ namespace GameLike.UI.Gallery
                 }
                 int ni = Mathf.FloorToInt(a.value);
                 float fill = a.value - ni;
-                if (ni != a.shown)
+                if (IsLive && a.param >= 0 && _orbs != null)
+                {
+                    // Cada ponto inteiro sai como bolinha do personagem; o contador sobe quando ela chega.
+                    if (ni < a.launched) { a.launched = a.shown = ni; a.countPill.text = ni.ToString(); }
+                    else if (ni > a.launched)
+                    {
+                        var area = a;
+                        LaunchBatch(a.orbKind, ni - a.launched, a.disc, amount =>
+                        {
+                            area.shown += amount;
+                            area.countPill.text = area.shown.ToString();
+                            area.pop = 1f;
+                        });
+                        a.launched = ni;
+                    }
+                }
+                else if (ni != a.shown)
                 {
                     bool up = ni > a.shown;
                     a.shown = ni; a.countPill.text = ni.ToString();
@@ -852,6 +883,7 @@ namespace GameLike.UI.Gallery
             UpdateBugs(dt);
             UpdateResearch(dt);
             UpdateFlyingOrbs(dt);
+            _orbs?.Tick(dt);
             UpdateMoney(dt);
             UpdateSales(dt);
 
@@ -934,7 +966,15 @@ namespace GameLike.UI.Gallery
         {
             if (IsLive)
             {
-                if (_bugs != Live.bugs) { _bugs = Live.bugs; _bugVal.text = _bugs.ToString(); }
+                if (_bugsLaunched < 0) { _bugsLaunched = _bugs = Live.bugs; _bugVal.text = _bugs.ToString(); }
+                if (Live.bugs > _bugsLaunched && _orbs != null)
+                    LaunchBatch(OrbKind.Bug, Live.bugs - _bugsLaunched, _bugBadge ?? _bugCard, amount =>
+                    {
+                        _bugs += amount;
+                        _bugVal.text = _bugs.ToString();
+                    });
+                else if (Live.bugs < _bugsLaunched) { _bugs = Live.bugs; _bugVal.text = _bugs.ToString(); }
+                _bugsLaunched = Live.bugs;
             }
             else
             {
@@ -1056,6 +1096,40 @@ namespace GameLike.UI.Gallery
             }
         }
 
+        /// <summary>
+        /// Lança as bolinhas de <paramref name="points"/> pontos (até 6 no ar por vez; acima disso cada
+        /// uma leva mais de um ponto), escalonadas, saindo da cabeça de um personagem.
+        /// </summary>
+        private void LaunchBatch(OrbKind kind, int points, VisualElement target, System.Action<int> onArrive)
+        {
+            if (points <= 0 || target == null) return;
+            int orbs = Mathf.Min(points, 6);
+            int left = points;
+            for (int k = 0; k < orbs; k++)
+            {
+                int amount = Mathf.CeilToInt(left / (float)(orbs - k));
+                left -= amount;
+                _orbs.Launch(kind, OrbSource(), target, () => onArrive(amount), amount, k * 0.12f);
+            }
+        }
+
+        /// <summary>Topo da cabeça de um personagem (em rodízio) em coordenadas da camada; sem boneco, embaixo no centro.</summary>
+        private Vector2 OrbSource()
+        {
+            var cam = Camera.main;
+            if (IsLive && Live.crewHeads.Count > 0 && cam != null && _root.panel != null)
+            {
+                var head = Live.crewHeads[_crewCursor++ % Live.crewHeads.Count];
+                if (cam.WorldToViewportPoint(head).z > 0f)
+                {
+                    Vector2 panelPos = RuntimePanelUtils.CameraTransformWorldToPanel(_root.panel, head, cam);
+                    return _orbLayer.WorldToLocal(panelPos);
+                }
+            }
+            var r = _orbLayer.contentRect;
+            return new Vector2(r.width * 0.5f + Random.Range(-60f, 60f), r.height * 0.62f);
+        }
+
         private void SpawnResearchOrb()
         {
             if (_resCard == null || _root == null) return;
@@ -1077,13 +1151,19 @@ namespace GameLike.UI.Gallery
         {
             if (IsLive)
             {
-                if (_lastResearch < 0) { _lastResearch = Live.research; _resVal.text = Live.research.ToString(); }
-                if (Live.research > _lastResearch)
+                if (_lastResearch < 0) { _lastResearch = _shownResearch = Live.research; _resVal.text = Live.research.ToString(); }
+                if (Live.research > _lastResearch && _orbs != null)
                 {
-                    int orbs = Mathf.Min(4, Live.research - _lastResearch);
-                    for (int k = 0; k < orbs; k++) SpawnResearchOrb();
+                    LaunchBatch(OrbKind.Research, Live.research - _lastResearch, _resBadge ?? _resCard, amount =>
+                    {
+                        _shownResearch += amount;
+                        _resVal.text = _shownResearch.ToString();
+                        var wb = _resCard.worldBound;
+                        ResearchHit(wb.width * 0.5f, wb.height * 0.5f);
+                    });
                 }
-                if (Live.research != _lastResearch) { _lastResearch = Live.research; _resVal.text = Live.research.ToString(); }
+                else if (Live.research < _lastResearch) { _shownResearch = Live.research; _resVal.text = Live.research.ToString(); }
+                _lastResearch = Live.research;
             }
             else
             {

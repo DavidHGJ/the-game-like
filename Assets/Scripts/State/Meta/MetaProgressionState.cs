@@ -54,6 +54,8 @@ namespace GameLike.State.Meta
         public int hairStyle = 1;
         public int shirt;
         public int accessory = 1;
+        /// <summary>Aptidão de base por área (1..10, índice de DevArea), sorteada uma vez na criação (GDD 23.16).</summary>
+        public float[] aptitude = new float[0];
     }
 
     /// <summary>Empresa de uma run encerrada — reaparece como rival (GDD 1.2 / 2.2).</summary>

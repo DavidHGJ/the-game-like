@@ -180,10 +180,12 @@ namespace GameLike.Systems.Projects
             var parameters = ParameterCatalog.AvailableFor(phase, size);
             var shares = new float[parameters.Count];
             float sum = 0f;
+            var balance = BalanceProvider.Get<GameLoopBalanceSO>();
+            float contrast = balance != null ? balance.GenreWeightContrast : 2f;
             for (int i = 0; i < parameters.Count; i++)
             {
                 int w = genre != null ? (int)genre.WeightFor(parameters[i], size) : 0;
-                shares[i] = Mathf.Max(0.25f, w + 3f);
+                shares[i] = Mathf.Pow(contrast, w);
                 sum += shares[i];
             }
             for (int i = 0; i < shares.Length; i++) shares[i] = sum > 0f ? shares[i] / sum : 1f / shares.Length;
@@ -215,6 +217,17 @@ namespace GameLike.Systems.Projects
             return sum / ParameterCatalog.PhaseCount;
         }
 
+        /// <summary>Pontos entregues numa fase ÷ esperados para o tamanho (sem limite) — para relatórios e UI.</summary>
+        public static float PhaseVolume(ProjectSize size, ProductionPhase phase, float[] paramPoints, float requiredPoints)
+        {
+            if (requiredPoints <= 0f) return 1f;
+            var parameters = ParameterCatalog.AvailableFor(phase, size);
+            float total = 0f;
+            for (int i = 0; i < parameters.Count; i++) total += Mathf.Max(0f, paramPoints[(int)parameters[i]]);
+            float expected = requiredPoints * ParameterCatalog.DurationShare(phase);
+            return expected > 0f ? total / expected : 1f;
+        }
+
         /// <summary>Converte os pontos por parâmetro na distribuição por <see cref="DevArea"/> (soma 1).</summary>
         public static float[] AreaSharesFromParameters(float[] paramPoints)
         {
@@ -231,42 +244,6 @@ namespace GameLike.Systems.Projects
             return areas;
         }
 
-        /// <summary>
-        /// Nota final (0..10) pela fórmula do GDD 19.7 usando os 19 parâmetros entregues nas
-        /// fases, o Engine Budget real (adendo 23.7) e o saldo de decisões em eventos.
-        /// </summary>
-        public static float ComputeDetailed(GenreSO genre, ProjectSize size, float[] paramPoints,
-            float teamQuality01, float scopeCoverage01, float engineScore01,
-            ThemeSO theme, string genreKey, float marketTrend01, float devEventsBonus, bool applyNoise = true)
-        {
-            var qf = BalanceProvider.Get<QualityFormulaBalanceSO>();
-
-            // A aderência vale cheia só se a equipe deu conta do escopo (GDD 5.3).
-            float coverage = Mathf.Lerp(0.5f, 1f, Mathf.Clamp01(scopeCoverage01));
-            float sliderProfileScore = ParameterMatch(genre, size, paramPoints) * 10f * coverage;
-            float teamLevelScore = Mathf.Clamp01(teamQuality01) * 10f;
-            float engineBudgetScore = Mathf.Clamp01(engineScore01) * 10f;
-            float themeGenreScore = theme != null
-                ? WeightToScore(theme.CompatibilityFor(genreKey))
-                : (qf != null ? qf.NeutralThemeGenreScore : 6f);
-            float marketTrendScore = Mathf.Clamp01(marketTrend01) * 10f;
-            float neutralEvents = qf != null ? qf.NeutralDevelopmentEventsScore : 6f;
-            float devEventsScore = Mathf.Clamp(neutralEvents + devEventsBonus * 4f, 0f, 10f);
-
-            float wSlider = qf != null ? qf.SliderProfileWeight : 0.40f;
-            float wTheme = qf != null ? qf.ThemeGenreCompatibilityWeight : 0.20f;
-            float wTeam = qf != null ? qf.TeamLevelWeight : 0.15f;
-            float wEngine = qf != null ? qf.EngineBudgetUsageWeight : 0.10f;
-            float wMarket = qf != null ? qf.MarketTrendWeight : 0.10f;
-            float wEvents = qf != null ? qf.DevelopmentEventsWeight : 0.05f;
-
-            float weightedTen = wSlider * sliderProfileScore + wTheme * themeGenreScore + wTeam * teamLevelScore
-                                + wEngine * engineBudgetScore + wMarket * marketTrendScore + wEvents * devEventsScore;
-            float totalWeight = wSlider + wTheme + wTeam + wEngine + wMarket + wEvents;
-            float score = totalWeight > 0.0001f ? weightedTen / totalWeight : 0f;
-            if (applyNoise) score += Random.Range(-0.2f, 0.2f);
-            return Mathf.Clamp(score, 0f, 10f);
-        }
 
         private static float Avg(params WeightLevel[] levels)
         {

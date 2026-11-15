@@ -151,11 +151,17 @@ namespace GameLike.UI.Game
                     _ui.RefreshHudAttributes();
                     _ui.CloseScreen();
                 }
-                else if (screenshots && !shotHud && p.phaseIndex == 0 && p.phaseWeek >= 1)
+                else if (screenshots && !shotHud && p.phaseIndex == 2 && !p.awaitingAllocation && !_ui.HasScreen)
                 {
                     shotHud = true;
                     yield return Wait(0.4f);
                     yield return Shot("hud_producao");
+                    yield return Wait(0.35f);
+                    yield return Shot("hud_bolinhas");
+                    yield return Wait(0.3f);
+                    yield return Shot("hud_bolinhas_2");
+                    yield return Wait(0.3f);
+                    yield return Shot("hud_bolinhas_3");
                 }
                 else if (screenshots && !shotMarketing && p.phaseIndex == 1)
                 {

@@ -894,3 +894,51 @@ Pedido: montar os cenarios DENTRO do jogo, vendo o 3D, movendo e girando as peca
   21/21 metas de chances/lucro. 125/125 testes. NAO publicado.
 - Pendencias: vender empresa quebrada ainda rende ~R$ 150 mil (valuation soma reputacao, nota media, catalogo mesmo
   sem caixa); equipe cheia trava o expert (salarios comem o lucro); a inflacao sobe custos mas nao precos.
+
+## 2026-11-13 (noite 3) — tempo acelerado vira perk, pontos por aptidao, bolinhas de ponto (GDD 23.16)
+- HUD so tem pausar/jogar. Novo perk "Ritmo Acelerado" (Lideranca, 5 PL) volta o botao de acelerar
+  (`FounderPerks.CanFastForward`). A arvore de Lideranca passou a ter 5 perks (layout ajusta o espacamento).
+- Distribuicao da fase em PORCENTAGEM (soma 100%). Pontos nascem toda semana: % x 3 pts-base x (aptidao/5) x
+  produtividade, por pessoa. Aptidao 1..10 por area (Design/Arte/Audio/Tecnologia/Conteudo): fundador sorteia uma vez
+  (perfil, uma area forte e uma fraca) e cada run recomeca dela; funcionario forte na especialidade (mais com
+  senioridade). Pratica: +0,02 por ponto (mais lento perto de 10). Treinamento: +0,5 por R$ 2.000 x aptidao atual
+  (botoes na tela Equipe; o antigo "Treinar" de XP virou "Mentoria").
+- Nota: o componente de 40% agora e, por fase, aderencia ao genero x volume (pontos entregues / esperados; esperado =
+  equipe de referencia x semanas x 3). Fundador mediano faz ~24 pts num Pequeno (antes 500). Valores na tela de
+  Parametros (grupo do loop). Removidos: pontos por pessoa por fase e tetos por parametro.
+- Save v5 (migracao: alocacao em andamento vira fracao; fundador ganha aptidao de base).
+- Bolinhas (`UI/Gallery/PointOrbs`): plup em cima do personagem -> voo com rastro proprio por tipo -> entrada com
+  respingo e "+N"; o contador so sobe na chegada. 7 tipos (5 areas, pesquisa, bug). Galeria de validacao no menu
+  ("Bolinhas de ponto", so dev). Print automatico: `MenuShot.Capture -glorbs <png>`.
+- PROVISORIO: simuladores de economia/carreira continuam abstraindo a nota (perfil de habilidade); nao modelam
+  aptidao/treino ainda.
+
+## 2026-11-14 — nota "quão perto do perfeito" (GDD 23.18) e vendas semana a semana (GDD 23.19)
+- Nota = 10 × (metade tema + metade fases) × (1 − desconto de bugs). Tema por compatibilidade (+++ 100% … −−− 0%).
+  Fases: cada fase 20%, blocos iguais dentro da fase; bloco = acerto da divisão (tolerância 5 p.p.) + metade da fração
+  do ideal de pontos + engine ligada ao bloco amenizando até 40% do que falta; passou de 100% = 100%. Bugs nascem por
+  ponto e descontam pela proporção bugs/pontos. Regras nunca explicadas na UI (textos e "esperado" removidos).
+- Módulos de engine ligados a blocos (ResearchCatalog.ParametersHelpedBy). Simulador de desenvolvimento + varredura
+  completa (2.268 combinações, Docs/Simulacao/desenvolvimento_varredura.*), 0 violações de coerência.
+- Pendente (aguardando o David): contraste do perfil do gênero (dividir igual = perfeito hoje), pior caso chegar a 0,
+  bugs pela aptidão.
+- Vendas: 1ª semana = base do tamanho × nota × hype (0,5–1,5) × preço (barato/médio/caro) × plataforma + wishlists;
+  cada semana sai da anterior: queda base reduzida pelo hype (até 60%), acelerada pelos bugs, com variação aleatória
+  (−25%/+15%); acaba abaixo de uma fração da 1ª semana. Sem duração fixa; UI não mostra semanas totais. Save v6.
+- Recalibrado pelas buscas (economia 21/21 sem marketing; carreira 5/5): queda base 25%, fim em 10% da 1ª semana,
+  1ª semana P 11.250 / M 41.250 / G 42.000 / AAA 237.500, preços M 38 / G 75, curva da nota piso 0,24 virada 5 exp. 1.
+- ALERTA: com marketing completo (hype alto) jogo ruim dá lucro de Indie para cima — hype ficou forte demais.
+- Efeito rebote (GDD 23.19): "entrega" da nota (−1..+1 em torno da virada) decide o lado do hype — jogo bom: hype
+  multiplica a 1ª semana e segura a queda; jogo ruim: hype quase não vende e acelera a queda (força 1,5) e tira até
+  10 pontos de reputação. Com marketing completo, jogo ruim deixou de dar lucro em todos os tamanhos.
+- Recalibrado de novo: 1ª semana P 9.000 / M 30.938 / G 31.500 / AAA 296.875; fator mínimo do hype 0,9; curva da nota
+  exp. 1,4, piso 0,2, virada 5; queda base 25%, fim em 10%. Economia sem marketing 20/21 (falha: dois jogos nota 5
+  seguidos não quebram), carreira 5/5. Com marketing: Garagem não paga o marketing completo (como antes) e o Indie
+  médio com marketing completo fica levemente no prejuízo.
+- Aplicados (2026-11-14): contraste do perfil do gênero (fator 2 por nível), tolerância do bloco relativa (10% do
+  ideal; zero num bloco = erro total), fase de bloco único fora da média, bugs pela aptidão em Tecnologia, estouro só
+  com as 4 críticas ≥ 9 e proporcional ao tamanho (Pequeno 1, Médio 0,4, Grande 0,2, AAA 0,1), expansão exige 2 jogos
+  lançados na fase (save v7). Varredura: pior 0,6, dividir igual 6,4 < perfeita 7,0, 0 violações.
+- Economia sem marketing 20/21; carreira 4/5 — falha "ninguém chega ao Estúdio na 1ª run": o expert com equipe cheia
+  chega em ~53% (o estouro paga a folha que antes o travava). Exigir 3 jogos por fase não mudou. Decisão do David.
+- Build de playtest local em Build/Playtest/2026-11-14 (não publicado).

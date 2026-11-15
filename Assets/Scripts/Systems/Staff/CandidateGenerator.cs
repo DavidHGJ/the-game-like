@@ -54,6 +54,7 @@ namespace GameLike.Systems.Staff
                     _ => 0
                 }
             };
+            e.aptitude = AptitudeCalculator.ForEmployee(specialty, seniority, rng);
             return e;
         }
 

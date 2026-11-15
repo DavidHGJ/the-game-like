@@ -11,12 +11,15 @@ namespace GameLike.Core.Events
         public readonly string GameName;
         public readonly float Score;
         public readonly bool IsSequel;
+        /// <summary>Efeito rebote (0..1): hype alto com nota ruim — tira reputação (GDD 23.19).</summary>
+        public readonly float HypeBacklash01;
 
-        public GameLaunchedEvent(string gameName, float score, bool isSequel)
+        public GameLaunchedEvent(string gameName, float score, bool isSequel, float hypeBacklash01 = 0f)
         {
             GameName = gameName;
             Score = score;
             IsSequel = isSequel;
+            HypeBacklash01 = hypeBacklash01;
         }
 
         public EventCategory Category => EventCategory.Project;

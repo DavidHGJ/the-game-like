@@ -32,6 +32,8 @@ namespace GameLike.Systems.Simulation
         public Seniority employeeSeniority = Seniority.Junior;
         /// <summary>Caixa no início. Negativo = o dinheiro inicial do balanceamento.</summary>
         public long startingCash = -1;
+        /// <summary>Proporção bugs ÷ pontos dos jogos (acelera a queda das vendas, GDD 23.19). Típico ≈ 0,07.</summary>
+        public float bugRatio = 0.07f;
         /// <summary>Licença da plataforma paga ao começar cada jogo (PC = 5.000 no conteúdo atual).</summary>
         public long licenseCost = 5_000;
         public SimMarketing marketing = SimMarketing.None;
@@ -101,8 +103,10 @@ namespace GameLike.Systems.Simulation
         private sealed class Running
         {
             public SimGame game;
-            public long forecastUnits;
-            public float retention;
+            public long firstWeekUnits;
+            public float nextUnits;
+            public float decay;
+            public bool ended;
             public int price;
             public int salesWeek;
             public bool awaitingReview;
@@ -126,7 +130,6 @@ namespace GameLike.Systems.Simulation
             long salary = SalaryFor(scenario.employeeSeniority, economy) * Mathf.Max(0, scenario.employees);
             long engineUpkeep = EngineCalculator.ModuleWeeklyCost(EngineModuleWeight.Light, engine) * Mathf.Max(0, scenario.lightEngineModules);
             int grace = tuning.BankruptcyGraceWeeks;
-            int tailWeeks = loop.SalesTailWeeks;
 
             var selling = new List<Running>();
             int nextGame = 0;
@@ -165,8 +168,10 @@ namespace GameLike.Systems.Simulation
                 {
                     var r = selling[i];
                     if (r.awaitingReview) { r.awaitingReview = false; continue; }
-                    if (r.salesWeek >= tailWeeks) continue;
-                    long units = SalesCalculator.TailUnitsForWeek(r.forecastUnits, r.salesWeek, tailWeeks, r.retention);
+                    if (r.ended) continue;
+                    long units = (long)Math.Round(r.nextUnits);
+                    r.nextUnits = SalesCalculator.NextWeekUnits(r.nextUnits, r.decay, 0.5f, loop);
+                    if (SalesCalculator.SalesEnded(r.nextUnits, r.firstWeekUnits, loop)) r.ended = true;
                     long revenue = units * r.price;
                     r.salesWeek++;
                     r.game.units += units;
@@ -192,7 +197,7 @@ namespace GameLike.Systems.Simulation
                     devWeekIndex++;
                     if (--devWeeksLeft <= 0)
                     {
-                        selling.Add(Launch(current, scenario.size, hype, wishlists, loop, quality, week));
+                        selling.Add(Launch(current, scenario.size, hype, wishlists, scenario.bugRatio, loop, quality, week));
                         result.games.Add(current);
                         current = null;
                     }
@@ -210,7 +215,7 @@ namespace GameLike.Systems.Simulation
 
                 bool allLaunched = nextGame >= scenario.scores.Length && current == null;
                 if (scenario.stopAtLastLaunch && allLaunched) break;
-                bool allSold = selling.TrueForAll(r => !r.awaitingReview && r.salesWeek >= tailWeeks);
+                bool allSold = selling.TrueForAll(r => !r.awaitingReview && r.ended);
                 if (allLaunched && allSold) break;
             }
 
@@ -229,21 +234,26 @@ namespace GameLike.Systems.Simulation
             return total;
         }
 
-        private static Running Launch(SimGame game, ProjectSize size, float hype, long wishlists,
+        private static Running Launch(SimGame game, ProjectSize size, float hype, long wishlists, float bugRatio,
             GameLoopBalanceSO loop, QualityFormulaBalanceSO quality, int week)
         {
-            var sales = SalesCalculator.Compute(game.score, size, hype, wishlists, loop, quality);
+            int price = loop.PriceFor(size);
+            long first = SalesCalculator.FirstWeekUnits(game.score, size, hype, wishlists, price, price, 1f, loop, quality);
+            float decay = SalesCalculator.WeeklyDecay(hype, SalesCalculator.Delivery(game.score, loop), bugRatio, loop);
+            long expected = (long)SalesCalculator.ExpectedTotalUnits(first, decay, loop);
             game.launchWeek = week;
-            game.forecastUnits = sales.units;
-            game.forecastRevenue = sales.units * loop.PriceFor(size);
+            game.forecastUnits = expected;
+            game.forecastRevenue = expected * price;
             game.hypeAtLaunch = hype;
             game.wishlists = wishlists;
             return new Running
             {
                 game = game,
-                forecastUnits = sales.units,
-                retention = SalesCalculator.TailRetention(game.score, loop),
-                price = loop.PriceFor(size),
+                firstWeekUnits = first,
+                nextUnits = first,
+                decay = decay,
+                ended = first <= 0,
+                price = price,
                 awaitingReview = true
             };
         }

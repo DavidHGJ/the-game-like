@@ -127,40 +127,108 @@ namespace GameLike.Systems.Projects
 
         // ------------------------------------------------------------------ fases
 
-        /// <summary>Pontos que a equipe entrega em uma fase (GDD 5.3): 100 por pessoa + nível/produtividade.</summary>
+        /// <summary>Aptidão do fundador nesta run (adendo 23.16), criada da base do perfil se faltar.</summary>
+        public float[] FounderAptitude
+        {
+            get
+            {
+                if (_run == null) return AptitudeCalculator.Ensure(null);
+                if (_run.founderAptitude == null || _run.founderAptitude.Length != ProjectState.AreaCount)
+                    _run.founderAptitude = AptitudeCalculator.Ensure(null);
+                return _run.founderAptitude;
+            }
+        }
+
+        /// <summary>Uma pessoa que trabalha no projeto: aptidão por área e produtividade (fundador = 1).</summary>
+        public readonly struct Worker
+        {
+            public readonly string Id;
+            public readonly float[] Aptitude;
+            public readonly float Productivity;
+
+            public Worker(string id, float[] aptitude, float productivity)
+            {
+                Id = id; Aptitude = aptitude; Productivity = productivity;
+            }
+        }
+
+        /// <summary>Quem produz no projeto: o fundador e os contratados, até o tamanho da equipe do projeto.</summary>
+        public List<Worker> Workers(ProjectState project)
+        {
+            var list = new List<Worker>();
+            if (_run == null) return list;
+            list.Add(new Worker(FounderId, FounderAptitude, 1f));
+            var staff = _run.company.employees;
+            int limit = project != null ? Mathf.Max(1, project.teamSize) : int.MaxValue;
+            for (int i = 0; i < staff.Count && list.Count < limit; i++)
+                list.Add(new Worker(staff[i].id, AptitudeCalculator.Of(staff[i]), StaffCalculator.ProductivityFactor(staff[i])));
+            return list;
+        }
+
+        /// <summary>Id usado para o fundador nas listas de quem produz (as bolinhas saem de cima dele).</summary>
+        public const string FounderId = "founder";
+
+        /// <summary>
+        /// Pontos que cada pessoa gera numa semana no parâmetro, com a fração dada (adendo 23.16), já com
+        /// os bônus de equipe pequena e de crunch (mais pontos por semana, mesma fase mais curta).
+        /// </summary>
+        public float WeeklyPointsFor(ProjectState project, Worker worker, GameParameter parameter, float share01, bool crunch)
+        {
+            return DevelopmentRules.WeeklyPoints(worker.Aptitude, parameter, share01, worker.Productivity,
+                project != null ? project.teamSize : 1, crunch, BalanceProvider.Get<GameLoopBalanceSO>());
+        }
+
+        /// <summary>Previsão dos pontos que a equipe gera na fase atual com as frações dadas (só para a UI).</summary>
+        public float ForecastPhasePoints(ProjectState project, float[] sharesByParameter, bool crunch)
+        {
+            if (project == null || sharesByParameter == null) return 0f;
+            var parameters = ParameterCatalog.AvailableFor((ProductionPhase)project.phaseIndex, project.size);
+            int weeks = WeeksForPhase(project, project.phaseIndex, crunch);
+            float total = 0f;
+            foreach (var worker in Workers(project))
+                for (int i = 0; i < parameters.Count; i++)
+                    total += WeeklyPointsFor(project, worker, parameters[i], sharesByParameter[(int)parameters[i]], crunch) * weeks;
+            return total;
+        }
+
+        /// <summary>Previsão dos pontos do jogo inteiro com a equipe atual e o perfil ideal em cada fase (só UI).</summary>
+        public float ForecastProjectPoints(ProjectState project)
+        {
+            if (project == null) return 0f;
+            var loop = BalanceProvider.Get<GameLoopBalanceSO>();
+            int saved = project.phaseIndex, savedTarget = project.targetWeeks;
+            if (project.targetWeeks <= 0) project.targetWeeks = loop != null ? loop.WeeksFor(project.size) : 8;
+            float total = 0f;
+            for (int i = 0; i < ParameterCatalog.PhaseCount; i++)
+            {
+                project.phaseIndex = i;
+                total += ForecastPhasePoints(project, IdealAllocation(project), false);
+            }
+            project.phaseIndex = saved;
+            project.targetWeeks = savedTarget;
+            return total;
+        }
+
+        /// <summary>Previsão de pontos da fase atual com o perfil ideal do gênero (adendo 23.16).</summary>
         public int PhaseBudget(ProjectState project)
         {
             if (_run == null || project == null) return 0;
-            var loop = BalanceProvider.Get<GameLoopBalanceSO>();
-            int perPerson = loop != null ? loop.PointsPerPersonPerPhase : 100;
-            float people = 1f; // fundador
-            var staff = _run.company.employees;
-            int counted = 1;
-            for (int i = 0; i < staff.Count && counted < project.teamSize; i++, counted++)
-                people += (1f + 0.2f * (int)staff[i].seniority) * StaffCalculator.ProductivityFactor(staff[i]);
-            float points = perPerson * people * FounderPerks.SmallTeamPointMultiplier(project.teamSize);
-            return Mathf.Max(perPerson, Mathf.RoundToInt(points / 10f) * 10);
+            return Mathf.RoundToInt(ForecastPhasePoints(project, IdealAllocation(project), false));
         }
 
-        /// <summary>Teto de pontos por parâmetro para o escopo do projeto (GDD 5.3).</summary>
-        public int ParameterCap(ProjectState project)
+        /// <summary>Pontos esperados na fase atual para o tamanho do jogo (referência do volume, adendo 23.16).</summary>
+        public float ExpectedPhasePoints(ProjectState project)
         {
-            var loop = BalanceProvider.Get<GameLoopBalanceSO>();
-            return loop != null && project != null ? loop.ParamCapFor(project.size) : 300;
+            if (project == null) return 0f;
+            float required = ProductionCalculator.RequiredPoints(project.size, BalanceProvider.Get<GameLoopBalanceSO>());
+            return required * ParameterCatalog.DurationShare((ProductionPhase)Mathf.Clamp(project.phaseIndex, 0, ParameterCatalog.PhaseCount - 1));
         }
 
         /// <summary>Semanas que a fase dada leva neste projeto (adendo 23.2), com ou sem crunch.</summary>
         public int WeeksForPhase(ProjectState project, int phaseIndex, bool crunch)
         {
             if (project == null) return 1;
-            float share = ParameterCatalog.DurationShare((ProductionPhase)Mathf.Clamp(phaseIndex, 0, ParameterCatalog.PhaseCount - 1));
-            int weeks = Mathf.Max(1, Mathf.RoundToInt(project.targetWeeks * share));
-            if (crunch)
-            {
-                var loop = BalanceProvider.Get<GameLoopBalanceSO>();
-                weeks = Mathf.Max(1, Mathf.CeilToInt(weeks * (loop != null ? loop.CrunchDurationMultiplier : 0.75f)));
-            }
-            return weeks;
+            return DevelopmentRules.PhaseWeeks(project.targetWeeks, phaseIndex, crunch, BalanceProvider.Get<GameLoopBalanceSO>());
         }
 
         private void BeginPhase(ProjectState project)
@@ -170,49 +238,47 @@ namespace GameLike.Systems.Projects
             project.phasePointBudget = PhaseBudget(project);
             project.phaseWeeks = WeeksForPhase(project, project.phaseIndex, false);
             project.awaitingAllocation = true;
+            UpdateWeeklyRate(project);
         }
 
-        /// <summary>Distribuição que segue o perfil ideal do gênero (usada no modo automático e em testes).</summary>
+        /// <summary>Frações (soma 1) que seguem o perfil ideal do gênero (usada no modo automático e em testes).</summary>
         public float[] IdealAllocation(ProjectState project)
         {
-            var points = new float[ParameterCatalog.ParameterCount];
-            if (project == null) return points;
+            var shares = new float[ParameterCatalog.ParameterCount];
+            if (project == null) return shares;
             var phase = (ProductionPhase)project.phaseIndex;
             var parameters = ParameterCatalog.AvailableFor(phase, project.size);
-            var shares = QualityCalculator.IdealPhaseShares(GenreOf(project), project.size, phase);
-            int cap = ParameterCap(project);
-            for (int i = 0; i < parameters.Count; i++)
-                points[(int)parameters[i]] = Mathf.Min(cap, shares[i] * project.phasePointBudget);
-            return points;
+            var ideal = QualityCalculator.IdealPhaseShares(GenreOf(project), project.size, phase);
+            for (int i = 0; i < parameters.Count; i++) shares[(int)parameters[i]] = ideal[i];
+            return shares;
         }
 
         /// <summary>
-        /// Confirma a distribuição de pontos da fase atual (um valor por parâmetro; só os da
-        /// fase contam) e põe a fase para rodar. Excesso sobre o orçamento ou o teto é cortado.
+        /// Confirma a distribuição da fase atual em frações dos pontos gerados (um valor por parâmetro;
+        /// só os da fase contam; normalizado para somar 1 — adendo 23.16) e põe a fase para rodar.
         /// </summary>
-        public bool ConfirmAllocation(float[] pointsByParameter, bool crunch)
+        public bool ConfirmAllocation(float[] sharesByParameter, bool crunch)
         {
             var p = _run?.currentProject;
             if (p == null || p.status != ProjectStatus.InDevelopment || !p.awaitingAllocation) return false;
-            if (pointsByParameter == null || pointsByParameter.Length < ParameterCatalog.ParameterCount) return false;
+            if (sharesByParameter == null || sharesByParameter.Length < ParameterCatalog.ParameterCount) return false;
 
             var parameters = ParameterCatalog.AvailableFor((ProductionPhase)p.phaseIndex, p.size);
-            int cap = ParameterCap(p);
             float total = 0f;
-            for (int i = 0; i < parameters.Count; i++)
-                total += Mathf.Clamp(pointsByParameter[(int)parameters[i]], 0f, cap);
-            float scale = total > p.phasePointBudget && total > 0f ? p.phasePointBudget / total : 1f;
+            for (int i = 0; i < parameters.Count; i++) total += Mathf.Max(0f, sharesByParameter[(int)parameters[i]]);
+            if (total <= 0.0001f) return false;
             for (int i = 0; i < parameters.Count; i++)
             {
                 int idx = (int)parameters[i];
-                p.paramAllocated[idx] = Mathf.Clamp(pointsByParameter[idx], 0f, cap) * scale;
+                p.paramAllocated[idx] = Mathf.Max(0f, sharesByParameter[idx]) / total;
             }
 
             p.crunch = crunch;
             p.phaseWeeks = WeeksForPhase(p, p.phaseIndex, crunch);
             p.phaseWeek = 0;
             p.awaitingAllocation = false;
-            p.areaAllocation = QualityCalculator.AreaSharesFromParameters(p.paramAllocated);
+            p.areaAllocation = CurrentPhaseAreaShares(p);
+            UpdateWeeklyRate(p);
             EventBus.Publish(new ProductionPhaseStartedEvent(p.phaseIndex, p.phaseWeeks));
             return true;
         }
@@ -234,7 +300,7 @@ namespace GameLike.Systems.Projects
                 if (released.awaitingReview)
                 {
                     released.awaitingReview = false;
-                    EventBus.Publish(new GameLaunchedEvent(released.name, released.finalScore, released.isSequel));
+                    EventBus.Publish(new GameLaunchedEvent(released.name, released.finalScore, released.isSequel, released.hypeBacklash01));
                 }
                 else if (released.IsSelling) SellWeek(released);
             }
@@ -254,14 +320,9 @@ namespace GameLike.Systems.Projects
             }
 
             var loop = BalanceProvider.Get<GameLoopBalanceSO>();
-            var parameters = ParameterCatalog.AvailableFor((ProductionPhase)p.phaseIndex, p.size);
-            for (int i = 0; i < parameters.Count; i++)
-            {
-                int idx = (int)parameters[i];
-                p.paramPoints[idx] = Mathf.Min(p.paramAllocated[idx], p.paramPoints[idx] + p.paramAllocated[idx] / Mathf.Max(1, p.phaseWeeks));
-            }
+            float produced = ProduceWeek(p, loop);
 
-            p.bugCount += BugsThisWeek(p, loop);
+            p.bugCount += BugsThisWeek(p, produced, loop);
             if (p.crunch) ApplyCrunchBurnout(loop);
             if (_research != null)
             {
@@ -273,9 +334,6 @@ namespace GameLike.Systems.Projects
             p.weeksInDevelopment++;
             p.progress01 = OverallProgress01(p);
             if (p.phaseWeek < p.phaseWeeks) return;
-
-            for (int i = 0; i < parameters.Count; i++)
-                p.paramPoints[(int)parameters[i]] = p.paramAllocated[(int)parameters[i]];
 
             if (p.phaseIndex < ParameterCatalog.PhaseCount - 1)
             {
@@ -293,6 +351,72 @@ namespace GameLike.Systems.Projects
             if (p.autoAllocate) Launch(ReferencePrice(p), 0);
         }
 
+        /// <summary>
+        /// Uma semana de produção (adendo 23.16): cada pessoa gera pontos por parâmetro pela fração
+        /// alocada e pela aptidão na área, e pratica (sobe a aptidão) no que produziu.
+        /// </summary>
+        private float ProduceWeek(ProjectState p, GameLoopBalanceSO loop)
+        {
+            var parameters = ParameterCatalog.AvailableFor((ProductionPhase)p.phaseIndex, p.size);
+            float produced = 0f;
+            var byArea = new float[ProjectState.AreaCount];
+            foreach (var worker in Workers(p))
+            {
+                Array.Clear(byArea, 0, byArea.Length);
+                for (int i = 0; i < parameters.Count; i++)
+                {
+                    int idx = (int)parameters[i];
+                    float pts = WeeklyPointsFor(p, worker, parameters[i], p.paramAllocated[idx], p.crunch);
+                    p.paramPoints[idx] += pts;
+                    produced += pts;
+                    byArea[QualityCalculator.AreaIndexOf(parameters[i])] += pts;
+                }
+                for (int a = 0; a < byArea.Length; a++) AptitudeCalculator.Practice(worker.Aptitude, a, byArea[a], loop);
+            }
+            UpdateWeeklyRate(p);
+            return produced;
+        }
+
+        /// <summary>Recalcula os pontos por semana de cada parâmetro com a equipe e a aptidão atuais (UI interpola).</summary>
+        public void UpdateWeeklyRate(ProjectState p)
+        {
+            if (p == null) return;
+            p.EnsureCollections();
+            Array.Clear(p.paramWeeklyRate, 0, p.paramWeeklyRate.Length);
+            if (p.awaitingAllocation || p.status != ProjectStatus.InDevelopment) return;
+            var parameters = ParameterCatalog.AvailableFor((ProductionPhase)p.phaseIndex, p.size);
+            foreach (var worker in Workers(p))
+                for (int i = 0; i < parameters.Count; i++)
+                {
+                    int idx = (int)parameters[i];
+                    p.paramWeeklyRate[idx] += WeeklyPointsFor(p, worker, parameters[i], p.paramAllocated[idx], p.crunch);
+                }
+        }
+
+        /// <summary>
+        /// Treinamento (adendo 23.16): paga e sobe a aptidão da pessoa (fundador ou funcionário pelo id)
+        /// na área. Falso se não há caixa, a pessoa não existe ou a área já está no máximo.
+        /// </summary>
+        public bool Train(string workerId, int area, out long cost)
+        {
+            cost = 0;
+            if (_run == null || _run.ended) return false;
+            float[] aptitude = null;
+            if (workerId == FounderId) aptitude = FounderAptitude;
+            else
+                foreach (var e in _run.company.employees)
+                    if (e.id == workerId) { aptitude = AptitudeCalculator.Of(e); break; }
+            if (aptitude == null || area < 0 || area >= aptitude.Length) return false;
+            var loop = BalanceProvider.Get<GameLoopBalanceSO>();
+            cost = AptitudeCalculator.TrainingCost(aptitude[area], loop);
+            if (aptitude[area] >= AptitudeCalculator.Max || _run.company.cash < cost) return false;
+            AptitudeCalculator.Train(aptitude, area, loop);
+            if (_economy != null) _economy.ApplyDelta(-cost, "Treinamento");
+            else _run.company.cash -= cost;
+            UpdateWeeklyRate(_run.currentProject);
+            return true;
+        }
+
         /// <summary>Progresso total do projeto (0..1) somando fases concluídas e a fração da fase atual.</summary>
         public static float OverallProgress01(ProjectState p)
         {
@@ -306,17 +430,23 @@ namespace GameLike.Systems.Projects
             return Mathf.Clamp01(done + current * frac);
         }
 
-        private int BugsThisWeek(ProjectState p, GameLoopBalanceSO loop)
+        /// <summary>Divisão da fase atual somada por área (soma 1) — só os itens da fase em andamento.</summary>
+        public static float[] CurrentPhaseAreaShares(ProjectState p)
         {
-            float basePerWeek = loop != null ? loop.BugBasePerWeek : 2.5f;
-            float teamQuality = StaffCalculator.TeamQuality01(_run.company.employees, p.areaAllocation);
-            float teamFactor = Mathf.Clamp01(1.3f - teamQuality);
-            float techFactor = 1f - BugCalculator.TechFocus01(p.areaAllocation);
-            // Pontos em Estabilidade e Testes seguram os bugs (GDD 5.5).
-            float stability = p.paramAllocated[(int)GameParameter.StabilityTesting];
-            float stabilityFactor = 1f - 0.5f * Mathf.Clamp01(stability / Mathf.Max(1f, 0.5f * p.phasePointBudget));
-            float crunch = p.crunch ? (loop != null ? loop.CrunchBugMultiplier : 1.6f) : 1f;
-            float bugs = basePerWeek * teamFactor * techFactor * stabilityFactor * crunch * FounderPerks.BugMultiplier;
+            var current = new float[ParameterCatalog.ParameterCount];
+            if (p == null) return QualityCalculator.AreaSharesFromParameters(current);
+            foreach (var gp in ParameterCatalog.AvailableFor((ProductionPhase)Mathf.Clamp(p.phaseIndex, 0, ParameterCatalog.PhaseCount - 1), p.size))
+                current[(int)gp] = p.paramAllocated[(int)gp];
+            return QualityCalculator.AreaSharesFromParameters(current);
+        }
+
+        private int BugsThisWeek(ProjectState p, float producedPoints, GameLoopBalanceSO loop)
+        {
+            var tech = new List<float[]>();
+            foreach (var w in Workers(p)) tech.Add(w.Aptitude);
+            float teamQuality = DevelopmentRules.TechQuality01(tech);
+            float bugs = DevelopmentRules.ExpectedBugs(producedPoints, teamQuality, p.areaAllocation,
+                p.phaseIndex == (int)ProductionPhase.Technology ? p.paramAllocated[(int)GameParameter.StabilityTesting] : 0f, p.crunch, loop);
             int whole = Mathf.FloorToInt(bugs);
             if (UnityEngine.Random.value < bugs - whole) whole++;
             return Mathf.Max(0, whole);
@@ -376,8 +506,8 @@ namespace GameLike.Systems.Projects
             var qf = BalanceProvider.Get<QualityFormulaBalanceSO>();
             float hype = Mathf.Clamp01(p.hype01 + SalesCalculator.LaunchBudgetHype(marketingBudget, loop) * FounderPerks.HypeMultiplier);
             int reference = ReferencePrice(p);
-            float priceFactor = SalesCalculator.PriceFactor(price, reference, loop != null ? loop.PriceElasticity : 1.3f);
-            long wishSales = (long)(p.wishlists * (qf != null ? qf.SalesPer100Wishlists : 80) / 100 * priceFactor);
+            float priceFactor = SalesCalculator.PriceFactor(price, reference, loop);
+            long wishSales = SalesCalculator.WishlistUnits(p.wishlists, qf);
             return new LaunchPreview(hype, p.wishlists, wishSales, reference, priceFactor);
         }
 
@@ -405,18 +535,16 @@ namespace GameLike.Systems.Projects
             p.launchMarketingBudget = marketingBudget;
             p.price = Mathf.Max(1, price);
 
-            float coverage = ProductionCalculator.ScopeCoverage01(p.teamSize, p.size, loop);
+            // Nota "quão perto do perfeito" (adendo 23.18): tema + divisão das fases, pontos e engine amenizam, bugs descontam.
+            float required = ProductionCalculator.RequiredPoints(p.size, loop);
+            float delivered = 0f;
+            foreach (float v in p.paramPoints) delivered += Mathf.Max(0f, v);
+            float coverage = required > 0f ? Mathf.Clamp01(delivered / required) : 1f;
             p.areaAllocation = QualityCalculator.AreaSharesFromParameters(p.paramPoints);
-            float teamQuality = StaffCalculator.TeamQuality01(_run.company.employees, p.areaAllocation);
-            float engineScore = EngineCalculator.BudgetScore01(p.engineBudget, p.size, BalanceProvider.Get<EngineBalanceSO>());
-            float marketTrend = _market != null ? _market.ThemeTrend01(p.themeKey) : 0.5f;
-
-            float score = genre != null
-                ? QualityCalculator.ComputeDetailed(genre, p.size, p.paramPoints, teamQuality, coverage, engineScore,
-                    theme, p.genreKey, marketTrend, p.devEventsBonus)
-                : 5f;
-            score -= BugCalculator.ScorePenalty(p.bugCount, p.size, loop);
-            score = Mathf.Clamp(score + FounderPerks.ReviewBonus, 0f, 10f);
+            var engineLevels = _research != null ? _research.EngineLevelsByParameter() : null;
+            var breakdown = ScoreCalculator.Compute(genre, p.size, ScoreCalculator.ThemeAccuracy(theme, p.genreKey, loop),
+                p.paramAllocated, p.paramPoints, required, engineLevels, p.bugCount, loop);
+            float score = Mathf.Clamp(breakdown.score + FounderPerks.ReviewBonus, 0f, 10f);
 
             // Casas de crítica (adendo 23.3): a nota final é a média das notas publicadas.
             float noise = loop != null ? loop.ReviewerNoise : 1f;
@@ -429,15 +557,23 @@ namespace GameLike.Systems.Projects
             }
             float finalScore = sum / ReviewerCount;
 
+            // Vendas semana a semana (adendo 23.19): a 1ª semana é o ponto de partida; o hype (com o bônus do
+            // tema em alta) segura a queda e os bugs a aceleram.
+            float trend = _market != null ? _market.ThemeTrend01(p.themeKey) : 0.5f;
+            p.hype01 = Mathf.Clamp01(p.hype01 + SalesCalculator.TrendingThemeHype(trend, loop));
             float platformReach = string.IsNullOrEmpty(p.consoleId) ? 1f : SalesCalculator.PlatformReach(p.consolePopularity01);
-            var sales = SalesCalculator.Compute(finalScore, p.size, p.hype01, p.wishlists, loop, qf, platformReach);
-            float priceFactor = SalesCalculator.PriceFactor(p.price, ReferencePrice(p), loop != null ? loop.PriceElasticity : 1.3f);
+            float bugRatio = p.bugCount / Mathf.Max(1f, delivered);
 
             p.scopeCoverage01 = coverage;
             p.finalScore = finalScore;
-            p.forecastUnits = (long)(sales.units * priceFactor);
-            p.salesRetention = SalesCalculator.TailRetention(finalScore, loop);
-            p.salesWeeksTotal = loop != null ? loop.SalesTailWeeks : 26;
+            p.firstWeekUnits = SalesCalculator.FirstWeekUnits(finalScore, p.size, p.hype01, p.wishlists, p.price, ReferencePrice(p),
+                platformReach, loop, qf, SalesCalculator.HitScore(p.reviewScores, finalScore));
+            p.nextWeekUnits = p.firstWeekUnits;
+            float delivery = SalesCalculator.Delivery(finalScore, loop);
+            p.salesDecay = SalesCalculator.WeeklyDecay(p.hype01, delivery, bugRatio, loop);
+            p.hypeBacklash01 = SalesCalculator.Backlash01(p.hype01, delivery);
+            p.salesEnded = p.firstWeekUnits <= 0;
+            p.forecastUnits = (long)SalesCalculator.ExpectedTotalUnits(p.firstWeekUnits, p.salesDecay, loop);
             p.salesWeek = 0;
             p.unitsSold = 0;
             p.revenue = 0;
@@ -448,6 +584,7 @@ namespace GameLike.Systems.Projects
             p.fixingBugs = false;
 
             _run.company.gamesReleased++;
+            _run.company.gamesInPhase++;
             if (!string.IsNullOrEmpty(p.genreId) && !_run.company.genresReleased.Contains(p.genreId))
                 _run.company.genresReleased.Add(p.genreId);
             _run.releasedProjects.Add(p);
@@ -460,9 +597,12 @@ namespace GameLike.Systems.Projects
 
         private void SellWeek(ProjectState p)
         {
-            long units = SalesCalculator.TailUnitsForWeek(p.forecastUnits, p.salesWeek, p.salesWeeksTotal, p.salesRetention);
+            // Semana a semana (adendo 23.19): vende o previsto, e a próxima semana sai desta com queda e variação.
+            var loop = BalanceProvider.Get<GameLoopBalanceSO>();
             float global = _run.market != null ? _run.market.globalSalesMultiplier : 1f;
-            units = (long)(units * Mathf.Max(0f, global));
+            long units = (long)Mathf.Round(p.nextWeekUnits * Mathf.Max(0f, global));
+            p.nextWeekUnits = SalesCalculator.NextWeekUnits(p.nextWeekUnits, p.salesDecay, UnityEngine.Random.value, loop);
+            if (SalesCalculator.SalesEnded(p.nextWeekUnits, p.firstWeekUnits, loop)) p.salesEnded = true;
             long revenue = units * Mathf.Max(1, p.price);
             p.salesWeek++;
             p.unitsSold += units;

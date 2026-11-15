@@ -49,7 +49,7 @@ namespace GameLike.Systems.Meta
         public const string NegociadorNato = "negociador_nato", OlhoNoMercado = "olho_no_mercado",
             VisaoLongoPrazo = "visao_longo_prazo", FusaoEstrategica = "fusao_estrategica",
             AntiBurnout = "anti_burnout", RetencaoTalentos = "retencao_talentos", MentorNato = "mentor_nato",
-            EquipeEnxuta = "equipe_enxuta", ArquitetoEngine = "arquiteto_engine", CodeReview = "code_review",
+            EquipeEnxuta = "equipe_enxuta", RitmoAcelerado = "ritmo_acelerado", ArquitetoEngine = "arquiteto_engine", CodeReview = "code_review",
             PrototipagemRapida = "prototipagem_rapida", Otimizador = "otimizador", TimingPerfeito = "timing_perfeito",
             ViralNatural = "viral_natural", RelacoesImprensa = "relacoes_imprensa", RecuperacaoCrise = "recuperacao_crise",
             CeoCelebridade = "ceo_celebridade", DiscursoAfiado = "discurso_afiado", GerenciamentoCrise = "gerenciamento_crise",
@@ -69,7 +69,8 @@ namespace GameLike.Systems.Meta
                 P(AntiBurnout, "Anti-Burnout", "A equipe acumula burnout 30% mais devagar.", 5, FounderSkill.Leadership, true),
                 P(RetencaoTalentos, "Retenção de Talentos", "Rivais têm menos chance de levar seus funcionários.", 10, FounderSkill.Leadership, false),
                 P(MentorNato, "Mentor Nato", "Funcionários ganham 25% mais XP por jogo lançado.", 15, FounderSkill.Leadership, true),
-                P(EquipeEnxuta, "Equipe Enxuta", "Equipes de até 3 pessoas rendem 10% mais pontos por fase.", 10, FounderSkill.Leadership, true)),
+                P(EquipeEnxuta, "Equipe Enxuta", "Equipes de até 3 pessoas rendem 10% mais pontos por semana.", 10, FounderSkill.Leadership, true),
+                P(RitmoAcelerado, "Ritmo Acelerado", "Destrava o botão de acelerar o tempo na partida.", 5, FounderSkill.Leadership, true)),
             new SkillTreeDef(FounderSkill.Technical, "Técnica", "Qualidade dos jogos, engines e P&D",
                 "Curva de Aprendizado", "+10% de PP gerado durante o desenvolvimento por nível.",
                 P(ArquitetoEngine, "Arquiteto de Engine", "Módulos de engine custam 25% menos PP.", 10, FounderSkill.Technical, true),
@@ -193,6 +194,8 @@ namespace GameLike.Systems.Meta
 
         public static float LicenseCostMultiplier => Has(SkillTreeCatalog.NegociadorNato) ? 0.75f : 1f;
         public static float StagnationMultiplier => Has(SkillTreeCatalog.VisaoLongoPrazo) ? 0.5f : 1f;
+        /// <summary>Verdadeiro se o fundador comprou o perk que destrava o tempo acelerado (GDD 23.16).</summary>
+        public static bool CanFastForward => Has(SkillTreeCatalog.RitmoAcelerado);
         public static float BurnoutMultiplier => Has(SkillTreeCatalog.AntiBurnout) ? 0.7f : 1f;
         public static float XpMultiplier => Has(SkillTreeCatalog.MentorNato) ? 1.25f : 1f;
         public static float BugMultiplier => Has(SkillTreeCatalog.CodeReview) ? 0.75f : 1f;

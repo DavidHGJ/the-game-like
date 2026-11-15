@@ -26,6 +26,8 @@ namespace GameLike.State.Staff
         public float burnout01;
         /// <summary>Salário semanal em $ (GDD 19.2), definido na contratação pela senioridade.</summary>
         public long weeklySalary;
+        /// <summary>Aptidão por área (1..10, índice de DevArea) — rende os pontos da semana e cresce com prática e treino (GDD 23.16).</summary>
+        public float[] aptitude = new float[0];
 
         /// <summary>True enquanto o funcionário está empregado (false = ainda candidato no mercado).</summary>
         public bool hired;

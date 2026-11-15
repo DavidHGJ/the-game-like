@@ -6,7 +6,7 @@ namespace GameLike.UI.Game
     /// <summary>Efeitos sonoros provisórios do jogo.</summary>
     public enum SfxId
     {
-        Hover, Click, Open, Close, Point, Coin, Spend, Success, Fail, Alert, Launch, Review, Fanfare, GameOver, Unlock, Week
+        Hover, Click, Open, Close, Point, Coin, Spend, Success, Fail, Alert, Launch, Review, Fanfare, GameOver, Unlock, Week, Plup, Absorb
     }
 
     /// <summary>
@@ -22,7 +22,7 @@ namespace GameLike.UI.Game
         private static Sfx _instance;
         private readonly Dictionary<SfxId, AudioClip> _clips = new Dictionary<SfxId, AudioClip>();
         private AudioSource _source;
-        private float _lastHover, _lastPoint;
+        private float _lastHover, _lastPoint, _lastPlup, _lastAbsorb;
 
         /// <summary>Volume dos efeitos (0..1), persistido.</summary>
         public static float Volume
@@ -59,6 +59,8 @@ namespace GameLike.UI.Game
             float now = Time.unscaledTime;
             if (id == SfxId.Hover) { if (now - _lastHover < 0.05f) return; _lastHover = now; }
             if (id == SfxId.Point) { if (now - _lastPoint < 0.07f) return; _lastPoint = now; }
+            if (id == SfxId.Plup) { if (now - _lastPlup < 0.06f) return; _lastPlup = now; }
+            if (id == SfxId.Absorb) { if (now - _lastAbsorb < 0.06f) return; _lastAbsorb = now; }
             if (FindFirstObjectByType<AudioListener>() == null) gameObject.AddComponent<AudioListener>();
             if (!_clips.TryGetValue(id, out var clip)) return;
             _source.pitch = pitch;
@@ -87,6 +89,8 @@ namespace GameLike.UI.Game
                 Note(262f, 262f, 0.25f, 0.3f, 2), Note(196f, 150f, 0.6f, 0.3f, 2)));
             _clips[SfxId.Unlock] = Make("unlock", Join(Note(784f, 784f, 0.07f, 0.3f, 0), Note(1175f, 1175f, 0.07f, 0.3f, 0), Note(1568f, 1568f, 0.22f, 0.3f, 0)));
             _clips[SfxId.Week] = Make("week", Note(520f, 520f, 0.03f, 0.08f, 0));
+            _clips[SfxId.Plup] = Make("plup", Join(Note(260f, 820f, 0.05f, 0.30f, 0), Note(820f, 620f, 0.04f, 0.12f, 0)));
+            _clips[SfxId.Absorb] = Make("absorb", Join(Note(1180f, 1180f, 0.03f, 0.16f, 0), Note(1580f, 1760f, 0.07f, 0.16f, 0)));
         }
 
         private static AudioClip Make(string name, float[] samples)

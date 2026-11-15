@@ -101,7 +101,7 @@ namespace GameLike.State
         public int phaseWeek;
         /// <summary>Duração planejada da fase atual, em semanas.</summary>
         public int phaseWeeks;
-        /// <summary>Pontos que a equipe tem para distribuir na fase atual.</summary>
+        /// <summary>Previsão de pontos que a equipe gera na fase atual (GDD 23.16) — só referência para a UI.</summary>
         public int phasePointBudget;
         /// <summary>Verdadeiro enquanto o jogo espera o jogador distribuir os pontos da fase.</summary>
         public bool awaitingAllocation;
@@ -109,10 +109,12 @@ namespace GameLike.State
         public bool autoAllocate;
         /// <summary>Crunch ligado na fase atual (GDD 5.6).</summary>
         public bool crunch;
-        /// <summary>Pontos planejados por parâmetro (19) — definidos na alocação de cada fase.</summary>
+        /// <summary>Fração (0..1) dos pontos gerados que vai para cada parâmetro (19) na fase atual — soma 1 (GDD 23.16).</summary>
         public float[] paramAllocated = new float[ParameterCount];
         /// <summary>Pontos já entregues por parâmetro (19) — crescem semana a semana.</summary>
         public float[] paramPoints = new float[ParameterCount];
+        /// <summary>Pontos por semana de cada parâmetro com a equipe e a aptidão atuais (a UI interpola a semana).</summary>
+        public float[] paramWeeklyRate = new float[ParameterCount];
         /// <summary>Soma do bônus de nota vindo de decisões em eventos durante o desenvolvimento (-1..+1).</summary>
         public float devEventsBonus;
         /// <summary>Engine Budget da empresa no início do projeto (adendo 23.7).</summary>
@@ -133,23 +135,34 @@ namespace GameLike.State
         public float[] reviewScores = new float[0];
         public int releaseWeek;
         public int releaseYear;
-        /// <summary>Unidades totais previstas ao longo de toda a cauda.</summary>
+        /// <summary>Total esperado de unidades (média, sem a variação semanal) — só para relatórios e simulações; nunca mostrado.</summary>
         public long forecastUnits;
         /// <summary>Semanas de venda já contabilizadas.</summary>
         public int salesWeek;
+        /// <summary>Unidades da 1ª semana de vendas (ponto de partida da curva, GDD 23.19).</summary>
+        public long firstWeekUnits;
+        /// <summary>Unidades previstas para a PRÓXIMA semana (sai da anterior, com queda e variação).</summary>
+        public float nextWeekUnits;
+        /// <summary>Queda semanal das vendas (0..1): queda base reduzida pelo hype e acelerada pelos bugs.</summary>
+        public float salesDecay;
+        /// <summary>Verdadeiro quando as vendas já acabaram (semana abaixo do mínimo).</summary>
+        public bool salesEnded;
+        /// <summary>Intensidade do efeito rebote no lançamento (hype alto com nota ruim), 0..1 (GDD 23.19).</summary>
+        public float hypeBacklash01;
+        /// <summary>LEGADO (saves até v5): duração fixa da cauda antiga; só lido na migração.</summary>
         public int salesWeeksTotal;
-        /// <summary>Retenção semanal das vendas (0..1) — maior com nota melhor.</summary>
+        /// <summary>LEGADO (saves até v5): retenção semanal da cauda antiga; só lido na migração.</summary>
         public float salesRetention;
         /// <summary>Unidades vendidas em cada semana desde o lançamento.</summary>
         public System.Collections.Generic.List<long> weeklyUnits = new System.Collections.Generic.List<long>();
 
         public const int ParameterCount = 19;
 
-        /// <summary>Verdadeiro enquanto o jogo ainda está vendendo.</summary>
         /// <summary>Lançado e esperando as críticas saírem (na semana seguinte ao lançamento).</summary>
         public bool awaitingReview;
 
-        public bool IsSelling => status == ProjectStatus.Released && !awaitingReview && salesWeeksTotal > 0 && salesWeek < salesWeeksTotal;
+        /// <summary>Verdadeiro enquanto o jogo ainda está vendendo.</summary>
+        public bool IsSelling => status == ProjectStatus.Released && !awaitingReview && !salesEnded && firstWeekUnits > 0;
 
         /// <summary>Garante arrays/listas válidos após carregar um save antigo.</summary>
         public void EnsureCollections()
@@ -157,6 +170,7 @@ namespace GameLike.State
             if (areaAllocation == null || areaAllocation.Length != AreaCount) areaAllocation = new float[AreaCount];
             if (paramAllocated == null || paramAllocated.Length != ParameterCount) paramAllocated = new float[ParameterCount];
             if (paramPoints == null || paramPoints.Length != ParameterCount) paramPoints = new float[ParameterCount];
+            if (paramWeeklyRate == null || paramWeeklyRate.Length != ParameterCount) paramWeeklyRate = new float[ParameterCount];
             if (reviewScores == null) reviewScores = new float[0];
             if (campaignsUsed == null) campaignsUsed = new System.Collections.Generic.List<int>();
             if (weeklyUnits == null) weeklyUnits = new System.Collections.Generic.List<long>();

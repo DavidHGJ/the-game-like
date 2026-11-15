@@ -79,12 +79,16 @@ namespace GameLike.Systems.Simulation
         private const float ReviewerReputationPerPoint = 0.03f;
         /// <summary>Licença da plataforma inicial (PC) paga a cada jogo.</summary>
         private const long LicenseCost = 5_000;
+        /// <summary>Proporção bugs ÷ pontos típica (simulação de desenvolvimento), que acelera a queda das vendas.</summary>
+        private const float TypicalBugRatio = 0.07f;
         private static readonly string[] Genres = { "rpg", "action_rpg", "platformer", "puzzle", "simulation", "strategy", "fps" };
 
         private sealed class Selling
         {
-            public long forecastUnits;
-            public float retention;
+            public long firstWeekUnits;
+            public float nextUnits;
+            public float decay;
+            public bool ended;
             public int price;
             public int week;
             public bool awaitingReview;
@@ -182,8 +186,10 @@ namespace GameLike.Systems.Simulation
                         company.reputation01 = Mathf.Clamp01(company.reputation01 + (s.score - 6f) * ReviewerReputationPerPoint);
                         continue;
                     }
-                    if (s.week >= loop.SalesTailWeeks) continue;
-                    long units = SalesCalculator.TailUnitsForWeek(s.forecastUnits, s.week, loop.SalesTailWeeks, s.retention);
+                    if (s.ended) continue;
+                    long units = (long)Math.Round(s.nextUnits);
+                    s.nextUnits = SalesCalculator.NextWeekUnits(s.nextUnits, s.decay, (float)rng.NextDouble(), loop);
+                    if (SalesCalculator.SalesEnded(s.nextUnits, s.firstWeekUnits, loop)) s.ended = true;
                     long revenue = units * s.price;
                     s.week++;
                     company.cash += revenue;
@@ -213,12 +219,16 @@ namespace GameLike.Systems.Simulation
                     current.wishlists += (long)(current.hype * (loop.BaseWishlistsFor(current.size) / Mathf.Max(1, loop.WeeksFor(current.size))));
                     if (--current.weeksLeft <= 0)
                     {
-                        var sales = SalesCalculator.Compute(current.score, current.size, current.hype, current.wishlists, loop, quality);
+                        int price = loop.PriceFor(current.size);
+                        long first = SalesCalculator.FirstWeekUnits(current.score, current.size, current.hype, current.wishlists,
+                            price, price, 1f, loop, quality, SimulatedHitScore(current.score, loop, rng));
                         selling.Add(new Selling
                         {
-                            forecastUnits = sales.units,
-                            retention = SalesCalculator.TailRetention(current.score, loop),
-                            price = loop.PriceFor(current.size),
+                            firstWeekUnits = first,
+                            nextUnits = first,
+                            decay = SalesCalculator.WeeklyDecay(current.hype, SalesCalculator.Delivery(current.score, loop), TypicalBugRatio, loop),
+                            ended = first <= 0,
+                            price = price,
                             awaitingReview = true,
                             score = current.score
                         });
@@ -228,6 +238,7 @@ namespace GameLike.Systems.Simulation
                         };
                         released.Add(project);
                         company.gamesReleased++;
+                        company.gamesInPhase++;
                         string genre = Genres[run.games % Genres.Length];
                         if (!company.genresReleased.Contains(genre)) company.genresReleased.Add(genre);
                         pp += research.PpPerGameLaunched * ppMultiplier;
@@ -248,7 +259,7 @@ namespace GameLike.Systems.Simulation
                 company.valuation = (long)Math.Max(0, valuation);
                 if (company.valuation > run.peakValuation) run.peakValuation = company.valuation;
                 if (!company.expansionAvailable && company.phase != CompanyPhase.Studio
-                    && company.valuation >= economy.ThresholdAfter(company.phase))
+                    && company.valuation >= economy.ThresholdAfter(company.phase) && company.gamesInPhase >= economy.MinGamesPerPhase)
                 {
                     company.expansionAvailable = true;
                     company.stagnationWeeks = 0;
@@ -348,6 +359,7 @@ namespace GameLike.Systems.Simulation
             if (company.cash < expansion + nextBurn * profile.expansionCushionWeeks) return;
             company.cash -= expansion;
             company.phase = next;
+            company.gamesInPhase = 0;
             company.expansionAvailable = false;
             company.stagnationWeeks = 0;
             run.phaseWeek[(int)next] = week;
@@ -372,6 +384,16 @@ namespace GameLike.Systems.Simulation
             return Mathf.Clamp(score, 1f, 10f);
         }
 
+
+        /// <summary>Sorteia as 4 casas de crítica em volta da nota (como o jogo) e devolve a nota que conta para o estouro.</summary>
+        private static float SimulatedHitScore(float score, GameLoopBalanceSO loop, System.Random rng)
+        {
+            float noise = loop != null ? loop.ReviewerNoise : 1f;
+            var reviews = new float[GameLike.Systems.Projects.ProjectManager.ReviewerCount];
+            for (int i = 0; i < reviews.Length; i++)
+                reviews[i] = Mathf.Clamp(Mathf.Round(score + ((float)rng.NextDouble() * 2f - 1f) * noise), 1f, 10f);
+            return SalesCalculator.HitScore(reviews, score);
+        }
         private static float SeniorityLevel(List<EmployeeInstance> staff)
         {
             float sum = 0;

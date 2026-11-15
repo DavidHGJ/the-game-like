@@ -257,6 +257,7 @@ namespace GameLike.Systems.Core
             company.costVariation = 1f + UnityEngine.Random.Range(-spread, spread); // GDD 23.12
 
             _run = new RunState(company) { runNumber = _nextRunNumber++, capitalInvested = startingCash };
+            _run.founderAptitude = AptitudeCalculator.Copy(FounderBaseAptitude());
             _weekIncome = _weekExpense = 0;
             _weeksSinceAutosave = 0;
             if (time != null)
@@ -267,6 +268,15 @@ namespace GameLike.Systems.Core
             }
             BindManagers();
             RecomputeValuation();
+        }
+
+        /// <summary>Aptidão de base do fundador (adendo 23.16): sorteada uma vez e guardada no perfil.</summary>
+        public float[] FounderBaseAptitude()
+        {
+            _meta.EnsureCollections();
+            var f = _meta.founder;
+            if (f.aptitude == null || f.aptitude.Length != ProjectState.AreaCount) f.aptitude = AptitudeCalculator.RollFounder(new System.Random());
+            return f.aptitude;
         }
 
         /// <summary>Define nome e aparência do fundador (GDD 20.2).</summary>
@@ -505,6 +515,9 @@ namespace GameLike.Systems.Core
             // Reputação acompanha a recepção do jogo (GDD 4.1).
             var c = _run.company;
             c.reputation01 = Mathf.Clamp01(c.reputation01 + (e.Score - 6f) * 0.03f);
+            // Rebote (GDD 23.19): prometeu com hype e não entregou.
+            var loop = BalanceProvider.Get<GameLoopBalanceSO>();
+            if (e.HypeBacklash01 > 0f) c.reputation01 = Mathf.Clamp01(c.reputation01 - e.HypeBacklash01 * (loop != null ? loop.HypeBacklashReputationMax : 0.1f));
             RecomputeValuation();
             CheckExpansion();
             AutoSave(); // autosave em momento importante (GDD 20.6)
@@ -595,6 +608,8 @@ namespace GameLike.Systems.Core
             if (c.expansionAvailable || c.phase == CompanyPhase.Studio) return;
             long threshold = NextPhaseThreshold;
             if (threshold <= 0 || c.valuation < threshold) return;
+            var econ = BalanceProvider.Get<EconomyBalanceSO>();
+            if (econ != null && c.gamesInPhase < econ.MinGamesPerPhase) return;
             c.expansionAvailable = true;
             c.stagnationWeeks = 0;
             EventBus.Publish(new PhaseExpansionAvailableEvent(NextPhase, ExpansionCost));
@@ -612,6 +627,7 @@ namespace GameLike.Systems.Core
             CompanyPhase from = c.phase;
             if (cost > 0) economy?.ApplyDelta(-cost, "Expansão da empresa");
             c.phase = NextPhase;
+            c.gamesInPhase = 0;
             c.expansionAvailable = false;
             c.stagnationWeeks = 0;
             EventBus.Publish(new PhaseChangedEvent(from, c.phase));

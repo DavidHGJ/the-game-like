@@ -50,21 +50,21 @@ namespace GameLike.Editor.CI
             {
                 var garage = Search(loop, "Garagem (jogo Pequeno)", s => s.template.phase == CompanyPhase.Garage, new Dictionary<string, double[]>
                 {
-                    { "smallBaseUnits", new double[] { 20000, 30000, 40000, 60000, 80000, 100000 } },
-                    { "smallPrice", new double[] { 15, 20, 25, 30 } },
-                    { "salesScoreExponent", new double[] { 1.5, 2, 2.4, 3 } },
-                    { "salesFloorShare", new double[] { 0, 0.1, 0.2, 0.3, 0.4, 0.5 } },
-                    { "salesScoreThreshold", new double[] { 0, 3, 5, 6 } },
-                    { "tailRetentionWorst", new double[] { 0.55, 0.4, 0.25 } },
-                    { "tailRetentionBest", new double[] { 0.93, 0.8, 0.65 } },
-                    { "salesTailWeeks", new double[] { 26, 16 } },
+                    { "smallFirstWeekUnits", new double[] { 5000, 7000, 9000, 11000, 14000, 17000, 21000, 26000, 32000 } },
+                    { "salesEndShare", new double[] { 0.02, 0.05, 0.1 } },
+                    { "weeklyDecayBase", new double[] { 0.15, 0.2, 0.25 } },
+                    { "hypeDecayReductionMax", new double[] { 0.6 } },
+                    { "hypeSalesFactorMin", new double[] { 0.5, 0.7, 0.9 } },
+                    { "salesScoreExponent", new double[] { 1, 1.5, 2 } },
+                    { "salesFloorShare", new double[] { 0.1, 0.2, 0.3, 0.4 } },
+                    { "salesScoreThreshold", new double[] { 4, 5, 6 } },
                 }, new[] { 0.95f, 1f, 1.05f }, report);
                 Merge(chosen, garage);
                 Apply(loop, chosen);
 
-                SearchSize(loop, "Indie · Médio", "mediumBaseUnits", "mediumPrice", chosen, report);
-                SearchSize(loop, "Escritório · Grande", "largeBaseUnits", "largePrice", chosen, report);
-                SearchSize(loop, "Estúdio · AAA", "aaaBaseUnits", "aaaPrice", chosen, report);
+                SearchSize(loop, "Indie · Médio", "mediumFirstWeekUnits", "mediumPrice", chosen, report);
+                SearchSize(loop, "Escritório · Grande", "largeFirstWeekUnits", "largePrice", chosen, report);
+                SearchSize(loop, "Estúdio · AAA", "aaaFirstWeekUnits", "aaaPrice", chosen, report);
                 Apply(loop, chosen);
 
                 var rows = EconomyReport.RunAll();
@@ -101,9 +101,9 @@ namespace GameLike.Editor.CI
 
             var loop = BalanceProvider.Get<GameLoopBalanceSO>();
             string original = JsonUtility.ToJson(loop);
-            var current = Read(loop, "smallBaseUnits", "salesFloorShare", "salesScoreExponent", "salesScoreThreshold",
-                "mediumBaseUnits", "largeBaseUnits", "aaaBaseUnits");
-            double flopUnits = current["smallBaseUnits"] * current["salesFloorShare"];
+            var current = Read(loop, "smallFirstWeekUnits", "salesFloorShare", "salesScoreExponent", "salesScoreThreshold",
+                "mediumFirstWeekUnits", "largeFirstWeekUnits", "aaaFirstWeekUnits");
+            double flopUnits = current["smallFirstWeekUnits"] * current["salesFloorShare"];
             var profiles = CareerReport.StandardProfiles().FindAll(p => p.name.Contains("equipe enxuta"));
             var chanceScenarios = EconomyReport.StandardScenarios().FindAll(s => s.section == EconomyReport.SectionChances || s.section == EconomyReport.SectionProfit);
             var report = new StringBuilder();
@@ -111,6 +111,10 @@ namespace GameLike.Editor.CI
                               + flopUnits.ToString("0", Inv) + " unidades-base de piso.");
 
             Dictionary<string, double> best = null;
+            var baseline = new Candidate { values = current };
+            Evaluate(chanceScenarios, baseline, new[] { 1f });
+            int baselineChances = baseline.passed;
+            report.AppendLine("Metas de chances e lucro hoje: " + baseline.passed + "/" + baseline.total + " — a busca não aceita menos que isso.");
             int bestGoals = -1, evaluated = 0, kept = 0;
             double bestDistance = double.MaxValue;
             string bestMeasured = "";
@@ -118,22 +122,22 @@ namespace GameLike.Editor.CI
             {
                 var grid = new Dictionary<string, double[]>
                 {
-                    { "smallBaseUnits", new double[] { 40000, 50000, 60000 } },
+                    { "smallFirstWeekUnits", Scale(current["smallFirstWeekUnits"], 0.8, 1, 1.25) },
                     { "salesScoreThreshold", new double[] { 4, 5, 6 } },
                     { "salesScoreExponent", new double[] { 0.8, 1, 1.1, 1.2, 1.3, 1.4 } },
-                    { "mediumBaseUnits", Scale(current["mediumBaseUnits"], 0.75, 1, 1.25, 1.5) },
-                    { "largeBaseUnits", Scale(current["largeBaseUnits"], 0.5, 0.6, 0.75, 0.9, 1, 1.25) },
-                    { "aaaBaseUnits", Scale(current["aaaBaseUnits"], 1, 1.5) },
+                    { "mediumFirstWeekUnits", Scale(current["mediumFirstWeekUnits"], 0.75, 1, 1.25, 1.5) },
+                    { "largeFirstWeekUnits", Scale(current["largeFirstWeekUnits"], 0.5, 0.6, 0.75, 0.9, 1, 1.25) },
+                    { "aaaFirstWeekUnits", Scale(current["aaaFirstWeekUnits"], 1, 1.5) },
                 };
                 foreach (var combo in Combinations(grid))
                 {
                     evaluated++;
-                    combo["salesFloorShare"] = Math.Round(flopUnits / combo["smallBaseUnits"], 4);
+                    combo["salesFloorShare"] = Math.Round(flopUnits / combo["smallFirstWeekUnits"], 4);
                     Apply(loop, combo);
 
                     var chances = new Candidate { values = combo };
                     Evaluate(chanceScenarios, chances, new[] { 1f });
-                    if (chances.passed < chances.total) continue;
+                    if (chances.passed < baselineChances) continue;
                     kept++;
 
                     var results = new List<CareerProfileResult>();
@@ -167,6 +171,7 @@ namespace GameLike.Editor.CI
                 Directory.CreateDirectory(Path.Combine(outFolder, "BalanceOverrides"));
                 File.WriteAllText(Path.Combine(outFolder, "BalanceOverrides", "GameLoopBalanceSO.json"), ToJson(best), new UTF8Encoding(false));
             }
+            Directory.CreateDirectory(outFolder);
             File.WriteAllText(Path.Combine(outFolder, "busca_carreira.txt"), report.ToString(), new UTF8Encoding(false));
             Debug.Log(report.ToString());
             Debug.Log("GAMELIKE_CAREER_SEARCH goals=" + bestGoals);
@@ -180,7 +185,7 @@ namespace GameLike.Editor.CI
             var best = Search(loop, scenarioName, s => s.template.name == scenarioName, new Dictionary<string, double[]>
             {
                 { unitsKey, Scale(current[unitsKey], 0.5, 0.75, 1, 1.25, 1.5, 2, 2.5, 3, 4, 5, 6, 8, 10, 12, 15, 20, 25, 30) },
-                { priceKey, Scale(current[priceKey], 1, 1.25, 1.5, 2) },
+                { priceKey, Scale(current[priceKey], 1, 1.25) },
             }, new[] { 1f }, report);
             Merge(chosen, best);
             Apply(loop, chosen);
